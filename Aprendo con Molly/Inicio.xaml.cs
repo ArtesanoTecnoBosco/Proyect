@@ -64,7 +64,11 @@ namespace Aprendo_con_Molly
         }
 
 
-
+        /// <summary>
+        /// Accion del timer.
+        /// </summary>
+        /// <param name="myObject"></param>
+        /// <param name="myEventArgs"></param>
         private void TimerEventProcessor(Object myObject,
                                            EventArgs myEventArgs)
         {
