@@ -65,7 +65,7 @@ namespace Aprendo_con_Molly
 
 
         /// <summary>
-        /// Accion del timer.
+        /// Accion del timer por medio segundo.
         /// </summary>
         /// <param name="myObject"></param>
         /// <param name="myEventArgs"></param>
