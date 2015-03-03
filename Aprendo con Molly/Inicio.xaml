@@ -41,6 +41,6 @@
                 </TransformGroup>
             </ProgressBar.RenderTransform>
         </ProgressBar>
-        <Image Margin="3,369,10,0" Source="TITULO.png" Stretch="Fill"/>
+        <Image Margin="3,369,10,0" Stretch="Fill"/>
     </Grid>
 </Window>
