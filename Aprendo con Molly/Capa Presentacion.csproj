@@ -105,6 +105,9 @@
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <None Include="Aprendo con Molly.rar" />
+    <None Include="fondo1COPIA1.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
     <None Include="Molly.ico">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
@@ -118,9 +121,12 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Resource Include="cerrarb.png" />
     <Resource Include="images.jpg" />
+    <Resource Include="minimizar5.png" />
     <Resource Include="Molly.jpg" />
     <Resource Include="Molly.png" />
+    <Resource Include="pantallaInicio.png" />
     <Resource Include="TITULO.png" />
   </ItemGroup>
   <ItemGroup>
