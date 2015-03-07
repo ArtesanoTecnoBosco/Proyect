@@ -59,6 +59,10 @@
     <ApplicationDefinition Include="App.xaml">
       <Generator>MSBuild:Compile</Generator>
     </ApplicationDefinition>
+    <Page Include="colores.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="Inicio.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -74,6 +78,9 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="colores.xaml.cs">
+      <DependentUpon>colores.xaml</DependentUpon>
     </Compile>
     <Compile Include="Inicio.xaml.cs">
       <DependentUpon>Inicio.xaml</DependentUpon>
@@ -122,6 +129,7 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="cerrarb.png" />
+    <Resource Include="fondo3.jpg" />
     <Resource Include="images.jpg" />
     <Resource Include="minimizar5.png" />
     <Resource Include="Molly.jpg" />
