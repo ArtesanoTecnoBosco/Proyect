@@ -1,0 +1,25 @@
+﻿<Window
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	x:Class="Aprendo_con_Molly.VentanaEmergente"
+	x:Name="Window"
+	Title="ATENCIÓN"
+	Width="340.667" Height="207.333" WindowStyle="None" Background="Transparent" Icon="pack://siteoforigin:,,,/Molly.ico" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" AllowsTransparency="True">
+	<Window.Effect>
+		<DropShadowEffect BlurRadius="8" Direction="200" Color="#FF080E95"/>
+	</Window.Effect>
+
+	<Grid x:Name="LayoutRoot" Margin="0,0,2,0.343">
+		<Grid.ColumnDefinitions>
+			<ColumnDefinition Width="0*"/>
+			<ColumnDefinition/>
+		</Grid.ColumnDefinitions>
+		<Rectangle Grid.ColumnSpan="2" Height="199.657" RadiusY="48" RadiusX="48" StrokeThickness="8" Margin="10,3.666,16,3.666">
+			<Rectangle.Fill>
+				<ImageBrush ImageSource="fondo5.jpg"/>
+			</Rectangle.Fill>
+		</Rectangle>
+		<Button Grid.ColumnSpan="2" Content="OK" HorizontalAlignment="Left" Height="31.167" Margin="147.334,146,0,0" VerticalAlignment="Top" Width="43.5" Background="#FFCFF9E0" Foreground="#FF158D02" FontFamily="Cooper Black" FontSize="16"/>
+		<Button Content="Button" HorizontalAlignment="Left" Height="14.72" Margin="284.833,19,0,0" Style="{DynamicResource BotonCerrar}" VerticalAlignment="Top" Width="15.011" Cursor="Hand" Click="Button_Click" Grid.ColumnSpan="2"/>
+	</Grid>
+</Window>
