@@ -39,8 +39,8 @@
 									</RadialGradientBrush>
 								</Ellipse.Fill>
 							</Ellipse>
-							<ContentPresenter x:Name="ACCION" VerticalAlignment="{TemplateBinding VerticalContentAlignment}" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" RecognizesAccessKey="True" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" Height="127.682" Margin="0" Width="153.834"/>
-							<Ellipse x:Name="CRISTAL_Copy" StrokeThickness="2" HorizontalAlignment="Right" Width="153.834">
+							<ContentPresenter x:Name="ACCION" VerticalAlignment="{TemplateBinding VerticalContentAlignment}" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" RecognizesAccessKey="True" HorizontalAlignment="{Binding HorizontalAlignment, ElementName=CRISTAL_Copy}" Height="127.682" Margin="0" Width="Auto" Content=""/>
+							<Ellipse x:Name="CRISTAL_Copy" StrokeThickness="2" HorizontalAlignment="Stretch" Width="153.834" VerticalAlignment="Stretch" Height="127.682">
 								<Ellipse.Fill>
 									<RadialGradientBrush RadiusX="10" RadiusY="10" Opacity="0">
 										<GradientStop Color="#FFCFF3F5" Offset="0.125"/>
@@ -52,6 +52,7 @@
 									</RadialGradientBrush>
 								</Ellipse.Fill>
 							</Ellipse>
+							<Label Content="NEXT" HorizontalAlignment="Center" Height="38.923" Margin="30.503,46.479,26.993,42.28" VerticalAlignment="Center" Width="96.338" Foreground="#FF138D3F"/>
 						</Grid>
 						<ControlTemplate.Triggers>
 							<Trigger Property="IsFocused" Value="True"/>
@@ -239,8 +240,7 @@
 					</TransformGroup>
 				</Label.RenderTransform>
 			</Label>
-			<Button x:Name="btnSiguiente" Content="" HorizontalAlignment="Left" Height="127.682" Margin="27.909,214.318,0,0" Style="{DynamicResource comenzR}" VerticalAlignment="Top" Width="153.834" Click="btnSiguiente_Click"/>
-			<Label Content="NEXT" HorizontalAlignment="Left" Height="42.29" Margin="62.512,257.818,0,0" VerticalAlignment="Top" Width="95.822" FontFamily="Cooper Black" FontSize="26.667" Foreground="#FF238755" FontWeight="Bold"/>
+			<Button x:Name="btnSiguiente" Content="NEXT" HorizontalAlignment="Left" Height="127.682" Margin="27.909,214.318,0,0" Style="{DynamicResource comenzR}" VerticalAlignment="Top" Width="153.834" Click="btnSiguiente_Click" FontFamily="Cooper Black" FontSize="26.667" FontWeight="Bold" Foreground="#FF238755" IsCancel="True" HorizontalContentAlignment="Left" VerticalContentAlignment="Top" Padding="1" FlowDirection="RightToLeft"/>
 		</Grid>
 		<Grid x:Name="NIVELES" HorizontalAlignment="Left" Height="348.5" Margin="370.502,189.5,0,0" VerticalAlignment="Top" Width="258.5" Visibility="Hidden">
 			<Label Content="NIVELES" HorizontalAlignment="Left" Margin="37.164,34.861,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.059,1.213" Width="210.041" HorizontalContentAlignment="Center" FontFamily="Cooper Black" FontSize="26.667" Foreground="#FF269C7C" FontWeight="Bold">
@@ -253,11 +253,10 @@
 					</TransformGroup>
 				</Label.RenderTransform>
 			</Label>
-			<Button x:Name="btnNext" Content="" HorizontalAlignment="Left" Height="127.683" Margin="63.512,210.817,0,0" Style="{DynamicResource comenzR}" VerticalAlignment="Top" Width="149.925"/>
-			<Label Content="NEXT" HorizontalAlignment="Left" Height="42.29" Margin="93.179,254.318,0,0" VerticalAlignment="Top" Width="95.822" FontFamily="Cooper Black" FontSize="26.667" Foreground="#FF238755" FontWeight="Bold" RenderTransformOrigin="0.657,0.324"/>
 			<RadioButton x:Name="rdbBajo" Content="BAJO" Margin="93.167,103.166,92.5,220.667" FontFamily="Cooper Black" FontWeight="Bold" FontSize="16"/>
 			<RadioButton x:Name="rdbMedio" Content="MEDIO" HorizontalAlignment="Left" Height="28" VerticalAlignment="Top" Width="95.834" FontFamily="Cooper Black" FontWeight="Bold" FontSize="16" Margin="93.167,127.833,0,0"/>
 			<RadioButton x:Name="rdbAlto" Content="ALTO" Margin="93.167,155.833,92.5,168" FontFamily="Cooper Black" FontWeight="Bold" FontSize="16"/>
+			<Button x:Name="btnSiguiente_Copy" Content="NEXT" HorizontalAlignment="Left" Height="132.015" Margin="61.908,210.818,0,0" Style="{DynamicResource comenzR}" VerticalAlignment="Top" Width="153.834" Click="btnSiguiente_Click" FontFamily="Cooper Black" FontSize="26.667" FontWeight="Bold" Foreground="#FF238755" IsCancel="True" HorizontalContentAlignment="Left" VerticalContentAlignment="Top" Padding="1" FlowDirection="RightToLeft"/>
 		</Grid>
 		<Button Content="Button" HorizontalAlignment="Left" Height="23.72" Margin="944.833,10,0,0" Style="{DynamicResource BotonCerrar}" VerticalAlignment="Top" Width="25.011" Cursor="Hand" Click="Button_Click"/>
 		<Button Content="Button" HorizontalAlignment="Left" Height="23.72" Margin="914.822,10,0,0" Style="{DynamicResource Minimizar}" VerticalAlignment="Top" Width="25.011" Cursor="Hand" Click="Button_Click_1"/>
