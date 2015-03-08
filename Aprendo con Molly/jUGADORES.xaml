@@ -39,7 +39,7 @@
 									</RadialGradientBrush>
 								</Ellipse.Fill>
 							</Ellipse>
-							<ContentPresenter x:Name="ACCION" VerticalAlignment="{TemplateBinding VerticalContentAlignment}" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" RecognizesAccessKey="True" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"/>
+							<ContentPresenter x:Name="ACCION" VerticalAlignment="{TemplateBinding VerticalContentAlignment}" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" RecognizesAccessKey="True" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" Height="127.682" Margin="0" Width="153.834"/>
 							<Ellipse x:Name="CRISTAL_Copy" StrokeThickness="2" HorizontalAlignment="Right" Width="153.834">
 								<Ellipse.Fill>
 									<RadialGradientBrush RadiusX="10" RadiusY="10" Opacity="0">
