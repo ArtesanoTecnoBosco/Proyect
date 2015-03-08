@@ -86,5 +86,20 @@ namespace Capa_de_Negocio
             
 
         }
+
+
+
+        public ModeloDatos.Usuario getUsuario()
+        {
+            return usuario;
+        }
+
+
+        public void setUsuario(ModeloDatos.Usuario usuario)
+        {
+            this.usuario = usuario;
+        }
+
+
     }
 }

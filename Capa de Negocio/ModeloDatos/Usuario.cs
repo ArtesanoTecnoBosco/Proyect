@@ -10,7 +10,7 @@ namespace Capa_de_Negocio.ModeloDatos
     /// Clase de representacion para un usuario.
     /// </summary>
 
-    class Usuario
+    public class Usuario
     {
 
         /// <summary>

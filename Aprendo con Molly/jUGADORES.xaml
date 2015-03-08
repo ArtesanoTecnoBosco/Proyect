@@ -255,7 +255,7 @@
 					</TransformGroup>
 				</Label.RenderTransform>
 			</Label>
-			<Button x:Name="btnSiguiente" Content="" HorizontalAlignment="Left" Height="127.682" Margin="27.909,214.318,0,0" Style="{DynamicResource comenzR}" VerticalAlignment="Top" Width="153.834"/>
+			<Button x:Name="btnSiguiente" Content="" HorizontalAlignment="Left" Height="127.682" Margin="27.909,214.318,0,0" Style="{DynamicResource comenzR}" VerticalAlignment="Top" Width="153.834" Click="btnSiguiente_Click"/>
 			<Label Content="NEXT" HorizontalAlignment="Left" Height="42.29" Margin="62.512,257.818,0,0" VerticalAlignment="Top" Width="95.822" FontFamily="Cooper Black" FontSize="26.667" Foreground="#FF238755" FontWeight="Bold"/>
 		</Grid>
 		<Grid x:Name="NIVELES" HorizontalAlignment="Left" Height="348.5" Margin="405,189.5,0,0" VerticalAlignment="Top" Width="258.5" Opacity="0">
@@ -275,7 +275,7 @@
 			<RadioButton x:Name="rdbMedio" Content="MEDIO" HorizontalAlignment="Left" Height="28" VerticalAlignment="Top" Width="95.834" FontFamily="Cooper Black" FontWeight="Bold" FontSize="16" Margin="93.167,127.833,0,0"/>
 			<RadioButton x:Name="rdbAlto" Content="ALTO" Margin="93.167,155.833,92.5,168" FontFamily="Cooper Black" FontWeight="Bold" FontSize="16"/>
 		</Grid>
-		<Button Content="Button" HorizontalAlignment="Left" Height="23.72" Margin="944.833,10,0,0" Style="{DynamicResource BotonCerrar}" VerticalAlignment="Top" Width="25.011"/>
-		<Button Content="Button" HorizontalAlignment="Left" Height="23.72" Margin="914.822,10,0,0" Style="{DynamicResource Minimizar}" VerticalAlignment="Top" Width="25.011"/>
+		<Button Content="Button" HorizontalAlignment="Left" Height="23.72" Margin="944.833,10,0,0" Style="{DynamicResource BotonCerrar}" VerticalAlignment="Top" Width="25.011" Cursor="Hand" Click="Button_Click"/>
+		<Button Content="Button" HorizontalAlignment="Left" Height="23.72" Margin="914.822,10,0,0" Style="{DynamicResource Minimizar}" VerticalAlignment="Top" Width="25.011" Cursor="Hand" Click="Button_Click_1"/>
 	</Grid>
 </Window>

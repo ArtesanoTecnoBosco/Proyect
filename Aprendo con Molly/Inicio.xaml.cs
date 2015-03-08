@@ -20,7 +20,10 @@ namespace Aprendo_con_Molly
 	public partial class Inicio : Window
 	{
 
-        Timer timer = new Timer();
+        Capa_de_Negocio.Juego juego;
+
+
+        
         int contador = 0;
         int contadorMaximo = 33;
 
@@ -30,18 +33,65 @@ namespace Aprendo_con_Molly
 			this.InitializeComponent();
 			
             configurarBarra();
-            Capa_de_Negocio.Juego juego = new Capa_de_Negocio.Juego();
+            juego = new Capa_de_Negocio.Juego();
 
-            timer.Tick += new EventHandler(TimerEventProcessor);
-            timer.Interval = 50;
-            juego.cargarNiveles();
-            contadorMaximo = 33;
-            timer.Start();
-            
-            
-            
+
+            cargarJuego();
+
+
+
+            if (settingsOk())
+            {
+
+                jUGADORES ventanaJugador = new jUGADORES(juego);
+                ventanaJugador.Show();
+                this.Close();
+                
+
+
+
+            }
+            else
+            {
+                String x="Hay un problema a la hora de cargar los datos de la bd";
+            }
+
+
 
 		}
+
+
+
+        public void cargarJuego()
+        {
+            juego.cargarNiveles();
+            contadorMaximo = 33;
+
+            for (int pos = contador; pos < contadorMaximo; pos++)
+            {
+                rellenarBarra(pos);
+            }
+
+
+            //añadir las siguientes cargas.
+
+
+            
+
+
+        }
+
+
+        public Boolean settingsOk()
+        {
+            Boolean bien = true;
+
+
+            return bien;
+        }
+
+
+
 
         /// <summary>
         /// Metodo para configurar la barra de progreso.
@@ -64,27 +114,7 @@ namespace Aprendo_con_Molly
         }
 
 
-        /// <summary>
-        /// Accion del timer por medio segundo.
-        /// </summary>
-        /// <param name="myObject"></param>
-        /// <param name="myEventArgs"></param>
-        private void TimerEventProcessor(Object myObject,
-                                           EventArgs myEventArgs)
-        {
 
-            if (contador < contadorMaximo)
-            {
-                contador++;
-                rellenarBarra(contador);
-
-            }
-            else
-            {
-                timer.Stop();
-            }
-
-        }
 
 
 
