@@ -40,27 +40,15 @@
 								</Ellipse.Fill>
 							</Ellipse>
 							<ContentPresenter x:Name="ACCION" VerticalAlignment="{TemplateBinding VerticalContentAlignment}" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" RecognizesAccessKey="True" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"/>
-							<Ellipse x:Name="CRISTAL" StrokeThickness="2">
-								<Ellipse.Fill>
-									<RadialGradientBrush RadiusY="10" RadiusX="10">
-										<GradientStop Color="#BFCFF3F5" Offset="0.174"/>
-										<GradientStop Color="#FF2CE868" Offset="1"/>
-										<GradientStop Color="#FFD1F7EE" Offset="0.565"/>
-										<GradientStop/>
-										<GradientStop Color="#DDCFF4F1" Offset="0.357"/>
-									</RadialGradientBrush>
-								</Ellipse.Fill>
-							</Ellipse>
-							<Ellipse x:Name="CRISTAL_Copy" StrokeThickness="2">
+							<Ellipse x:Name="CRISTAL_Copy" StrokeThickness="2" HorizontalAlignment="Right" Width="153.834">
 								<Ellipse.Fill>
 									<RadialGradientBrush RadiusX="10" RadiusY="10" Opacity="0">
-										<GradientStop Color="#FFCFF3F5" Offset="0.174"/>
-										<GradientStop Color="#FFCFF3F5" Offset="0.991"/>
-										<GradientStop Color="#FFCFF3F5" Offset="0.565"/>
+										<GradientStop Color="#FFCFF3F5" Offset="0.125"/>
+										<GradientStop Color="#FFCFF3F5" Offset="0.86"/>
+										<GradientStop Color="#FFCFF3F5" Offset="0.479"/>
 										<GradientStop Color="#B292EEC0"/>
-										<GradientStop Color="#DECFF4F1" Offset="0.365"/>
-										<GradientStop Offset="0.365" Color="#B292EEC0"/>
-										<GradientStop Color="#B292EEC0" Offset="0.783"/>
+										<GradientStop Offset="0.296" Color="#B292EEC0"/>
+										<GradientStop Color="#B292EEC0" Offset="0.673"/>
 									</RadialGradientBrush>
 								</Ellipse.Fill>
 							</Ellipse>
@@ -97,9 +85,7 @@
 					<ControlTemplate TargetType="{x:Type Button}">
 						<Grid>
 							<Rectangle x:Name="cerrar" StrokeThickness="8" RadiusX="7.667" RadiusY="7.667">
-								<Rectangle.Fill>
-									<ImageBrush ImageSource="cerrarb.png"/>
-								</Rectangle.Fill>
+								
 							</Rectangle>
 							<ContentPresenter VerticalAlignment="{TemplateBinding VerticalContentAlignment}" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" RecognizesAccessKey="True" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" Content=""/>
 							<Rectangle x:Name="cristal" StrokeThickness="2" RadiusX="8" RadiusY="8" Opacity="0">
@@ -134,9 +120,7 @@
 					<ControlTemplate TargetType="{x:Type Button}">
 						<Grid>
 							<Rectangle x:Name="minimizar" StrokeThickness="8" RadiusX="7.667" RadiusY="7.667">
-								<Rectangle.Fill>
-									<ImageBrush ImageSource="minimizar5.png"/>
-								</Rectangle.Fill>
+								
 							</Rectangle>
 							<ContentPresenter x:Name="contentPresenter" VerticalAlignment="{TemplateBinding VerticalContentAlignment}" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" RecognizesAccessKey="True" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" Content=""/>
 							<Rectangle x:Name="crista" StrokeThickness="2" RadiusX="10" RadiusY="10" Opacity="0">
@@ -258,7 +242,7 @@
 			<Button x:Name="btnSiguiente" Content="" HorizontalAlignment="Left" Height="127.682" Margin="27.909,214.318,0,0" Style="{DynamicResource comenzR}" VerticalAlignment="Top" Width="153.834" Click="btnSiguiente_Click"/>
 			<Label Content="NEXT" HorizontalAlignment="Left" Height="42.29" Margin="62.512,257.818,0,0" VerticalAlignment="Top" Width="95.822" FontFamily="Cooper Black" FontSize="26.667" Foreground="#FF238755" FontWeight="Bold"/>
 		</Grid>
-		<Grid x:Name="NIVELES" HorizontalAlignment="Left" Height="348.5" Margin="405,189.5,0,0" VerticalAlignment="Top" Width="258.5" Opacity="0">
+		<Grid x:Name="NIVELES" HorizontalAlignment="Left" Height="348.5" Margin="370.502,189.5,0,0" VerticalAlignment="Top" Width="258.5" Visibility="Hidden">
 			<Label Content="NIVELES" HorizontalAlignment="Left" Margin="37.164,34.861,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.059,1.213" Width="210.041" HorizontalContentAlignment="Center" FontFamily="Cooper Black" FontSize="26.667" Foreground="#FF269C7C" FontWeight="Bold">
 				<Label.RenderTransform>
 					<TransformGroup>
@@ -269,8 +253,8 @@
 					</TransformGroup>
 				</Label.RenderTransform>
 			</Label>
-			<Button x:Name="btnNext" Content="" HorizontalAlignment="Left" Height="111.182" Margin="63.512,227.318,0,0" Style="{DynamicResource comenzR}" VerticalAlignment="Top" Width="149.925"/>
-			<Label Content="NEXT" HorizontalAlignment="Left" Height="42.29" Margin="93.512,266.318,0,0" VerticalAlignment="Top" Width="95.822" FontFamily="Cooper Black" FontSize="26.667" Foreground="#FF238755" FontWeight="Bold" RenderTransformOrigin="0.657,0.324"/>
+			<Button x:Name="btnNext" Content="" HorizontalAlignment="Left" Height="127.683" Margin="63.512,210.817,0,0" Style="{DynamicResource comenzR}" VerticalAlignment="Top" Width="149.925"/>
+			<Label Content="NEXT" HorizontalAlignment="Left" Height="42.29" Margin="93.179,254.318,0,0" VerticalAlignment="Top" Width="95.822" FontFamily="Cooper Black" FontSize="26.667" Foreground="#FF238755" FontWeight="Bold" RenderTransformOrigin="0.657,0.324"/>
 			<RadioButton x:Name="rdbBajo" Content="BAJO" Margin="93.167,103.166,92.5,220.667" FontFamily="Cooper Black" FontWeight="Bold" FontSize="16"/>
 			<RadioButton x:Name="rdbMedio" Content="MEDIO" HorizontalAlignment="Left" Height="28" VerticalAlignment="Top" Width="95.834" FontFamily="Cooper Black" FontWeight="Bold" FontSize="16" Margin="93.167,127.833,0,0"/>
 			<RadioButton x:Name="rdbAlto" Content="ALTO" Margin="93.167,155.833,92.5,168" FontFamily="Cooper Black" FontWeight="Bold" FontSize="16"/>

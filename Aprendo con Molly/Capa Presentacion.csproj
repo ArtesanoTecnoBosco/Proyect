@@ -128,10 +128,8 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="cerrarb.png" />
     <Resource Include="fondo3.jpg" />
     <Resource Include="images.jpg" />
-    <Resource Include="minimizar5.png" />
     <Resource Include="Molly.jpg" />
     <Resource Include="Molly.png" />
     <Resource Include="pantallaInicio.png" />

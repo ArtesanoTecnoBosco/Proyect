@@ -81,6 +81,8 @@ namespace Aprendo_con_Molly
                 
 
                 Nombre.Opacity = 0;
+				Nombre.Visibility= System.Windows.Visibility.Hidden;
+				NIVELES.Visibility= System.Windows.Visibility.Visible;
                 NIVELES.Opacity = 100;
 
             }
