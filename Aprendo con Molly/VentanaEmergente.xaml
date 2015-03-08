@@ -20,6 +20,7 @@
 			</Rectangle.Fill>
 		</Rectangle>
 		<Button Grid.ColumnSpan="2" Content="OK" HorizontalAlignment="Left" Height="31.167" Margin="147.334,146,0,0" VerticalAlignment="Top" Width="43.5" Background="#FFCFF9E0" Foreground="#FF158D02" FontFamily="Cooper Black" FontSize="16"/>
-		<Button Content="Button" HorizontalAlignment="Left" Height="14.72" Margin="284.833,19,0,0" Style="{DynamicResource BotonCerrar}" VerticalAlignment="Top" Width="15.011" Cursor="Hand" Click="Button_Click" Grid.ColumnSpan="2"/>
+		<Button Grid.ColumnSpan="2" Content="Button" HorizontalAlignment="Left" Height="12" Margin="288,20,0,0" VerticalAlignment="Top" Width="13" Style="{DynamicResource BotonCerrar}"/>
+		<Label x:Name="lblMensag" Grid.ColumnSpan="2" Content="" HorizontalAlignment="Left" Height="56" Margin="34,68,0,0" VerticalAlignment="Top" Width="258" FontFamily="Cooper Black"/>
 	</Grid>
 </Window>
