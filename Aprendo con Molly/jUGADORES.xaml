@@ -224,7 +224,7 @@
 			</ModelVisual3D>
 		</Viewport3D>
 		<Image Margin="167.5,10,61.167,469" Source="pantallaInicio.png" Stretch="Fill"/>
-		<Grid x:Name="Nombre" HorizontalAlignment="Left" Height="348.5" Margin="405,189.5,0,0" VerticalAlignment="Top" Width="271.5" Opacity="0">
+		<Grid x:Name="Nombre" HorizontalAlignment="Left" Height="348.5" Margin="405,189.5,0,0" VerticalAlignment="Top" Width="271.5">
 			<TextBox x:Name="txtUsuario" HorizontalAlignment="Left" Height="38.167" Margin="10,107.333,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="213.834" FontFamily="Cooper Black" FontSize="26.667" Template="{DynamicResource textBoxRedondeado}" BorderBrush="#FFD1D1D1">
 				<TextBox.BindingGroup>
 					<BindingGroup/>
@@ -260,7 +260,7 @@
 		</Grid>
 		<Button Content="Button" HorizontalAlignment="Left" Height="23.72" Margin="944.833,10,0,0" Style="{DynamicResource BotonCerrar}" VerticalAlignment="Top" Width="25.011" Cursor="Hand" Click="Button_Click"/>
 		<Button Content="Button" HorizontalAlignment="Left" Height="23.72" Margin="914.822,10,0,0" Style="{DynamicResource Minimizar}" VerticalAlignment="Top" Width="25.011" Cursor="Hand" Click="Button_Click_1"/>
-		<ed:Callout AnchorPoint="0.885,1.94" Content="¡DIME COMO TE LLAMAS!" FontSize="14.667" HorizontalAlignment="Left" Height="130.008" Margin="629.002,103.419,0,0" StrokeThickness="8" VerticalAlignment="Top" Width="212.982" FontFamily="Cooper Black" CalloutStyle="Oval">
+		<ed:Callout x:Name="bocadillo" AnchorPoint="0.885,1.94" Content="¡DIME COMO TE LLAMAS!" FontSize="14.667" HorizontalAlignment="Left" Height="130.008" Margin="629.002,103.419,0,0" StrokeThickness="8" VerticalAlignment="Top" Width="212.982" FontFamily="Cooper Black" CalloutStyle="Oval">
 			<ed:Callout.Fill>
 				<RadialGradientBrush Center="106.491,65.004" GradientOrigin="106.491,65.004" MappingMode="Absolute" RadiusY="65.004" RadiusX="106.491">
 					<GradientStop Color="#BFF0FFBF" Offset="0.424"/>
@@ -271,7 +271,7 @@
 				</RadialGradientBrush>
 			</ed:Callout.Fill>
 		</ed:Callout>
-		<Grid x:Name="Avatar" HorizontalAlignment="Left" Height="348.5" Margin="405,189.5,0,0" VerticalAlignment="Top" Width="271.5">
+		<Grid x:Name="Avatar" HorizontalAlignment="Left" Height="348.5" Margin="405,189.5,0,0" VerticalAlignment="Top" Width="271.5" Opacity="0">
 			<TextBox x:Name="txtUsuario1" HorizontalAlignment="Left" Height="38.167" Margin="10,107.333,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="213.834" FontFamily="Cooper Black" FontSize="26.667" Template="{DynamicResource textBoxRedondeado}" BorderBrush="#FFD1D1D1">
 				<TextBox.BindingGroup>
 					<BindingGroup/>

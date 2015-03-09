@@ -19,8 +19,8 @@
 				<ImageBrush ImageSource="fondo5.jpg"/>
 			</Rectangle.Fill>
 		</Rectangle>
-		<Button Grid.ColumnSpan="2" Content="OK" HorizontalAlignment="Left" Height="31.167" Margin="147.334,146,0,0" VerticalAlignment="Top" Width="43.5" Background="#FFCFF9E0" Foreground="#FF158D02" FontFamily="Cooper Black" FontSize="16"/>
-		<Button Grid.ColumnSpan="2" Content="Button" HorizontalAlignment="Left" Height="12" Margin="288,20,0,0" VerticalAlignment="Top" Width="13" Style="{DynamicResource BotonCerrar}"/>
-		<Label x:Name="lblMensag" Grid.ColumnSpan="2" Content="" HorizontalAlignment="Left" Height="56" Margin="34,68,0,0" VerticalAlignment="Top" Width="258" FontFamily="Cooper Black"/>
+		<Button Grid.ColumnSpan="2" Content="OK" HorizontalAlignment="Left" Height="31.167" Margin="147.334,146,0,0" VerticalAlignment="Top" Width="43.5" Background="#FFCFF9E0" Foreground="#FF158D02" FontFamily="Cooper Black" FontSize="16" Click="Button_Click_1"/>
+		<Button Grid.ColumnSpan="2" Content="Button" HorizontalAlignment="Left" Height="12" Margin="288,20,0,0" VerticalAlignment="Top" Width="13" Style="{DynamicResource BotonCerrar}" Click="Button_Click"/>
+		<TextBlock x:Name="lblMensag" Grid.ColumnSpan="2" TextWrapping="WrapWithOverflow" HorizontalAlignment="Left" Height="63" Margin="54,78,0,0" VerticalAlignment="Top" Width="230" TextAlignment="Center" Focusable="True"/>
 	</Grid>
 </Window>

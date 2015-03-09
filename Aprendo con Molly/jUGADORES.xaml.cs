@@ -22,20 +22,21 @@ namespace Aprendo_con_Molly
 
 		public jUGADORES(Capa_de_Negocio.Juego juego)
 		{
+            this.InitializeComponent();
             this.juego = juego;
 
-            if (juego != null)
+            if (this.juego == null)
             {
-                this.InitializeComponent();
+               String x = "ERROR 102\nPor favor pongase en contacto con el administrador de la aplicación.";
+
+                throw new System.Exception(x);
 
             }
-            else
-            {
-                String x = "ERROR 102";
-            }
+
+           
+          
 
 			
-			// A partir de este punto se requiere la inserción de código para la creación del objeto.
 		}
 
 
@@ -66,30 +67,79 @@ namespace Aprendo_con_Molly
 
             String usuario = txtUsuario.Text;
 
-            if (!usuario.Equals(""))
+            if (usuario.Equals(""))
             {
 
-                MessageBox.Show("Introduce tu nombre.");
+                bocadillo.Content = "Dime tu nombre por favor";
+                /**
+                 *  ANIMACION NOMBRE.
+                 * 
+                 * */
 
             }
             else
             {
 
-                Capa_de_Negocio.ModeloDatos.Usuario auxUsu = new Capa_de_Negocio.ModeloDatos.Usuario();
+                if (nombreEsReal(usuario))
+                {
+                    Capa_de_Negocio.ModeloDatos.Usuario auxUsu = new Capa_de_Negocio.ModeloDatos.Usuario();
 
-                auxUsu.setNombre(usuario);
-                
+                    auxUsu.setNombre(usuario);
 
-                Nombre.Opacity = 0;
-				Nombre.Visibility= System.Windows.Visibility.Hidden;
-				NIVELES.Visibility= System.Windows.Visibility.Visible;
-                NIVELES.Opacity = 100;
+
+                    Nombre.Opacity = 0;
+                    Nombre.Visibility = System.Windows.Visibility.Hidden;
+
+                    NIVELES.Visibility = System.Windows.Visibility.Visible;
+                    NIVELES.Opacity = 100;
+
+                }
+                else
+                {
+
+                    bocadillo.Content = "Dime tu nombre de verdad";
+
+                }
+
+      
+
+            }
+
+        }
+
+
+        private Boolean nombreEsReal(String nombre)
+        {
+            Boolean real = true;
+            int pos=0;
+
+            Char[] x  = nombre.ToCharArray();
+
+            while (pos < nombre.Length && real)
+            {
+
+
+                if ((int)nombre[pos]<65 || (int)nombre[pos]>90||(int)nombre[pos]<96 || (int) nombre[pos]>122)
+                {
+                    real = true;
+
+                }
+                else
+                {
+                    pos++;
+                }
+
+
 
             }
 
 
 
+                return real;
 
         }
+
+
+
 	}
 }

@@ -42,10 +42,16 @@ namespace Aprendo_con_Molly
 
             if (settingsOk())
             {
-
-                jUGADORES ventanaJugador = new jUGADORES(juego);
-                ventanaJugador.Show();
-                this.Close();
+                try
+                {
+                    jUGADORES ventanaJugador = new jUGADORES(juego);
+                    ventanaJugador.Show();
+                    this.Close();
+                }
+                catch (Exception e)
+                {
+                    crearEmergente(e.Message);
+                }
                 
 
 
@@ -53,14 +59,20 @@ namespace Aprendo_con_Molly
             }
             else
             {
-                String x="Hay un problema a la hora de cargar los datos de la bd";
+                String x = "ERROR 101\nPor favor pongase en contacto con el administrador de la aplicación.";
+                crearEmergente(x);
             }
 
 
 
 		}
 
-
+        private void crearEmergente(String x)
+        {
+            VentanaEmergente emergente = new VentanaEmergente(x);
+            emergente.ShowDialog();
+            emergente.Focus();
+        }
 
         public void cargarJuego()
         {
