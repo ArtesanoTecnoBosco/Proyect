@@ -67,6 +67,13 @@
 					</Setter.Value>
 				</Setter>
 			</Style>
+			<ControlTemplate x:Key="BotonColor" TargetType="{x:Type Button}">
+				<Grid>
+					<Grid.Background>
+						<ImageBrush ImageSource="blanco.png"/>
+					</Grid.Background>
+				</Grid>
+			</ControlTemplate>
 		</ResourceDictionary>
 	</Application.Resources>
 </Application>

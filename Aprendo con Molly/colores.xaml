@@ -194,7 +194,15 @@
 				<ImageBrush ImageSource="fondo3.jpg"/>
 			</Rectangle.Fill>
 		</Rectangle>
-		<Rectangle HorizontalAlignment="Left" Height="204" Margin="795.207,81.053,0,0" RadiusY="48" RadiusX="48" StrokeThickness="8" VerticalAlignment="Top" Width="175.5">
+		<Rectangle HorizontalAlignment="Left" Height="204" Margin="14.707,386.053,0,0" RadiusY="48" RadiusX="48" StrokeThickness="8" VerticalAlignment="Top" Width="159.5" RenderTransformOrigin="0.5,0.5">
+			<Rectangle.RenderTransform>
+				<TransformGroup>
+					<ScaleTransform ScaleX="-1"/>
+					<SkewTransform/>
+					<RotateTransform/>
+					<TranslateTransform/>
+				</TransformGroup>
+			</Rectangle.RenderTransform>
 			<Rectangle.Fill>
 				<ImageBrush ImageSource="Molly.png"/>
 			</Rectangle.Fill>
@@ -241,5 +249,56 @@
 				</TransformGroup>
 			</Label.RenderTransform>
 		</Label>
+		<Button Content="Button" HorizontalAlignment="Left" Height="23.72" Margin="906.822,10,0,0" VerticalAlignment="Top" Width="25.011" Style="{DynamicResource Minimizar}" RenderTransformOrigin="-2.032,0.008"/>
+		<Button Content="Button" HorizontalAlignment="Left" Height="23.72" Margin="936.833,10,0,0" VerticalAlignment="Top" Width="25.011" Style="{DynamicResource BotonCerrar}" RenderTransformOrigin="-2.032,0.008"/>
+		<Rectangle HorizontalAlignment="Left" Height="322" Margin="208,244,0,0" RadiusY="48" RadiusX="48" StrokeThickness="8" VerticalAlignment="Top" Width="444">
+			<Rectangle.Fill>
+				<LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+					<GradientStop Color="#FFD3F5F5" Offset="0"/>
+					<GradientStop Color="#FFE1FFDC" Offset="1"/>
+				</LinearGradientBrush>
+			</Rectangle.Fill>
+		</Rectangle>
+		<Button Content="Button" HorizontalAlignment="Left" Height="78.28" Margin="42,35.72,0,0" VerticalAlignment="Top" Width="86" Template="{DynamicResource BotonColor}"/>
+		<Button Content="" HorizontalAlignment="Left" Height="78.28" Margin="170,35.72,0,0" VerticalAlignment="Top" Width="86">
+			<Button.Background>
+				<ImageBrush ImageSource="amarillo.png"/>
+			</Button.Background>
+		</Button>
+		<Button Content="" HorizontalAlignment="Left" Height="78.28" Margin="294,35.72,0,0" VerticalAlignment="Top" Width="86">
+			<Button.Background>
+				<ImageBrush TileMode="FlipX" ImageSource="naranja.png"/>
+			</Button.Background>
+		</Button>
+		<Button Content="" HorizontalAlignment="Left" Height="78.28" Margin="424,35.72,0,0" VerticalAlignment="Top" Width="86">
+			<Button.Background>
+				<ImageBrush ImageSource="rojo.png"/>
+			</Button.Background>
+		</Button>
+		<Button Content="" HorizontalAlignment="Left" Height="78.28" Margin="546,35.72,0,0" VerticalAlignment="Top" Width="86">
+			<Button.Background>
+				<ImageBrush ImageSource="rosa.png"/>
+			</Button.Background>
+		</Button>
+		<Button Content="" HorizontalAlignment="Left" Height="78.28" Margin="670,35.72,0,0" VerticalAlignment="Top" Width="86">
+			<Button.Background>
+				<ImageBrush ImageSource="verde.png"/>
+			</Button.Background>
+		</Button>
+		<Button Content="" HorizontalAlignment="Left" Height="78.28" Margin="795.207,35.72,0,0" VerticalAlignment="Top" Width="86">
+			<Button.Background>
+				<ImageBrush ImageSource="azul.png"/>
+			</Button.Background>
+		</Button>
+		<Button Content="" HorizontalAlignment="Left" Height="78.28" Margin="350,140.72,0,0" VerticalAlignment="Top" Width="86">
+			<Button.Background>
+				<ImageBrush ImageSource="marron.png"/>
+			</Button.Background>
+		</Button>
+		<Button Content="" HorizontalAlignment="Left" Height="78.28" Margin="508,140.72,0,0" VerticalAlignment="Top" Width="86">
+			<Button.Background>
+				<ImageBrush ImageSource="negro.png"/>
+			</Button.Background>
+		</Button>
 	</Grid>
 </Window>

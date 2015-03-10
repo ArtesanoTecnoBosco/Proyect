@@ -139,13 +139,22 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Resource Include="amarillo.png" />
+    <Resource Include="azul.png" />
+    <Resource Include="blanco.png" />
     <Resource Include="fondo3.jpg" />
     <Resource Include="fondo5.jpg" />
     <Resource Include="images.jpg" />
+    <Resource Include="marron.png" />
     <Resource Include="Molly.jpg" />
     <Resource Include="Molly.png" />
+    <Resource Include="naranja.png" />
+    <Resource Include="negro.png" />
     <Resource Include="pantallaInicio.png" />
+    <Resource Include="rojo.png" />
+    <Resource Include="rosa.png" />
     <Resource Include="TITULO.png" />
+    <Resource Include="verde.png" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Imagenes\" />
