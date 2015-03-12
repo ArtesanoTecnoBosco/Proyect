@@ -9,6 +9,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using System.Text.RegularExpressions;
 
 namespace Aprendo_con_Molly
 {
@@ -110,32 +111,28 @@ namespace Aprendo_con_Molly
 
         private Boolean nombreEsReal(String nombre)
         {
-            Boolean real = true;
+            Boolean real =true;
+
+            
+            char [] x = nombre.ToCharArray();
+
             int pos=0;
 
-            Char[] x  = nombre.ToCharArray();
+            while(pos<x.Length && real){
 
-            while (pos < nombre.Length && real)
-            {
-
-
-                if ((int)nombre[pos]<65 || (int)nombre[pos]>90||(int)nombre[pos]<96 || (int) nombre[pos]>122)
-                {
-                    real = true;
-
-                }
-                else
+                if (Char.IsLetter(x[pos]) ||(int)x[pos]==32)
                 {
                     pos++;
                 }
-
-
-
+                else
+                {
+                    real = false;
+                }
+                               
             }
 
 
-
-                return real;
+            return real;
 
         }
 

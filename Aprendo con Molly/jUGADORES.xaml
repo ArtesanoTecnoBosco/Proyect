@@ -225,7 +225,7 @@
 		</Viewport3D>
 		<Image Margin="167.5,10,61.167,469" Source="pantallaInicio.png" Stretch="Fill"/>
 		<Grid x:Name="Nombre" HorizontalAlignment="Left" Height="348.5" Margin="405,189.5,0,0" VerticalAlignment="Top" Width="271.5">
-			<TextBox x:Name="txtUsuario" HorizontalAlignment="Left" Height="38.167" Margin="10,107.333,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="213.834" FontFamily="Cooper Black" FontSize="26.667" Template="{DynamicResource textBoxRedondeado}" BorderBrush="#FFD1D1D1">
+			<TextBox x:Name="txtUsuario" HorizontalAlignment="Left" Height="38.167" Margin="10,107.333,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="213.834" FontFamily="Cooper Black" FontSize="26.667" Template="{DynamicResource textBoxRedondeado}" BorderBrush="#FFD1D1D1" TextAlignment="Center" UndoLimit="13" MaxLines="1" MaxLength="13">
 				<TextBox.BindingGroup>
 					<BindingGroup/>
 				</TextBox.BindingGroup>
@@ -240,9 +240,9 @@
 					</TransformGroup>
 				</Label.RenderTransform>
 			</Label>
-			<Button x:Name="btnSiguiente" Content="NEXT" HorizontalAlignment="Left" Height="127.682" Margin="27.909,214.318,0,0" Style="{DynamicResource comenzR}" VerticalAlignment="Top" Width="153.834" Click="btnSiguiente_Click" FontFamily="Cooper Black" FontSize="26.667" FontWeight="Bold" Foreground="#FF238755" IsCancel="True" HorizontalContentAlignment="Left" VerticalContentAlignment="Top" Padding="1" FlowDirection="RightToLeft"/>
+			<Button x:Name="btnSiguiente" Content="NEXT" HorizontalAlignment="Left" Height="127.682" Margin="27.909,214.318,0,0" Style="{DynamicResource comenzR}" VerticalAlignment="Top" Width="153.834" Click="btnSiguiente_Click" FontFamily="Cooper Black" FontSize="26.667" FontWeight="Bold" Foreground="#FF238755" IsCancel="True" HorizontalContentAlignment="Left" VerticalContentAlignment="Top" Padding="1" FlowDirection="RightToLeft" Cursor="Hand"/>
 		</Grid>
-		<Grid x:Name="NIVELES" HorizontalAlignment="Left" Height="348.5" Margin="370.502,189.5,0,0" VerticalAlignment="Top" Width="258.5" Visibility="Hidden">
+		<Grid x:Name="NIVELES" HorizontalAlignment="Left" Height="348.5" Margin="370.502,189.5,0,0" VerticalAlignment="Top" Width="258.5" Visibility="Hidden" Opacity="0">
 			<Label Content="NIVELES" HorizontalAlignment="Left" Margin="37.164,34.861,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.059,1.213" Width="210.041" HorizontalContentAlignment="Center" FontFamily="Cooper Black" FontSize="26.667" Foreground="#FF269C7C" FontWeight="Bold">
 				<Label.RenderTransform>
 					<TransformGroup>
@@ -271,23 +271,5 @@
 				</RadialGradientBrush>
 			</ed:Callout.Fill>
 		</ed:Callout>
-		<Grid x:Name="Avatar" HorizontalAlignment="Left" Height="348.5" Margin="405,189.5,0,0" VerticalAlignment="Top" Width="271.5" Opacity="0">
-			<TextBox x:Name="txtUsuario1" HorizontalAlignment="Left" Height="38.167" Margin="10,107.333,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="213.834" FontFamily="Cooper Black" FontSize="26.667" Template="{DynamicResource textBoxRedondeado}" BorderBrush="#FFD1D1D1">
-				<TextBox.BindingGroup>
-					<BindingGroup/>
-				</TextBox.BindingGroup>
-			</TextBox>
-			<Label Content="¿QUIEN ERES?" HorizontalAlignment="Left" Margin="8.664,31.861,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.059,1.213" Width="210.041" HorizontalContentAlignment="Center" FontFamily="Cooper Black" FontSize="26.667" Foreground="#FF269C7C" FontWeight="Bold">
-				<Label.RenderTransform>
-					<TransformGroup>
-						<ScaleTransform/>
-						<SkewTransform/>
-						<RotateTransform Angle="0.066"/>
-						<TranslateTransform/>
-					</TransformGroup>
-				</Label.RenderTransform>
-			</Label>
-			<Button x:Name="btnSiguiente1" Content="NEXT" HorizontalAlignment="Left" Height="127.682" Margin="27.909,214.318,0,0" Style="{DynamicResource comenzR}" VerticalAlignment="Top" Width="153.834" Click="btnSiguiente_Click" FontFamily="Cooper Black" FontSize="26.667" FontWeight="Bold" Foreground="#FF238755" IsCancel="True" HorizontalContentAlignment="Left" VerticalContentAlignment="Top" Padding="1" FlowDirection="RightToLeft"/>
-		</Grid>
 	</Grid>
 </Window>
