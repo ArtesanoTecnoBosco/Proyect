@@ -40,6 +40,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Juego.cs" />
+    <Compile Include="ModeloDatos\Avatar.cs" />
     <Compile Include="ModeloDatos\Nivel.cs" />
     <Compile Include="ModeloDatos\Partida.cs" />
     <Compile Include="ModeloDatos\Tipo.cs" />

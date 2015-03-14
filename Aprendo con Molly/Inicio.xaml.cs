@@ -11,6 +11,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using Capa_de_Negocio.ModeloDatos;
 using System.Windows.Forms;
+using System.IO;
 
 namespace Aprendo_con_Molly
 {
@@ -38,7 +39,7 @@ namespace Aprendo_con_Molly
 
             cargarJuego();
 
-
+            
 
             if (settingsOk())
             {
@@ -85,6 +86,7 @@ namespace Aprendo_con_Molly
             }
 
 
+            cargarImagenes();
             //añadir las siguientes cargas.
 
 
@@ -92,6 +94,56 @@ namespace Aprendo_con_Molly
 
 
         }
+
+
+        public void cargarImagenes()
+        {
+
+            String padre = directorioPadre();
+            String ruta = padre + "\\Imagenes";
+
+            if(Directory.Exists(ruta)){
+
+                ruta = padre + "\\Imagenes\avatares";
+
+                if (Directory.Exists(ruta))
+                {
+
+                    this.juego.cargarAvatares(ruta);
+
+                }
+                else
+                {
+
+                    String x = "ERROR 104\nPor favor pongase en contacto con el administrador de la aplicación.";
+                    crearEmergente(x);
+
+                }
+
+
+            }
+            else
+            {
+                String x = "ERROR 104\nPor favor pongase en contacto con el administrador de la aplicación.";
+                crearEmergente(x);
+            }
+
+
+
+
+
+        }
+
+        
+       private String directorioPadre(){
+            DirectoryInfo info; 
+            String path = Directory.GetCurrentDirectory();
+            info = System.IO.Directory.GetParent(path);
+            info = System.IO.Directory.GetParent(info.FullName);
+            return info.FullName;
+       }
+
+
 
 
         public Boolean settingsOk()

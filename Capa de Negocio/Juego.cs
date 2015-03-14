@@ -14,7 +14,7 @@ namespace Capa_de_Negocio
 
         public static int contadorBarra =0;
 
-
+        List<ModeloDatos.Avatar> avatares;
         List<ModeloDatos.Partida> partidas;
         List<ModeloDatos.Nivel> niveles;
         ModeloDatos.Usuario usuario;
@@ -24,13 +24,29 @@ namespace Capa_de_Negocio
 
         public Juego()
         {
+            avatares = new List<ModeloDatos.Avatar>();
             partidas = new List<ModeloDatos.Partida>();
             niveles = new List<ModeloDatos.Nivel>();
             usuario = new ModeloDatos.Usuario();
             conexion = new Capa_Acceso_a_Datos.Conexion();
         }
 
-        
+
+
+        public int cargarAvatares(String rutaPadre)
+        {
+            int numero=0;
+
+            
+
+
+
+
+
+
+            return numero;
+        }
+
 
         /// <summary>
         /// Metodo para cargar los niveles de la partida.
