@@ -104,7 +104,7 @@ namespace Aprendo_con_Molly
 
             if(Directory.Exists(ruta)){
 
-                ruta = padre + "\\Imagenes\avatares";
+                ruta = padre + "\\Imagenes\\avatares";
 
                 if (Directory.Exists(ruta))
                 {
@@ -115,7 +115,7 @@ namespace Aprendo_con_Molly
                 else
                 {
 
-                    String x = "ERROR 104\nPor favor pongase en contacto con el administrador de la aplicación.";
+                    String x = "ERROR 105\nPor favor pongase en contacto con el administrador de la aplicación.";
                     crearEmergente(x);
 
                 }
