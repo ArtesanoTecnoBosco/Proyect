@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Data.SqlClient;
+using System.IO;
 
 
 
@@ -14,11 +15,11 @@ namespace Capa_de_Negocio
 
         public static int contadorBarra =0;
 
-        List<ModeloDatos.Avatar> avatares;
-        List<ModeloDatos.Partida> partidas;
-        List<ModeloDatos.Nivel> niveles;
-        ModeloDatos.Usuario usuario;
-        Capa_Acceso_a_Datos.Conexion conexion;
+        private List<ModeloDatos.Avatar> avatares;
+        private List<ModeloDatos.Partida> partidas;
+        private List<ModeloDatos.Nivel> niveles;
+        private ModeloDatos.Usuario usuario;
+        private Capa_Acceso_a_Datos.Conexion conexion;
 
 
 
@@ -35,16 +36,24 @@ namespace Capa_de_Negocio
 
         public int cargarAvatares(String rutaPadre)
         {
-            int numero=0;
-
             
+            
+          
+
+            System.Data.OleDb.OleDbDataReader reader = conexion.ejecutarConsulta("Select Id,Ruta from AVATARES");
+
+            while (reader.Read())
+            {
+
+                avatares.Add(new Capa_de_Negocio.ModeloDatos.Avatar(reader.GetInt32(0), reader.GetString(1)));
 
 
+            }
 
 
+            conexion.cerrarConexion();
 
-
-            return numero;
+            return avatares.Count();
         }
 
 
@@ -103,6 +112,30 @@ namespace Capa_de_Negocio
 
         }
 
+        public void comprobarImagenes()
+        {
+
+            for (int pos = 0; pos < this.avatares.Count; pos++)
+            {
+
+                if (!File.Exists(directorioPadre() + this.avatares.ElementAt(pos).getRuta()))
+                {
+                    this.avatares.RemoveAt(pos);
+                }
+
+            }
+
+        }
+
+        private String directorioPadre()
+        {
+            DirectoryInfo info;
+            String path = Directory.GetCurrentDirectory();
+            info = System.IO.Directory.GetParent(path);
+            info = System.IO.Directory.GetParent(info.FullName);
+            return info.FullName;
+        }
+
 
         public Capa_de_Negocio.ModeloDatos.Nivel buscarNivel(String nombre){
 
@@ -158,5 +191,10 @@ namespace Capa_de_Negocio
         }
 
 
+        public List<ModeloDatos.Avatar> getAvatares()
+        {
+            return this.avatares;
+            
+        }
     }
 }

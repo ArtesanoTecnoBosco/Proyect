@@ -109,7 +109,35 @@ namespace Aprendo_con_Molly
                 if (Directory.Exists(ruta))
                 {
 
-                    this.juego.cargarAvatares(ruta);
+                    int n=this.juego.cargarAvatares(ruta);
+
+
+                    if (n > 0)
+                    {
+
+                        this.juego.comprobarImagenes();
+                   
+
+                        if (this.juego.getAvatares().Count == 0)
+                        {
+
+
+                            String x = "ERROR 107\nPor favor pongase en contacto con el administrador de la aplicación.";
+                            crearEmergente(x);
+
+                        }
+                        
+
+                    }
+                    else
+                    {
+
+                        String x = "ERROR 106\nPor favor pongase en contacto con el administrador de la aplicación.";
+                        crearEmergente(x);
+
+                    }
+
+
 
                 }
                 else
