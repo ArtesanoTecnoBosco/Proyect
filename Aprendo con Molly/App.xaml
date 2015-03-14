@@ -74,6 +74,119 @@
 					</Grid.Background>
 				</Grid>
 			</ControlTemplate>
+			<Style x:Key="bNaranja" TargetType="{x:Type Button}">
+				<Setter Property="Template">
+					<Setter.Value>
+						<ControlTemplate TargetType="{x:Type Button}">
+							<Grid x:Name="grid" Margin="52,0,0,39">
+								<Rectangle x:Name="rectangle1" RadiusY="0" RadiusX="0" StrokeThickness="8" Margin="0" Height="120" VerticalAlignment="Top">
+									<Rectangle.Fill>
+										<ImageBrush ImageSource="naranja.png"/>
+									</Rectangle.Fill>
+								</Rectangle>
+								<ContentPresenter x:Name="contentPresenter" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" RecognizesAccessKey="True" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}" Content="" Margin="0" Width="142" Height="130"/>
+							</Grid>
+							<ControlTemplate.Triggers>
+								<Trigger Property="IsFocused" Value="True"/>
+								<Trigger Property="IsDefaulted" Value="True"/>
+								<Trigger Property="IsMouseOver" Value="True">
+									<Setter Property="Height" TargetName="rectangle1" Value="77"/>
+									<Setter Property="Margin" TargetName="rectangle1" Value="0"/>
+									<Setter Property="Width" TargetName="contentPresenter" Value="90"/>
+									<Setter Property="Height" TargetName="contentPresenter" Value="104"/>
+									<Setter Property="Margin" TargetName="contentPresenter" Value="0"/>
+								</Trigger>
+								<Trigger Property="IsPressed" Value="True"/>
+								<Trigger Property="IsEnabled" Value="False"/>
+							</ControlTemplate.Triggers>
+						</ControlTemplate>
+					</Setter.Value>
+				</Setter>
+			</Style>
+			<Style x:Key="botonNaranja" TargetType="{x:Type Button}">
+				<Setter Property="Template">
+					<Setter.Value>
+						<ControlTemplate TargetType="{x:Type Button}">
+							<Grid>
+								<Rectangle x:Name="rectangle" RadiusY="0" RadiusX="0" StrokeThickness="8">
+									<Rectangle.Fill>
+										<ImageBrush ImageSource="naranja.png"/>
+									</Rectangle.Fill>
+								</Rectangle>
+								<ContentPresenter x:Name="contentPresenter" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" RecognizesAccessKey="True" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}" Content="" Margin="0" Width="92" Height="80.28"/>
+							</Grid>
+							<ControlTemplate.Triggers>
+								<Trigger Property="IsFocused" Value="True"/>
+								<Trigger Property="IsDefaulted" Value="True"/>
+								<Trigger Property="IsMouseOver" Value="True">
+									<Setter Property="Width" TargetName="contentPresenter" Value="154"/>
+									<Setter Property="Height" TargetName="contentPresenter" Value="194.28"/>
+									<Setter Property="Margin" TargetName="contentPresenter" Value="-62,0,0,-114"/>
+									<Setter Property="Margin" TargetName="rectangle" Value="0"/>
+								</Trigger>
+								<Trigger Property="IsPressed" Value="True"/>
+								<Trigger Property="IsEnabled" Value="False"/>
+							</ControlTemplate.Triggers>
+						</ControlTemplate>
+					</Setter.Value>
+				</Setter>
+			</Style>
+			<Style x:Key="btnAnterior" TargetType="{x:Type Button}">
+				<Setter Property="Template">
+					<Setter.Value>
+						<ControlTemplate TargetType="{x:Type Button}">
+							<Grid>
+								<Ellipse x:Name="btnAtras" StrokeThickness="8">
+									<Ellipse.Fill>
+										<ImageBrush ImageSource="boyom1.png"/>
+									</Ellipse.Fill>
+								</Ellipse>
+								<ContentPresenter x:Name="contentPresenter" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" RecognizesAccessKey="True" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}" Content="" Height="79.5" Margin="0" Width="68.583"/>
+							</Grid>
+							<ControlTemplate.Triggers>
+								<Trigger Property="IsFocused" Value="True"/>
+								<Trigger Property="IsDefaulted" Value="True"/>
+								<Trigger Property="IsMouseOver" Value="True">
+									<Setter Property="Width" TargetName="contentPresenter" Value="104.583"/>
+									<Setter Property="Height" TargetName="contentPresenter" Value="114"/>
+									<Setter Property="Margin" TargetName="contentPresenter" Value="-36,-34.5,0,0"/>
+									<Setter Property="Margin" TargetName="btnAtras" Value="-36,-34.5,0,0"/>
+								</Trigger>
+								<Trigger Property="IsPressed" Value="True"/>
+								<Trigger Property="IsEnabled" Value="False"/>
+							</ControlTemplate.Triggers>
+						</ControlTemplate>
+					</Setter.Value>
+				</Setter>
+			</Style>
+			<Style x:Key="btnPro" TargetType="{x:Type Button}">
+				<Setter Property="Template">
+					<Setter.Value>
+						<ControlTemplate TargetType="{x:Type Button}">
+							<Grid>
+								<Ellipse x:Name="btnAlante" StrokeThickness="8">
+									<Ellipse.Fill>
+										<ImageBrush ImageSource="boyom.png"/>
+									</Ellipse.Fill>
+								</Ellipse>
+								<ContentPresenter x:Name="contentPresenter" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" RecognizesAccessKey="True" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}" Content="" Margin="0" Width="68.583" Height="79.5"/>
+							</Grid>
+							<ControlTemplate.Triggers>
+								<Trigger Property="IsFocused" Value="True"/>
+								<Trigger Property="IsDefaulted" Value="True"/>
+								<Trigger Property="IsMouseOver" Value="True">
+									<Setter Property="Width" TargetName="contentPresenter" Value="93.083"/>
+									<Setter Property="Height" TargetName="contentPresenter" Value="107"/>
+									<Setter Property="Margin" TargetName="contentPresenter" Value="-24.5,-27.5,0,0"/>
+									<Setter Property="Margin" TargetName="btnAlante" Value="0"/>
+								</Trigger>
+								<Trigger Property="IsPressed" Value="True"/>
+								<Trigger Property="IsEnabled" Value="False"/>
+							</ControlTemplate.Triggers>
+						</ControlTemplate>
+					</Setter.Value>
+				</Setter>
+			</Style>
 		</ResourceDictionary>
 	</Application.Resources>
 </Application>

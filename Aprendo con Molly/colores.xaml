@@ -255,50 +255,51 @@
 			<Rectangle.Fill>
 				<LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
 					<GradientStop Color="#FFD3F5F5" Offset="0"/>
-					<GradientStop Color="#FFE1FFDC" Offset="1"/>
+					<GradientStop Offset="1"/>
 				</LinearGradientBrush>
 			</Rectangle.Fill>
 		</Rectangle>
-		<Button Content="Button" HorizontalAlignment="Left" Height="78.28" Margin="42,35.72,0,0" VerticalAlignment="Top" Width="86" Template="{DynamicResource BotonColor}"/>
-		<Button Content="" HorizontalAlignment="Left" Height="78.28" Margin="170,35.72,0,0" VerticalAlignment="Top" Width="86">
+		<Button x:Name="blanco" Content="Button" HorizontalAlignment="Left" Height="78.28" Margin="260,136.72,0,0" VerticalAlignment="Top" Width="86" Template="{DynamicResource BotonColor}"/>
+		<Button Content="" HorizontalAlignment="Left" Height="78.28" Margin="214,35.72,0,0" VerticalAlignment="Top" Width="86">
 			<Button.Background>
 				<ImageBrush ImageSource="amarillo.png"/>
 			</Button.Background>
 		</Button>
-		<Button Content="" HorizontalAlignment="Left" Height="78.28" Margin="294,35.72,0,0" VerticalAlignment="Top" Width="86">
+		<Button Content="" HorizontalAlignment="Left" Height="78.28" Margin="348,35.72,0,0" VerticalAlignment="Top" Width="86">
 			<Button.Background>
 				<ImageBrush TileMode="FlipX" ImageSource="naranja.png"/>
 			</Button.Background>
 		</Button>
-		<Button Content="" HorizontalAlignment="Left" Height="78.28" Margin="424,35.72,0,0" VerticalAlignment="Top" Width="86">
+		<Button Content="" HorizontalAlignment="Left" Height="78.28" Margin="478,35.72,0,0" VerticalAlignment="Top" Width="86">
 			<Button.Background>
 				<ImageBrush ImageSource="rojo.png"/>
 			</Button.Background>
 		</Button>
-		<Button Content="" HorizontalAlignment="Left" Height="78.28" Margin="546,35.72,0,0" VerticalAlignment="Top" Width="86">
+		<Button Content="" HorizontalAlignment="Left" Height="78.28" Margin="604.102,35.72,0,0" VerticalAlignment="Top" Width="86">
 			<Button.Background>
 				<ImageBrush ImageSource="rosa.png"/>
 			</Button.Background>
 		</Button>
-		<Button Content="" HorizontalAlignment="Left" Height="78.28" Margin="670,35.72,0,0" VerticalAlignment="Top" Width="86">
+		<Button Content="" HorizontalAlignment="Left" Height="78.28" Margin="720,35.72,0,0" VerticalAlignment="Top" Width="86">
 			<Button.Background>
 				<ImageBrush ImageSource="verde.png"/>
 			</Button.Background>
 		</Button>
-		<Button Content="" HorizontalAlignment="Left" Height="78.28" Margin="795.207,35.72,0,0" VerticalAlignment="Top" Width="86">
+		<Button Content="" HorizontalAlignment="Left" Height="78.28" Margin="636,141.72,0,0" VerticalAlignment="Top" Width="86">
 			<Button.Background>
 				<ImageBrush ImageSource="azul.png"/>
 			</Button.Background>
 		</Button>
-		<Button Content="" HorizontalAlignment="Left" Height="78.28" Margin="350,140.72,0,0" VerticalAlignment="Top" Width="86">
+		<Button Content="" HorizontalAlignment="Left" Height="78.28" Margin="396,136.72,0,0" VerticalAlignment="Top" Width="86">
 			<Button.Background>
 				<ImageBrush ImageSource="marron.png"/>
 			</Button.Background>
 		</Button>
-		<Button Content="" HorizontalAlignment="Left" Height="78.28" Margin="508,140.72,0,0" VerticalAlignment="Top" Width="86">
+		<Button Content="" HorizontalAlignment="Left" Height="78.28" Margin="516,141.72,0,0" VerticalAlignment="Top" Width="86">
 			<Button.Background>
 				<ImageBrush ImageSource="negro.png"/>
 			</Button.Background>
 		</Button>
+		<Button Content="Button" HorizontalAlignment="Left" Height="80.28" Margin="134,134.72,0,0" Style="{DynamicResource botonNaranja}" VerticalAlignment="Top" Width="92"/>
 	</Grid>
 </Window>
