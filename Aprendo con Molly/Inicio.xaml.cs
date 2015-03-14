@@ -67,7 +67,7 @@ namespace Aprendo_con_Molly
 
 		}
 
-        private void crearEmergente(String x)
+        public static void crearEmergente(String x)
         {
             VentanaEmergente emergente = new VentanaEmergente(x);
             emergente.ShowDialog();

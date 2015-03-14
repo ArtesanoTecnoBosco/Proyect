@@ -242,7 +242,7 @@
 			</Label>
 			<Button x:Name="btnSiguiente" Content="NEXT" HorizontalAlignment="Left" Height="127.682" Margin="27.909,214.318,0,0" Style="{DynamicResource comenzR}" VerticalAlignment="Top" Width="153.834" Click="btnSiguiente_Click" FontFamily="Cooper Black" FontSize="26.667" FontWeight="Bold" Foreground="#FF238755" IsCancel="True" HorizontalContentAlignment="Left" VerticalContentAlignment="Top" Padding="1" FlowDirection="RightToLeft" Cursor="Hand"/>
 		</Grid>
-		<Grid x:Name="NIVELES" HorizontalAlignment="Left" Height="348.5" Margin="370.502,189.5,0,0" VerticalAlignment="Top" Width="258.5" Visibility="Hidden" Opacity="0">
+		<Grid x:Name="NIVELES" HorizontalAlignment="Left" Height="348.5" Margin="370.502,189.5,0,0" VerticalAlignment="Top" Width="258.5" Opacity="0" Visibility="Hidden">
 			<Label Content="NIVELES" HorizontalAlignment="Left" Margin="37.164,34.861,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.059,1.213" Width="210.041" HorizontalContentAlignment="Center" FontFamily="Cooper Black" FontSize="26.667" Foreground="#FF269C7C" FontWeight="Bold">
 				<Label.RenderTransform>
 					<TransformGroup>
@@ -271,7 +271,7 @@
 				</RadialGradientBrush>
 			</ed:Callout.Fill>
 		</ed:Callout>
-		<Canvas x:Name="imagenNene" HorizontalAlignment="Left" Height="430.968" Margin="298.426,134.183,0,0" VerticalAlignment="Top" Width="452.471" RenderTransformOrigin="0.5,0.5">
+		<Canvas x:Name="imagenNene" HorizontalAlignment="Left" Height="430.968" Margin="298.426,134.183,0,0" VerticalAlignment="Top" Width="452.471" RenderTransformOrigin="0.5,0.5" Visibility="Hidden" Opacity="0">
 			<Canvas.RenderTransform>
 				<TransformGroup>
 					<ScaleTransform/>
@@ -322,16 +322,5 @@
 			<Button Content="Button" Height="79.5" Canvas.Left="42.411" Style="{DynamicResource btnAnterior}" Canvas.Top="325.064" Width="68.583"/>
 			<Button Content="Button" Height="79.5" Canvas.Left="340.33" Style="{DynamicResource btnPro}" Canvas.Top="325.064" Width="68.583"/>
 		</Canvas>
-		<ed:Callout x:Name="bocataImagen" AnchorPoint="0.885,1.94" Content="¿Qien eres?" FontSize="14.667" HorizontalAlignment="Left" Height="130.008" Margin="629.002,103.419,0,0" StrokeThickness="8" VerticalAlignment="Top" Width="212.982" FontFamily="Cooper Black" CalloutStyle="Oval">
-			<ed:Callout.Fill>
-				<RadialGradientBrush Center="106.491,65.004" GradientOrigin="106.491,65.004" MappingMode="Absolute" RadiusY="65.004" RadiusX="106.491">
-					<GradientStop Color="#BFF0FFBF" Offset="0.424"/>
-					<GradientStop Color="#BFCFF2F3" Offset="0.916"/>
-					<GradientStop Color="#BFB0F0CA" Offset="0.676"/>
-					<GradientStop Color="#FFBFFCFF" Offset="0.006"/>
-					<GradientStop Color="#BFFFBFBF" Offset="0.171"/>
-				</RadialGradientBrush>
-			</ed:Callout.Fill>
-		</ed:Callout>
 	</Grid>
 </Window>

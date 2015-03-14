@@ -9,7 +9,7 @@ namespace Capa_de_Negocio.ModeloDatos
     /// <summary>
     ///Clase de representacion de un nivel de la base de datos. 
     /// </summary>
-    class Nivel
+    public class Nivel
     {
 
         /// <summary>

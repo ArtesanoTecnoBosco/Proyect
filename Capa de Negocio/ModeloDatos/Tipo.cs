@@ -9,7 +9,7 @@ namespace Capa_de_Negocio.ModeloDatos
     /// <summary>
     ///Clase de representacion de un tipo de la base de datos. 
     /// </summary>
-    class Tipo
+     public class Tipo
     {
 
         /// <summary>

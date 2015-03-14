@@ -88,6 +88,41 @@ namespace Capa_de_Negocio
         }
 
 
+        public Capa_de_Negocio.ModeloDatos.Nivel buscarNivel(String nombre){
+
+            Capa_de_Negocio.ModeloDatos.Nivel n = new ModeloDatos.Nivel();
+
+            int pos = 0;
+            Boolean encontrado = false;
+
+            while (!encontrado && this.niveles.Count() > pos)
+            {
+
+                if (this.niveles.ElementAt(pos).getNombre().Equals(nombre))
+                {
+
+                    encontrado = true;
+                    n = this.niveles.ElementAt(pos);
+
+                }
+                else
+                {
+                    pos++;
+                }
+
+
+            }
+
+            if (!encontrado)
+            {
+                String x = "ERROR 103\nPor favor pongase en contacto con el administrador de la aplicación.";
+
+                throw new System.Exception(x);
+            }
+
+            return n;
+        }
+
 
         public ModeloDatos.Usuario getUsuario()
         {
@@ -98,6 +133,12 @@ namespace Capa_de_Negocio
         public void setUsuario(ModeloDatos.Usuario usuario)
         {
             this.usuario = usuario;
+        }
+
+
+        public List<ModeloDatos.Partida> getPartidas()
+        {
+            return this.partidas;
         }
 
 

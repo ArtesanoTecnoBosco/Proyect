@@ -9,7 +9,7 @@ namespace Capa_de_Negocio.ModeloDatos
     /// <summary>
     /// Clase de representacion para una partida.
     /// </summary>
-    class Partida
+    public class Partida
     {
 
         /// <summary>
@@ -61,6 +61,14 @@ namespace Capa_de_Negocio.ModeloDatos
             this.tipo = tipo;
             this.nivel = nivel;
         }
+
+
+
+        public Partida(Nivel nivel)
+        {
+            this.nivel = nivel;
+        }
+
 
         /// <summary>
         /// Metodo para obtener el identificador de la partida.

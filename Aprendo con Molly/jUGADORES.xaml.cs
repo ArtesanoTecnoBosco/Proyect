@@ -19,6 +19,7 @@ namespace Aprendo_con_Molly
 	public partial class jUGADORES : Window
 	{
         Capa_de_Negocio.Juego juego;
+        Capa_de_Negocio.ModeloDatos.Usuario auxUsu;
 
 
 		public jUGADORES(Capa_de_Negocio.Juego juego)
@@ -62,49 +63,139 @@ namespace Aprendo_con_Molly
 
         }
 
+        private void seleccionarCuadroUsuario()
+        {
+
+            txtUsuario.Text = "";
+            txtUsuario.Focus();
+
+        }
+
+
         private void btnSiguiente_Click(object sender, RoutedEventArgs e)
         {
 
+            
 
-            String usuario = txtUsuario.Text;
+            //Si el panel nombre es visible almacenar nombre y pasar el panel.
+            if (Nombre.Visibility == System.Windows.Visibility.Visible) {   
 
-            if (usuario.Equals(""))
-            {
+                String usuario = txtUsuario.Text;
 
-                bocadillo.Content = "Dime tu nombre por favor";
-                /**
-                 *  ANIMACION NOMBRE.
-                 * 
-                 * */
-
-            }
-            else
-            {
-
-                if (nombreEsReal(usuario))
+                //Compruebo si no hay ningun nombre introducido.
+                if (usuario.Equals("") || usuario.Trim().Equals(""))
                 {
-                    Capa_de_Negocio.ModeloDatos.Usuario auxUsu = new Capa_de_Negocio.ModeloDatos.Usuario();
 
-                    auxUsu.setNombre(usuario);
+                    bocadillo.Content = "Dime tu nombre\n por favor";
+                    seleccionarCuadroUsuario();
 
-
-                    Nombre.Opacity = 0;
-                    Nombre.Visibility = System.Windows.Visibility.Hidden;
-
-                    NIVELES.Visibility = System.Windows.Visibility.Visible;
-                    NIVELES.Opacity = 100;
+                    /**
+                     *  ANIMACION NOMBRE.
+                     * 
+                     * */
 
                 }
                 else
                 {
+                    //Se comprueba que lo que introduce el usuario son letra, algun espacio o acentos.
+                    if (nombreEsReal(usuario))
+                    {
 
-                    bocadillo.Content = "Dime tu nombre de verdad";
+                        auxUsu = new Capa_de_Negocio.ModeloDatos.Usuario();
+                        auxUsu.setNombre(usuario);
+
+
+                        Nombre.Opacity = 0;
+                        Nombre.Visibility = System.Windows.Visibility.Hidden;
+
+                        NIVELES.Visibility = System.Windows.Visibility.Visible;
+                        NIVELES.Opacity = 100;
+
+                        bocadillo.Content = "Selecciona un nivel\n de dificultad";
+
+                    }
+                    else
+                    {
+
+                        bocadillo.Content = "Dime tu nombre\n de verdad";
+                        seleccionarCuadroUsuario();
+
+                        /**
+                         * ANIMACION NOMBRE
+                         * 
+                         * */
+
+                    }
 
                 }
 
-      
+            }
+            //Si el panel de niveles esta visible y el de nombre oculto guardar la dificultad seleccionada.
+            else if (Nombre.Visibility == System.Windows.Visibility.Hidden && NIVELES.Visibility == System.Windows.Visibility.Visible)
+            {
+
+
+                try
+                {
+
+                    if (rdbBajo.IsChecked == true)
+                    {
+
+                        crearPartidaNivel("Principiante");
+
+                    }
+                    else if (rdbMedio.IsChecked == true)
+                    {
+
+                        crearPartidaNivel("Medio");
+
+                    }
+                    else if (rdbAlto.IsChecked == true) 
+                    {
+                        crearPartidaNivel("Avanzado");
+                    }
+                    else
+                    {
+                        bocadillo.Content="Por favor,\n selecciona un nivel.";
+
+                        /**
+                         * ANIMACION SELECCION DE NIVEL.
+                         * */
+
+                    }
+
+                }
+                catch (Exception ex)
+                {
+
+                    Inicio.crearEmergente(ex.Message);
+
+                }
 
             }
+
+        }
+
+
+
+        /// <summary>
+        /// Metodo que crea la partida con su nivel.
+        /// </summary>
+        /// <param name="nombreNivel">Nombre del nivel a crear.</param>
+        private void crearPartidaNivel(String nombreNivel)
+        {
+
+
+            this.juego.getPartidas().Add(new Capa_de_Negocio.ModeloDatos.Partida(this.juego.buscarNivel(nombreNivel)));
+
+            //Ocultar panel niveles.
+            NIVELES.Visibility = System.Windows.Visibility.Hidden;
+            NIVELES.Opacity = 0;
+
+            //Mostrar panel de los avatares.
+            imagenNene.Visibility = System.Windows.Visibility.Visible;
+            imagenNene.Opacity = 100;
+
 
         }
 
