@@ -271,7 +271,7 @@
 				</RadialGradientBrush>
 			</ed:Callout.Fill>
 		</ed:Callout>
-		<Canvas x:Name="imagenNene" HorizontalAlignment="Left" Height="430.968" Margin="298.426,134.183,0,0" VerticalAlignment="Top" Width="452.471" RenderTransformOrigin="0.5,0.5" Visibility="Hidden" Opacity="0">
+		<Canvas x:Name="imagenNene" HorizontalAlignment="Left" Height="379.969" Margin="359.843,188.223,0,0" VerticalAlignment="Top" Width="374.374" RenderTransformOrigin="0.5,0.5" Opacity="0" Visibility="Hidden">
 			<Canvas.RenderTransform>
 				<TransformGroup>
 					<ScaleTransform/>
@@ -280,7 +280,7 @@
 					<TranslateTransform/>
 				</TransformGroup>
 			</Canvas.RenderTransform>
-			<Rectangle x:Name="imgIzda" Height="248.775" RadiusY="48" RadiusX="48" StrokeThickness="8" Canvas.Top="9.548" Width="148.192" RenderTransformOrigin="0.5,0.5" Canvas.Left="0.357" Fill="#FFF9F3F3">
+			<Rectangle x:Name="imgIzda" Height="193.031" RadiusY="48" RadiusX="48" StrokeThickness="8" Canvas.Top="5.155" Width="126.303" RenderTransformOrigin="0.5,0.5" Canvas.Left="13.315" Fill="#FFF9F3F3">
 				<Rectangle.Effect>
 					<DropShadowEffect Color="#FF528911" Direction="229" Opacity="0.825"/>
 				</Rectangle.Effect>
@@ -293,7 +293,7 @@
 					</TransformGroup>
 				</Rectangle.RenderTransform>
 			</Rectangle>
-			<Rectangle x:Name="imgDcha" RadiusY="48" RadiusX="48" StrokeThickness="8" RenderTransformOrigin="0.5,0.5" Height="248.775" Canvas.Left="295.168" Canvas.Top="7.435" Width="148.192" Fill="#FFFBF5F5">
+			<Rectangle x:Name="imgDcha" RadiusY="48" RadiusX="48" StrokeThickness="8" RenderTransformOrigin="0.5,0.5" Height="193.031" Canvas.Left="236.637" Canvas.Top="3.363" Width="127" Fill="#FFFBF5F5">
 				<Rectangle.Effect>
 					<DropShadowEffect Color="#FF528911" Direction="200"/>
 				</Rectangle.Effect>
@@ -306,7 +306,7 @@
 					</TransformGroup>
 				</Rectangle.RenderTransform>
 			</Rectangle>
-			<Rectangle x:Name="imgCentro" Height="286.97" RadiusY="48" RadiusX="48" StrokeThickness="8" Canvas.Top="38.36" Width="165.774" RenderTransformOrigin="0.5,0.5" Canvas.Left="140.921" Fill="#FFF7F4F4">
+			<Rectangle x:Name="imgCentro" Height="235.742" RadiusY="48" RadiusX="48" StrokeThickness="8" Canvas.Top="87.878" Width="145.324" RenderTransformOrigin="0.5,0.5" Canvas.Left="114.682" Fill="#FFF7F4F4">
 				<Rectangle.Effect>
 					<DropShadowEffect Color="#FF528911" Direction="200" Opacity="0.905"/>
 				</Rectangle.Effect>
@@ -319,8 +319,8 @@
 					</TransformGroup>
 				</Rectangle.RenderTransform>
 			</Rectangle>
-			<Button Content="Button" Height="79.5" Canvas.Left="42.411" Style="{DynamicResource btnAnterior}" Canvas.Top="325.064" Width="68.583"/>
-			<Button Content="Button" Height="79.5" Canvas.Left="340.33" Style="{DynamicResource btnPro}" Canvas.Top="325.064" Width="68.583"/>
+			<Button Content="Button" Height="79.5" Canvas.Left="36.258" Style="{DynamicResource btnAnterior}" Canvas.Top="300.069" Width="68.583"/>
+			<Button Content="Button" Height="79.5" Canvas.Left="271.145" Style="{DynamicResource dcha}" Canvas.Top="300.069" Width="68.583"/>
 		</Canvas>
 	</Grid>
 </Window>
