@@ -196,5 +196,13 @@ namespace Capa_de_Negocio
             return this.avatares;
             
         }
+
+
+        public ModeloDatos.Avatar getUnAvatar(int pos)
+        {
+
+            return this.avatares.ElementAt(pos);
+
+        }
     }
 }

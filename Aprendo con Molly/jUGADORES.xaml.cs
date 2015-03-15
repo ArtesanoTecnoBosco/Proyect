@@ -10,6 +10,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using System.Text.RegularExpressions;
+using System.IO;
 
 namespace Aprendo_con_Molly
 {
@@ -18,15 +19,18 @@ namespace Aprendo_con_Molly
 	/// </summary>
 	public partial class jUGADORES : Window
 	{
-        Capa_de_Negocio.Juego juego;
-        Capa_de_Negocio.ModeloDatos.Usuario auxUsu;
+        private Capa_de_Negocio.Juego juego;
+        private Capa_de_Negocio.ModeloDatos.Usuario auxUsu;
+        private int posicionAvatar;
 
 
 		public jUGADORES(Capa_de_Negocio.Juego juego)
 		{
             this.InitializeComponent();
-            this.juego = juego;
+            this.posicionAvatar = 0;
+            this.juego = juego;            
 
+            //Compruebo si hemos tenido algun problema al cargar el juego para mandar un error.
             if (this.juego == null)
             {
                String x = "ERROR 102\nPor favor pongase en contacto con el administrador de la aplicación.";
@@ -35,9 +39,8 @@ namespace Aprendo_con_Molly
 
             }
 
-           
-          
-
+            //Fuerzo a que el txt obtenga el foco.
+            txtUsuario.Focus();
 			
 		}
 
@@ -192,12 +195,30 @@ namespace Aprendo_con_Molly
             NIVELES.Visibility = System.Windows.Visibility.Hidden;
             NIVELES.Opacity = 0;
 
+            //Quitar bocadillo
+            bocadillo.Visibility = System.Windows.Visibility.Hidden;
+
             //Mostrar panel de los avatares.
             imagenNene.Visibility = System.Windows.Visibility.Visible;
             imagenNene.Opacity = 100;
 
+            //Cargo imagenes estaticas en los paneles.
+            imgCentro.Fill = new ImageBrush(new BitmapImage(new Uri(directorioPadre() + this.juego.getUnAvatar(posicionAvatar).getRuta(), UriKind.Relative)));
+            imgIzda.Fill = new ImageBrush(new BitmapImage(new Uri(directorioPadre() + this.juego.getUnAvatar(this.juego.getAvatares().Count-1).getRuta(), UriKind.Relative)));
+            imgDcha.Fill = new ImageBrush(new BitmapImage(new Uri(directorioPadre() + this.juego.getUnAvatar(posicionAvatar+1).getRuta(), UriKind.Relative)));
+
 
         }
+
+        private String directorioPadre()
+        {
+            DirectoryInfo info;
+            String path = Directory.GetCurrentDirectory();
+            info = System.IO.Directory.GetParent(path);
+            info = System.IO.Directory.GetParent(info.FullName);
+            return info.FullName;
+        }
+
 
 
         private Boolean nombreEsReal(String nombre)
@@ -225,6 +246,142 @@ namespace Aprendo_con_Molly
 
             return real;
 
+        }
+
+        /// <summary>
+        /// Accion del boton derecho de los avatares (Ir hacia delante).
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void Button_Click_2(object sender, RoutedEventArgs e)
+
+        {
+
+            delante();
+
+
+        }
+
+
+        private void delante()
+        {
+            posicionAvatar = posicionAvatar - 1;
+
+            if (posicionAvatar < 0)
+            {
+
+                posicionAvatar = this.juego.getAvatares().Count - 1;
+
+            }
+
+            //Cargo imagen centro.
+            imgCentro.Fill = new ImageBrush(new BitmapImage(new Uri(directorioPadre() + this.juego.getUnAvatar(posicionAvatar).getRuta(), UriKind.Relative)));
+
+
+            int auxiliar = posicionAvatar;
+
+            if (posicionAvatar - 1 < 0)
+            {
+                auxiliar = this.juego.getAvatares().Count - 1;
+            }
+            else
+            {
+                auxiliar = auxiliar - 1;
+            }
+
+
+            imgIzda.Fill = new ImageBrush(new BitmapImage(new Uri(directorioPadre() + this.juego.getUnAvatar(auxiliar).getRuta(), UriKind.Relative)));
+
+
+            auxiliar = posicionAvatar + 1;
+
+            if (auxiliar > this.juego.getAvatares().Count - 1)
+            {
+                auxiliar = 0;
+            }
+
+
+            //Cargo imagen derecha.
+            imgDcha.Fill = new ImageBrush(new BitmapImage(new Uri(directorioPadre() + this.juego.getUnAvatar(auxiliar).getRuta(), UriKind.Relative)));
+        }
+
+
+
+        /// <summary>
+        /// Accion del boton izquierdo de los avatares (Ir hacia atras).
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void Button_Click_3(object sender, RoutedEventArgs e)
+        {
+
+            atras();
+
+
+        }
+
+        private void atras()
+        {
+            posicionAvatar = posicionAvatar + 1;
+
+            if (posicionAvatar > this.juego.getAvatares().Count - 1)
+            {
+
+                posicionAvatar = 0;
+
+            }
+
+            //Cargo imagen centro.
+            imgCentro.Fill = new ImageBrush(new BitmapImage(new Uri(directorioPadre() + this.juego.getUnAvatar(posicionAvatar).getRuta(), UriKind.Relative)));
+
+            int auxiliar = posicionAvatar;
+
+            if (posicionAvatar + 1 > this.juego.getAvatares().Count - 1)
+            {
+                auxiliar = 0;
+            }
+            else
+            {
+                auxiliar = auxiliar + 1;
+            }
+
+            //Cargo imagen derecha.
+            imgDcha.Fill = new ImageBrush(new BitmapImage(new Uri(directorioPadre() + this.juego.getUnAvatar(auxiliar).getRuta(), UriKind.Relative)));
+
+
+            auxiliar = posicionAvatar - 1;
+
+            if (posicionAvatar - 1 < 0)
+            {
+                auxiliar = this.juego.getAvatares().Count - 1;
+            }
+
+
+            imgIzda.Fill = new ImageBrush(new BitmapImage(new Uri(directorioPadre() + this.juego.getUnAvatar(auxiliar).getRuta(), UriKind.Relative)));
+
+        }
+
+        private void Window_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (imagenNene.Visibility == System.Windows.Visibility.Visible)
+            {
+
+                //Sì pulsa la tecla izquierda.
+                if (e.Key == Key.Left)
+                {
+
+                    atras();
+
+                }
+
+                //`Si pulsa derecha.
+                if (e.Key == Key.Right)
+                {
+
+                    delante();
+
+                }
+            }
         }
 
 
