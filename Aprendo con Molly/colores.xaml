@@ -208,7 +208,6 @@
 				<ImageBrush ImageSource="Molly.png"/>
 			</Rectangle.Fill>
 		</Rectangle>
-		<Button Content="Button" HorizontalAlignment="Left" Height="36.075" Margin="795.207,334.478,0,0" Style="{DynamicResource botonJugar}" VerticalAlignment="Top" Width="152.895"/>
 		<Label Content="    JUGAR" HorizontalAlignment="Left" Height="33.826" Margin="808.964,335.982,0,0" VerticalAlignment="Top" Width="137.388" FontFamily="Cooper BLACK" FontSize="21.333" FontWeight="Bold" RenderTransformOrigin="0.5,0.5" Foreground="#FF7C3800">
 			<Label.RenderTransform>
 				<TransformGroup>
@@ -219,7 +218,6 @@
 				</TransformGroup>
 			</Label.RenderTransform>
 		</Label>
-		<Button Content="Button" HorizontalAlignment="Left" Height="36.075" Margin="695.207,409.478,0,0" Style="{DynamicResource btnEscuchar1}" VerticalAlignment="Top" Width="152.895"/>
 		<Label Content="ESCUCHAR" HorizontalAlignment="Left" Height="33.826" Margin="696.964,412.982,0,0" VerticalAlignment="Top" Width="137.388" FontFamily="Cooper BLACK" FontSize="21.333" FontWeight="Bold" RenderTransformOrigin="0.5,0.5" Foreground="#FF7C3800">
 			<Label.RenderTransform>
 				<TransformGroup>
@@ -230,16 +228,6 @@
 				</TransformGroup>
 			</Label.RenderTransform>
 		</Label>
-		<Rectangle x:Name="btnVer" HorizontalAlignment="Left" Height="36.075" Margin="819.207,434.478,0,0" RadiusY="48" RadiusX="48" StrokeThickness="8" VerticalAlignment="Top" Width="152.895" RenderTransformOrigin="0.5,0.5">
-			<Rectangle.RenderTransform>
-				<TransformGroup>
-					<ScaleTransform/>
-					<SkewTransform/>
-					<RotateTransform Angle="0.231"/>
-					<TranslateTransform/>
-				</TransformGroup>
-			</Rectangle.RenderTransform>
-		</Rectangle>
 		<Label Content="VER" HorizontalAlignment="Left" Height="33.826" Margin="866.109,435.397,0,0" VerticalAlignment="Top" Width="48.787" FontFamily="Cooper BLACK" FontSize="21.333" FontWeight="Bold" RenderTransformOrigin="0.5,0.5" Foreground="#FF7C3800">
 			<Label.RenderTransform>
 				<TransformGroup>
@@ -252,7 +240,7 @@
 		</Label>
 		<Button Content="Button" HorizontalAlignment="Left" Height="23.72" Margin="906.822,10,0,0" VerticalAlignment="Top" Width="25.011" Style="{DynamicResource Minimizar}" RenderTransformOrigin="-2.032,0.008"/>
 		<Button Content="Button" HorizontalAlignment="Left" Height="23.72" Margin="936.833,10,0,0" VerticalAlignment="Top" Width="25.011" Style="{DynamicResource BotonCerrar}" RenderTransformOrigin="-2.032,0.008"/>
-		<Rectangle HorizontalAlignment="Left" Height="322" Margin="208,244,0,0" RadiusY="48" RadiusX="48" StrokeThickness="8" VerticalAlignment="Top" Width="444">
+		<Rectangle HorizontalAlignment="Left" Height="336" Margin="193.687,226,0,0" RadiusY="48" RadiusX="48" StrokeThickness="8" VerticalAlignment="Top" Width="472">
 			<Rectangle.Fill>
 				<LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
 					<GradientStop Color="#FFD3F5F5" Offset="0"/>
@@ -260,22 +248,16 @@
 				</LinearGradientBrush>
 			</Rectangle.Fill>
 		</Rectangle>
-		<Button x:Name="btnBlanco" Content="Button" HorizontalAlignment="Left" Height="78.28" Margin="260,136.72,0,0" VerticalAlignment="Top" Width="86" Template="{DynamicResource BotonColor}"/>
-		<Button Content="" HorizontalAlignment="Left" Height="78.28" Margin="720,35.72,0,0" VerticalAlignment="Top" Width="86">
-			<Button.Background>
-				<ImageBrush ImageSource="verde.png"/>
-			</Button.Background>
-		</Button>
-		<Button Content="" HorizontalAlignment="Left" Height="78.28" Margin="636,141.72,0,0" VerticalAlignment="Top" Width="86">
-			<Button.Background>
-				<ImageBrush ImageSource="azul.png"/>
-			</Button.Background>
-		</Button>
-		<Button x:Name="btnNaranja" Content="Button" HorizontalAlignment="Left" Height="80.28" Margin="134,134.72,0,0" Style="{DynamicResource botonNaranja}" VerticalAlignment="Top" Width="92"/>
-		<Button x:Name="btnAmarillo" Content="Button" HorizontalAlignment="Left" Height="78.28" Margin="134,35.72,0,0" Style="{DynamicResource btnAmarillo}" VerticalAlignment="Top" Width="92"/>
-		<Button Content="Button" HorizontalAlignment="Left" Height="80.28" Margin="260,33.72,0,0" Style="{DynamicResource rojo}" VerticalAlignment="Top" Width="86"/>
-		<Button x:Name="btnMarron" Content="Button" HorizontalAlignment="Left" Height="78.28" Margin="392,35.72,0,0" Style="{DynamicResource marrons}" VerticalAlignment="Top" Width="83.102"/>
-		<Button Content="Button" HorizontalAlignment="Left" Height="78.28" Margin="392,141.72,0,0" Style="{DynamicResource negro}" VerticalAlignment="Top" Width="83.102"/>
-		<Button Content="Button" HorizontalAlignment="Left" Height="78.28" Margin="518,35.72,0,0" Style="{DynamicResource rosa}" VerticalAlignment="Top" Width="83.102"/>
+		<Canvas x:Name="Nubes" HorizontalAlignment="Left" Height="191.522" Margin="30,34.478,0,0" VerticalAlignment="Top" Width="966">
+			<Button x:Name="btnAmarillo" Content="Button" HorizontalAlignment="Left" Height="78.28" Style="{DynamicResource btnAmarillo}" VerticalAlignment="Top" Width="92" Canvas.Left="117" Canvas.Top="32"/>
+			<Button x:Name="btnBlanco" Content="Button" HorizontalAlignment="Left" Height="80.28" Style="{DynamicResource btnBlanco}" VerticalAlignment="Top" Width="92" Canvas.Left="10" Canvas.Top="111.242"/>
+			<Button x:Name="btnNaranja" Content="Button" HorizontalAlignment="Left" Height="80.28" Style="{DynamicResource botonNaranja}" VerticalAlignment="Top" Width="92" Canvas.Left="325" Canvas.Top="21.72"/>
+			<Button x:Name="btnRojo" Content="Button" HorizontalAlignment="Left" Height="80.28" Style="{DynamicResource btnRojo}" VerticalAlignment="Top" Width="92" Canvas.Left="532" Canvas.Top="21.72"/>
+			<Button x:Name="btnRosa" Content="Button" HorizontalAlignment="Left" Height="80.28" Style="{DynamicResource btnRosa}" VerticalAlignment="Top" Width="92" Canvas.Left="841.833" Canvas.Top="102"/>
+			<Button x:Name="btnAzul" Content="Button" HorizontalAlignment="Left" Height="80.28" Style="{DynamicResource btnAzul}" VerticalAlignment="Top" Width="92" Canvas.Left="730.833" Canvas.Top="21.72"/>
+			<Button x:Name="btnVerde" Content="Button" HorizontalAlignment="Left" Height="80.28" Style="{DynamicResource btnVerde}" VerticalAlignment="Top" Width="92" Canvas.Left="426" Canvas.Top="102"/>
+			<Button x:Name="btnMarron" Content="Button" HorizontalAlignment="Left" Height="80.28" Style="{DynamicResource btnMarron}" VerticalAlignment="Top" Width="92" Canvas.Left="220" Canvas.Top="102"/>
+			<Button x:Name="btnNegro" Content="Button" HorizontalAlignment="Left" Height="80.28" Style="{DynamicResource btnNegro}" VerticalAlignment="Top" Width="92" Canvas.Left="634.833" Canvas.Top="102"/>
+		</Canvas>
 	</Grid>
 </Window>
