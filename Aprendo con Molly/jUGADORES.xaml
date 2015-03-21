@@ -306,10 +306,27 @@
 					</TransformGroup>
 				</Rectangle.RenderTransform>
 			</Rectangle>
-			<Rectangle x:Name="imgCentro" Height="235.742" RadiusY="48" RadiusX="48" StrokeThickness="8" Canvas.Top="87.878" Width="145.324" RenderTransformOrigin="0.5,0.5" Canvas.Left="114.682" Fill="#FFF7F4F4" MouseDown="imgCentro_MouseDown">
+			<Rectangle x:Name="imgCentro" Height="235.742" RadiusY="48" RadiusX="48" StrokeThickness="8" Canvas.Top="92.878" Width="145.324" RenderTransformOrigin="0.5,0.5" Canvas.Left="114.719" Fill="#FFF7F4F4" MouseDown="imgCentro_MouseDown" >
 				<Rectangle.Effect>
 					<DropShadowEffect Color="#FF528911" Direction="200" Opacity="0.905"/>
 				</Rectangle.Effect>
+				<Rectangle.RenderTransform>
+					<TransformGroup>
+						<ScaleTransform/>
+						<SkewTransform/>
+						<RotateTransform Angle="-1.048"/>
+						<TranslateTransform/>
+					</TransformGroup>
+				</Rectangle.RenderTransform>
+			</Rectangle>
+			<Rectangle x:Name="imgCentroTrasera" Height="243.511" RadiusY="48" RadiusX="48" StrokeThickness="8" Canvas.Top="88.997" Width="166.411" RenderTransformOrigin="0.5,0.5" Canvas.Left="103.675" MouseDown="imgCentro_MouseDown" >
+				<Rectangle.Fill>
+					<RadialGradientBrush>
+						<GradientStop Color="White" Offset="0.552"/>
+						<GradientStop Color="#FFF0F1D6" Offset="0.817"/>
+						<GradientStop Color="#FEF2F5B5" Offset="0.991"/>
+					</RadialGradientBrush>
+				</Rectangle.Fill>
 				<Rectangle.RenderTransform>
 					<TransformGroup>
 						<ScaleTransform/>
