@@ -108,7 +108,7 @@
 					<Setter.Value>
 						<ControlTemplate TargetType="{x:Type Button}">
 							<Grid>
-								<Rectangle x:Name="rectangle" RadiusY="0" RadiusX="0" StrokeThickness="8">
+								<Rectangle x:Name="rectangle" RadiusY="0" RadiusX="0" StrokeThickness="8" Opacity="0.4">
 									<Rectangle.Fill>
 										<ImageBrush ImageSource="naranja.png"/>
 									</Rectangle.Fill>
@@ -189,7 +189,7 @@
 					<Setter.Value>
 						<ControlTemplate TargetType="{x:Type Button}">
 							<Grid>
-								<Rectangle x:Name="amarillo" StrokeThickness="8">
+								<Rectangle x:Name="amarillo" StrokeThickness="8" Opacity="0.4">
 									<Rectangle.Fill>
 										<ImageBrush ImageSource="amarillo.png"/>
 									</Rectangle.Fill>
@@ -341,7 +341,7 @@
 					<Setter.Value>
 						<ControlTemplate TargetType="{x:Type Button}">
 							<Grid>
-								<Rectangle x:Name="rectangle" RadiusY="0" RadiusX="0" StrokeThickness="8">
+								<Rectangle x:Name="rectangle" RadiusY="0" RadiusX="0" StrokeThickness="8" Opacity="0.4">
 									<Rectangle.Fill>
 										<ImageBrush ImageSource="negro.png"/>
 									</Rectangle.Fill>
@@ -372,7 +372,7 @@
 								<Grid.Background>
 									<ImageBrush/>
 								</Grid.Background>
-								<Rectangle x:Name="rectangle" RadiusY="0" RadiusX="0" StrokeThickness="8">
+								<Rectangle x:Name="rectangle" RadiusY="0" RadiusX="0" StrokeThickness="8" Opacity="0.45">
 									<Rectangle.Fill>
 										<ImageBrush ImageSource="blanco.png"/>
 									</Rectangle.Fill>
@@ -400,7 +400,7 @@
 					<Setter.Value>
 						<ControlTemplate TargetType="{x:Type Button}">
 							<Grid>
-								<Rectangle x:Name="rectangle" RadiusY="0" RadiusX="0" StrokeThickness="8">
+								<Rectangle x:Name="rectangle" RadiusY="0" RadiusX="0" StrokeThickness="8" Opacity="0.4">
 									<Rectangle.Fill>
 										<ImageBrush ImageSource="marron.png"/>
 									</Rectangle.Fill>
@@ -428,7 +428,7 @@
 					<Setter.Value>
 						<ControlTemplate TargetType="{x:Type Button}">
 							<Grid>
-								<Rectangle x:Name="rectangle" RadiusY="0" RadiusX="0" StrokeThickness="8">
+								<Rectangle x:Name="rectangle" RadiusY="0" RadiusX="0" StrokeThickness="8" Opacity="0.4">
 									<Rectangle.Fill>
 										<ImageBrush ImageSource="rosa.png"/>
 									</Rectangle.Fill>
@@ -456,7 +456,7 @@
 					<Setter.Value>
 						<ControlTemplate TargetType="{x:Type Button}">
 							<Grid>
-								<Rectangle x:Name="rectangle" RadiusY="0" RadiusX="0" StrokeThickness="8">
+								<Rectangle x:Name="rectangle" RadiusY="0" RadiusX="0" StrokeThickness="8" Opacity="0.4">
 									<Rectangle.Fill>
 										<ImageBrush ImageSource="rojo.png"/>
 									</Rectangle.Fill>
@@ -487,7 +487,7 @@
 								<Grid.Background>
 									<ImageBrush/>
 								</Grid.Background>
-								<Rectangle x:Name="rectangle" RadiusY="0" RadiusX="0" StrokeThickness="8">
+								<Rectangle x:Name="rectangle" RadiusY="0" RadiusX="0" StrokeThickness="8" Opacity="0.4">
 									<Rectangle.Fill>
 										<ImageBrush ImageSource="azul.png"/>
 									</Rectangle.Fill>
@@ -518,7 +518,7 @@
 								<Grid.Background>
 									<ImageBrush/>
 								</Grid.Background>
-								<Rectangle x:Name="rectangle" RadiusY="0" RadiusX="0" StrokeThickness="8">
+								<Rectangle x:Name="rectangle" RadiusY="0" RadiusX="0" StrokeThickness="8" Opacity="0.4">
 									<Rectangle.Fill>
 										<ImageBrush ImageSource="verde.png"/>
 									</Rectangle.Fill>
