@@ -384,6 +384,35 @@ namespace Aprendo_con_Molly
             }
         }
 
+        private void imgCentro_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+
+            //Guardar datos del usuario.            
+            this.auxUsu.setAvatar(this.juego.getUnAvatar(posicionAvatar));
+            this.auxUsu.insertarUsuario();
+
+
+
+            this.juego.setUsuario(auxUsu);
+
+            //Mostrar animacion de selección.
+
+
+
+            //Cargar ventana del juego.
+            //Crear contador de tiempo y cuando finalice que cargue la ventana.
+            colores ventana = new colores();
+            ventana = new colores();
+            ventana.Show();
+
+            this.Close();
+            
+
+
+
+
+        }
+
 
 
 	}

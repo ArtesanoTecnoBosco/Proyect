@@ -306,7 +306,7 @@
 					</TransformGroup>
 				</Rectangle.RenderTransform>
 			</Rectangle>
-			<Rectangle x:Name="imgCentro" Height="235.742" RadiusY="48" RadiusX="48" StrokeThickness="8" Canvas.Top="87.878" Width="145.324" RenderTransformOrigin="0.5,0.5" Canvas.Left="114.682" Fill="#FFF7F4F4">
+			<Rectangle x:Name="imgCentro" Height="235.742" RadiusY="48" RadiusX="48" StrokeThickness="8" Canvas.Top="87.878" Width="145.324" RenderTransformOrigin="0.5,0.5" Canvas.Left="114.682" Fill="#FFF7F4F4" MouseDown="imgCentro_MouseDown">
 				<Rectangle.Effect>
 					<DropShadowEffect Color="#FF528911" Direction="200" Opacity="0.905"/>
 				</Rectangle.Effect>
