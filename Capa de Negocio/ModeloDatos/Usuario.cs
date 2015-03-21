@@ -24,7 +24,7 @@ namespace Capa_de_Negocio.ModeloDatos
         /// <summary>
         /// Ruta del avatar del usuario.
         /// </summary>
-        private Avatar avatar;
+        private String avatar;
         /// <summary>
         /// Lista de partidas del usuario.
         /// </summary>
@@ -38,7 +38,7 @@ namespace Capa_de_Negocio.ModeloDatos
         {
             id = null;
             nombre = "";
-            avatar = new Avatar();
+            avatar = "";
             partidas = new List<Partida>();
 
         }
@@ -49,7 +49,7 @@ namespace Capa_de_Negocio.ModeloDatos
         /// <param name="id">int identificador del usuario.</param>
         /// <param name="nombre">String nombre del usuario.</param>
         /// <param name="avatar">String ruta del avatar del usuario.</param>
-        public Usuario(int id, String nombre, Avatar avatar)
+        public Usuario(int id, String nombre, String avatar)
         {
             this.id = id;
             this.nombre = nombre;
@@ -98,7 +98,7 @@ namespace Capa_de_Negocio.ModeloDatos
         /// Metodo para obtener la ruta del avatar del usuario.
         /// </summary>
         /// <returns>String con la ruta del avatar.</returns>
-        public Avatar getAvatar()
+        public String getAvatar()
         {
             return avatar;
         }
@@ -107,24 +107,12 @@ namespace Capa_de_Negocio.ModeloDatos
         /// Metodo para establecer la ruta del avatar.
         /// </summary>
         /// <param name="avatar">String ruta del avatar.</param>
-        public void setAvatar(Avatar avatar)
+        public void setAvatar(String avatar)
         {
             this.avatar = avatar;
         }
+ 
 
-
-        public int insertarUsuario()
-        {
-            int numero = 0;
-
-            //Añadir usuario y saber que identificador es para pasarsele a este usuario.
-
-            Capa_Acceso_a_Datos.Conexion conexion = new Capa_Acceso_a_Datos.Conexion();
-
-            numero=conexion.ejecutarSentencia("INSERT INTO USUARIOS (Nombre, Avatar) VALUES ('"+this.nombre+"','"+this.avatar.getRuta()+"')");
-            
-            return numero;
-        }
 
 
     }
