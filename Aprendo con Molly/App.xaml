@@ -108,7 +108,7 @@
 					<Setter.Value>
 						<ControlTemplate TargetType="{x:Type Button}">
 							<Grid>
-								<Rectangle x:Name="rectangle" RadiusY="0" RadiusX="0" StrokeThickness="8" Opacity="0.4">
+								<Rectangle x:Name="rectangle" RadiusY="0" RadiusX="0" StrokeThickness="8" Opacity="1">
 									<Rectangle.Fill>
 										<ImageBrush ImageSource="naranja.png"/>
 									</Rectangle.Fill>
@@ -189,7 +189,7 @@
 					<Setter.Value>
 						<ControlTemplate TargetType="{x:Type Button}">
 							<Grid>
-								<Rectangle x:Name="amarillo" StrokeThickness="8" Opacity="0.4">
+								<Rectangle x:Name="amarillo" StrokeThickness="8" Opacity="1">
 									<Rectangle.Fill>
 										<ImageBrush ImageSource="amarillo.png"/>
 									</Rectangle.Fill>
@@ -341,7 +341,7 @@
 					<Setter.Value>
 						<ControlTemplate TargetType="{x:Type Button}">
 							<Grid>
-								<Rectangle x:Name="rectangle" RadiusY="0" RadiusX="0" StrokeThickness="8" Opacity="0.4">
+								<Rectangle x:Name="rectangle" RadiusY="0" RadiusX="0" StrokeThickness="8" Opacity="1">
 									<Rectangle.Fill>
 										<ImageBrush ImageSource="negro.png"/>
 									</Rectangle.Fill>
@@ -372,7 +372,7 @@
 								<Grid.Background>
 									<ImageBrush/>
 								</Grid.Background>
-								<Rectangle x:Name="rectangle" RadiusY="0" RadiusX="0" StrokeThickness="8" Opacity="0.45">
+								<Rectangle x:Name="rectangle" RadiusY="0" RadiusX="0" StrokeThickness="8" Opacity="1">
 									<Rectangle.Fill>
 										<ImageBrush ImageSource="blanco.png"/>
 									</Rectangle.Fill>
@@ -400,7 +400,7 @@
 					<Setter.Value>
 						<ControlTemplate TargetType="{x:Type Button}">
 							<Grid>
-								<Rectangle x:Name="rectangle" RadiusY="0" RadiusX="0" StrokeThickness="8" Opacity="0.4">
+								<Rectangle x:Name="rectangle" RadiusY="0" RadiusX="0" StrokeThickness="8" Opacity="1">
 									<Rectangle.Fill>
 										<ImageBrush ImageSource="marron.png"/>
 									</Rectangle.Fill>
@@ -427,21 +427,69 @@
 				<Setter Property="Template">
 					<Setter.Value>
 						<ControlTemplate TargetType="{x:Type Button}">
-							<Grid>
-								<Rectangle x:Name="rectangle" RadiusY="0" RadiusX="0" StrokeThickness="8" Opacity="0.4">
+							<ControlTemplate.Resources>
+								<Storyboard x:Key="OnMouseDown1">
+									<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleX)" Storyboard.TargetName="grid">
+										<EasingDoubleKeyFrame KeyTime="0:0:0.1" Value="0.848"/>
+										<EasingDoubleKeyFrame KeyTime="0:0:0.3" Value="1.283"/>
+									</DoubleAnimationUsingKeyFrames>
+									<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleY)" Storyboard.TargetName="grid">
+										<EasingDoubleKeyFrame KeyTime="0:0:0.1" Value="0.875"/>
+										<EasingDoubleKeyFrame KeyTime="0:0:0.3" Value="1.299"/>
+									</DoubleAnimationUsingKeyFrames>
+									<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)" Storyboard.TargetName="grid">
+										<EasingDoubleKeyFrame KeyTime="0:0:0.1" Value="7"/>
+										<EasingDoubleKeyFrame KeyTime="0:0:0.3" Value="-13"/>
+									</DoubleAnimationUsingKeyFrames>
+									<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)" Storyboard.TargetName="grid">
+										<EasingDoubleKeyFrame KeyTime="0:0:0.1" Value="5"/>
+										<EasingDoubleKeyFrame KeyTime="0:0:0.3" Value="-12"/>
+									</DoubleAnimationUsingKeyFrames>
+									<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleX)" Storyboard.TargetName="rectangle">
+										<EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="0.848"/>
+										<EasingDoubleKeyFrame KeyTime="0:0:0.3" Value="0.989"/>
+									</DoubleAnimationUsingKeyFrames>
+									<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleY)" Storyboard.TargetName="rectangle">
+										<EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="0.826"/>
+										<EasingDoubleKeyFrame KeyTime="0:0:0.3" Value="0.988"/>
+									</DoubleAnimationUsingKeyFrames>
+									<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)" Storyboard.TargetName="rectangle">
+										<EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="7"/>
+										<EasingDoubleKeyFrame KeyTime="0:0:0.3" Value="0.5"/>
+									</DoubleAnimationUsingKeyFrames>
+									<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)" Storyboard.TargetName="rectangle">
+										<EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="7"/>
+										<EasingDoubleKeyFrame KeyTime="0:0:0.3" Value="0.5"/>
+									</DoubleAnimationUsingKeyFrames>
+								</Storyboard>
+							</ControlTemplate.Resources>
+							<Grid x:Name="grid" RenderTransformOrigin="0.5,0.5">
+								<Grid.RenderTransform>
+									<TransformGroup>
+										<ScaleTransform/>
+										<SkewTransform/>
+										<RotateTransform/>
+										<TranslateTransform/>
+									</TransformGroup>
+								</Grid.RenderTransform>
+								<Rectangle x:Name="rectangle" RadiusY="0" RadiusX="0" StrokeThickness="8" Opacity="1" RenderTransformOrigin="0.5,0.5">
+									<Rectangle.RenderTransform>
+										<TransformGroup>
+											<ScaleTransform/>
+											<SkewTransform/>
+											<RotateTransform/>
+											<TranslateTransform/>
+										</TransformGroup>
+									</Rectangle.RenderTransform>
 									<Rectangle.Fill>
 										<ImageBrush ImageSource="rosa.png"/>
 									</Rectangle.Fill>
 								</Rectangle>
-								<ContentPresenter x:Name="contentPresenter" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" RecognizesAccessKey="True" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}" Content="" Margin="0" Width="92" Height="80.28"/>
 							</Grid>
 							<ControlTemplate.Triggers>
 								<Trigger Property="IsFocused" Value="True"/>
 								<Trigger Property="IsDefaulted" Value="True"/>
 								<Trigger Property="IsMouseOver" Value="True">
-									<Setter Property="Width" TargetName="contentPresenter" Value="105"/>
-									<Setter Property="Height" TargetName="contentPresenter" Value="103.28"/>
-									<Setter Property="Margin" TargetName="contentPresenter" Value="-13,-23,0,0"/>
 									<Setter Property="Margin" TargetName="rectangle" Value="-13,-23,0,0"/>
 								</Trigger>
 								<Trigger Property="IsPressed" Value="True"/>
@@ -456,7 +504,7 @@
 					<Setter.Value>
 						<ControlTemplate TargetType="{x:Type Button}">
 							<Grid>
-								<Rectangle x:Name="rectangle" RadiusY="0" RadiusX="0" StrokeThickness="8" Opacity="0.4">
+								<Rectangle x:Name="rectangle" RadiusY="0" RadiusX="0" StrokeThickness="8" Opacity="1">
 									<Rectangle.Fill>
 										<ImageBrush ImageSource="rojo.png"/>
 									</Rectangle.Fill>
@@ -487,7 +535,7 @@
 								<Grid.Background>
 									<ImageBrush/>
 								</Grid.Background>
-								<Rectangle x:Name="rectangle" RadiusY="0" RadiusX="0" StrokeThickness="8" Opacity="0.4">
+								<Rectangle x:Name="rectangle" RadiusY="0" RadiusX="0" StrokeThickness="8" Opacity="1">
 									<Rectangle.Fill>
 										<ImageBrush ImageSource="azul.png"/>
 									</Rectangle.Fill>
@@ -518,7 +566,7 @@
 								<Grid.Background>
 									<ImageBrush/>
 								</Grid.Background>
-								<Rectangle x:Name="rectangle" RadiusY="0" RadiusX="0" StrokeThickness="8" Opacity="0.4">
+								<Rectangle x:Name="rectangle" RadiusY="0" RadiusX="0" StrokeThickness="8" Opacity="1">
 									<Rectangle.Fill>
 										<ImageBrush ImageSource="verde.png"/>
 									</Rectangle.Fill>
@@ -585,7 +633,7 @@
 					<Setter.Value>
 						<ControlTemplate TargetType="{x:Type Button}">
 							<Grid x:Name="grid">
-								<Label x:Name="label" Content="    JUGAR" Foreground="#FF7C3800" FontWeight="Bold" FontSize="21.333" FontFamily="Cooper BLACK" RenderTransformOrigin="0.5,0.5">
+								<Label x:Name="label" Content="   JUGAR" Foreground="#FF7C3800" FontWeight="Bold" FontSize="21.333" FontFamily="Cooper BLACK" RenderTransformOrigin="0.5,0.5">
 									<Label.RenderTransform>
 										<TransformGroup>
 											<ScaleTransform/>
@@ -612,6 +660,133 @@
 								<Trigger Property="IsMouseOver" Value="True">
 									<Setter Property="Foreground" TargetName="label" Value="#FF287C01"/>
 									<Setter Property="Margin" TargetName="grid" Value="0,-4,-1,0"/>
+								</Trigger>
+								<Trigger Property="IsPressed" Value="True"/>
+								<Trigger Property="IsEnabled" Value="False"/>
+							</ControlTemplate.Triggers>
+						</ControlTemplate>
+					</Setter.Value>
+				</Setter>
+			</Style>
+			<Style x:Key="btnEcucharEfecti" TargetType="{x:Type Button}">
+				<Setter Property="Template">
+					<Setter.Value>
+						<ControlTemplate TargetType="{x:Type Button}">
+							<Grid>
+								<Label Content="ESCUCHAR" Foreground="#FF7C3800" FontWeight="Bold" FontSize="21.333" FontFamily="Cooper BLACK" RenderTransformOrigin="0.5,0.5" Style="{DynamicResource btnEscucharEfecto}">
+									<Label.RenderTransform>
+										<TransformGroup>
+											<ScaleTransform/>
+											<SkewTransform/>
+											<RotateTransform Angle="-19.425"/>
+											<TranslateTransform/>
+										</TransformGroup>
+									</Label.RenderTransform>
+								</Label>
+								<ContentPresenter HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" RecognizesAccessKey="True" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}" Content=""/>
+							</Grid>
+							<ControlTemplate.Triggers>
+								<Trigger Property="IsFocused" Value="True"/>
+								<Trigger Property="IsDefaulted" Value="True"/>
+								<Trigger Property="IsMouseOver" Value="True"/>
+								<Trigger Property="IsPressed" Value="True"/>
+								<Trigger Property="IsEnabled" Value="False"/>
+							</ControlTemplate.Triggers>
+						</ControlTemplate>
+					</Setter.Value>
+				</Setter>
+			</Style>
+			<Style x:Key="btnEscucharEfecto" TargetType="{x:Type Button}">
+				<Setter Property="Template">
+					<Setter.Value>
+						<ControlTemplate TargetType="{x:Type Button}">
+							<Grid x:Name="grid">
+								<Label x:Name="label" Content="ESCUCHAR" Foreground="#FF7C3800" FontWeight="Bold" FontSize="21.333" FontFamily="Cooper BLACK" RenderTransformOrigin="0.5,0.5">
+									<Label.RenderTransform>
+										<TransformGroup>
+											<ScaleTransform/>
+											<SkewTransform/>
+											<RotateTransform Angle="-19.425"/>
+											<TranslateTransform/>
+										</TransformGroup>
+									</Label.RenderTransform>
+								</Label>
+								<ContentPresenter HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" RecognizesAccessKey="True" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}" Content="" Height="58.96" Margin="-10.306,-12.067,-0.306,-13.067" RenderTransformOrigin="0.5,0.5" Width="148">
+									<ContentPresenter.RenderTransform>
+										<TransformGroup>
+											<ScaleTransform ScaleX="-1"/>
+											<SkewTransform/>
+											<RotateTransform/>
+											<TranslateTransform/>
+										</TransformGroup>
+									</ContentPresenter.RenderTransform>
+								</ContentPresenter>
+							</Grid>
+							<ControlTemplate.Triggers>
+								<Trigger Property="IsFocused" Value="True"/>
+								<Trigger Property="IsDefaulted" Value="True"/>
+								<Trigger Property="IsMouseOver" Value="True">
+									<Setter Property="Foreground" TargetName="label" Value="#FF377C07"/>
+									<Setter Property="Margin" TargetName="grid" Value="0,-1,0,-15"/>
+								</Trigger>
+								<Trigger Property="IsPressed" Value="True"/>
+								<Trigger Property="IsEnabled" Value="False"/>
+							</ControlTemplate.Triggers>
+						</ControlTemplate>
+					</Setter.Value>
+				</Setter>
+			</Style>
+			<Style x:Key="btnVerEfecto" TargetType="{x:Type Button}">
+				<Setter Property="Template">
+					<Setter.Value>
+						<ControlTemplate TargetType="{x:Type Button}">
+							<Grid>
+								<Label Content="VER" Foreground="#FF7C3800" FontWeight="Bold" FontSize="21.333" FontFamily="Cooper BLACK" RenderTransformOrigin="0.5,0.5">
+									<Label.RenderTransform>
+										<TransformGroup>
+											<ScaleTransform/>
+											<SkewTransform/>
+											<RotateTransform Angle="4.642"/>
+											<TranslateTransform/>
+										</TransformGroup>
+									</Label.RenderTransform>
+								</Label>
+								<ContentPresenter HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" RecognizesAccessKey="True" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+							</Grid>
+							<ControlTemplate.Triggers>
+								<Trigger Property="IsFocused" Value="True"/>
+								<Trigger Property="IsDefaulted" Value="True"/>
+								<Trigger Property="IsMouseOver" Value="True"/>
+								<Trigger Property="IsPressed" Value="True"/>
+								<Trigger Property="IsEnabled" Value="False"/>
+							</ControlTemplate.Triggers>
+						</ControlTemplate>
+					</Setter.Value>
+				</Setter>
+			</Style>
+			<Style x:Key="btnVerEfect" TargetType="{x:Type Button}">
+				<Setter Property="Template">
+					<Setter.Value>
+						<ControlTemplate TargetType="{x:Type Button}">
+							<Grid x:Name="grid">
+								<Label x:Name="label" Content="VER" Foreground="#FF7C3800" FontWeight="Bold" FontSize="21.333" FontFamily="Cooper BLACK" RenderTransformOrigin="0.5,0.5">
+									<Label.RenderTransform>
+										<TransformGroup>
+											<ScaleTransform/>
+											<SkewTransform/>
+											<RotateTransform Angle="4.642"/>
+											<TranslateTransform/>
+										</TransformGroup>
+									</Label.RenderTransform>
+								</Label>
+								<ContentPresenter HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" RecognizesAccessKey="True" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}" Content="" Margin="-11.639,-11.067,-8.639,-9.067" Width="89" Height="53.96"/>
+							</Grid>
+							<ControlTemplate.Triggers>
+								<Trigger Property="IsFocused" Value="True"/>
+								<Trigger Property="IsDefaulted" Value="True"/>
+								<Trigger Property="IsMouseOver" Value="True">
+									<Setter Property="Foreground" TargetName="label" Value="#FF377C07"/>
+									<Setter Property="Margin" TargetName="grid" Value="0,1,0,0"/>
 								</Trigger>
 								<Trigger Property="IsPressed" Value="True"/>
 								<Trigger Property="IsEnabled" Value="False"/>

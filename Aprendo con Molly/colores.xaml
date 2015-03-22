@@ -208,47 +208,26 @@
 				<ImageBrush ImageSource="Molly.png"/>
 			</Rectangle.Fill>
 		</Rectangle>
-		<Button Content="Button" HorizontalAlignment="Left" Height="33.826" Margin="808.964,335.982,0,0" Style="{DynamicResource btnJugarEfecto}" VerticalAlignment="Top" Width="137.388"/>
-		<Label Content="ESCUCHAR" HorizontalAlignment="Left" Height="33.826" Margin="696.964,412.982,0,0" VerticalAlignment="Top" Width="137.388" FontFamily="Cooper BLACK" FontSize="21.333" FontWeight="Bold" RenderTransformOrigin="0.5,0.5" Foreground="#FF7C3800">
-			<Label.RenderTransform>
-				<TransformGroup>
-					<ScaleTransform/>
-					<SkewTransform/>
-					<RotateTransform Angle="-19.425"/>
-					<TranslateTransform/>
-				</TransformGroup>
-			</Label.RenderTransform>
-		</Label>
-		<Label Content="VER" HorizontalAlignment="Left" Height="33.826" Margin="866.109,435.397,0,0" VerticalAlignment="Top" Width="48.787" FontFamily="Cooper BLACK" FontSize="21.333" FontWeight="Bold" RenderTransformOrigin="0.5,0.5" Foreground="#FF7C3800">
-			<Label.RenderTransform>
-				<TransformGroup>
-					<ScaleTransform/>
-					<SkewTransform/>
-					<RotateTransform Angle="4.642"/>
-					<TranslateTransform/>
-				</TransformGroup>
-			</Label.RenderTransform>
-		</Label>
+		<Button x:Name="btnJugar" Content="Button" HorizontalAlignment="Left" Height="39.826" Margin="808.964,335.982,0,0" Style="{DynamicResource btnJugarEfecto}" VerticalAlignment="Top" Width="137.388" Background="#FF377C07"/>
+		<Button Content="Button" HorizontalAlignment="Left" Height="49.826" Margin="696.964,414.982,0,0" Style="{DynamicResource btnEscucharEfecto}" VerticalAlignment="Top" Width="137.388"/>
+		<Button Content="Button" HorizontalAlignment="Left" Height="33.826" Margin="866.076,439.204,0,0" Style="{DynamicResource btnVerEfect}" VerticalAlignment="Top" Width="68.722"/>
 		<Button Content="Button" HorizontalAlignment="Left" Height="23.72" Margin="906.822,10,0,0" VerticalAlignment="Top" Width="25.011" Style="{DynamicResource Minimizar}" RenderTransformOrigin="-2.032,0.008"/>
 		<Button Content="Button" HorizontalAlignment="Left" Height="23.72" Margin="936.833,10,0,0" VerticalAlignment="Top" Width="25.011" Style="{DynamicResource BotonCerrar}" RenderTransformOrigin="-2.032,0.008"/>
-		<Rectangle HorizontalAlignment="Left" Height="336" Margin="193.687,226,0,0" RadiusY="48" RadiusX="48" StrokeThickness="8" VerticalAlignment="Top" Width="472">
+		<Rectangle HorizontalAlignment="Left" Height="367.5" Margin="192.187,236.5,0,0" RadiusY="48" RadiusX="48" StrokeThickness="8" VerticalAlignment="Top" Width="476.5">
 			<Rectangle.Fill>
 				<LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
 					<GradientStop Color="#FFD3F5F5" Offset="0"/>
-					<GradientStop Offset="1"/>
+					<GradientStop Offset="1" Color="#FFDCB2B2"/>
 				</LinearGradientBrush>
 			</Rectangle.Fill>
 		</Rectangle>
-		<Canvas x:Name="Nubes" HorizontalAlignment="Left" Height="267.522" Margin="30,34.478,0,0" VerticalAlignment="Top" Width="966">
-			<Button x:Name="btnAmarillo" Content="Button" HorizontalAlignment="Left" Height="78.28" Style="{DynamicResource btnAmarillo}" VerticalAlignment="Top" Width="92" Canvas.Left="111" Canvas.Top="26"/>
-			<Button x:Name="btnBlanco" Content="Button" HorizontalAlignment="Left" Height="80.28" Style="{DynamicResource btnBlanco}" VerticalAlignment="Top" Width="92" Canvas.Left="844" Canvas.Top="159.72"/>
-			<Button x:Name="btnNaranja" Content="Button" HorizontalAlignment="Left" Height="80.28" Style="{DynamicResource botonNaranja}" VerticalAlignment="Top" Width="92" Canvas.Left="343" Canvas.Top="10"/>
-			<Button x:Name="btnRojo" Content="Button" HorizontalAlignment="Left" Height="80.28" Style="{DynamicResource btnRojo}" VerticalAlignment="Top" Width="92" Canvas.Left="572" Canvas.Top="1.72"/>
-			<Button x:Name="btnRosa" Content="Button" HorizontalAlignment="Left" Height="80.28" Style="{DynamicResource btnRosa}" VerticalAlignment="Top" Width="92" Canvas.Left="10" Canvas.Top="177.242"/>
-			<Button x:Name="btnAzul" Content="Button" HorizontalAlignment="Left" Height="80.28" Style="{DynamicResource btnAzul}" VerticalAlignment="Top" Width="92" Canvas.Left="754.833" Canvas.Top="21.72"/>
-			<Button x:Name="btnVerde" Content="Button" HorizontalAlignment="Left" Height="80.28" Style="{DynamicResource btnVerde}" VerticalAlignment="Top" Width="92" Canvas.Left="436" Canvas.Top="98"/>
-			<Button x:Name="btnMarron" Content="Button" HorizontalAlignment="Left" Height="80.28" Style="{DynamicResource btnMarron}" VerticalAlignment="Top" Width="92" Canvas.Left="220" Canvas.Top="102"/>
-			<Button x:Name="btnNegro" Content="Button" HorizontalAlignment="Left" Height="80.28" Style="{DynamicResource btnNegro}" VerticalAlignment="Top" Width="92" Canvas.Left="652.833" Canvas.Top="140"/>
-		</Canvas>
+		<Ellipse HorizontalAlignment="Left" Height="162.28" Margin="266,33.72,0,0" StrokeThickness="8" VerticalAlignment="Top" Width="310">
+			<Ellipse.Fill>
+				<LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+					<GradientStop Color="#FFD3F5F5" Offset="0"/>
+					<GradientStop Offset="1" Color="#FFDCB2B2"/>
+				</LinearGradientBrush>
+			</Ellipse.Fill>
+		</Ellipse>
 	</Grid>
 </Window>
