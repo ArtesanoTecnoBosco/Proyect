@@ -9,6 +9,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using System.Windows.Media.Animation;
 
 namespace Aprendo_con_Molly
 {
@@ -23,5 +24,26 @@ namespace Aprendo_con_Molly
 			
 			// A partir de este punto se requiere la inserción de código para la creación del objeto.
 		}
+
+        private void Nubes_IsVisibleChanged(object sender, DependencyPropertyChangedEventArgs e)
+        {
+
+            Storyboard animacion = new Storyboard();
+            animacion = (Storyboard)FindResource("EfectoNubes");
+
+            if (Nubes.Visibility == System.Windows.Visibility.Hidden)
+            {
+
+                animacion.Stop();
+
+            }
+
+            if (Nubes.Visibility == System.Windows.Visibility.Visible)
+            {
+                animacion.Begin();
+            }
+
+
+        }
 	}
 }

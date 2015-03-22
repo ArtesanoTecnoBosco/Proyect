@@ -185,7 +185,192 @@
 			</Setter>
 		</Style>
 		<Style x:Key="marron" TargetType="{x:Type Button}"/>
+		<Storyboard x:Key="EfectoNubes" RepeatBehavior="Forever">
+			<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)" Storyboard.TargetName="btnBlanco">
+				<EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:1" Value="-21"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:2" Value="16"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:3" Value="-22"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:4" Value="-11"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:5" Value="-29"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:6" Value="1"/>
+			</DoubleAnimationUsingKeyFrames>
+			<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)" Storyboard.TargetName="btnBlanco">
+				<EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:1" Value="60"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:2" Value="120"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:3" Value="163"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:4" Value="111"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:5" Value="69"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:6" Value="-1"/>
+			</DoubleAnimationUsingKeyFrames>
+			<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)" Storyboard.TargetName="btnMarron">
+				<EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:1" Value="-48"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:2" Value="-126"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:3" Value="-186"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:4" Value="-212"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:5" Value="-127"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:5.6" Value="-63"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:6.5" Value="-1"/>
+			</DoubleAnimationUsingKeyFrames>
+			<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)" Storyboard.TargetName="btnMarron">
+				<EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:1" Value="40"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:2" Value="12"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:3" Value="44"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:4" Value="-5"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:5" Value="11"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:5.6" Value="-14"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:6.5" Value="1"/>
+			</DoubleAnimationUsingKeyFrames>
+			<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)" Storyboard.TargetName="btnAmarillo">
+				<EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:1" Value="57"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:2" Value="111"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:3" Value="154"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:4" Value="208"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:5" Value="139"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:6" Value="56"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:6.5" Value="0"/>
+			</DoubleAnimationUsingKeyFrames>
+			<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)" Storyboard.TargetName="btnAmarillo">
+				<EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:1" Value="-28"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:2" Value="13"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:3" Value="13"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:4" Value="-15"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:5" Value="-42"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:6" Value="-26"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:6.5" Value="1"/>
+			</DoubleAnimationUsingKeyFrames>
+			<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)" Storyboard.TargetName="btnNaranja">
+				<EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:1" Value="51"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:2" Value="123"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:3" Value="89"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:4" Value="31"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:5" Value="-51"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:6" Value="-46"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:6.5" Value="0"/>
+			</DoubleAnimationUsingKeyFrames>
+			<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)" Storyboard.TargetName="btnNaranja">
+				<EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:1" Value="-37"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:2" Value="8"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:3" Value="58"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:4" Value="77"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:5" Value="73"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:6" Value="-5"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:6.5" Value="0"/>
+			</DoubleAnimationUsingKeyFrames>
+			<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)" Storyboard.TargetName="btnVerde">
+				<EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:1" Value="-102"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:2" Value="-92"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:3" Value="2"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:4" Value="108"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:5" Value="82"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:6" Value="50"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:6.5" Value="0"/>
+			</DoubleAnimationUsingKeyFrames>
+			<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)" Storyboard.TargetName="btnVerde">
+				<EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:1" Value="9"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:2" Value="-109"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:3" Value="-135"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:4" Value="-77"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:5" Value="-23"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:6" Value="13"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:6.5" Value="-1"/>
+			</DoubleAnimationUsingKeyFrames>
+			<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)" Storyboard.TargetName="btnRojo">
+				<EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:1" Value="-54"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:2" Value="5"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:3" Value="71"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:4" Value="137"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:5" Value="93"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:6" Value="42"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:6.5" Value="1"/>
+			</DoubleAnimationUsingKeyFrames>
+			<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)" Storyboard.TargetName="btnRojo">
+				<EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:1" Value="46"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:2" Value="91"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:3" Value="63"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:4" Value="72"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:5" Value="17"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:6" Value="-26"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:6.5" Value="0"/>
+			</DoubleAnimationUsingKeyFrames>
+			<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)" Storyboard.TargetName="btnNegro">
+				<EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:1" Value="-49"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:2" Value="10"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:3" Value="103"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:4" Value="127"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:5" Value="63"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:6" Value="41"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:6.5" Value="0"/>
+			</DoubleAnimationUsingKeyFrames>
+			<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)" Storyboard.TargetName="btnNegro">
+				<EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:1" Value="-74"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:2" Value="-122"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:3" Value="-80"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:4" Value="-8"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:5" Value="-25"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:6" Value="23"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:6.5" Value="1"/>
+			</DoubleAnimationUsingKeyFrames>
+			<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)" Storyboard.TargetName="btnAzul">
+				<EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:1" Value="-60"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:2" Value="0"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:3" Value="85"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:4" Value="142"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:5" Value="64"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:6" Value="32"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:6.5" Value="1"/>
+			</DoubleAnimationUsingKeyFrames>
+			<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)" Storyboard.TargetName="btnAzul">
+				<EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:1" Value="74"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:2" Value="139"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:3" Value="93"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:4" Value="53"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:5" Value="79"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:6" Value="36"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:6.5" Value="1"/>
+			</DoubleAnimationUsingKeyFrames>
+			<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)" Storyboard.TargetName="btnRosa">
+				<EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:1" Value="36"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:2" Value="0"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:3" Value="43"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:4" Value="-69"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:5" Value="-112"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:6" Value="-38"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:6.5" Value="0"/>
+			</DoubleAnimationUsingKeyFrames>
+			<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)" Storyboard.TargetName="btnRosa">
+				<EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:1" Value="-27"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:2" Value="-19"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:3" Value="63"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:4" Value="82"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:5" Value="85"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:6" Value="16"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:6.5" Value="-19"/>
+			</DoubleAnimationUsingKeyFrames>
+		</Storyboard>
 	</Window.Resources>
+	<Window.Triggers>
+		<EventTrigger RoutedEvent="FrameworkElement.Loaded">
+			<BeginStoryboard Storyboard="{StaticResource EfectoNubes}"/>
+		</EventTrigger>
+	</Window.Triggers>
 	<Window.Effect>
 		<DropShadowEffect Color="#FF32911D" Direction="200" Opacity="0.75"/>
 	</Window.Effect>
@@ -249,15 +434,96 @@
 			</Rectangle.Fill>
 		</Rectangle>
 		<Canvas x:Name="Nubes" HorizontalAlignment="Left" Height="191.522" Margin="30,34.478,0,0" VerticalAlignment="Top" Width="966">
-			<Button x:Name="btnAmarillo" Content="Button" HorizontalAlignment="Left" Height="78.28" Style="{DynamicResource btnAmarillo}" VerticalAlignment="Top" Width="92" Canvas.Left="117" Canvas.Top="32"/>
-			<Button x:Name="btnBlanco" Content="Button" HorizontalAlignment="Left" Height="80.28" Style="{DynamicResource btnBlanco}" VerticalAlignment="Top" Width="92" Canvas.Left="10" Canvas.Top="111.242"/>
-			<Button x:Name="btnNaranja" Content="Button" HorizontalAlignment="Left" Height="80.28" Style="{DynamicResource botonNaranja}" VerticalAlignment="Top" Width="92" Canvas.Left="325" Canvas.Top="21.72"/>
-			<Button x:Name="btnRojo" Content="Button" HorizontalAlignment="Left" Height="80.28" Style="{DynamicResource btnRojo}" VerticalAlignment="Top" Width="92" Canvas.Left="532" Canvas.Top="21.72"/>
-			<Button x:Name="btnRosa" Content="Button" HorizontalAlignment="Left" Height="80.28" Style="{DynamicResource btnRosa}" VerticalAlignment="Top" Width="92" Canvas.Left="841.833" Canvas.Top="102"/>
-			<Button x:Name="btnAzul" Content="Button" HorizontalAlignment="Left" Height="80.28" Style="{DynamicResource btnAzul}" VerticalAlignment="Top" Width="92" Canvas.Left="730.833" Canvas.Top="21.72"/>
-			<Button x:Name="btnVerde" Content="Button" HorizontalAlignment="Left" Height="80.28" Style="{DynamicResource btnVerde}" VerticalAlignment="Top" Width="92" Canvas.Left="426" Canvas.Top="102"/>
-			<Button x:Name="btnMarron" Content="Button" HorizontalAlignment="Left" Height="80.28" Style="{DynamicResource btnMarron}" VerticalAlignment="Top" Width="92" Canvas.Left="220" Canvas.Top="102"/>
-			<Button x:Name="btnNegro" Content="Button" HorizontalAlignment="Left" Height="80.28" Style="{DynamicResource btnNegro}" VerticalAlignment="Top" Width="92" Canvas.Left="634.833" Canvas.Top="102"/>
+			<Button x:Name="btnAmarillo" Content="Button" HorizontalAlignment="Left" Height="78.28" Style="{DynamicResource btnAmarillo}" VerticalAlignment="Top" Width="92" Canvas.Left="117" Canvas.Top="32" RenderTransformOrigin="0.5,0.5">
+				<Button.RenderTransform>
+					<TransformGroup>
+						<ScaleTransform/>
+						<SkewTransform/>
+						<RotateTransform/>
+						<TranslateTransform/>
+					</TransformGroup>
+				</Button.RenderTransform>
+			</Button>
+			<Button x:Name="btnBlanco" Content="Button" HorizontalAlignment="Left" Height="80.28" Style="{DynamicResource btnBlanco}" VerticalAlignment="Top" Width="92" Canvas.Left="10" Canvas.Top="111.242" RenderTransformOrigin="0.5,0.5">
+				<Button.RenderTransform>
+					<TransformGroup>
+						<ScaleTransform/>
+						<SkewTransform/>
+						<RotateTransform/>
+						<TranslateTransform/>
+					</TransformGroup>
+				</Button.RenderTransform>
+			</Button>
+			<Button x:Name="btnNaranja" Content="Button" HorizontalAlignment="Left" Height="80.28" Style="{DynamicResource botonNaranja}" VerticalAlignment="Top" Width="92" Canvas.Left="325" Canvas.Top="21.72" RenderTransformOrigin="0.5,0.5">
+				<Button.RenderTransform>
+					<TransformGroup>
+						<ScaleTransform/>
+						<SkewTransform/>
+						<RotateTransform/>
+						<TranslateTransform/>
+					</TransformGroup>
+				</Button.RenderTransform>
+			</Button>
+			<Button x:Name="btnRojo" Content="Button" HorizontalAlignment="Left" Height="80.28" Style="{DynamicResource btnRojo}" VerticalAlignment="Top" Width="92" Canvas.Left="532" Canvas.Top="21.72" RenderTransformOrigin="0.5,0.5">
+				<Button.RenderTransform>
+					<TransformGroup>
+						<ScaleTransform/>
+						<SkewTransform/>
+						<RotateTransform/>
+						<TranslateTransform/>
+					</TransformGroup>
+				</Button.RenderTransform>
+			</Button>
+			<Button x:Name="btnRosa" Content="Button" HorizontalAlignment="Left" Height="80.28" Style="{DynamicResource btnRosa}" VerticalAlignment="Top" Width="92" Canvas.Left="841.833" Canvas.Top="102" RenderTransformOrigin="0.5,0.5">
+				<Button.RenderTransform>
+					<TransformGroup>
+						<ScaleTransform/>
+						<SkewTransform/>
+						<RotateTransform/>
+						<TranslateTransform/>
+					</TransformGroup>
+				</Button.RenderTransform>
+			</Button>
+			<Button x:Name="btnAzul" Content="Button" HorizontalAlignment="Left" Height="80.28" Style="{DynamicResource btnAzul}" VerticalAlignment="Top" Width="92" Canvas.Left="730.833" Canvas.Top="21.72" RenderTransformOrigin="0.5,0.5">
+				<Button.RenderTransform>
+					<TransformGroup>
+						<ScaleTransform/>
+						<SkewTransform/>
+						<RotateTransform/>
+						<TranslateTransform/>
+					</TransformGroup>
+				</Button.RenderTransform>
+			</Button>
+			<Button x:Name="btnVerde" Content="Button" HorizontalAlignment="Left" Height="80.28" Style="{DynamicResource btnVerde}" VerticalAlignment="Top" Width="92" Canvas.Left="426" Canvas.Top="102" RenderTransformOrigin="0.5,0.5">
+				<Button.RenderTransform>
+					<TransformGroup>
+						<ScaleTransform/>
+						<SkewTransform/>
+						<RotateTransform/>
+						<TranslateTransform/>
+					</TransformGroup>
+				</Button.RenderTransform>
+			</Button>
+			<Button x:Name="btnMarron" Content="Button" HorizontalAlignment="Left" Height="80.28" Style="{DynamicResource btnMarron}" VerticalAlignment="Top" Width="92" Canvas.Left="220" Canvas.Top="102" RenderTransformOrigin="0.5,0.5">
+				<Button.RenderTransform>
+					<TransformGroup>
+						<ScaleTransform/>
+						<SkewTransform/>
+						<RotateTransform/>
+						<TranslateTransform/>
+					</TransformGroup>
+				</Button.RenderTransform>
+			</Button>
+			<Button x:Name="btnNegro" Content="Button" HorizontalAlignment="Left" Height="80.28" Style="{DynamicResource btnNegro}" VerticalAlignment="Top" Width="92" Canvas.Left="634.833" Canvas.Top="102" RenderTransformOrigin="0.5,0.5">
+				<Button.RenderTransform>
+					<TransformGroup>
+						<ScaleTransform/>
+						<SkewTransform/>
+						<RotateTransform/>
+						<TranslateTransform/>
+					</TransformGroup>
+				</Button.RenderTransform>
+			</Button>
 		</Canvas>
 	</Grid>
 </Window>

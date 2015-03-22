@@ -11,6 +11,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using System.Text.RegularExpressions;
 using System.IO;
+using System.Windows.Media.Animation;
 
 namespace Aprendo_con_Molly
 {
@@ -201,6 +202,13 @@ namespace Aprendo_con_Molly
             //Mostrar panel de los avatares.
             imagenNene.Visibility = System.Windows.Visibility.Visible;
             imagenNene.Opacity = 100;
+
+
+            /**ANIMACION DEL AVATAR**/
+            Storyboard storyBoard = new Storyboard();
+            storyBoard = (Storyboard)FindResource("EfectoFondoCentro");
+            storyBoard.Begin();
+
 
             //Cargo imagenes estaticas en los paneles.
             imgCentro.Fill = new ImageBrush(new BitmapImage(new Uri(directorioPadre() + this.juego.getUnAvatar(posicionAvatar).getRuta(), UriKind.Relative)));
@@ -396,7 +404,9 @@ namespace Aprendo_con_Molly
             this.juego.setUsuario(auxUsu);
 
             //Mostrar animacion de selección.
-
+            Storyboard storyboard = new Storyboard();
+            storyboard = (Storyboard)FindResource("EfectoPantallaCompleta");
+            storyboard.Begin();
 
 
             //Cargar ventana del juego.

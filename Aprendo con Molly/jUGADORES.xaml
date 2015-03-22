@@ -151,6 +151,48 @@
 				</Setter.Value>
 			</Setter>
 		</Style>
+		<Storyboard x:Key="EfectoFondoCentro" RepeatBehavior="Forever">
+			<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="imgCentroTrasera">
+				<EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="0.2"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:1" Value="0.5"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:1.5" Value="0.7"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:2" Value="0.8"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:2.5" Value="0.7"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:3" Value="0.5"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:3.5" Value="0.2"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:4" Value="0"/>
+			</DoubleAnimationUsingKeyFrames>
+			<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)" Storyboard.TargetName="imgCentroTrasera">
+				<EasingDoubleKeyFrame KeyTime="0" Value="-1"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="-1"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:1" Value="-1.833"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:1.5" Value="-1.833"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:2" Value="-2.375"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:2.5" Value="-2.375"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:3" Value="-2.187"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:3.5" Value="-1"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:4" Value="-1"/>
+			</DoubleAnimationUsingKeyFrames>
+			<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)" Storyboard.TargetName="imgCentroTrasera">
+				<EasingDoubleKeyFrame KeyTime="0" Value="1"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="2.657"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:1" Value="2.657"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:1.5" Value="2.486"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:2" Value="2.486"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:2.5" Value="1.857"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:3" Value="1.857"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:3.5" Value="1"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:4" Value="1"/>
+			</DoubleAnimationUsingKeyFrames>
+			<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="imgCentroTrasera">
+				<DiscreteObjectKeyFrame KeyTime="0" Value="{x:Static Visibility.Visible}"/>
+				<DiscreteObjectKeyFrame KeyTime="0:0:0.5" Value="{x:Static Visibility.Visible}"/>
+				<DiscreteObjectKeyFrame KeyTime="0:0:3.5" Value="{x:Static Visibility.Visible}"/>
+				<DiscreteObjectKeyFrame KeyTime="0:0:4" Value="{x:Static Visibility.Hidden}"/>
+			</ObjectAnimationUsingKeyFrames>
+		</Storyboard>
+		<Storyboard x:Key="EfectoPantallaCompleta"/>
 	</Window.Resources>
 	<Window.Effect>
 		<DropShadowEffect BlurRadius="8" Direction="200" Opacity="0.75" Color="#FF32911D"/>
@@ -306,6 +348,24 @@
 					</TransformGroup>
 				</Rectangle.RenderTransform>
 			</Rectangle>
+			<Rectangle x:Name="imgCentroTrasera" Height="243.511" RadiusY="48" RadiusX="48" StrokeThickness="8" Canvas.Top="88.997" Width="166.411" RenderTransformOrigin="0.5,0.5" Canvas.Left="103.675" MouseDown="imgCentro_MouseDown" Opacity="0" Visibility="Hidden" >
+				<Rectangle.Fill>
+					<RadialGradientBrush>
+						<GradientStop Color="White" Offset="0.6"/>
+						<GradientStop Color="#FFF0F1D6" Offset="0.817"/>
+						<GradientStop Color="#FE2CF4FD" Offset="0.96"/>
+						<GradientStop Color="#FE28BBA7" Offset="0.996"/>
+					</RadialGradientBrush>
+				</Rectangle.Fill>
+				<Rectangle.RenderTransform>
+					<TransformGroup>
+						<ScaleTransform/>
+						<SkewTransform/>
+						<RotateTransform Angle="-1.048"/>
+						<TranslateTransform/>
+					</TransformGroup>
+				</Rectangle.RenderTransform>
+			</Rectangle>
 			<Rectangle x:Name="imgCentro" Height="235.742" RadiusY="48" RadiusX="48" StrokeThickness="8" Canvas.Top="92.878" Width="145.324" RenderTransformOrigin="0.5,0.5" Canvas.Left="114.719" Fill="#FFF7F4F4" MouseDown="imgCentro_MouseDown" >
 				<Rectangle.Effect>
 					<DropShadowEffect Color="#FF528911" Direction="200" Opacity="0.905"/>
@@ -319,25 +379,8 @@
 					</TransformGroup>
 				</Rectangle.RenderTransform>
 			</Rectangle>
-			<Rectangle x:Name="imgCentroTrasera" Height="243.511" RadiusY="48" RadiusX="48" StrokeThickness="8" Canvas.Top="88.997" Width="166.411" RenderTransformOrigin="0.5,0.5" Canvas.Left="103.675" MouseDown="imgCentro_MouseDown" >
-				<Rectangle.Fill>
-					<RadialGradientBrush>
-						<GradientStop Color="White" Offset="0.552"/>
-						<GradientStop Color="#FFF0F1D6" Offset="0.817"/>
-						<GradientStop Color="#FEF2F5B5" Offset="0.991"/>
-					</RadialGradientBrush>
-				</Rectangle.Fill>
-				<Rectangle.RenderTransform>
-					<TransformGroup>
-						<ScaleTransform/>
-						<SkewTransform/>
-						<RotateTransform Angle="-1.048"/>
-						<TranslateTransform/>
-					</TransformGroup>
-				</Rectangle.RenderTransform>
-			</Rectangle>
-			<Button Content="Button" Height="79.5" Canvas.Left="36.258" Style="{DynamicResource btnAnterior}" Canvas.Top="300.069" Width="68.583" Click="Button_Click_3" Focusable="False" IsTabStop="False"/>
-			<Button Content="Button" Height="79.5" Canvas.Left="271.145" Style="{DynamicResource dcha}" Canvas.Top="300.069" Width="68.583" Click="Button_Click_2" Focusable="False" IsTabStop="False"/>
+			<Button x:Name="button" Content="Button" Height="79.5" Canvas.Left="36.258" Style="{DynamicResource btnAnterior}" Canvas.Top="300.069" Width="68.583" Click="Button_Click_3" Focusable="False" IsTabStop="False"/>
+			<Button x:Name="button1" Content="Button" Height="79.5" Canvas.Left="271.145" Style="{DynamicResource dcha}" Canvas.Top="300.069" Width="68.583" Click="Button_Click_2" Focusable="False" IsTabStop="False"/>
 		</Canvas>
 	</Grid>
 </Window>
