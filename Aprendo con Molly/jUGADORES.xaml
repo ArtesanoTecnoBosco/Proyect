@@ -165,18 +165,18 @@
 				<EasingDoubleKeyFrame KeyTime="0" Value="0.999"/>
 			</DoubleAnimationUsingKeyFrames>
 		</Storyboard>
-		<Storyboard x:Key="EfectoFondoCentro">
+		<Storyboard x:Key="EfectoFondoCentro" RepeatBehavior="Forever">
 			<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="imgCentroTrasera">
 				<EasingDoubleKeyFrame KeyTime="0" Value="0"/>
-				<EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="0.5"/>
-				<EasingDoubleKeyFrame KeyTime="0:0:0.4" Value="1"/>
-				<EasingDoubleKeyFrame KeyTime="0:0:0.6" Value="0.5"/>
-				<EasingDoubleKeyFrame KeyTime="0:0:0.8" Value="0"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:1" Value="0.5"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:2" Value="1"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:3" Value="0.5"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:4" Value="0"/>
 			</DoubleAnimationUsingKeyFrames>
 			<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="imgCentroTrasera">
 				<DiscreteObjectKeyFrame KeyTime="0" Value="{x:Static Visibility.Visible}"/>
-				<DiscreteObjectKeyFrame KeyTime="0:0:0.6" Value="{x:Static Visibility.Visible}"/>
-				<DiscreteObjectKeyFrame KeyTime="0:0:0.8" Value="{x:Static Visibility.Hidden}"/>
+				<DiscreteObjectKeyFrame KeyTime="0:0:3" Value="{x:Static Visibility.Visible}"/>
+				<DiscreteObjectKeyFrame KeyTime="0:0:4" Value="{x:Static Visibility.Hidden}"/>
 			</ObjectAnimationUsingKeyFrames>
 		</Storyboard>
 	</Window.Resources>
@@ -340,21 +340,6 @@
 					</TransformGroup>
 				</Rectangle.RenderTransform>
 			</Rectangle>
-			<Rectangle x:Name="imgCentro" Height="235.742" RadiusY="48" RadiusX="48" StrokeThickness="8" Canvas.Top="100.356" Width="145.324" RenderTransformOrigin="0.5,0.5" Canvas.Left="113.263" Fill="#FFF7F4F4" MouseDown="imgCentro_MouseDown" >
-				<Rectangle.Effect>
-					<DropShadowEffect Color="#FF528911" Direction="200" Opacity="0.905"/>
-				</Rectangle.Effect>
-				<Rectangle.RenderTransform>
-					<TransformGroup>
-						<ScaleTransform/>
-						<SkewTransform/>
-						<RotateTransform Angle="-0.791"/>
-						<TranslateTransform/>
-					</TransformGroup>
-				</Rectangle.RenderTransform>
-			</Rectangle>
-			<Button Content="Button" Height="79.5" Canvas.Left="36.258" Style="{DynamicResource btnAnterior}" Canvas.Top="300.069" Width="68.583" Click="Button_Click_3" Focusable="False" IsTabStop="False"/>
-			<Button Content="Button" Height="79.5" Canvas.Left="271.145" Style="{DynamicResource dcha}" Canvas.Top="300.069" Width="68.583" Click="Button_Click_2" Focusable="False" IsTabStop="False"/>
 			<Rectangle x:Name="imgCentroTrasera" Height="253.994" RadiusY="48" RadiusX="48" StrokeThickness="8" Canvas.Top="90.496" Width="166.411" RenderTransformOrigin="0.5,0.5" Canvas.Left="102.337" MouseDown="imgCentro_MouseDown" Opacity="0" Visibility="Hidden" >
 				<Rectangle.Fill>
 					<RadialGradientBrush>
@@ -375,6 +360,21 @@
 					</TransformGroup>
 				</Rectangle.RenderTransform>
 			</Rectangle>
+			<Rectangle x:Name="imgCentro" Height="235.742" RadiusY="48" RadiusX="48" StrokeThickness="8" Canvas.Top="100.356" Width="145.324" RenderTransformOrigin="0.5,0.5" Canvas.Left="113.263" Fill="#FFF7F4F4" MouseDown="imgCentro_MouseDown" >
+				<Rectangle.Effect>
+					<DropShadowEffect Color="#FF528911" Direction="200" Opacity="0.905"/>
+				</Rectangle.Effect>
+				<Rectangle.RenderTransform>
+					<TransformGroup>
+						<ScaleTransform/>
+						<SkewTransform/>
+						<RotateTransform Angle="-0.791"/>
+						<TranslateTransform/>
+					</TransformGroup>
+				</Rectangle.RenderTransform>
+			</Rectangle>
+			<Button Content="Button" Height="79.5" Canvas.Left="36.258" Style="{DynamicResource btnAnterior}" Canvas.Top="300.069" Width="68.583" Click="Button_Click_3" Focusable="False" IsTabStop="False"/>
+			<Button Content="Button" Height="79.5" Canvas.Left="271.145" Style="{DynamicResource dcha}" Canvas.Top="300.069" Width="68.583" Click="Button_Click_2" Focusable="False" IsTabStop="False"/>
 		</Canvas>
 	</Grid>
 </Window>

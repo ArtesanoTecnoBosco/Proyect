@@ -5,229 +5,229 @@
 	x:Name="Window"
 	Title="colores"
 	Width="1006" Height="614" AllowsTransparency="True" WindowStyle="None" ResizeMode="NoResize" HorizontalAlignment="Center" VerticalAlignment="Center" Icon="pack://siteoforigin:,,,/Molly.ico" Background="Transparent" WindowState="Maximized" WindowStartupLocation="CenterScreen">
-	<Window.Resources>
-		<Style x:Key="botoncerrar" TargetType="{x:Type Button}">
-			<Setter Property="Template">
-				<Setter.Value>
-					<ControlTemplate TargetType="{x:Type Button}">
-						<Grid>
-							<Rectangle x:Name="cerrar" RadiusY="7.667" RadiusX="7.667" StrokeThickness="8">
-							</Rectangle>
-							<ContentPresenter HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" RecognizesAccessKey="True" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}" Content=""/>
-							<Rectangle x:Name="cristal" RadiusY="8" RadiusX="8" StrokeThickness="2" Opacity="0">
-								<Rectangle.Fill>
-									<LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-										<GradientStop Color="#BFF5ABAB" Offset="0"/>
-										<GradientStop Color="#BFCBE4E1" Offset="1"/>
-										<GradientStop Color="#BFCBE4E1" Offset="0.223"/>
-										<GradientStop Color="#BFF5ABAB" Offset="0.432"/>
-										<GradientStop Color="#BFC6E0DD" Offset="0.638"/>
-										<GradientStop Color="#BFF5ABAB" Offset="0.822"/>
-									</LinearGradientBrush>
-								</Rectangle.Fill>
-							</Rectangle>
-						</Grid>
-						<ControlTemplate.Triggers>
-							<Trigger Property="IsFocused" Value="True"/>
-							<Trigger Property="IsDefaulted" Value="True"/>
-							<Trigger Property="IsMouseOver" Value="True">
-								<Setter Property="Opacity" TargetName="cristal" Value="1"/>
-							</Trigger>
-							<Trigger Property="IsPressed" Value="True"/>
-							<Trigger Property="IsEnabled" Value="False"/>
-						</ControlTemplate.Triggers>
-					</ControlTemplate>
-				</Setter.Value>
-			</Setter>
-		</Style>
-		<Style x:Key="botonminimizar" TargetType="{x:Type Button}">
-			<Setter Property="Template">
-				<Setter.Value>
-					<ControlTemplate TargetType="{x:Type Button}">
-						<Grid>
-							<Rectangle x:Name="minimizar" RadiusY="7.667" RadiusX="7.667" StrokeThickness="8">
-							</Rectangle>
-							<ContentPresenter x:Name="contentPresenter" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" RecognizesAccessKey="True" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}" Content=""/>
-							<Rectangle x:Name="crista" RadiusY="10" RadiusX="10" StrokeThickness="2" Opacity="0">
-								<Rectangle.Fill>
-									<LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-										<GradientStop Color="#BF6BFBE1" Offset="0"/>
-										<GradientStop Color="#BFFBF5B6" Offset="1"/>
-										<GradientStop Color="#BFB7F9EB" Offset="0.415"/>
-										<GradientStop Color="#BFFBF5B6" Offset="0.212"/>
-										<GradientStop Color="#BFFBF5B6" Offset="0.641"/>
-										<GradientStop Color="#BFB7F9EB" Offset="0.821"/>
-										<GradientStop Color="#BFB7F9EB"/>
-									</LinearGradientBrush>
-								</Rectangle.Fill>
-							</Rectangle>
-						</Grid>
-						<ControlTemplate.Triggers>
-							<Trigger Property="IsFocused" Value="True"/>
-							<Trigger Property="IsDefaulted" Value="True"/>
-							<Trigger Property="IsMouseOver" Value="True">
-								<Setter Property="Opacity" TargetName="crista" Value="1"/>
-							</Trigger>
-							<Trigger Property="IsPressed" Value="True"/>
-							<Trigger Property="IsEnabled" Value="False"/>
-						</ControlTemplate.Triggers>
-					</ControlTemplate>
-				</Setter.Value>
-			</Setter>
-		</Style>
-		<Style x:Key="botonJugar" TargetType="{x:Type Button}">
-			<Setter Property="Template">
-				<Setter.Value>
-					<ControlTemplate TargetType="{x:Type Button}">
-						<Grid>
-							<Rectangle x:Name="btnJugar" RadiusY="18.037" RadiusX="18.037" RenderTransformOrigin="0.5,0.5" StrokeThickness="8">
-								<Rectangle.RenderTransform>
-									<TransformGroup>
-										<ScaleTransform/>
-										<SkewTransform/>
-										<RotateTransform Angle="-12.664"/>
-										<TranslateTransform/>
-									</TransformGroup>
-								</Rectangle.RenderTransform>
-							</Rectangle>
-							<ContentPresenter HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" RecognizesAccessKey="True" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}" Content=""/>
-							<Rectangle x:Name="cristal" RadiusY="18.037" RadiusX="18.037" RenderTransformOrigin="0.5,0.5" StrokeThickness="8" Opacity="0">
-								<Rectangle.Fill>
-									<RadialGradientBrush>
-										<GradientStop Color="#BFA86300" Offset="0"/>
-										<GradientStop Color="#BFFFA200" Offset="1"/>
-										<GradientStop Color="#BFFFA200" Offset="0.171"/>
-										<GradientStop Color="#BFA86300" Offset="0.359"/>
-										<GradientStop Color="#BFFFA200" Offset="0.575"/>
-										<GradientStop Color="#BFA86300" Offset="0.792"/>
-									</RadialGradientBrush>
-								</Rectangle.Fill>
-								<Rectangle.RenderTransform>
-									<TransformGroup>
-										<ScaleTransform/>
-										<SkewTransform/>
-										<RotateTransform Angle="-12.664"/>
-										<TranslateTransform/>
-									</TransformGroup>
-								</Rectangle.RenderTransform>
-							</Rectangle>
-						</Grid>
-						<ControlTemplate.Triggers>
-							<Trigger Property="IsFocused" Value="True"/>
-							<Trigger Property="IsDefaulted" Value="True"/>
-							<Trigger Property="IsMouseOver" Value="True">
-								<Setter Property="Opacity" TargetName="cristal" Value="1"/>
-							</Trigger>
-							<Trigger Property="IsPressed" Value="True"/>
-							<Trigger Property="IsEnabled" Value="False"/>
-						</ControlTemplate.Triggers>
-					</ControlTemplate>
-				</Setter.Value>
-			</Setter>
-		</Style>
-		<Style x:Key="btnEscuchar1" TargetType="{x:Type Button}">
-			<Setter Property="Template">
-				<Setter.Value>
-					<ControlTemplate TargetType="{x:Type Button}">
-						<Grid x:Name="grid" RenderTransformOrigin="0.5,0.5">
-							<Grid.RenderTransform>
-								<TransformGroup>
-									<ScaleTransform/>
-									<SkewTransform/>
-									<RotateTransform Angle="-23.497"/>
-									<TranslateTransform/>
-								</TransformGroup>
-							</Grid.RenderTransform>
-							<Rectangle x:Name="btnEscuchar" RadiusY="48" RadiusX="48" RenderTransformOrigin="0.5,0.5" StrokeThickness="8">
-								<Rectangle.RenderTransform>
-									<TransformGroup>
-										<ScaleTransform/>
-										<SkewTransform/>
-										<RotateTransform Angle="0.541"/>
-										<TranslateTransform/>
-									</TransformGroup>
-								</Rectangle.RenderTransform>
-							</Rectangle>
-							<ContentPresenter HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" RecognizesAccessKey="True" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}" Content=""/>
-							<Rectangle x:Name="cristal" RadiusY="10" RadiusX="10" RenderTransformOrigin="0.5,0.5" StrokeThickness="2" Opacity="0">
-								<Rectangle.Fill>
-									<RadialGradientBrush>
-										<GradientStop Color="#BF834E00" Offset="0"/>
-										<GradientStop Color="#BFD38F2A" Offset="1"/>
-										<GradientStop Color="#BFD38F2A" Offset="0.221"/>
-										<GradientStop Color="#BF834E00" Offset="0.426"/>
-										<GradientStop Color="#BFD38F2A" Offset="0.621"/>
-										<GradientStop Color="#BFBD7100" Offset="0.835"/>
-										<GradientStop Color="#BF834E00" Offset="0.835"/>
-									</RadialGradientBrush>
-								</Rectangle.Fill>
-								<Rectangle.RenderTransform>
-									<TransformGroup>
-										<ScaleTransform/>
-										<SkewTransform/>
-										<RotateTransform Angle="-1.267"/>
-										<TranslateTransform/>
-									</TransformGroup>
-								</Rectangle.RenderTransform>
-							</Rectangle>
-						</Grid>
-						<ControlTemplate.Triggers>
-							<Trigger Property="IsFocused" Value="True"/>
-							<Trigger Property="IsDefaulted" Value="True"/>
-							<Trigger Property="IsMouseOver" Value="True">
-								<Setter Property="Opacity" TargetName="cristal" Value="1"/>
-							</Trigger>
-							<Trigger Property="IsPressed" Value="True"/>
-							<Trigger Property="IsEnabled" Value="False"/>
-						</ControlTemplate.Triggers>
-					</ControlTemplate>
-				</Setter.Value>
-			</Setter>
-		</Style>
-		<Style x:Key="marron" TargetType="{x:Type Button}"/>
-	</Window.Resources>
-	<Window.Effect>
-		<DropShadowEffect Color="#FF32911D" Direction="200" Opacity="0.75"/>
-	</Window.Effect>
-	<Grid HorizontalAlignment="Center" Height="614" Margin="0" VerticalAlignment="Center" Width="1006" Background="#00000000">
-		<Rectangle HorizontalAlignment="Center" Height="614" RadiusY="48" RadiusX="48" VerticalAlignment="Center" Width="1006" StrokeThickness="8">
-			<Rectangle.Fill>
-				<ImageBrush ImageSource="fondo3.jpg"/>
-			</Rectangle.Fill>
-		</Rectangle>
-		<Rectangle HorizontalAlignment="Left" Height="204" Margin="14.707,386.053,0,0" RadiusY="48" RadiusX="48" StrokeThickness="8" VerticalAlignment="Top" Width="159.5" RenderTransformOrigin="0.5,0.5">
-			<Rectangle.RenderTransform>
-				<TransformGroup>
-					<ScaleTransform ScaleX="-1"/>
-					<SkewTransform/>
-					<RotateTransform/>
-					<TranslateTransform/>
-				</TransformGroup>
-			</Rectangle.RenderTransform>
-			<Rectangle.Fill>
-				<ImageBrush ImageSource="Molly.png"/>
-			</Rectangle.Fill>
-		</Rectangle>
-		<Button x:Name="btnJugar" Content="Button" HorizontalAlignment="Left" Height="39.826" Margin="808.964,335.982,0,0" Style="{DynamicResource btnJugarEfecto}" VerticalAlignment="Top" Width="137.388" Background="#FF377C07"/>
-		<Button Content="Button" HorizontalAlignment="Left" Height="49.826" Margin="696.964,414.982,0,0" Style="{DynamicResource btnEscucharEfecto}" VerticalAlignment="Top" Width="137.388"/>
-		<Button Content="Button" HorizontalAlignment="Left" Height="33.826" Margin="866.076,439.204,0,0" Style="{DynamicResource btnVerEfect}" VerticalAlignment="Top" Width="68.722"/>
-		<Button Content="Button" HorizontalAlignment="Left" Height="23.72" Margin="906.822,10,0,0" VerticalAlignment="Top" Width="25.011" Style="{DynamicResource Minimizar}" RenderTransformOrigin="-2.032,0.008"/>
-		<Button Content="Button" HorizontalAlignment="Left" Height="23.72" Margin="936.833,10,0,0" VerticalAlignment="Top" Width="25.011" Style="{DynamicResource BotonCerrar}" RenderTransformOrigin="-2.032,0.008"/>
-		<Rectangle HorizontalAlignment="Left" Height="367.5" Margin="192.187,236.5,0,0" RadiusY="48" RadiusX="48" StrokeThickness="8" VerticalAlignment="Top" Width="476.5">
-			<Rectangle.Fill>
-				<LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-					<GradientStop Color="#FFD3F5F5" Offset="0"/>
-					<GradientStop Offset="1" Color="#FFDCB2B2"/>
-				</LinearGradientBrush>
-			</Rectangle.Fill>
-		</Rectangle>
-		<Ellipse HorizontalAlignment="Left" Height="162.28" Margin="266,33.72,0,0" StrokeThickness="8" VerticalAlignment="Top" Width="310">
-			<Ellipse.Fill>
-				<LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-					<GradientStop Color="#FFD3F5F5" Offset="0"/>
-					<GradientStop Offset="1" Color="#FFDCB2B2"/>
-				</LinearGradientBrush>
-			</Ellipse.Fill>
-		</Ellipse>
-	</Grid>
+    <Window.Resources>
+        <Style x:Key="botoncerrar" TargetType="{x:Type Button}">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Grid>
+                            <Rectangle x:Name="cerrar" RadiusY="7.667" RadiusX="7.667" StrokeThickness="8">
+                            </Rectangle>
+                            <ContentPresenter HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" RecognizesAccessKey="True" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}" Content=""/>
+                            <Rectangle x:Name="cristal" RadiusY="8" RadiusX="8" StrokeThickness="2" Opacity="0">
+                                <Rectangle.Fill>
+                                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                        <GradientStop Color="#BFF5ABAB" Offset="0"/>
+                                        <GradientStop Color="#BFCBE4E1" Offset="1"/>
+                                        <GradientStop Color="#BFCBE4E1" Offset="0.223"/>
+                                        <GradientStop Color="#BFF5ABAB" Offset="0.432"/>
+                                        <GradientStop Color="#BFC6E0DD" Offset="0.638"/>
+                                        <GradientStop Color="#BFF5ABAB" Offset="0.822"/>
+                                    </LinearGradientBrush>
+                                </Rectangle.Fill>
+                            </Rectangle>
+                        </Grid>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsFocused" Value="True"/>
+                            <Trigger Property="IsDefaulted" Value="True"/>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Opacity" TargetName="cristal" Value="1"/>
+                            </Trigger>
+                            <Trigger Property="IsPressed" Value="True"/>
+                            <Trigger Property="IsEnabled" Value="False"/>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <Style x:Key="botonminimizar" TargetType="{x:Type Button}">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Grid>
+                            <Rectangle x:Name="minimizar" RadiusY="7.667" RadiusX="7.667" StrokeThickness="8">
+                            </Rectangle>
+                            <ContentPresenter x:Name="contentPresenter" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" RecognizesAccessKey="True" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}" Content=""/>
+                            <Rectangle x:Name="crista" RadiusY="10" RadiusX="10" StrokeThickness="2" Opacity="0">
+                                <Rectangle.Fill>
+                                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                        <GradientStop Color="#BF6BFBE1" Offset="0"/>
+                                        <GradientStop Color="#BFFBF5B6" Offset="1"/>
+                                        <GradientStop Color="#BFB7F9EB" Offset="0.415"/>
+                                        <GradientStop Color="#BFFBF5B6" Offset="0.212"/>
+                                        <GradientStop Color="#BFFBF5B6" Offset="0.641"/>
+                                        <GradientStop Color="#BFB7F9EB" Offset="0.821"/>
+                                        <GradientStop Color="#BFB7F9EB"/>
+                                    </LinearGradientBrush>
+                                </Rectangle.Fill>
+                            </Rectangle>
+                        </Grid>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsFocused" Value="True"/>
+                            <Trigger Property="IsDefaulted" Value="True"/>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Opacity" TargetName="crista" Value="1"/>
+                            </Trigger>
+                            <Trigger Property="IsPressed" Value="True"/>
+                            <Trigger Property="IsEnabled" Value="False"/>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <Style x:Key="botonJugar" TargetType="{x:Type Button}">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Grid>
+                            <Rectangle x:Name="btnJugar" RadiusY="18.037" RadiusX="18.037" RenderTransformOrigin="0.5,0.5" StrokeThickness="8">
+                                <Rectangle.RenderTransform>
+                                    <TransformGroup>
+                                        <ScaleTransform/>
+                                        <SkewTransform/>
+                                        <RotateTransform Angle="-12.664"/>
+                                        <TranslateTransform/>
+                                    </TransformGroup>
+                                </Rectangle.RenderTransform>
+                            </Rectangle>
+                            <ContentPresenter HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" RecognizesAccessKey="True" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}" Content=""/>
+                            <Rectangle x:Name="cristal" RadiusY="18.037" RadiusX="18.037" RenderTransformOrigin="0.5,0.5" StrokeThickness="8" Opacity="0">
+                                <Rectangle.Fill>
+                                    <RadialGradientBrush>
+                                        <GradientStop Color="#BFA86300" Offset="0"/>
+                                        <GradientStop Color="#BFFFA200" Offset="1"/>
+                                        <GradientStop Color="#BFFFA200" Offset="0.171"/>
+                                        <GradientStop Color="#BFA86300" Offset="0.359"/>
+                                        <GradientStop Color="#BFFFA200" Offset="0.575"/>
+                                        <GradientStop Color="#BFA86300" Offset="0.792"/>
+                                    </RadialGradientBrush>
+                                </Rectangle.Fill>
+                                <Rectangle.RenderTransform>
+                                    <TransformGroup>
+                                        <ScaleTransform/>
+                                        <SkewTransform/>
+                                        <RotateTransform Angle="-12.664"/>
+                                        <TranslateTransform/>
+                                    </TransformGroup>
+                                </Rectangle.RenderTransform>
+                            </Rectangle>
+                        </Grid>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsFocused" Value="True"/>
+                            <Trigger Property="IsDefaulted" Value="True"/>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Opacity" TargetName="cristal" Value="1"/>
+                            </Trigger>
+                            <Trigger Property="IsPressed" Value="True"/>
+                            <Trigger Property="IsEnabled" Value="False"/>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <Style x:Key="btnEscuchar1" TargetType="{x:Type Button}">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Grid x:Name="grid" RenderTransformOrigin="0.5,0.5">
+                            <Grid.RenderTransform>
+                                <TransformGroup>
+                                    <ScaleTransform/>
+                                    <SkewTransform/>
+                                    <RotateTransform Angle="-23.497"/>
+                                    <TranslateTransform/>
+                                </TransformGroup>
+                            </Grid.RenderTransform>
+                            <Rectangle x:Name="btnEscuchar" RadiusY="48" RadiusX="48" RenderTransformOrigin="0.5,0.5" StrokeThickness="8">
+                                <Rectangle.RenderTransform>
+                                    <TransformGroup>
+                                        <ScaleTransform/>
+                                        <SkewTransform/>
+                                        <RotateTransform Angle="0.541"/>
+                                        <TranslateTransform/>
+                                    </TransformGroup>
+                                </Rectangle.RenderTransform>
+                            </Rectangle>
+                            <ContentPresenter HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" RecognizesAccessKey="True" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}" Content=""/>
+                            <Rectangle x:Name="cristal" RadiusY="10" RadiusX="10" RenderTransformOrigin="0.5,0.5" StrokeThickness="2" Opacity="0">
+                                <Rectangle.Fill>
+                                    <RadialGradientBrush>
+                                        <GradientStop Color="#BF834E00" Offset="0"/>
+                                        <GradientStop Color="#BFD38F2A" Offset="1"/>
+                                        <GradientStop Color="#BFD38F2A" Offset="0.221"/>
+                                        <GradientStop Color="#BF834E00" Offset="0.426"/>
+                                        <GradientStop Color="#BFD38F2A" Offset="0.621"/>
+                                        <GradientStop Color="#BFBD7100" Offset="0.835"/>
+                                        <GradientStop Color="#BF834E00" Offset="0.835"/>
+                                    </RadialGradientBrush>
+                                </Rectangle.Fill>
+                                <Rectangle.RenderTransform>
+                                    <TransformGroup>
+                                        <ScaleTransform/>
+                                        <SkewTransform/>
+                                        <RotateTransform Angle="-1.267"/>
+                                        <TranslateTransform/>
+                                    </TransformGroup>
+                                </Rectangle.RenderTransform>
+                            </Rectangle>
+                        </Grid>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsFocused" Value="True"/>
+                            <Trigger Property="IsDefaulted" Value="True"/>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Opacity" TargetName="cristal" Value="1"/>
+                            </Trigger>
+                            <Trigger Property="IsPressed" Value="True"/>
+                            <Trigger Property="IsEnabled" Value="False"/>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <Style x:Key="marron" TargetType="{x:Type Button}"/>
+    </Window.Resources>
+    <Window.Effect>
+        <DropShadowEffect Color="#FF32911D" Direction="200" Opacity="0.75"/>
+    </Window.Effect>
+    <Grid HorizontalAlignment="Center" Height="614" Margin="0" VerticalAlignment="Center" Width="1006" Background="#00000000">
+        <Rectangle HorizontalAlignment="Center" Height="614" RadiusY="48" RadiusX="48" VerticalAlignment="Center" Width="1006" StrokeThickness="8">
+            <Rectangle.Fill>
+                <ImageBrush ImageSource="fondo3.jpg"/>
+            </Rectangle.Fill>
+        </Rectangle>
+        <Rectangle HorizontalAlignment="Left" Height="204" Margin="14.707,386.053,0,0" RadiusY="48" RadiusX="48" StrokeThickness="8" VerticalAlignment="Top" Width="159.5" RenderTransformOrigin="0.5,0.5">
+            <Rectangle.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform ScaleX="-1"/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Rectangle.RenderTransform>
+            <Rectangle.Fill>
+                <ImageBrush ImageSource="Molly.png"/>
+            </Rectangle.Fill>
+        </Rectangle>
+        <Button x:Name="btnJugar" Content="Button" HorizontalAlignment="Left" Height="39.826" Margin="808.964,335.982,0,0" Style="{DynamicResource btnJugarEfecto}" VerticalAlignment="Top" Width="137.388" Background="#FF377C07"/>
+        <Button Content="Button" HorizontalAlignment="Left" Height="49.826" Margin="696.964,414.982,0,0" Style="{DynamicResource btnEscucharEfecto}" VerticalAlignment="Top" Width="137.388"/>
+        <Button Content="Button" HorizontalAlignment="Left" Height="33.826" Margin="866.076,439.204,0,0" Style="{DynamicResource btnVerEfect}" VerticalAlignment="Top" Width="68.722"/>
+        <Button Content="Button" HorizontalAlignment="Left" Height="23.72" Margin="906.822,10,0,0" VerticalAlignment="Top" Width="25.011" Style="{DynamicResource Minimizar}" RenderTransformOrigin="-2.032,0.008"/>
+        <Button Content="Button" HorizontalAlignment="Left" Height="23.72" Margin="936.833,10,0,0" VerticalAlignment="Top" Width="25.011" Style="{DynamicResource BotonCerrar}" RenderTransformOrigin="-2.032,0.008"/>
+        <Rectangle HorizontalAlignment="Left" Height="367.5" Margin="192.187,236.5,0,0" RadiusY="48" RadiusX="48" StrokeThickness="8" VerticalAlignment="Top" Width="476.5">
+            <Rectangle.Fill>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FFD3F5F5" Offset="0"/>
+                    <GradientStop Offset="1" Color="#FFDCB2B2"/>
+                </LinearGradientBrush>
+            </Rectangle.Fill>
+        </Rectangle>
+        <Ellipse HorizontalAlignment="Left" Height="163" Margin="390,32,0,0" StrokeThickness="8" VerticalAlignment="Top" Width="310">
+            <Ellipse.Fill>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FFD3F5F5" Offset="0"/>
+                    <GradientStop Offset="1" Color="#FFDCB2B2"/>
+                </LinearGradientBrush>
+            </Ellipse.Fill>
+        </Ellipse>
+    </Grid>
 </Window>
