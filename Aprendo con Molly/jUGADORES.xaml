@@ -151,7 +151,24 @@
 				</Setter.Value>
 			</Setter>
 		</Style>
+		<Storyboard x:Key="OnGotFocus1">
+			<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleY)" Storyboard.TargetName="imgCentro">
+				<EasingDoubleKeyFrame KeyTime="0" Value="1.051"/>
+			</DoubleAnimationUsingKeyFrames>
+			<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)" Storyboard.TargetName="imgCentro">
+				<EasingDoubleKeyFrame KeyTime="0" Value="-0.044"/>
+			</DoubleAnimationUsingKeyFrames>
+			<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)" Storyboard.TargetName="imgCentro">
+				<EasingDoubleKeyFrame KeyTime="0" Value="-6"/>
+			</DoubleAnimationUsingKeyFrames>
+			<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleX)" Storyboard.TargetName="imgCentro">
+				<EasingDoubleKeyFrame KeyTime="0" Value="0.999"/>
+			</DoubleAnimationUsingKeyFrames>
+		</Storyboard>
 	</Window.Resources>
+	<Window.Triggers>
+		<EventTrigger RoutedEvent="Mouse.GotMouseCapture" SourceName="imgCentro"/>
+	</Window.Triggers>
 	<Window.Effect>
 		<DropShadowEffect BlurRadius="8" Direction="200" Opacity="0.75" Color="#FF32911D"/>
 	</Window.Effect>
@@ -314,24 +331,7 @@
 					<TransformGroup>
 						<ScaleTransform/>
 						<SkewTransform/>
-						<RotateTransform Angle="-1.048"/>
-						<TranslateTransform/>
-					</TransformGroup>
-				</Rectangle.RenderTransform>
-			</Rectangle>
-			<Rectangle x:Name="imgCentroTrasera" Height="243.511" RadiusY="48" RadiusX="48" StrokeThickness="8" Canvas.Top="88.997" Width="166.411" RenderTransformOrigin="0.5,0.5" Canvas.Left="103.675" MouseDown="imgCentro_MouseDown" >
-				<Rectangle.Fill>
-					<RadialGradientBrush>
-						<GradientStop Color="White" Offset="0.552"/>
-						<GradientStop Color="#FFF0F1D6" Offset="0.817"/>
-						<GradientStop Color="#FEF2F5B5" Offset="0.991"/>
-					</RadialGradientBrush>
-				</Rectangle.Fill>
-				<Rectangle.RenderTransform>
-					<TransformGroup>
-						<ScaleTransform/>
-						<SkewTransform/>
-						<RotateTransform Angle="-1.048"/>
+						<RotateTransform Angle="-0.791"/>
 						<TranslateTransform/>
 					</TransformGroup>
 				</Rectangle.RenderTransform>

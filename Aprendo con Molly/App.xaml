@@ -580,6 +580,46 @@
 					</Setter.Value>
 				</Setter>
 			</Style>
+			<Style x:Key="btnJugarEfecto" TargetType="{x:Type Button}">
+				<Setter Property="Template">
+					<Setter.Value>
+						<ControlTemplate TargetType="{x:Type Button}">
+							<Grid x:Name="grid">
+								<Label x:Name="label" Content="    JUGAR" Foreground="#FF7C3800" FontWeight="Bold" FontSize="21.333" FontFamily="Cooper BLACK" RenderTransformOrigin="0.5,0.5">
+									<Label.RenderTransform>
+										<TransformGroup>
+											<ScaleTransform/>
+											<SkewTransform/>
+											<RotateTransform Angle="-12.797"/>
+											<TranslateTransform/>
+										</TransformGroup>
+									</Label.RenderTransform>
+								</Label>
+								<ContentPresenter HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" RecognizesAccessKey="True" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}" Content="" Height="56.893" Margin="0,-13.067,-4.306,-10" RenderTransformOrigin="0.5,0.5" Width="141.694">
+									<ContentPresenter.RenderTransform>
+										<TransformGroup>
+											<ScaleTransform ScaleX="-1"/>
+											<SkewTransform/>
+											<RotateTransform/>
+											<TranslateTransform/>
+										</TransformGroup>
+									</ContentPresenter.RenderTransform>
+								</ContentPresenter>
+							</Grid>
+							<ControlTemplate.Triggers>
+								<Trigger Property="IsFocused" Value="True"/>
+								<Trigger Property="IsDefaulted" Value="True"/>
+								<Trigger Property="IsMouseOver" Value="True">
+									<Setter Property="Foreground" TargetName="label" Value="#FF287C01"/>
+									<Setter Property="Margin" TargetName="grid" Value="0,-4,-1,0"/>
+								</Trigger>
+								<Trigger Property="IsPressed" Value="True"/>
+								<Trigger Property="IsEnabled" Value="False"/>
+							</ControlTemplate.Triggers>
+						</ControlTemplate>
+					</Setter.Value>
+				</Setter>
+			</Style>
 		</ResourceDictionary>
 	</Application.Resources>
 </Application>
