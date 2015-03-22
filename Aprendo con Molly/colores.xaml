@@ -219,7 +219,7 @@
 				</TransformGroup>
 			</Label.RenderTransform>
 		</Label>
-		<Label Content="VER" HorizontalAlignment="Left" Height="33.826" Margin="860.446,437.566,0,0" VerticalAlignment="Top" Width="64.248" FontFamily="Cooper BLACK" FontSize="21.333" FontWeight="Bold" RenderTransformOrigin="0.5,0.5" Foreground="#FF7C3800">
+		<Label Content="VER" HorizontalAlignment="Left" Height="33.826" Margin="866.109,435.397,0,0" VerticalAlignment="Top" Width="48.787" FontFamily="Cooper BLACK" FontSize="21.333" FontWeight="Bold" RenderTransformOrigin="0.5,0.5" Foreground="#FF7C3800">
 			<Label.RenderTransform>
 				<TransformGroup>
 					<ScaleTransform/>
