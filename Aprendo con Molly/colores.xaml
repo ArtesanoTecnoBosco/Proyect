@@ -213,7 +213,7 @@
         <Button Content="Button" HorizontalAlignment="Left" Height="33.826" Margin="866.076,439.204,0,0" Style="{DynamicResource btnVerEfect}" VerticalAlignment="Top" Width="68.722"/>
         <Button Content="Button" HorizontalAlignment="Left" Height="23.72" Margin="906.822,10,0,0" VerticalAlignment="Top" Width="25.011" Style="{DynamicResource Minimizar}" RenderTransformOrigin="-2.032,0.008"/>
         <Button Content="Button" HorizontalAlignment="Left" Height="23.72" Margin="936.833,10,0,0" VerticalAlignment="Top" Width="25.011" Style="{DynamicResource BotonCerrar}" RenderTransformOrigin="-2.032,0.008"/>
-        <Rectangle HorizontalAlignment="Left" Height="367.5" Margin="192.187,236.5,0,0" RadiusY="48" RadiusX="48" StrokeThickness="8" VerticalAlignment="Top" Width="476.5">
+        <Rectangle x:Name="espacioJuego" HorizontalAlignment="Left" Height="367.5" Margin="190.687,227.5,0,0" RadiusY="48" RadiusX="48" StrokeThickness="8" VerticalAlignment="Top" Width="476.5">
             <Rectangle.Fill>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                     <GradientStop Color="#FFD3F5F5" Offset="0"/>
@@ -221,13 +221,16 @@
                 </LinearGradientBrush>
             </Rectangle.Fill>
         </Rectangle>
-        <Ellipse HorizontalAlignment="Left" Height="163" Margin="390,32,0,0" StrokeThickness="8" VerticalAlignment="Top" Width="310">
-            <Ellipse.Fill>
-                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                    <GradientStop Color="#FFD3F5F5" Offset="0"/>
-                    <GradientStop Offset="1" Color="#FFDCB2B2"/>
-                </LinearGradientBrush>
-            </Ellipse.Fill>
-        </Ellipse>
+        <Rectangle x:Name="bolitas" HorizontalAlignment="Left" Height="325.982" Margin="10,10,0,0" RadiusY="48" RadiusX="48" StrokeThickness="8" VerticalAlignment="Top" Width="968.322"/>
+        <Button x:Name="blanco" Content="Button" HorizontalAlignment="Left" Height="57.78" Margin="475.5,9.94,0,0" VerticalAlignment="Top" Width="69" Style="{DynamicResource btnBlanco}"/>
+        <Button x:Name="amarillo" Content="Button" HorizontalAlignment="Left" Height="57.78" Margin="461.5,115.78,0,0" VerticalAlignment="Top" Width="69" Style="{DynamicResource btnAmarillo}"/>
+        <Button x:Name="marron" Content="Button" HorizontalAlignment="Left" Height="58" Margin="224,149.56,0,0" VerticalAlignment="Top" Width="69" Style="{DynamicResource btnMarron}"/>
+        <Button x:Name="azul" Content="Button" HorizontalAlignment="Left" Height="57.78" Margin="662.964,33.94,0,0" VerticalAlignment="Top" Width="69" Style="{DynamicResource btnAzul}"/>
+        <Button x:Name="rojo" Content="Button" HorizontalAlignment="Left" Height="58" Margin="304,23.72,0,0" VerticalAlignment="Top" Width="69" Style="{DynamicResource btnRojo}"/>
+        <Button x:Name="rosa" Content="Button" HorizontalAlignment="Left" Height="58" Margin="826.964,92,0,0" VerticalAlignment="Top" Width="69" Style="{DynamicResource rosa}"/>
+        <Button x:Name="negro" Content="Button" HorizontalAlignment="Left" Height="58" Margin="909.322,226,0,0" VerticalAlignment="Top" Width="69" Style="{DynamicResource negro}" RenderTransformOrigin="1.053,0.241"/>
+        <Button x:Name="verde" Content="Button" HorizontalAlignment="Left" Height="58" Margin="25.5,226,0,0" VerticalAlignment="Top" Width="69" Style="{DynamicResource btnVerde}"/>
+        <Button x:Name="naranja" Content="Button" HorizontalAlignment="Left" Height="58" Margin="702.964,149.56,0,0" VerticalAlignment="Top" Width="69" Style="{DynamicResource bNaranja}"/>
+        <Button x:Name="morado" Content="Button" HorizontalAlignment="Left" Height="58" Margin="129,72,0,0" VerticalAlignment="Top" Width="69" Style="{DynamicResource btnMorado}"/>
     </Grid>
 </Window>

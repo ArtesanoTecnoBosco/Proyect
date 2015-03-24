@@ -69,32 +69,27 @@
 			</Style>
 			<ControlTemplate x:Key="BotonColor" TargetType="{x:Type Button}">
 				<Grid>
-					<Grid.Background>
-						<ImageBrush ImageSource="blanco.png"/>
-					</Grid.Background>
+					
 				</Grid>
 			</ControlTemplate>
 			<Style x:Key="bNaranja" TargetType="{x:Type Button}">
 				<Setter Property="Template">
 					<Setter.Value>
 						<ControlTemplate TargetType="{x:Type Button}">
-							<Grid x:Name="grid" Margin="52,0,0,39">
-								<Rectangle x:Name="rectangle1" RadiusY="0" RadiusX="0" StrokeThickness="8" Margin="0" Height="120" VerticalAlignment="Top">
+							<Grid x:Name="grid" Margin="-1,0,0,-2">
+								<Rectangle x:Name="naranja" RadiusY="0" RadiusX="0" StrokeThickness="8" Height="60" VerticalAlignment="Top">
 									<Rectangle.Fill>
 										<ImageBrush ImageSource="naranja.png"/>
 									</Rectangle.Fill>
+									
 								</Rectangle>
-								<ContentPresenter x:Name="contentPresenter" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" RecognizesAccessKey="True" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}" Content="" Margin="0" Width="142" Height="130"/>
+								<ContentPresenter x:Name="contentPresenter" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" RecognizesAccessKey="True" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}" Content="" Width="70" Height="60"/>
 							</Grid>
 							<ControlTemplate.Triggers>
 								<Trigger Property="IsFocused" Value="True"/>
 								<Trigger Property="IsDefaulted" Value="True"/>
 								<Trigger Property="IsMouseOver" Value="True">
-									<Setter Property="Height" TargetName="rectangle1" Value="77"/>
-									<Setter Property="Margin" TargetName="rectangle1" Value="0"/>
-									<Setter Property="Width" TargetName="contentPresenter" Value="90"/>
-									<Setter Property="Height" TargetName="contentPresenter" Value="104"/>
-									<Setter Property="Margin" TargetName="contentPresenter" Value="0"/>
+									<Setter Property="Margin" TargetName="grid" Value="-8,-5,0,-2"/>
 								</Trigger>
 								<Trigger Property="IsPressed" Value="True"/>
 								<Trigger Property="IsEnabled" Value="False"/>
@@ -108,10 +103,11 @@
 					<Setter.Value>
 						<ControlTemplate TargetType="{x:Type Button}">
 							<Grid>
-								<Rectangle x:Name="rectangle" RadiusY="0" RadiusX="0" StrokeThickness="8" Opacity="1">
+								<Rectangle x:Name="naranja" RadiusY="0" RadiusX="0" StrokeThickness="8" Opacity="1">
 									<Rectangle.Fill>
 										<ImageBrush ImageSource="naranja.png"/>
 									</Rectangle.Fill>
+									
 								</Rectangle>
 								<ContentPresenter x:Name="contentPresenter" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" RecognizesAccessKey="True" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}" Content="" Margin="0" Width="92" Height="80.28"/>
 							</Grid>
@@ -122,7 +118,7 @@
 									<Setter Property="Width" TargetName="contentPresenter" Value="105"/>
 									<Setter Property="Height" TargetName="contentPresenter" Value="103.28"/>
 									<Setter Property="Margin" TargetName="contentPresenter" Value="-13,-23,0,0"/>
-									<Setter Property="Margin" TargetName="rectangle" Value="-13,-23,0,0"/>
+									<Setter Property="Margin" TargetName="naranja" Value="-13,-23,0,0"/>
 								</Trigger>
 								<Trigger Property="IsPressed" Value="True"/>
 								<Trigger Property="IsEnabled" Value="False"/>
@@ -193,6 +189,7 @@
 									<Rectangle.Fill>
 										<ImageBrush ImageSource="amarillo.png"/>
 									</Rectangle.Fill>
+									
 								</Rectangle>
 								<ContentPresenter x:Name="contentPresenter" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" RecognizesAccessKey="True" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}" Content="" Margin="0" Width="92" Height="78.28"/>
 							</Grid>
@@ -295,14 +292,15 @@
 									<Rectangle.Fill>
 										<ImageBrush ImageSource="negro.png"/>
 									</Rectangle.Fill>
+									
 								</Rectangle>
-								<ContentPresenter HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" RecognizesAccessKey="True" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}" Content="" Margin="0" Width="83.102" Height="78.28"/>
+								<ContentPresenter x:Name="contentPresenter" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" RecognizesAccessKey="True" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}" Content="" Width="69" Height="58"/>
 							</Grid>
 							<ControlTemplate.Triggers>
 								<Trigger Property="IsFocused" Value="True"/>
 								<Trigger Property="IsDefaulted" Value="True"/>
 								<Trigger Property="IsMouseOver" Value="True">
-									<Setter Property="Margin" TargetName="grid" Value="0,-1,0,0"/>
+									<Setter Property="Margin" TargetName="grid" Value="-8,-11,0,0"/>
 								</Trigger>
 								<Trigger Property="IsPressed" Value="True"/>
 								<Trigger Property="IsEnabled" Value="False"/>
@@ -316,10 +314,11 @@
 					<Setter.Value>
 						<ControlTemplate TargetType="{x:Type Button}">
 							<Grid x:Name="grid">
-								<Rectangle Stroke="Black">
+								<Rectangle Stroke="Transparent">
 									<Rectangle.Fill>
 										<ImageBrush ImageSource="rosa.png"/>
 									</Rectangle.Fill>
+									
 								</Rectangle>
 								<ContentPresenter HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" RecognizesAccessKey="True" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}" Content="" Margin="0" Width="83.102" Height="78.28"/>
 							</Grid>
@@ -376,6 +375,7 @@
 									<Rectangle.Fill>
 										<ImageBrush ImageSource="blanco.png"/>
 									</Rectangle.Fill>
+									
 								</Rectangle>
 								<ContentPresenter x:Name="contentPresenter" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" RecognizesAccessKey="True" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}" Content="" Margin="0" Width="92" Height="80.28"/>
 							</Grid>
@@ -400,10 +400,11 @@
 					<Setter.Value>
 						<ControlTemplate TargetType="{x:Type Button}">
 							<Grid>
-								<Rectangle x:Name="rectangle" RadiusY="0" RadiusX="0" StrokeThickness="8" Opacity="1">
+								<Rectangle x:Name="m" RadiusY="0" RadiusX="0" StrokeThickness="8" Opacity="1">
 									<Rectangle.Fill>
 										<ImageBrush ImageSource="marron.png"/>
 									</Rectangle.Fill>
+									
 								</Rectangle>
 								<ContentPresenter x:Name="contentPresenter" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" RecognizesAccessKey="True" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}" Content="" Margin="0" Width="92" Height="80.28"/>
 							</Grid>
@@ -414,7 +415,7 @@
 									<Setter Property="Width" TargetName="contentPresenter" Value="105"/>
 									<Setter Property="Height" TargetName="contentPresenter" Value="103.28"/>
 									<Setter Property="Margin" TargetName="contentPresenter" Value="-13,-23,0,0"/>
-									<Setter Property="Margin" TargetName="rectangle" Value="-13,-23,0,0"/>
+									<Setter Property="Margin" TargetName="m" Value="-13,-23,0,0"/>
 								</Trigger>
 								<Trigger Property="IsPressed" Value="True"/>
 								<Trigger Property="IsEnabled" Value="False"/>
@@ -481,9 +482,6 @@
 											<TranslateTransform/>
 										</TransformGroup>
 									</Rectangle.RenderTransform>
-									<Rectangle.Fill>
-										<ImageBrush ImageSource="rosa.png"/>
-									</Rectangle.Fill>
 								</Rectangle>
 							</Grid>
 							<ControlTemplate.Triggers>
@@ -504,10 +502,11 @@
 					<Setter.Value>
 						<ControlTemplate TargetType="{x:Type Button}">
 							<Grid>
-								<Rectangle x:Name="rectangle" RadiusY="0" RadiusX="0" StrokeThickness="8" Opacity="1">
+								<Rectangle x:Name="rojo" RadiusY="0" RadiusX="0" StrokeThickness="8" Opacity="1">
 									<Rectangle.Fill>
 										<ImageBrush ImageSource="rojo.png"/>
 									</Rectangle.Fill>
+									
 								</Rectangle>
 								<ContentPresenter x:Name="contentPresenter" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" RecognizesAccessKey="True" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}" Content="" Margin="0" Width="92" Height="80.28"/>
 							</Grid>
@@ -518,7 +517,7 @@
 									<Setter Property="Width" TargetName="contentPresenter" Value="105"/>
 									<Setter Property="Height" TargetName="contentPresenter" Value="103.28"/>
 									<Setter Property="Margin" TargetName="contentPresenter" Value="-13,-23,0,0"/>
-									<Setter Property="Margin" TargetName="rectangle" Value="-13,-23,0,0"/>
+									<Setter Property="Margin" TargetName="rojo" Value="-13,-23,0,0"/>
 								</Trigger>
 								<Trigger Property="IsPressed" Value="True"/>
 								<Trigger Property="IsEnabled" Value="False"/>
@@ -535,10 +534,11 @@
 								<Grid.Background>
 									<ImageBrush/>
 								</Grid.Background>
-								<Rectangle x:Name="rectangle" RadiusY="0" RadiusX="0" StrokeThickness="8" Opacity="1">
+								<Rectangle x:Name="azul" RadiusY="0" RadiusX="0" StrokeThickness="8" Opacity="1">
 									<Rectangle.Fill>
 										<ImageBrush ImageSource="azul.png"/>
 									</Rectangle.Fill>
+									
 								</Rectangle>
 								<ContentPresenter x:Name="contentPresenter" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" RecognizesAccessKey="True" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}" Content="" Margin="0" Width="92" Height="80.28"/>
 							</Grid>
@@ -549,7 +549,7 @@
 									<Setter Property="Width" TargetName="contentPresenter" Value="105"/>
 									<Setter Property="Height" TargetName="contentPresenter" Value="103.28"/>
 									<Setter Property="Margin" TargetName="contentPresenter" Value="-13,-23,0,0"/>
-									<Setter Property="Margin" TargetName="rectangle" Value="-13,-23,0,0"/>
+									<Setter Property="Margin" TargetName="azul" Value="-13,-23,0,0"/>
 								</Trigger>
 								<Trigger Property="IsPressed" Value="True"/>
 								<Trigger Property="IsEnabled" Value="False"/>
@@ -562,14 +562,15 @@
 				<Setter Property="Template">
 					<Setter.Value>
 						<ControlTemplate TargetType="{x:Type Button}">
-							<Grid>
+							<Grid x:Name="grid">
 								<Grid.Background>
 									<ImageBrush/>
 								</Grid.Background>
-								<Rectangle x:Name="rectangle" RadiusY="0" RadiusX="0" StrokeThickness="8" Opacity="1">
+								<Rectangle x:Name="verde" RadiusY="0" RadiusX="0" StrokeThickness="8" Opacity="1">
 									<Rectangle.Fill>
 										<ImageBrush ImageSource="verde.png"/>
 									</Rectangle.Fill>
+									
 								</Rectangle>
 								<ContentPresenter x:Name="contentPresenter" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" RecognizesAccessKey="True" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}" Content="" Margin="0" Width="92" Height="80.28"/>
 							</Grid>
@@ -577,10 +578,7 @@
 								<Trigger Property="IsFocused" Value="True"/>
 								<Trigger Property="IsDefaulted" Value="True"/>
 								<Trigger Property="IsMouseOver" Value="True">
-									<Setter Property="Width" TargetName="contentPresenter" Value="105"/>
-									<Setter Property="Height" TargetName="contentPresenter" Value="103.28"/>
-									<Setter Property="Margin" TargetName="contentPresenter" Value="-13,-23,0,0"/>
-									<Setter Property="Margin" TargetName="rectangle" Value="-13,-23,0,0"/>
+									<Setter Property="Margin" TargetName="grid" Value="-5,-7,0,0"/>
 								</Trigger>
 								<Trigger Property="IsPressed" Value="True"/>
 								<Trigger Property="IsEnabled" Value="False"/>
@@ -787,6 +785,32 @@
 								<Trigger Property="IsMouseOver" Value="True">
 									<Setter Property="Foreground" TargetName="label" Value="#FF377C07"/>
 									<Setter Property="Margin" TargetName="grid" Value="0,1,0,0"/>
+								</Trigger>
+								<Trigger Property="IsPressed" Value="True"/>
+								<Trigger Property="IsEnabled" Value="False"/>
+							</ControlTemplate.Triggers>
+						</ControlTemplate>
+					</Setter.Value>
+				</Setter>
+			</Style>
+			<Style x:Key="btnMorado" TargetType="{x:Type Button}">
+				<Setter Property="Template">
+					<Setter.Value>
+						<ControlTemplate TargetType="{x:Type Button}">
+							<Grid x:Name="grid">
+								<Rectangle x:Name="morado" Stroke="Transparent">
+									<Rectangle.Fill>
+										<ImageBrush ImageSource="morada.png"/>
+									</Rectangle.Fill>
+									
+								</Rectangle>
+								<ContentPresenter HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" RecognizesAccessKey="True" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}" Content="" Margin="0" Width="83.102" Height="78.28"/>
+							</Grid>
+							<ControlTemplate.Triggers>
+								<Trigger Property="IsFocused" Value="True"/>
+								<Trigger Property="IsDefaulted" Value="True"/>
+								<Trigger Property="IsMouseOver" Value="True">
+									<Setter Property="Margin" TargetName="grid" Value="-10,-11,0,0"/>
 								</Trigger>
 								<Trigger Property="IsPressed" Value="True"/>
 								<Trigger Property="IsEnabled" Value="False"/>
