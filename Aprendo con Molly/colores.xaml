@@ -219,7 +219,7 @@
         </Rectangle>
         <Canvas x:Name="flores" HorizontalAlignment="Left" Height="614" VerticalAlignment="Top" Width="1006" Grid.ColumnSpan="2">
         	<Canvas.Background>
-        		<ImageBrush ImageSource="flores.png"/>
+        		<ImageBrush ImageSource="floress.png"/>
         	</Canvas.Background>
         	<Button x:Name="btnJugar" Content="Button" HorizontalAlignment="Left" Height="39.826" Style="{DynamicResource btnJugarEfecto}" VerticalAlignment="Top" Width="137.388" Background="#FF377C07" Canvas.Left="808.964" Canvas.Top="335.982"/>
         	<Button x:Name="bntExcuchar" Content="Button" HorizontalAlignment="Left" Height="49.826" Style="{DynamicResource btnEscucharEfecto}" VerticalAlignment="Top" Width="137.388" Canvas.Left="696.964" Canvas.Top="414.982"/>
