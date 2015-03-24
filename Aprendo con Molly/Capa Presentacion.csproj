@@ -139,6 +139,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Resource Include="am.png" />
     <Resource Include="amarillo.png" />
     <Resource Include="azul.png" />
     <Resource Include="blanco.png" />

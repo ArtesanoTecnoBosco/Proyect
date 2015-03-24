@@ -213,13 +213,10 @@
         <Button Content="Button" HorizontalAlignment="Left" Height="33.826" Margin="866.076,439.204,0,0" Style="{DynamicResource btnVerEfect}" VerticalAlignment="Top" Width="68.722"/>
         <Button Content="Button" HorizontalAlignment="Left" Height="23.72" Margin="906.822,10,0,0" VerticalAlignment="Top" Width="25.011" Style="{DynamicResource Minimizar}" RenderTransformOrigin="-2.032,0.008"/>
         <Button Content="Button" HorizontalAlignment="Left" Height="23.72" Margin="936.833,10,0,0" VerticalAlignment="Top" Width="25.011" Style="{DynamicResource BotonCerrar}" RenderTransformOrigin="-2.032,0.008"/>
-        <Rectangle x:Name="espacioJuego" HorizontalAlignment="Left" Height="367.5" Margin="190.687,227.5,0,0" RadiusY="48" RadiusX="48" StrokeThickness="8" VerticalAlignment="Top" Width="476.5">
-            <Rectangle.Fill>
-                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                    <GradientStop Color="#FFD3F5F5" Offset="0"/>
-                    <GradientStop Offset="1" Color="#FFDCB2B2"/>
-                </LinearGradientBrush>
-            </Rectangle.Fill>
+        <Rectangle x:Name="espacioJuego" HorizontalAlignment="Left" Height="367.5" Margin="182.687,227.5,0,0" RadiusY="48" RadiusX="48" StrokeThickness="8" VerticalAlignment="Top" Width="476.5">
+        	<Rectangle.Fill>
+        		<ImageBrush ImageSource="am.png"/>
+        	</Rectangle.Fill>
         </Rectangle>
         <Rectangle x:Name="bolitas" HorizontalAlignment="Left" Height="325.982" Margin="10,10,0,0" RadiusY="48" RadiusX="48" StrokeThickness="8" VerticalAlignment="Top" Width="968.322"/>
         <Button x:Name="blanco" Content="Button" HorizontalAlignment="Left" Height="57.78" Margin="475.5,9.94,0,0" VerticalAlignment="Top" Width="69" Style="{DynamicResource btnBlanco}"/>
