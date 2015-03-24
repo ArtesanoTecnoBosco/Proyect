@@ -229,5 +229,10 @@
         <Button x:Name="verde" Content="Button" HorizontalAlignment="Left" Height="58" Margin="25.5,226,0,0" VerticalAlignment="Top" Width="69" Style="{DynamicResource btnVerde}"/>
         <Button x:Name="naranja" Content="Button" HorizontalAlignment="Left" Height="58" Margin="702.964,149.56,0,0" VerticalAlignment="Top" Width="69" Style="{DynamicResource bNaranja}"/>
         <Button x:Name="morado" Content="Button" HorizontalAlignment="Left" Height="58" Margin="129,72,0,0" VerticalAlignment="Top" Width="69" Style="{DynamicResource btnMorado}"/>
+        <Rectangle x:Name="flores" HorizontalAlignment="Left" Height="646" Margin="0,-32,0,0" Stroke="Black" VerticalAlignment="Top" Width="1006">
+        	<Rectangle.Fill>
+        		<ImageBrush ImageSource="flores.png" TileMode="Tile"/>
+        	</Rectangle.Fill>
+        </Rectangle>
     </Grid>
 </Window>
