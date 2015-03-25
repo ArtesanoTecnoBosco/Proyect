@@ -185,7 +185,336 @@
             </Setter>
         </Style>
         <Style x:Key="marron" TargetType="{x:Type Button}"/>
+        <Storyboard x:Key="EfectoBolaNegra"/>
+        <Storyboard x:Key="MoradaEnter">
+        	<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)" Storyboard.TargetName="morado">
+        		<EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+        		<EasingDoubleKeyFrame KeyTime="0:0:0.6" Value="0"/>
+        	</DoubleAnimationUsingKeyFrames>
+        	<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)" Storyboard.TargetName="morado">
+        		<EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+        		<EasingDoubleKeyFrame KeyTime="0:0:0.6" Value="-1"/>
+        	</DoubleAnimationUsingKeyFrames>
+        	<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Width)" Storyboard.TargetName="morado">
+        		<EasingDoubleKeyFrame KeyTime="0" Value="69"/>
+        		<EasingDoubleKeyFrame KeyTime="0:0:0.6" Value="75"/>
+        	</DoubleAnimationUsingKeyFrames>
+        	<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Height)" Storyboard.TargetName="morado">
+        		<EasingDoubleKeyFrame KeyTime="0" Value="58"/>
+        		<EasingDoubleKeyFrame KeyTime="0:0:0.6" Value="65"/>
+        	</DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Key="MoradoDown">
+        	<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Width)" Storyboard.TargetName="morado">
+        		<EasingDoubleKeyFrame KeyTime="0" Value="69"/>
+        		<EasingDoubleKeyFrame KeyTime="0:0:0.6" Value="64"/>
+        	</DoubleAnimationUsingKeyFrames>
+        	<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Height)" Storyboard.TargetName="morado">
+        		<EasingDoubleKeyFrame KeyTime="0" Value="58"/>
+        		<EasingDoubleKeyFrame KeyTime="0:0:0.6" Value="51"/>
+        	</DoubleAnimationUsingKeyFrames>
+        	<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)" Storyboard.TargetName="morado">
+        		<EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+        		<EasingDoubleKeyFrame KeyTime="0:0:0.6" Value="1"/>
+        	</DoubleAnimationUsingKeyFrames>
+        	<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)" Storyboard.TargetName="morado">
+        		<EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+        		<EasingDoubleKeyFrame KeyTime="0:0:0.6" Value="0"/>
+        	</DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Key="MoradaNormal">
+        	<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Width)" Storyboard.TargetName="morado">
+        		<EasingDoubleKeyFrame KeyTime="0" Value="75"/>
+        		<EasingDoubleKeyFrame KeyTime="0:0:0.6" Value="69"/>
+        	</DoubleAnimationUsingKeyFrames>
+        	<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Height)" Storyboard.TargetName="morado">
+        		<EasingDoubleKeyFrame KeyTime="0" Value="65"/>
+        		<EasingDoubleKeyFrame KeyTime="0:0:0.6" Value="58"/>
+        	</DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Key="BlancaEnter">
+        	<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Width)" Storyboard.TargetName="blanco">
+        		<EasingDoubleKeyFrame KeyTime="0" Value="69"/>
+        		<EasingDoubleKeyFrame KeyTime="0:0:0.7" Value="75"/>
+        	</DoubleAnimationUsingKeyFrames>
+        	<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Height)" Storyboard.TargetName="blanco">
+        		<EasingDoubleKeyFrame KeyTime="0" Value="57.78"/>
+        		<EasingDoubleKeyFrame KeyTime="0:0:0.7" Value="65"/>
+        	</DoubleAnimationUsingKeyFrames>
+        	<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)" Storyboard.TargetName="blanco">
+        		<EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+        		<EasingDoubleKeyFrame KeyTime="0:0:0.7" Value="1"/>
+        	</DoubleAnimationUsingKeyFrames>
+        	<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)" Storyboard.TargetName="blanco">
+        		<EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+        		<EasingDoubleKeyFrame KeyTime="0:0:0.7" Value="1"/>
+        	</DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Key="BlancaLeave">
+        	<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Width)" Storyboard.TargetName="blanco">
+        		<EasingDoubleKeyFrame KeyTime="0" Value="75"/>
+        		<EasingDoubleKeyFrame KeyTime="0:0:0.7" Value="69"/>
+        	</DoubleAnimationUsingKeyFrames>
+        	<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Height)" Storyboard.TargetName="blanco">
+        		<EasingDoubleKeyFrame KeyTime="0" Value="65"/>
+        		<EasingDoubleKeyFrame KeyTime="0:0:0.7" Value="58"/>
+        	</DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Key="MarronEnter">
+        	<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Width)" Storyboard.TargetName="marron">
+        		<EasingDoubleKeyFrame KeyTime="0" Value="69"/>
+        		<EasingDoubleKeyFrame KeyTime="0:0:0.7" Value="75"/>
+        	</DoubleAnimationUsingKeyFrames>
+        	<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Height)" Storyboard.TargetName="marron">
+        		<EasingDoubleKeyFrame KeyTime="0" Value="58"/>
+        		<EasingDoubleKeyFrame KeyTime="0:0:0.7" Value="65"/>
+        	</DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Key="MarronLeave">
+        	<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Width)" Storyboard.TargetName="marron">
+        		<EasingDoubleKeyFrame KeyTime="0" Value="75"/>
+        		<EasingDoubleKeyFrame KeyTime="0:0:0.6" Value="69"/>
+        	</DoubleAnimationUsingKeyFrames>
+        	<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Height)" Storyboard.TargetName="marron">
+        		<EasingDoubleKeyFrame KeyTime="0" Value="65"/>
+        		<EasingDoubleKeyFrame KeyTime="0:0:0.6" Value="58"/>
+        	</DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Key="RojoEnter">
+        	<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Width)" Storyboard.TargetName="rojo">
+        		<EasingDoubleKeyFrame KeyTime="0" Value="69"/>
+        		<EasingDoubleKeyFrame KeyTime="0:0:0.6" Value="75"/>
+        	</DoubleAnimationUsingKeyFrames>
+        	<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Height)" Storyboard.TargetName="rojo">
+        		<EasingDoubleKeyFrame KeyTime="0" Value="58"/>
+        		<EasingDoubleKeyFrame KeyTime="0:0:0.6" Value="65"/>
+        	</DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Key="RojoLeave">
+        	<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Width)" Storyboard.TargetName="rojo">
+        		<EasingDoubleKeyFrame KeyTime="0" Value="75"/>
+        		<EasingDoubleKeyFrame KeyTime="0:0:0.6" Value="69"/>
+        	</DoubleAnimationUsingKeyFrames>
+        	<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Height)" Storyboard.TargetName="rojo">
+        		<EasingDoubleKeyFrame KeyTime="0" Value="65"/>
+        		<EasingDoubleKeyFrame KeyTime="0:0:0.6" Value="58"/>
+        	</DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Key="AmarilloEnter">
+        	<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Width)" Storyboard.TargetName="amarillo">
+        		<EasingDoubleKeyFrame KeyTime="0" Value="69"/>
+        		<EasingDoubleKeyFrame KeyTime="0:0:0.6" Value="75"/>
+        	</DoubleAnimationUsingKeyFrames>
+        	<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Height)" Storyboard.TargetName="amarillo">
+        		<EasingDoubleKeyFrame KeyTime="0" Value="57.78"/>
+        		<EasingDoubleKeyFrame KeyTime="0:0:0.6" Value="65"/>
+        	</DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Key="AmarilloLeave">
+        	<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Width)" Storyboard.TargetName="amarillo">
+        		<EasingDoubleKeyFrame KeyTime="0" Value="75"/>
+        		<EasingDoubleKeyFrame KeyTime="0:0:0.6" Value="69"/>
+        	</DoubleAnimationUsingKeyFrames>
+        	<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Height)" Storyboard.TargetName="amarillo">
+        		<EasingDoubleKeyFrame KeyTime="0" Value="65"/>
+        		<EasingDoubleKeyFrame KeyTime="0:0:0.6" Value="58"/>
+        	</DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Key="VerdeEnter">
+        	<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Width)" Storyboard.TargetName="verde">
+        		<EasingDoubleKeyFrame KeyTime="0" Value="69"/>
+        		<EasingDoubleKeyFrame KeyTime="0:0:0.6" Value="75"/>
+        	</DoubleAnimationUsingKeyFrames>
+        	<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Height)" Storyboard.TargetName="verde">
+        		<EasingDoubleKeyFrame KeyTime="0" Value="58"/>
+        		<EasingDoubleKeyFrame KeyTime="0:0:0.6" Value="65"/>
+        	</DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Key="VerdeLeave">
+        	<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Width)" Storyboard.TargetName="verde">
+        		<EasingDoubleKeyFrame KeyTime="0" Value="75"/>
+        		<EasingDoubleKeyFrame KeyTime="0:0:0.6" Value="69"/>
+        	</DoubleAnimationUsingKeyFrames>
+        	<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Height)" Storyboard.TargetName="verde">
+        		<EasingDoubleKeyFrame KeyTime="0" Value="65"/>
+        		<EasingDoubleKeyFrame KeyTime="0:0:0.6" Value="58"/>
+        	</DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Key="AzulEnter">
+        	<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Width)" Storyboard.TargetName="azul">
+        		<EasingDoubleKeyFrame KeyTime="0" Value="69"/>
+        		<EasingDoubleKeyFrame KeyTime="0:0:0.6" Value="75"/>
+        	</DoubleAnimationUsingKeyFrames>
+        	<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Height)" Storyboard.TargetName="azul">
+        		<EasingDoubleKeyFrame KeyTime="0" Value="57.78"/>
+        		<EasingDoubleKeyFrame KeyTime="0:0:0.6" Value="65"/>
+        	</DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Key="AzulLeave">
+        	<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Width)" Storyboard.TargetName="azul">
+        		<EasingDoubleKeyFrame KeyTime="0" Value="75"/>
+        		<EasingDoubleKeyFrame KeyTime="0:0:0.6" Value="69"/>
+        	</DoubleAnimationUsingKeyFrames>
+        	<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Height)" Storyboard.TargetName="azul">
+        		<EasingDoubleKeyFrame KeyTime="0" Value="65"/>
+        		<EasingDoubleKeyFrame KeyTime="0:0:0.6" Value="58"/>
+        	</DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Key="NaranjaEnter">
+        	<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Width)" Storyboard.TargetName="naranja">
+        		<EasingDoubleKeyFrame KeyTime="0" Value="69"/>
+        		<EasingDoubleKeyFrame KeyTime="0:0:0.7" Value="72"/>
+        	</DoubleAnimationUsingKeyFrames>
+        	<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Height)" Storyboard.TargetName="naranja">
+        		<EasingDoubleKeyFrame KeyTime="0" Value="58"/>
+        		<EasingDoubleKeyFrame KeyTime="0:0:0.7" Value="65"/>
+        	</DoubleAnimationUsingKeyFrames>
+        	<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleX)" Storyboard.TargetName="naranja">
+        		<EasingDoubleKeyFrame KeyTime="0" Value="1"/>
+        		<EasingDoubleKeyFrame KeyTime="0:0:0.7" Value="1"/>
+        	</DoubleAnimationUsingKeyFrames>
+        	<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)" Storyboard.TargetName="naranja">
+        		<EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+        		<EasingDoubleKeyFrame KeyTime="0:0:0.7" Value="1"/>
+        	</DoubleAnimationUsingKeyFrames>
+        	<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleY)" Storyboard.TargetName="naranja">
+        		<EasingDoubleKeyFrame KeyTime="0" Value="1"/>
+        		<EasingDoubleKeyFrame KeyTime="0:0:0.7" Value="1"/>
+        	</DoubleAnimationUsingKeyFrames>
+        	<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)" Storyboard.TargetName="naranja">
+        		<EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+        		<EasingDoubleKeyFrame KeyTime="0:0:0.7" Value="4"/>
+        	</DoubleAnimationUsingKeyFrames>
+        	<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[2].(RotateTransform.Angle)" Storyboard.TargetName="naranja">
+        		<EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+        		<EasingDoubleKeyFrame KeyTime="0:0:0.7" Value="0"/>
+        	</DoubleAnimationUsingKeyFrames>
+        	<PointAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransformOrigin)" Storyboard.TargetName="naranja">
+        		<EasingPointKeyFrame KeyTime="0" Value="0.5,0.5"/>
+        		<EasingPointKeyFrame KeyTime="0:0:0.7" Value="0.5,0.5"/>
+        	</PointAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Key="NaranjaLeave">
+        	<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Width)" Storyboard.TargetName="naranja">
+        		<EasingDoubleKeyFrame KeyTime="0" Value="75"/>
+        		<EasingDoubleKeyFrame KeyTime="0:0:0.7" Value="69"/>
+        	</DoubleAnimationUsingKeyFrames>
+        	<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Height)" Storyboard.TargetName="naranja">
+        		<EasingDoubleKeyFrame KeyTime="0" Value="65"/>
+        		<EasingDoubleKeyFrame KeyTime="0:0:0.7" Value="58"/>
+        	</DoubleAnimationUsingKeyFrames>
+        	<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)" Storyboard.TargetName="naranja">
+        		<EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+        		<EasingDoubleKeyFrame KeyTime="0:0:0.7" Value="1"/>
+        	</DoubleAnimationUsingKeyFrames>
+        	<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)" Storyboard.TargetName="naranja">
+        		<EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+        		<EasingDoubleKeyFrame KeyTime="0:0:0.7" Value="5"/>
+        	</DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Key="RosaEnter">
+        	<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Width)" Storyboard.TargetName="rosa">
+        		<EasingDoubleKeyFrame KeyTime="0" Value="69"/>
+        		<EasingDoubleKeyFrame KeyTime="0:0:0.6" Value="75"/>
+        	</DoubleAnimationUsingKeyFrames>
+        	<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Height)" Storyboard.TargetName="rosa">
+        		<EasingDoubleKeyFrame KeyTime="0" Value="58"/>
+        		<EasingDoubleKeyFrame KeyTime="0:0:0.6" Value="65"/>
+        	</DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Key="RosaLeave">
+        	<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Width)" Storyboard.TargetName="rosa">
+        		<EasingDoubleKeyFrame KeyTime="0" Value="75"/>
+        		<EasingDoubleKeyFrame KeyTime="0:0:0.6" Value="69"/>
+        	</DoubleAnimationUsingKeyFrames>
+        	<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Height)" Storyboard.TargetName="rosa">
+        		<EasingDoubleKeyFrame KeyTime="0" Value="65"/>
+        		<EasingDoubleKeyFrame KeyTime="0:0:0.6" Value="58"/>
+        	</DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Key="NegroEnter">
+        	<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Width)" Storyboard.TargetName="negro">
+        		<EasingDoubleKeyFrame KeyTime="0" Value="69"/>
+        		<EasingDoubleKeyFrame KeyTime="0:0:0.7" Value="75"/>
+        	</DoubleAnimationUsingKeyFrames>
+        	<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Height)" Storyboard.TargetName="negro">
+        		<EasingDoubleKeyFrame KeyTime="0" Value="58"/>
+        		<EasingDoubleKeyFrame KeyTime="0:0:0.7" Value="65"/>
+        	</DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Key="NegroLeave">
+        	<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Width)" Storyboard.TargetName="negro">
+        		<EasingDoubleKeyFrame KeyTime="0" Value="75"/>
+        		<EasingDoubleKeyFrame KeyTime="0:0:0.7" Value="69"/>
+        	</DoubleAnimationUsingKeyFrames>
+        	<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Height)" Storyboard.TargetName="negro">
+        		<EasingDoubleKeyFrame KeyTime="0" Value="65"/>
+        		<EasingDoubleKeyFrame KeyTime="0:0:0.7" Value="58"/>
+        	</DoubleAnimationUsingKeyFrames>
+        </Storyboard>
     </Window.Resources>
+	<Window.Triggers>
+		<EventTrigger RoutedEvent="Mouse.MouseEnter" SourceName="morado">
+			<BeginStoryboard x:Name="MoradaEnter_BeginStoryboard" Storyboard="{StaticResource MoradaEnter}"/>
+		</EventTrigger>
+		<EventTrigger RoutedEvent="Mouse.MouseEnter" SourceName="blanco">
+			<BeginStoryboard x:Name="MoradoDown_BeginStoryboard" Storyboard="{StaticResource BlancaEnter}"/>
+		</EventTrigger>
+		<EventTrigger RoutedEvent="Mouse.MouseLeave" SourceName="morado">
+			<BeginStoryboard Storyboard="{StaticResource MoradaNormal}"/>
+		</EventTrigger>
+		<EventTrigger RoutedEvent="Mouse.MouseLeave" SourceName="blanco">
+			<BeginStoryboard Storyboard="{StaticResource BlancaLeave}"/>
+		</EventTrigger>
+		<EventTrigger RoutedEvent="Mouse.MouseEnter" SourceName="marron">
+			<BeginStoryboard x:Name="MarronEnter_BeginStoryboard" Storyboard="{StaticResource MarronEnter}"/>
+		</EventTrigger>
+		<EventTrigger RoutedEvent="Mouse.MouseLeave" SourceName="marron">
+			<BeginStoryboard x:Name="MarronLeave_BeginStoryboard" Storyboard="{StaticResource MarronLeave}"/>
+		</EventTrigger>
+		<EventTrigger RoutedEvent="Mouse.MouseEnter" SourceName="rojo">
+			<BeginStoryboard Storyboard="{StaticResource RojoEnter}"/>
+		</EventTrigger>
+		<EventTrigger RoutedEvent="Mouse.MouseLeave" SourceName="rojo">
+			<BeginStoryboard x:Name="RojoLeave_BeginStoryboard" Storyboard="{StaticResource RojoLeave}"/>
+		</EventTrigger>
+		<EventTrigger RoutedEvent="Mouse.MouseEnter" SourceName="amarillo">
+			<BeginStoryboard Storyboard="{StaticResource AmarilloEnter}"/>
+		</EventTrigger>
+		<EventTrigger RoutedEvent="Mouse.MouseLeave" SourceName="amarillo">
+			<BeginStoryboard Storyboard="{StaticResource AmarilloLeave}"/>
+		</EventTrigger>
+		<EventTrigger RoutedEvent="Mouse.MouseEnter" SourceName="verde">
+			<BeginStoryboard Storyboard="{StaticResource VerdeEnter}"/>
+		</EventTrigger>
+		<EventTrigger RoutedEvent="Mouse.MouseLeave" SourceName="verde">
+			<BeginStoryboard Storyboard="{StaticResource VerdeLeave}"/>
+		</EventTrigger>
+		<EventTrigger RoutedEvent="Mouse.MouseEnter" SourceName="azul">
+			<BeginStoryboard Storyboard="{StaticResource AzulEnter}"/>
+		</EventTrigger>
+		<EventTrigger RoutedEvent="Mouse.MouseLeave" SourceName="azul">
+			<BeginStoryboard Storyboard="{StaticResource AzulLeave}"/>
+		</EventTrigger>
+		<EventTrigger RoutedEvent="Mouse.MouseEnter" SourceName="naranja">
+			<BeginStoryboard Storyboard="{StaticResource NaranjaEnter}"/>
+		</EventTrigger>
+		<EventTrigger RoutedEvent="Mouse.MouseLeave" SourceName="naranja">
+			<BeginStoryboard Storyboard="{StaticResource NaranjaLeave}"/>
+		</EventTrigger>
+		<EventTrigger RoutedEvent="Mouse.MouseEnter" SourceName="rosa">
+			<BeginStoryboard Storyboard="{StaticResource RosaEnter}"/>
+		</EventTrigger>
+		<EventTrigger RoutedEvent="Mouse.MouseLeave" SourceName="rosa">
+			<BeginStoryboard Storyboard="{StaticResource RosaLeave}"/>
+		</EventTrigger>
+		<EventTrigger RoutedEvent="Mouse.MouseEnter" SourceName="negro">
+			<BeginStoryboard Storyboard="{StaticResource NegroEnter}"/>
+		</EventTrigger>
+		<EventTrigger RoutedEvent="Mouse.MouseLeave" SourceName="negro">
+			<BeginStoryboard Storyboard="{StaticResource NegroLeave}"/>
+		</EventTrigger>
+	</Window.Triggers>
     <Window.Effect>
         <DropShadowEffect Color="#FF32911D" Direction="200" Opacity="0.75"/>
     </Window.Effect>
@@ -227,16 +556,52 @@
         	<Button x:Name="btnMinimiza" Content="Button" HorizontalAlignment="Left" Height="23.72" VerticalAlignment="Top" Width="25.011" Style="{DynamicResource Minimizar}" RenderTransformOrigin="-2.032,0.008" Canvas.Left="906.822" Canvas.Top="10"/>
         	<Button x:Name="btnCerrar" Content="Button" HorizontalAlignment="Left" Height="23.72" VerticalAlignment="Top" Width="25.011" Style="{DynamicResource BotonCerrar}" RenderTransformOrigin="-2.032,0.008" Canvas.Left="936.833" Canvas.Top="10"/>
         	<Canvas x:Name="bolitas" HorizontalAlignment="Left" Height="300.018" VerticalAlignment="Top" Width="991.992" Canvas.Left="4.008" Canvas.Top="-12">
-        		<Button x:Name="blanco" Content="Button" HorizontalAlignment="Left" Height="57.78" VerticalAlignment="Top" Width="69" Style="{DynamicResource btnBlanco}" Canvas.Left="2" Canvas.Top="233.518"/>
+        		<Button x:Name="blanco" Content="Button" HorizontalAlignment="Left" Height="57.78" VerticalAlignment="Top" Width="69" Style="{DynamicResource btnBlanco}" Canvas.Left="2" Canvas.Top="233.518" RenderTransformOrigin="0.5,0.5">
+        			<Button.RenderTransform>
+        				<TransformGroup>
+        					<ScaleTransform/>
+        					<SkewTransform/>
+        					<RotateTransform/>
+        					<TranslateTransform/>
+        				</TransformGroup>
+        			</Button.RenderTransform>
+        		</Button>
         		<Button x:Name="amarillo" Content="Button" HorizontalAlignment="Left" Height="57.78" VerticalAlignment="Top" Width="69" Style="{DynamicResource btnAmarillo}" Canvas.Left="432" Canvas.Top="137.798"/>
         		<Button x:Name="marron" Content="Button" HorizontalAlignment="Left" Height="58" VerticalAlignment="Top" Width="69" Style="{DynamicResource btnMarron}" Canvas.Left="194.5" Canvas.Top="171.578"/>
         		<Button x:Name="azul" Content="Button" HorizontalAlignment="Left" Height="57.78" VerticalAlignment="Top" Width="69" Style="{DynamicResource btnAzul}" Canvas.Left="633.464" Canvas.Top="55.958"/>
         		<Button x:Name="rojo" Content="Button" HorizontalAlignment="Left" Height="58" VerticalAlignment="Top" Width="69" Style="{DynamicResource btnRojo}" Canvas.Left="274.5" Canvas.Top="45.738"/>
         		<Button x:Name="rosa" Content="Button" HorizontalAlignment="Left" Height="58" VerticalAlignment="Top" Width="69" Style="{DynamicResource rosa}" Canvas.Left="797.464" Canvas.Top="114.018"/>
-        		<Button x:Name="negro" Content="Button" HorizontalAlignment="Left" Height="58" VerticalAlignment="Top" Width="69" Style="{DynamicResource negro}" RenderTransformOrigin="1.053,0.241" Canvas.Left="903.822" Canvas.Top="232.018"/>
+        		<Button x:Name="negro" Content="Button" HorizontalAlignment="Left" Height="58" VerticalAlignment="Top" Width="69" Style="{DynamicResource negro}" RenderTransformOrigin="0.495,0.465" Canvas.Left="903.822" Canvas.Top="232.018">
+        			<Button.RenderTransform>
+        				<TransformGroup>
+        					<ScaleTransform/>
+        					<SkewTransform/>
+        					<RotateTransform/>
+        					<TranslateTransform/>
+        				</TransformGroup>
+        			</Button.RenderTransform>
+        		</Button>
         		<Button x:Name="verde" Content="Button" HorizontalAlignment="Left" Height="58" VerticalAlignment="Top" Width="69" Style="{DynamicResource btnVerde}" Canvas.Left="452" Canvas.Top="32.018"/>
-        		<Button x:Name="naranja" Content="Button" HorizontalAlignment="Left" Height="58" VerticalAlignment="Top" Width="69" Style="{DynamicResource bNaranja}" Canvas.Left="673.464" Canvas.Top="171.578"/>
-        		<Button x:Name="morado" Content="Button" HorizontalAlignment="Left" Height="58" VerticalAlignment="Top" Width="69" Style="{DynamicResource btnMorado}" Canvas.Left="99.5" Canvas.Top="94.018"/>
+        		<Button x:Name="naranja" Content="Button" HorizontalAlignment="Left" Height="58" VerticalAlignment="Top" Width="69" Style="{DynamicResource bNaranja}" Canvas.Left="673.464" Canvas.Top="171.578" RenderTransformOrigin="0.5,0.5">
+        			<Button.RenderTransform>
+        				<TransformGroup>
+        					<ScaleTransform/>
+        					<SkewTransform/>
+        					<RotateTransform/>
+        					<TranslateTransform/>
+        				</TransformGroup>
+        			</Button.RenderTransform>
+        		</Button>
+        		<Button x:Name="morado" Content="Button" HorizontalAlignment="Left" Height="58" VerticalAlignment="Top" Width="69" Style="{DynamicResource btnMorado}" Canvas.Left="99.5" Canvas.Top="94.018" RenderTransformOrigin="0.5,0.5">
+        			<Button.RenderTransform>
+        				<TransformGroup>
+        					<ScaleTransform/>
+        					<SkewTransform/>
+        					<RotateTransform/>
+        					<TranslateTransform/>
+        				</TransformGroup>
+        			</Button.RenderTransform>
+        		</Button>
         	</Canvas>
         </Canvas>
     </Grid>

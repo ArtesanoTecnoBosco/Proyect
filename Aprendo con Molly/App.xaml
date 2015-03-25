@@ -2,7 +2,7 @@
 	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
 	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
 	x:Class="Aprendo_con_Molly.App"
-	StartupUri="Inicio.xaml">
+	StartupUri="colores.xaml">
 	<Application.Resources>
 		<ResourceDictionary>
 			<ResourceDictionary.MergedDictionaries>
@@ -88,9 +88,6 @@
 							<ControlTemplate.Triggers>
 								<Trigger Property="IsFocused" Value="True"/>
 								<Trigger Property="IsDefaulted" Value="True"/>
-								<Trigger Property="IsMouseOver" Value="True">
-									<Setter Property="Margin" TargetName="grid" Value="-8,-5,0,-2"/>
-								</Trigger>
 								<Trigger Property="IsPressed" Value="True"/>
 								<Trigger Property="IsEnabled" Value="False"/>
 							</ControlTemplate.Triggers>
@@ -196,12 +193,6 @@
 							<ControlTemplate.Triggers>
 								<Trigger Property="IsFocused" Value="True"/>
 								<Trigger Property="IsDefaulted" Value="True"/>
-								<Trigger Property="IsMouseOver" Value="True">
-									<Setter Property="Height" TargetName="contentPresenter" Value="93.28"/>
-									<Setter Property="Width" TargetName="contentPresenter" Value="106"/>
-									<Setter Property="Margin" TargetName="contentPresenter" Value="-14,-15,0,0"/>
-									<Setter Property="Margin" TargetName="amarillo" Value="-14,-15,0,0"/>
-								</Trigger>
 								<Trigger Property="IsPressed" Value="True"/>
 								<Trigger Property="IsEnabled" Value="False"/>
 							</ControlTemplate.Triggers>
@@ -299,9 +290,6 @@
 							<ControlTemplate.Triggers>
 								<Trigger Property="IsFocused" Value="True"/>
 								<Trigger Property="IsDefaulted" Value="True"/>
-								<Trigger Property="IsMouseOver" Value="True">
-									<Setter Property="Margin" TargetName="grid" Value="-8,-11,0,0"/>
-								</Trigger>
 								<Trigger Property="IsPressed" Value="True"/>
 								<Trigger Property="IsEnabled" Value="False"/>
 							</ControlTemplate.Triggers>
@@ -325,9 +313,6 @@
 							<ControlTemplate.Triggers>
 								<Trigger Property="IsFocused" Value="True"/>
 								<Trigger Property="IsDefaulted" Value="True"/>
-								<Trigger Property="IsMouseOver" Value="True">
-									<Setter Property="Margin" TargetName="grid" Value="-10,-11,0,0"/>
-								</Trigger>
 								<Trigger Property="IsPressed" Value="True"/>
 								<Trigger Property="IsEnabled" Value="False"/>
 							</ControlTemplate.Triggers>
@@ -382,12 +367,6 @@
 							<ControlTemplate.Triggers>
 								<Trigger Property="IsFocused" Value="True"/>
 								<Trigger Property="IsDefaulted" Value="True"/>
-								<Trigger Property="IsMouseOver" Value="True">
-									<Setter Property="Width" TargetName="contentPresenter" Value="105"/>
-									<Setter Property="Height" TargetName="contentPresenter" Value="103.28"/>
-									<Setter Property="Margin" TargetName="contentPresenter" Value="-13,-23,0,0"/>
-									<Setter Property="Margin" TargetName="rectangle" Value="-13,-23,0,0"/>
-								</Trigger>
 								<Trigger Property="IsPressed" Value="True"/>
 								<Trigger Property="IsEnabled" Value="False"/>
 							</ControlTemplate.Triggers>
@@ -411,12 +390,6 @@
 							<ControlTemplate.Triggers>
 								<Trigger Property="IsFocused" Value="True"/>
 								<Trigger Property="IsDefaulted" Value="True"/>
-								<Trigger Property="IsMouseOver" Value="True">
-									<Setter Property="Width" TargetName="contentPresenter" Value="105"/>
-									<Setter Property="Height" TargetName="contentPresenter" Value="103.28"/>
-									<Setter Property="Margin" TargetName="contentPresenter" Value="-13,-23,0,0"/>
-									<Setter Property="Margin" TargetName="m" Value="-13,-23,0,0"/>
-								</Trigger>
 								<Trigger Property="IsPressed" Value="True"/>
 								<Trigger Property="IsEnabled" Value="False"/>
 							</ControlTemplate.Triggers>
@@ -513,12 +486,6 @@
 							<ControlTemplate.Triggers>
 								<Trigger Property="IsFocused" Value="True"/>
 								<Trigger Property="IsDefaulted" Value="True"/>
-								<Trigger Property="IsMouseOver" Value="True">
-									<Setter Property="Width" TargetName="contentPresenter" Value="105"/>
-									<Setter Property="Height" TargetName="contentPresenter" Value="103.28"/>
-									<Setter Property="Margin" TargetName="contentPresenter" Value="-13,-23,0,0"/>
-									<Setter Property="Margin" TargetName="rojo" Value="-13,-23,0,0"/>
-								</Trigger>
 								<Trigger Property="IsPressed" Value="True"/>
 								<Trigger Property="IsEnabled" Value="False"/>
 							</ControlTemplate.Triggers>
@@ -545,12 +512,6 @@
 							<ControlTemplate.Triggers>
 								<Trigger Property="IsFocused" Value="True"/>
 								<Trigger Property="IsDefaulted" Value="True"/>
-								<Trigger Property="IsMouseOver" Value="True">
-									<Setter Property="Width" TargetName="contentPresenter" Value="105"/>
-									<Setter Property="Height" TargetName="contentPresenter" Value="103.28"/>
-									<Setter Property="Margin" TargetName="contentPresenter" Value="-13,-23,0,0"/>
-									<Setter Property="Margin" TargetName="azul" Value="-13,-23,0,0"/>
-								</Trigger>
 								<Trigger Property="IsPressed" Value="True"/>
 								<Trigger Property="IsEnabled" Value="False"/>
 							</ControlTemplate.Triggers>
@@ -577,9 +538,6 @@
 							<ControlTemplate.Triggers>
 								<Trigger Property="IsFocused" Value="True"/>
 								<Trigger Property="IsDefaulted" Value="True"/>
-								<Trigger Property="IsMouseOver" Value="True">
-									<Setter Property="Margin" TargetName="grid" Value="-5,-7,0,0"/>
-								</Trigger>
 								<Trigger Property="IsPressed" Value="True"/>
 								<Trigger Property="IsEnabled" Value="False"/>
 							</ControlTemplate.Triggers>
@@ -809,9 +767,6 @@
 							<ControlTemplate.Triggers>
 								<Trigger Property="IsFocused" Value="True"/>
 								<Trigger Property="IsDefaulted" Value="True"/>
-								<Trigger Property="IsMouseOver" Value="True">
-									<Setter Property="Margin" TargetName="grid" Value="-10,-11,0,0"/>
-								</Trigger>
 								<Trigger Property="IsPressed" Value="True"/>
 								<Trigger Property="IsEnabled" Value="False"/>
 							</ControlTemplate.Triggers>
