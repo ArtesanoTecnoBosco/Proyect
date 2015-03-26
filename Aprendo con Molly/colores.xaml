@@ -452,6 +452,240 @@
         		<EasingDoubleKeyFrame KeyTime="0:0:0.7" Value="58"/>
         	</DoubleAnimationUsingKeyFrames>
         </Storyboard>
+        <Storyboard x:Key="B">
+        	<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleX)" Storyboard.TargetName="b">
+        		<EasingDoubleKeyFrame KeyTime="0" Value="1"/>
+        		<EasingDoubleKeyFrame KeyTime="0:0:0.4" Value="0"/>
+        		<EasingDoubleKeyFrame KeyTime="0:0:0.7" Value="-1"/>
+        		<EasingDoubleKeyFrame KeyTime="0:0:1.1" Value="0"/>
+        		<EasingDoubleKeyFrame KeyTime="0:0:1.5" Value="1"/>
+        	</DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Key="E">
+        	<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleX)" Storyboard.TargetName="e">
+        		<EasingDoubleKeyFrame KeyTime="0" Value="1"/>
+        		<EasingDoubleKeyFrame KeyTime="0:0:0.4" Value="0"/>
+        		<EasingDoubleKeyFrame KeyTime="0:0:0.8" Value="-1"/>
+        		<EasingDoubleKeyFrame KeyTime="0:0:1.1" Value="0"/>
+        		<EasingDoubleKeyFrame KeyTime="0:0:1.5" Value="1"/>
+        	</DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Key="Q">
+        	<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleX)" Storyboard.TargetName="q">
+        		<EasingDoubleKeyFrame KeyTime="0" Value="1"/>
+        		<EasingDoubleKeyFrame KeyTime="0:0:0.4" Value="0"/>
+        		<EasingDoubleKeyFrame KeyTime="0:0:0.8" Value="-1"/>
+        		<EasingDoubleKeyFrame KeyTime="0:0:1.1" Value="0"/>
+        		<EasingDoubleKeyFrame KeyTime="0:0:1.5" Value="1"/>
+        	</DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Key="R">
+        	<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleX)" Storyboard.TargetName="r">
+        		<EasingDoubleKeyFrame KeyTime="0" Value="1"/>
+        		<EasingDoubleKeyFrame KeyTime="0:0:0.4" Value="0"/>
+        		<EasingDoubleKeyFrame KeyTime="0:0:0.8" Value="-1"/>
+        		<EasingDoubleKeyFrame KeyTime="0:0:1.1" Value="0"/>
+        		<EasingDoubleKeyFrame KeyTime="0:0:1.5" Value="1"/>
+        	</DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Key="I">
+        	<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleX)" Storyboard.TargetName="i">
+        		<EasingDoubleKeyFrame KeyTime="0" Value="1"/>
+        		<EasingDoubleKeyFrame KeyTime="0:0:0.4" Value="0"/>
+        		<EasingDoubleKeyFrame KeyTime="0:0:0.8" Value="-1"/>
+        		<EasingDoubleKeyFrame KeyTime="0:0:1.1" Value="0"/>
+        		<EasingDoubleKeyFrame KeyTime="0:0:1.5" Value="1"/>
+        	</DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Key="W">
+        	<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleX)" Storyboard.TargetName="w">
+        		<EasingDoubleKeyFrame KeyTime="0" Value="1"/>
+        		<EasingDoubleKeyFrame KeyTime="0:0:0.4" Value="0"/>
+        		<EasingDoubleKeyFrame KeyTime="0:0:0.8" Value="-1"/>
+        		<EasingDoubleKeyFrame KeyTime="0:0:1.1" Value="0"/>
+        		<EasingDoubleKeyFrame KeyTime="0:0:1.5" Value="1"/>
+        	</DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Key="T">
+        	<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleX)" Storyboard.TargetName="t">
+        		<EasingDoubleKeyFrame KeyTime="0" Value="1"/>
+        		<EasingDoubleKeyFrame KeyTime="0:0:0.4" Value="0"/>
+        		<EasingDoubleKeyFrame KeyTime="0:0:0.8" Value="-1"/>
+        		<EasingDoubleKeyFrame KeyTime="0:0:1.1" Value="0"/>
+        		<EasingDoubleKeyFrame KeyTime="0:0:1.5" Value="1"/>
+        	</DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Key="J">
+        	<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleX)" Storyboard.TargetName="j">
+        		<EasingDoubleKeyFrame KeyTime="0" Value="1"/>
+        		<EasingDoubleKeyFrame KeyTime="0:0:0.4" Value="0"/>
+        		<EasingDoubleKeyFrame KeyTime="0:0:0.8" Value="-1"/>
+        		<EasingDoubleKeyFrame KeyTime="0:0:1.1" Value="0"/>
+        		<EasingDoubleKeyFrame KeyTime="0:0:1.5" Value="1"/>
+        	</DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Key="H">
+        	<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleX)" Storyboard.TargetName="h">
+        		<EasingDoubleKeyFrame KeyTime="0" Value="1"/>
+        		<EasingDoubleKeyFrame KeyTime="0:0:0.4" Value="0"/>
+        		<EasingDoubleKeyFrame KeyTime="0:0:0.8" Value="-1"/>
+        		<EasingDoubleKeyFrame KeyTime="0:0:1.1" Value="0"/>
+        		<EasingDoubleKeyFrame KeyTime="0:0:1.5" Value="1"/>
+        	</DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Key="A">
+        	<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleX)" Storyboard.TargetName="a">
+        		<EasingDoubleKeyFrame KeyTime="0" Value="1"/>
+        		<EasingDoubleKeyFrame KeyTime="0:0:0.4" Value="0"/>
+        		<EasingDoubleKeyFrame KeyTime="0:0:0.8" Value="-1"/>
+        		<EasingDoubleKeyFrame KeyTime="0:0:1.1" Value="0"/>
+        		<EasingDoubleKeyFrame KeyTime="0:0:1.5" Value="1"/>
+        	</DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Key="F">
+        	<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleX)" Storyboard.TargetName="f">
+        		<EasingDoubleKeyFrame KeyTime="0" Value="1"/>
+        		<EasingDoubleKeyFrame KeyTime="0:0:0.4" Value="0"/>
+        		<EasingDoubleKeyFrame KeyTime="0:0:0.8" Value="-1"/>
+        		<EasingDoubleKeyFrame KeyTime="0:0:1.1" Value="0"/>
+        		<EasingDoubleKeyFrame KeyTime="0:0:1.5" Value="1"/>
+        	</DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Key="K">
+        	<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleX)" Storyboard.TargetName="k">
+        		<EasingDoubleKeyFrame KeyTime="0" Value="1"/>
+        		<EasingDoubleKeyFrame KeyTime="0:0:0.4" Value="0"/>
+        		<EasingDoubleKeyFrame KeyTime="0:0:0.8" Value="-1"/>
+        		<EasingDoubleKeyFrame KeyTime="0:0:1.1" Value="0"/>
+        		<EasingDoubleKeyFrame KeyTime="0:0:1.5" Value="1"/>
+        	</DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Key="L">
+        	<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleX)" Storyboard.TargetName="l">
+        		<EasingDoubleKeyFrame KeyTime="0" Value="1"/>
+        		<EasingDoubleKeyFrame KeyTime="0:0:0.4" Value="0"/>
+        		<EasingDoubleKeyFrame KeyTime="0:0:0.8" Value="-1"/>
+        		<EasingDoubleKeyFrame KeyTime="0:0:1.1" Value="0"/>
+        		<EasingDoubleKeyFrame KeyTime="0:0:1.5" Value="1"/>
+        	</DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Key="S">
+        	<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleX)" Storyboard.TargetName="s">
+        		<EasingDoubleKeyFrame KeyTime="0" Value="1"/>
+        		<EasingDoubleKeyFrame KeyTime="0:0:0.4" Value="0"/>
+        		<EasingDoubleKeyFrame KeyTime="0:0:0.8" Value="-1"/>
+        		<EasingDoubleKeyFrame KeyTime="0:0:1.1" Value="0"/>
+        		<EasingDoubleKeyFrame KeyTime="0:0:1.5" Value="1"/>
+        	</DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Key="V">
+        	<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleX)" Storyboard.TargetName="v">
+        		<EasingDoubleKeyFrame KeyTime="0" Value="1"/>
+        		<EasingDoubleKeyFrame KeyTime="0:0:0.4" Value="0"/>
+        		<EasingDoubleKeyFrame KeyTime="0:0:0.8" Value="-1"/>
+        		<EasingDoubleKeyFrame KeyTime="0:0:1.1" Value="0"/>
+        		<EasingDoubleKeyFrame KeyTime="0:0:1.5" Value="1"/>
+        	</DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Key="P">
+        	<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleX)" Storyboard.TargetName="p">
+        		<EasingDoubleKeyFrame KeyTime="0" Value="1"/>
+        		<EasingDoubleKeyFrame KeyTime="0:0:0.4" Value="0"/>
+        		<EasingDoubleKeyFrame KeyTime="0:0:0.8" Value="-1"/>
+        		<EasingDoubleKeyFrame KeyTime="0:0:1.1" Value="0"/>
+        		<EasingDoubleKeyFrame KeyTime="0:0:1.5" Value="1"/>
+        	</DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Key="C">
+        	<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleX)" Storyboard.TargetName="c">
+        		<EasingDoubleKeyFrame KeyTime="0" Value="1"/>
+        		<EasingDoubleKeyFrame KeyTime="0:0:0.4" Value="0"/>
+        		<EasingDoubleKeyFrame KeyTime="0:0:0.8" Value="-1"/>
+        		<EasingDoubleKeyFrame KeyTime="0:0:1.1" Value="0"/>
+        		<EasingDoubleKeyFrame KeyTime="0:0:1.5" Value="1"/>
+        	</DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Key="G">
+        	<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleX)" Storyboard.TargetName="g">
+        		<EasingDoubleKeyFrame KeyTime="0" Value="1"/>
+        		<EasingDoubleKeyFrame KeyTime="0:0:0.4" Value="0"/>
+        		<EasingDoubleKeyFrame KeyTime="0:0:0.8" Value="-1"/>
+        		<EasingDoubleKeyFrame KeyTime="0:0:1.1" Value="0"/>
+        		<EasingDoubleKeyFrame KeyTime="0:0:1.5" Value="1"/>
+        	</DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Key="O">
+        	<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleX)" Storyboard.TargetName="o">
+        		<EasingDoubleKeyFrame KeyTime="0" Value="1"/>
+        		<EasingDoubleKeyFrame KeyTime="0:0:0.4" Value="0"/>
+        		<EasingDoubleKeyFrame KeyTime="0:0:0.8" Value="-1"/>
+        		<EasingDoubleKeyFrame KeyTime="0:0:1.1" Value="0"/>
+        		<EasingDoubleKeyFrame KeyTime="0:0:1.5" Value="1"/>
+        	</DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Key="M">
+        	<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleX)" Storyboard.TargetName="m">
+        		<EasingDoubleKeyFrame KeyTime="0" Value="1"/>
+        		<EasingDoubleKeyFrame KeyTime="0:0:0.4" Value="0"/>
+        		<EasingDoubleKeyFrame KeyTime="0:0:0.8" Value="-1"/>
+        		<EasingDoubleKeyFrame KeyTime="0:0:1.1" Value="0"/>
+        		<EasingDoubleKeyFrame KeyTime="0:0:1.5" Value="1"/>
+        	</DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Key="Y">
+        	<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleX)" Storyboard.TargetName="y">
+        		<EasingDoubleKeyFrame KeyTime="0" Value="1"/>
+        		<EasingDoubleKeyFrame KeyTime="0:0:0.4" Value="0"/>
+        		<EasingDoubleKeyFrame KeyTime="0:0:0.8" Value="-1"/>
+        		<EasingDoubleKeyFrame KeyTime="0:0:1.1" Value="0"/>
+        		<EasingDoubleKeyFrame KeyTime="0:0:1.5" Value="1"/>
+        	</DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Key="N">
+        	<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleX)" Storyboard.TargetName="n">
+        		<EasingDoubleKeyFrame KeyTime="0" Value="1"/>
+        		<EasingDoubleKeyFrame KeyTime="0:0:0.4" Value="0"/>
+        		<EasingDoubleKeyFrame KeyTime="0:0:0.8" Value="-1"/>
+        		<EasingDoubleKeyFrame KeyTime="0:0:1.1" Value="0"/>
+        		<EasingDoubleKeyFrame KeyTime="0:0:1.5" Value="1"/>
+        	</DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Key="X">
+        	<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleX)" Storyboard.TargetName="x">
+        		<EasingDoubleKeyFrame KeyTime="0" Value="1"/>
+        		<EasingDoubleKeyFrame KeyTime="0:0:0.4" Value="0"/>
+        		<EasingDoubleKeyFrame KeyTime="0:0:0.8" Value="-1"/>
+        		<EasingDoubleKeyFrame KeyTime="0:0:1.1" Value="0"/>
+        		<EasingDoubleKeyFrame KeyTime="0:0:1.5" Value="1"/>
+        	</DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Key="D">
+        	<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleX)" Storyboard.TargetName="d">
+        		<EasingDoubleKeyFrame KeyTime="0" Value="1"/>
+        		<EasingDoubleKeyFrame KeyTime="0:0:0.4" Value="0"/>
+        		<EasingDoubleKeyFrame KeyTime="0:0:0.8" Value="-1"/>
+        		<EasingDoubleKeyFrame KeyTime="0:0:1.1" Value="0"/>
+        		<EasingDoubleKeyFrame KeyTime="0:0:1.5" Value="1"/>
+        	</DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Key="Z">
+        	<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleX)" Storyboard.TargetName="z">
+        		<EasingDoubleKeyFrame KeyTime="0" Value="1"/>
+        		<EasingDoubleKeyFrame KeyTime="0:0:0.4" Value="0"/>
+        		<EasingDoubleKeyFrame KeyTime="0:0:0.8" Value="-1"/>
+        		<EasingDoubleKeyFrame KeyTime="0:0:1.1" Value="0"/>
+        		<EasingDoubleKeyFrame KeyTime="0:0:1.5" Value="1"/>
+        	</DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Key="U">
+        	<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleX)" Storyboard.TargetName="u">
+        		<EasingDoubleKeyFrame KeyTime="0" Value="1"/>
+        		<EasingDoubleKeyFrame KeyTime="0:0:0.4" Value="0"/>
+        		<EasingDoubleKeyFrame KeyTime="0:0:0.8" Value="-1"/>
+        		<EasingDoubleKeyFrame KeyTime="0:0:1.1" Value="0"/>
+        		<EasingDoubleKeyFrame KeyTime="0:0:1.5" Value="1"/>
+        	</DoubleAnimationUsingKeyFrames>
+        </Storyboard>
     </Window.Resources>
 	<Window.Triggers>
 		<EventTrigger RoutedEvent="Mouse.MouseEnter" SourceName="morado">
@@ -513,6 +747,84 @@
 		</EventTrigger>
 		<EventTrigger RoutedEvent="Mouse.MouseLeave" SourceName="negro">
 			<BeginStoryboard Storyboard="{StaticResource NegroLeave}"/>
+		</EventTrigger>
+		<EventTrigger RoutedEvent="UIElement.MouseLeftButtonDown" SourceName="b">
+			<BeginStoryboard Storyboard="{StaticResource B}"/>
+		</EventTrigger>
+		<EventTrigger RoutedEvent="UIElement.MouseLeftButtonDown" SourceName="e">
+			<BeginStoryboard Storyboard="{StaticResource E}"/>
+		</EventTrigger>
+		<EventTrigger RoutedEvent="UIElement.MouseLeftButtonDown" SourceName="q">
+			<BeginStoryboard Storyboard="{StaticResource Q}"/>
+		</EventTrigger>
+		<EventTrigger RoutedEvent="UIElement.MouseLeftButtonDown" SourceName="r">
+			<BeginStoryboard Storyboard="{StaticResource R}"/>
+		</EventTrigger>
+		<EventTrigger RoutedEvent="UIElement.MouseLeftButtonDown" SourceName="i">
+			<BeginStoryboard Storyboard="{StaticResource I}"/>
+		</EventTrigger>
+		<EventTrigger RoutedEvent="UIElement.MouseLeftButtonDown" SourceName="w">
+			<BeginStoryboard Storyboard="{StaticResource W}"/>
+		</EventTrigger>
+		<EventTrigger RoutedEvent="UIElement.MouseLeftButtonDown" SourceName="t">
+			<BeginStoryboard Storyboard="{StaticResource T}"/>
+		</EventTrigger>
+		<EventTrigger RoutedEvent="UIElement.MouseLeftButtonDown" SourceName="j">
+			<BeginStoryboard Storyboard="{StaticResource J}"/>
+		</EventTrigger>
+		<EventTrigger RoutedEvent="UIElement.MouseLeftButtonDown" SourceName="h">
+			<BeginStoryboard Storyboard="{StaticResource H}"/>
+		</EventTrigger>
+		<EventTrigger RoutedEvent="UIElement.MouseLeftButtonDown" SourceName="a">
+			<BeginStoryboard Storyboard="{StaticResource A}"/>
+		</EventTrigger>
+		<EventTrigger RoutedEvent="UIElement.MouseLeftButtonDown" SourceName="f">
+			<BeginStoryboard Storyboard="{StaticResource F}"/>
+		</EventTrigger>
+		<EventTrigger RoutedEvent="UIElement.MouseLeftButtonDown" SourceName="k">
+			<BeginStoryboard Storyboard="{StaticResource K}"/>
+		</EventTrigger>
+		<EventTrigger RoutedEvent="UIElement.MouseLeftButtonDown" SourceName="l">
+			<BeginStoryboard Storyboard="{StaticResource L}"/>
+		</EventTrigger>
+		<EventTrigger RoutedEvent="UIElement.MouseLeftButtonDown" SourceName="s">
+			<BeginStoryboard Storyboard="{StaticResource S}"/>
+		</EventTrigger>
+		<EventTrigger RoutedEvent="UIElement.MouseLeftButtonDown" SourceName="v">
+			<BeginStoryboard Storyboard="{StaticResource V}"/>
+		</EventTrigger>
+		<EventTrigger RoutedEvent="UIElement.MouseLeftButtonDown" SourceName="p">
+			<BeginStoryboard Storyboard="{StaticResource P}"/>
+		</EventTrigger>
+		<EventTrigger RoutedEvent="UIElement.MouseLeftButtonDown" SourceName="c">
+			<BeginStoryboard Storyboard="{StaticResource C}"/>
+		</EventTrigger>
+		<EventTrigger RoutedEvent="UIElement.MouseLeftButtonDown" SourceName="g">
+			<BeginStoryboard Storyboard="{StaticResource G}"/>
+		</EventTrigger>
+		<EventTrigger RoutedEvent="UIElement.MouseLeftButtonDown" SourceName="o">
+			<BeginStoryboard Storyboard="{StaticResource O}"/>
+		</EventTrigger>
+		<EventTrigger RoutedEvent="UIElement.MouseLeftButtonDown" SourceName="m">
+			<BeginStoryboard Storyboard="{StaticResource M}"/>
+		</EventTrigger>
+		<EventTrigger RoutedEvent="UIElement.MouseLeftButtonDown" SourceName="y">
+			<BeginStoryboard Storyboard="{StaticResource Y}"/>
+		</EventTrigger>
+		<EventTrigger RoutedEvent="UIElement.MouseLeftButtonDown" SourceName="n">
+			<BeginStoryboard Storyboard="{StaticResource N}"/>
+		</EventTrigger>
+		<EventTrigger RoutedEvent="UIElement.MouseLeftButtonDown" SourceName="x">
+			<BeginStoryboard Storyboard="{StaticResource X}"/>
+		</EventTrigger>
+		<EventTrigger RoutedEvent="UIElement.MouseLeftButtonDown" SourceName="d">
+			<BeginStoryboard Storyboard="{StaticResource D}"/>
+		</EventTrigger>
+		<EventTrigger RoutedEvent="UIElement.MouseLeftButtonDown" SourceName="z">
+			<BeginStoryboard Storyboard="{StaticResource Z}"/>
+		</EventTrigger>
+		<EventTrigger RoutedEvent="UIElement.MouseLeftButtonDown" SourceName="u">
+			<BeginStoryboard Storyboard="{StaticResource U}"/>
 		</EventTrigger>
 	</Window.Triggers>
     <Window.Effect>
@@ -600,132 +912,340 @@
         		</Button>
         	</Canvas>
         	<Canvas x:Name="letras" Height="614" Width="1024" Visibility="Visible">
-        		<Rectangle x:Name="e" Height="96" Canvas.Left="146" StrokeThickness="8" Canvas.Top="36" Width="85.5">
+        		<Rectangle x:Name="e" Height="96" Canvas.Left="146" StrokeThickness="8" Canvas.Top="36" Width="85.5" RenderTransformOrigin="0.5,0.5">
+        			<Rectangle.RenderTransform>
+        				<TransformGroup>
+        					<ScaleTransform/>
+        					<SkewTransform/>
+        					<RotateTransform/>
+        					<TranslateTransform/>
+        				</TransformGroup>
+        			</Rectangle.RenderTransform>
         			<Rectangle.Fill>
         				<ImageBrush ImageSource="e.png"/>
         			</Rectangle.Fill>
         		</Rectangle>
-        		<Rectangle x:Name="b" Height="96" Canvas.Left="36.5" StrokeThickness="8" Canvas.Top="42" Width="85.5">
+        		<Rectangle x:Name="b" Height="96" Canvas.Left="36.5" StrokeThickness="8" Canvas.Top="42" Width="85.5" RenderTransformOrigin="0.5,0.5">
+        			<Rectangle.RenderTransform>
+        				<TransformGroup>
+        					<ScaleTransform/>
+        					<SkewTransform/>
+        					<RotateTransform/>
+        					<TranslateTransform/>
+        				</TransformGroup>
+        			</Rectangle.RenderTransform>
         			<Rectangle.Fill>
         				<ImageBrush ImageSource="b.png"/>
         			</Rectangle.Fill>
         		</Rectangle>
-        		<Rectangle x:Name="q" Height="96" Canvas.Left="261.5" StrokeThickness="8" Canvas.Top="36" Width="85.5">
+        		<Rectangle x:Name="q" Height="96" Canvas.Left="261.5" StrokeThickness="8" Canvas.Top="36" Width="85.5" RenderTransformOrigin="0.5,0.5">
+        			<Rectangle.RenderTransform>
+        				<TransformGroup>
+        					<ScaleTransform/>
+        					<SkewTransform/>
+        					<RotateTransform/>
+        					<TranslateTransform/>
+        				</TransformGroup>
+        			</Rectangle.RenderTransform>
         			<Rectangle.Fill>
         				<ImageBrush ImageSource="q.png"/>
         			</Rectangle.Fill>
         		</Rectangle>
-        		<Rectangle x:Name="r" Height="96" Canvas.Left="379.5" StrokeThickness="8" Canvas.Top="36" Width="85.5">
+        		<Rectangle x:Name="r" Height="96" Canvas.Left="379.5" StrokeThickness="8" Canvas.Top="36" Width="85.5" RenderTransformOrigin="0.5,0.5">
+        			<Rectangle.RenderTransform>
+        				<TransformGroup>
+        					<ScaleTransform/>
+        					<SkewTransform/>
+        					<RotateTransform/>
+        					<TranslateTransform/>
+        				</TransformGroup>
+        			</Rectangle.RenderTransform>
         			<Rectangle.Fill>
         				<ImageBrush ImageSource="r.png"/>
         			</Rectangle.Fill>
         		</Rectangle>
-        		<Rectangle x:Name="g" Height="96" Canvas.Left="145.5" StrokeThickness="8" Canvas.Top="283" Width="85.5">
+        		<Rectangle x:Name="g" Height="96" Canvas.Left="145.5" StrokeThickness="8" Canvas.Top="283" Width="85.5" RenderTransformOrigin="0.5,0.5">
+        			<Rectangle.RenderTransform>
+        				<TransformGroup>
+        					<ScaleTransform/>
+        					<SkewTransform/>
+        					<RotateTransform/>
+        					<TranslateTransform/>
+        				</TransformGroup>
+        			</Rectangle.RenderTransform>
         			<Rectangle.Fill>
         				<ImageBrush ImageSource="g.png"/>
         			</Rectangle.Fill>
         		</Rectangle>
-        		<Rectangle x:Name="i" StrokeThickness="8" Height="96" Canvas.Left="489.5" Canvas.Top="34" Width="85.5">
+        		<Rectangle x:Name="i" StrokeThickness="8" Height="96" Canvas.Left="489.5" Canvas.Top="34" Width="85.5" RenderTransformOrigin="0.5,0.5">
+        			<Rectangle.RenderTransform>
+        				<TransformGroup>
+        					<ScaleTransform/>
+        					<SkewTransform/>
+        					<RotateTransform/>
+        					<TranslateTransform/>
+        				</TransformGroup>
+        			</Rectangle.RenderTransform>
         			<Rectangle.Fill>
         				<ImageBrush ImageSource="i.png"/>
         			</Rectangle.Fill>
         		</Rectangle>
-        		<Rectangle x:Name="j" StrokeThickness="8" Height="96" Canvas.Left="808.5" Canvas.Top="34" Width="85.5">
+        		<Rectangle x:Name="j" StrokeThickness="8" Height="96" Canvas.Left="808.5" Canvas.Top="34" Width="85.5" RenderTransformOrigin="0.5,0.5">
+        			<Rectangle.RenderTransform>
+        				<TransformGroup>
+        					<ScaleTransform/>
+        					<SkewTransform/>
+        					<RotateTransform/>
+        					<TranslateTransform/>
+        				</TransformGroup>
+        			</Rectangle.RenderTransform>
         			<Rectangle.Fill>
         				<ImageBrush ImageSource="j.png"/>
         			</Rectangle.Fill>
         		</Rectangle>
-        		<Rectangle x:Name="n" StrokeThickness="8" Height="96" Canvas.Left="647.5" Canvas.Top="284" Width="85.5">
+        		<Rectangle x:Name="n" StrokeThickness="8" Height="96" Canvas.Left="574.5" Canvas.Top="283" Width="85.5" RenderTransformOrigin="0.5,0.5">
+        			<Rectangle.RenderTransform>
+        				<TransformGroup>
+        					<ScaleTransform/>
+        					<SkewTransform/>
+        					<RotateTransform/>
+        					<TranslateTransform/>
+        				</TransformGroup>
+        			</Rectangle.RenderTransform>
         			<Rectangle.Fill>
         				<ImageBrush ImageSource="n.png"/>
         			</Rectangle.Fill>
         		</Rectangle>
-        		<Rectangle x:Name="h" StrokeThickness="8" Height="96" Canvas.Left="89.5" Canvas.Top="158" Width="85.5">
+        		<Rectangle x:Name="h" StrokeThickness="8" Height="96" Canvas.Left="89.5" Canvas.Top="158" Width="85.5" RenderTransformOrigin="0.5,0.5">
+        			<Rectangle.RenderTransform>
+        				<TransformGroup>
+        					<ScaleTransform/>
+        					<SkewTransform/>
+        					<RotateTransform/>
+        					<TranslateTransform/>
+        				</TransformGroup>
+        			</Rectangle.RenderTransform>
         			<Rectangle.Fill>
         				<ImageBrush ImageSource="h.png"/>
         			</Rectangle.Fill>
         		</Rectangle>
-        		<Rectangle x:Name="f" StrokeThickness="8" Height="96" Canvas.Left="325.5" Canvas.Top="158" Width="85.5">
+        		<Rectangle x:Name="f" StrokeThickness="8" Height="96" Canvas.Left="325.5" Canvas.Top="158" Width="85.5" RenderTransformOrigin="0.5,0.5">
+        			<Rectangle.RenderTransform>
+        				<TransformGroup>
+        					<ScaleTransform/>
+        					<SkewTransform/>
+        					<RotateTransform/>
+        					<TranslateTransform/>
+        				</TransformGroup>
+        			</Rectangle.RenderTransform>
         			<Rectangle.Fill>
         				<ImageBrush ImageSource="f.png"/>
         			</Rectangle.Fill>
         		</Rectangle>
-        		<Rectangle x:Name="a" StrokeThickness="8" Height="96" Canvas.Left="209" Canvas.Top="158" Width="85.5">
+        		<Rectangle x:Name="a" StrokeThickness="8" Height="96" Canvas.Left="209" Canvas.Top="158" Width="85.5" RenderTransformOrigin="0.5,0.5">
+        			<Rectangle.RenderTransform>
+        				<TransformGroup>
+        					<ScaleTransform/>
+        					<SkewTransform/>
+        					<RotateTransform/>
+        					<TranslateTransform/>
+        				</TransformGroup>
+        			</Rectangle.RenderTransform>
         			<Rectangle.Fill>
         				<ImageBrush ImageSource="a.png"/>
         			</Rectangle.Fill>
         		</Rectangle>
-        		<Rectangle x:Name="c" StrokeThickness="8" Height="96" Canvas.Left="31.5" Canvas.Top="284" Width="85.5">
+        		<Rectangle x:Name="c" StrokeThickness="8" Height="96" Canvas.Left="31.5" Canvas.Top="284" Width="85.5" RenderTransformOrigin="0.5,0.5">
+        			<Rectangle.RenderTransform>
+        				<TransformGroup>
+        					<ScaleTransform/>
+        					<SkewTransform/>
+        					<RotateTransform/>
+        					<TranslateTransform/>
+        				</TransformGroup>
+        			</Rectangle.RenderTransform>
         			<Rectangle.Fill>
         				<ImageBrush ImageSource="c.png"/>
         			</Rectangle.Fill>
         		</Rectangle>
-        		<Rectangle x:Name="o" StrokeThickness="8" Height="96" Canvas.Left="253.5" Canvas.Top="284" Width="85.5">
+        		<Rectangle x:Name="o" StrokeThickness="8" Height="96" Canvas.Left="253.5" Canvas.Top="284" Width="85.5" RenderTransformOrigin="0.5,0.5">
+        			<Rectangle.RenderTransform>
+        				<TransformGroup>
+        					<ScaleTransform/>
+        					<SkewTransform/>
+        					<RotateTransform/>
+        					<TranslateTransform/>
+        				</TransformGroup>
+        			</Rectangle.RenderTransform>
         			<Rectangle.Fill>
         				<ImageBrush ImageSource="o.png"/>
         			</Rectangle.Fill>
         		</Rectangle>
-        		<Rectangle x:Name="k" StrokeThickness="8" Height="96" Canvas.Left="439" Canvas.Top="158" Width="85.5">
+        		<Rectangle x:Name="k" StrokeThickness="8" Height="96" Canvas.Left="439" Canvas.Top="158" Width="85.5" RenderTransformOrigin="0.5,0.5">
+        			<Rectangle.RenderTransform>
+        				<TransformGroup>
+        					<ScaleTransform/>
+        					<SkewTransform/>
+        					<RotateTransform/>
+        					<TranslateTransform/>
+        				</TransformGroup>
+        			</Rectangle.RenderTransform>
         			<Rectangle.Fill>
         				<ImageBrush ImageSource="k.png"/>
         			</Rectangle.Fill>
         		</Rectangle>
-        		<Rectangle x:Name="l" StrokeThickness="8" Height="96" Canvas.Left="560" Canvas.Top="158" Width="85.5">
+        		<Rectangle x:Name="l" StrokeThickness="8" Height="96" Canvas.Left="560" Canvas.Top="158" Width="85.5" RenderTransformOrigin="0.5,0.5">
+        			<Rectangle.RenderTransform>
+        				<TransformGroup>
+        					<ScaleTransform/>
+        					<SkewTransform/>
+        					<RotateTransform/>
+        					<TranslateTransform/>
+        				</TransformGroup>
+        			</Rectangle.RenderTransform>
         			<Rectangle.Fill>
         				<ImageBrush ImageSource="l.png"/>
         			</Rectangle.Fill>
         		</Rectangle>
-        		<Rectangle x:Name="t" StrokeThickness="8" Height="96" Canvas.Left="704" Canvas.Top="34" Width="85.5">
+        		<Rectangle x:Name="t" StrokeThickness="8" Height="96" Canvas.Left="704" Canvas.Top="34" Width="85.5" RenderTransformOrigin="0.5,0.5">
+        			<Rectangle.RenderTransform>
+        				<TransformGroup>
+        					<ScaleTransform/>
+        					<SkewTransform/>
+        					<RotateTransform/>
+        					<TranslateTransform/>
+        				</TransformGroup>
+        			</Rectangle.RenderTransform>
         			<Rectangle.Fill>
         				<ImageBrush ImageSource="t.png"/>
         			</Rectangle.Fill>
         		</Rectangle>
-        		<Rectangle x:Name="s" StrokeThickness="8" Height="96" Canvas.Left="671.5" Canvas.Top="158" Width="85.5">
+        		<Rectangle x:Name="s" StrokeThickness="8" Height="96" Canvas.Left="671.5" Canvas.Top="158" Width="85.5" RenderTransformOrigin="0.5,0.5">
+        			<Rectangle.RenderTransform>
+        				<TransformGroup>
+        					<ScaleTransform/>
+        					<SkewTransform/>
+        					<RotateTransform/>
+        					<TranslateTransform/>
+        				</TransformGroup>
+        			</Rectangle.RenderTransform>
         			<Rectangle.Fill>
         				<ImageBrush ImageSource="s.png"/>
         			</Rectangle.Fill>
         		</Rectangle>
-        		<Rectangle x:Name="m" StrokeThickness="8" Height="96" Canvas.Left="381.5" Canvas.Top="284" Width="85.5">
+        		<Rectangle x:Name="m" StrokeThickness="8" Height="96" Canvas.Left="361.5" Canvas.Top="284" Width="85.5" RenderTransformOrigin="0.5,0.5">
+        			<Rectangle.RenderTransform>
+        				<TransformGroup>
+        					<ScaleTransform/>
+        					<SkewTransform/>
+        					<RotateTransform/>
+        					<TranslateTransform/>
+        				</TransformGroup>
+        			</Rectangle.RenderTransform>
         			<Rectangle.Fill>
         				<ImageBrush ImageSource="m.png"/>
         			</Rectangle.Fill>
         		</Rectangle>
-        		<Rectangle x:Name="z" StrokeThickness="8" Height="96" Canvas.Left="460" Canvas.Top="420" Width="85.5">
+        		<Rectangle x:Name="z" StrokeThickness="8" Height="96" Canvas.Left="460" Canvas.Top="420" Width="85.5" RenderTransformOrigin="0.5,0.5">
+        			<Rectangle.RenderTransform>
+        				<TransformGroup>
+        					<ScaleTransform/>
+        					<SkewTransform/>
+        					<RotateTransform/>
+        					<TranslateTransform/>
+        				</TransformGroup>
+        			</Rectangle.RenderTransform>
         			<Rectangle.Fill>
         				<ImageBrush ImageSource="z.png"/>
         			</Rectangle.Fill>
         		</Rectangle>
-        		<Rectangle x:Name="u" StrokeThickness="8" Height="96" Canvas.Left="560.5" Canvas.Top="420" Width="85.5">
+        		<Rectangle x:Name="u" StrokeThickness="8" Height="96" Canvas.Left="560.5" Canvas.Top="420" Width="85.5" RenderTransformOrigin="0.5,0.5">
+        			<Rectangle.RenderTransform>
+        				<TransformGroup>
+        					<ScaleTransform/>
+        					<SkewTransform/>
+        					<RotateTransform/>
+        					<TranslateTransform/>
+        				</TransformGroup>
+        			</Rectangle.RenderTransform>
         			<Rectangle.Fill>
         				<ImageBrush ImageSource="u.png"/>
         			</Rectangle.Fill>
         		</Rectangle>
-        		<Rectangle x:Name="w" StrokeThickness="8" Height="96" Canvas.Left="597.5" Canvas.Top="34" Width="85.5">
+        		<Rectangle x:Name="w" StrokeThickness="8" Height="96" Canvas.Left="597.5" Canvas.Top="34" Width="85.5" RenderTransformOrigin="0.5,0.5">
+        			<Rectangle.RenderTransform>
+        				<TransformGroup>
+        					<ScaleTransform/>
+        					<SkewTransform/>
+        					<RotateTransform/>
+        					<TranslateTransform/>
+        				</TransformGroup>
+        			</Rectangle.RenderTransform>
         			<Rectangle.Fill>
         				<ImageBrush ImageSource="w.png"/>
         			</Rectangle.Fill>
         		</Rectangle>
-        		<Rectangle x:Name="p" StrokeThickness="8" Height="96" Canvas.Left="895.5" Canvas.Top="158" Width="85.5">
+        		<Rectangle x:Name="p" StrokeThickness="8" Height="96" Canvas.Left="895.5" Canvas.Top="158" Width="85.5" RenderTransformOrigin="0.5,0.5">
+        			<Rectangle.RenderTransform>
+        				<TransformGroup>
+        					<ScaleTransform/>
+        					<SkewTransform/>
+        					<RotateTransform/>
+        					<TranslateTransform/>
+        				</TransformGroup>
+        			</Rectangle.RenderTransform>
         			<Rectangle.Fill>
         				<ImageBrush ImageSource="p.png"/>
         			</Rectangle.Fill>
         		</Rectangle>
-        		<Rectangle x:Name="y" StrokeThickness="8" Height="96" Canvas.Left="518" Canvas.Top="284" Width="85.5">
+        		<Rectangle x:Name="y" StrokeThickness="8" Height="96" Canvas.Left="468.5" Canvas.Top="284" Width="85.5" RenderTransformOrigin="0.5,0.5">
+        			<Rectangle.RenderTransform>
+        				<TransformGroup>
+        					<ScaleTransform/>
+        					<SkewTransform/>
+        					<RotateTransform/>
+        					<TranslateTransform/>
+        				</TransformGroup>
+        			</Rectangle.RenderTransform>
         			<Rectangle.Fill>
         				<ImageBrush ImageSource="y.png"/>
         			</Rectangle.Fill>
         		</Rectangle>
-        		<Rectangle x:Name="x" StrokeThickness="8" Height="96" Canvas.Left="251.5" Canvas.Top="420" Width="85.5">
+        		<Rectangle x:Name="x" StrokeThickness="8" Height="96" Canvas.Left="251.5" Canvas.Top="420" Width="85.5" RenderTransformOrigin="0.5,0.5">
+        			<Rectangle.RenderTransform>
+        				<TransformGroup>
+        					<ScaleTransform/>
+        					<SkewTransform/>
+        					<RotateTransform/>
+        					<TranslateTransform/>
+        				</TransformGroup>
+        			</Rectangle.RenderTransform>
         			<Rectangle.Fill>
         				<ImageBrush ImageSource="x.png" Stretch="UniformToFill"/>
         			</Rectangle.Fill>
         		</Rectangle>
-        		<Rectangle x:Name="d" StrokeThickness="8" Height="96" Canvas.Left="350" Canvas.Top="420" Width="85.5">
+        		<Rectangle x:Name="d" StrokeThickness="8" Height="96" Canvas.Left="350" Canvas.Top="420" Width="85.5" RenderTransformOrigin="0.5,0.5">
+        			<Rectangle.RenderTransform>
+        				<TransformGroup>
+        					<ScaleTransform/>
+        					<SkewTransform/>
+        					<RotateTransform/>
+        					<TranslateTransform/>
+        				</TransformGroup>
+        			</Rectangle.RenderTransform>
         			<Rectangle.Fill>
         				<ImageBrush ImageSource="d.png"/>
         			</Rectangle.Fill>
         		</Rectangle>
-        		<Rectangle x:Name="v" Height="96" Canvas.Left="783.5" StrokeThickness="8" Canvas.Top="157" Width="85.5">
+        		<Rectangle x:Name="v" Height="96" Canvas.Left="783.5" StrokeThickness="8" Canvas.Top="157" Width="85.5" RenderTransformOrigin="0.5,0.5">
+        			<Rectangle.RenderTransform>
+        				<TransformGroup>
+        					<ScaleTransform/>
+        					<SkewTransform/>
+        					<RotateTransform/>
+        					<TranslateTransform/>
+        				</TransformGroup>
+        			</Rectangle.RenderTransform>
         			<Rectangle.Fill>
         				<ImageBrush ImageSource="v.png"/>
         			</Rectangle.Fill>
