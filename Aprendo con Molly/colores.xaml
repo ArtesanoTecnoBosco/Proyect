@@ -541,7 +541,7 @@
                 <ImageBrush ImageSource="Molly.png"/>
             </Rectangle.Fill>
         </Rectangle>
-        <Canvas x:Name="flores" HorizontalAlignment="Left" Height="614" VerticalAlignment="Top" Width="1016" Grid.ColumnSpan="2" Margin="-10,0,0,0">
+        <Canvas x:Name="flores" HorizontalAlignment="Left" Height="614" VerticalAlignment="Top" Width="1016" Grid.ColumnSpan="2" Margin="-2,0,-8,0">
         	<Canvas.Background>
         		<ImageBrush ImageSource="floress.png"/>
         	</Canvas.Background>
@@ -551,7 +551,7 @@
         	<Button x:Name="btnVer" Content="Button" HorizontalAlignment="Left" Height="33.826" Style="{DynamicResource btnVerEfect}" VerticalAlignment="Top" Width="68.722" Canvas.Left="866.076" Canvas.Top="439.204"/>
         	<Button x:Name="btnMinimiza" Content="Button" HorizontalAlignment="Left" Height="23.72" VerticalAlignment="Top" Width="25.011" Style="{DynamicResource Minimizar}" RenderTransformOrigin="-2.032,0.008" Canvas.Left="906.822" Canvas.Top="10"/>
         	<Button x:Name="btnCerrar" Content="Button" HorizontalAlignment="Left" Height="23.72" VerticalAlignment="Top" Width="25.011" Style="{DynamicResource BotonCerrar}" RenderTransformOrigin="-2.032,0.008" Canvas.Left="936.833" Canvas.Top="10"/>
-        	<Canvas x:Name="bolitas" HorizontalAlignment="Left" Height="300.018" VerticalAlignment="Top" Width="991.992" Canvas.Left="4.008" Canvas.Top="-12">
+        	<Canvas x:Name="bolitas" HorizontalAlignment="Left" Height="300.018" VerticalAlignment="Top" Width="991.992" Canvas.Left="4.008" Canvas.Top="-12" Visibility="Hidden">
         		<Button x:Name="blanco" Content="Button" HorizontalAlignment="Left" Height="57.78" VerticalAlignment="Top" Width="69" Style="{DynamicResource btnBlanco}" Canvas.Left="2" Canvas.Top="233.518" RenderTransformOrigin="0.5,0.5">
         			<Button.RenderTransform>
         				<TransformGroup>
@@ -599,139 +599,139 @@
         			</Button.RenderTransform>
         		</Button>
         	</Canvas>
-        	<Canvas x:Name="letras" Height="614" Width="1024" Visibility="Hidden">
-        		<Button x:Name="a" Content="" Height="96" Canvas.Left="224" Canvas.Top="155" Width="85.5" BorderBrush="{x:Null}">
-        			<Button.Background>
-        				<ImageBrush ImageSource="a.png"/>
-        			</Button.Background>
-        		</Button>
-        		<Button x:Name="c" Content="" Height="96" Width="85.5" Canvas.Left="36" Canvas.Top="290" BorderBrush="{x:Null}">
-        			<Button.Background>
-        				<ImageBrush ImageSource="c.png"/>
-        			</Button.Background>
-        		</Button>
-        		<Button x:Name="j" Content="" Height="96" Width="85.5" Canvas.Left="703.5" Canvas.Top="27" BorderBrush="{x:Null}">
-        			<Button.Background>
-        				<ImageBrush ImageSource="j.png"/>
-        			</Button.Background>
-        		</Button>
-        		<Button x:Name="g" Height="96" Width="85.5" Canvas.Left="136.5" Canvas.Top="291" BorderBrush="{x:Null}">
-        			<Button.Background>
-        				<ImageBrush ImageSource="g.png"/>
-        			</Button.Background>
-        		</Button>
-        		<Button x:Name="d" Height="96" Canvas.Left="908.5" Canvas.Top="157.5" Width="85.5" BorderBrush="{x:Null}">
-        			<Button.Background>
-        				<ImageBrush ImageSource="d.png"/>
-        			</Button.Background>
-        		</Button>
-        		<Button x:Name="b" Height="96" Canvas.Left="124.5" Canvas.Top="27" Width="85.5" BorderBrush="{x:Null}">
-        			<Button.Background>
-        				<ImageBrush ImageSource="b.png"/>
-        			</Button.Background>
-        		</Button>
-        		<Button x:Name="e" Content="" Height="96" Canvas.Left="236" Canvas.Top="27" Width="85.5" BorderBrush="{x:Null}">
-        			<Button.Background>
+        	<Canvas x:Name="letras" Height="614" Width="1024" Visibility="Visible">
+        		<Rectangle x:Name="e" Height="96" Canvas.Left="146" StrokeThickness="8" Canvas.Top="36" Width="85.5">
+        			<Rectangle.Fill>
         				<ImageBrush ImageSource="e.png"/>
-        			</Button.Background>
-        		</Button>
-        		<Button x:Name="h" Content="" Height="96" Canvas.Left="12" Canvas.Top="162" Width="85.5" BorderBrush="{x:Null}">
-        			<Button.Background>
-        				<ImageBrush ImageSource="h.png"/>
-        			</Button.Background>
-        		</Button>
-        		<Button x:Name="f" Content="" Height="96" Canvas.Left="112.5" Canvas.Top="162" Width="85.5" BorderBrush="{x:Null}">
-        			<Button.Background>
-        				<ImageBrush ImageSource="f.png"/>
-        			</Button.Background>
-        		</Button>
-        		<Button x:Name="k" Content="" Height="96" Canvas.Left="341.5" Canvas.Top="155" Width="85.5" BorderBrush="{x:Null}">
-        			<Button.Background>
-        				<ImageBrush ImageSource="k.png"/>
-        			</Button.Background>
-        		</Button>
-        		<Button x:Name="i" Content="" Height="96" Canvas.Left="593.5" Canvas.Top="27" Width="85.5" BorderBrush="{x:Null}">
-        			<Button.Background>
-        				<ImageBrush ImageSource="i.png"/>
-        			</Button.Background>
-        		</Button>
-        		<Button x:Name="m" Content="" Height="96" Width="85.5" Canvas.Left="491.5" Canvas.Top="291" BorderBrush="{x:Null}">
-        			<Button.Background>
-        				<ImageBrush ImageSource="m.png"/>
-        			</Button.Background>
-        		</Button>
-        		<Button x:Name="l" Height="96" Canvas.Left="365.5" Canvas.Top="291" Width="85.5" BorderBrush="{x:Null}">
-        			<Button.Background>
-        				<ImageBrush ImageSource="l.png"/>
-        			</Button.Background>
-        		</Button>
-        		<Button x:Name="n" Height="96" Canvas.Left="822.5" Canvas.Top="27" Width="85.5" BorderBrush="{x:Null}">
-        			<Button.Background>
-        				<ImageBrush ImageSource="n.png"/>
-        			</Button.Background>
-        		</Button>
-        		<Button x:Name="p" Height="96" Width="85.5" Canvas.Left="691.5" Canvas.Top="155" BorderBrush="{x:Null}">
-        			<Button.Background>
-        				<ImageBrush ImageSource="p.png"/>
-        			</Button.Background>
-        		</Button>
-        		<Button x:Name="o" Height="96" Canvas.Left="248" Canvas.Top="291" Width="85.5" BorderBrush="{x:Null}">
-        			<Button.Background>
-        				<ImageBrush ImageSource="o.png"/>
-        			</Button.Background>
-        		</Button>
-        		<Button x:Name="u" Height="96" Width="85.5" Canvas.Left="605.5" Canvas.Top="291" BorderBrush="{x:Null}">
-        			<Button.Background>
-        				<ImageBrush ImageSource="u.png"/>
-        			</Button.Background>
-        		</Button>
-        		<Button x:Name="q" Height="96" Canvas.Left="353.5" Canvas.Top="27" Width="85.5" BorderBrush="{x:Null}">
-        			<Button.Background>
+        			</Rectangle.Fill>
+        		</Rectangle>
+        		<Rectangle x:Name="b" Height="96" Canvas.Left="36.5" StrokeThickness="8" Canvas.Top="42" Width="85.5">
+        			<Rectangle.Fill>
+        				<ImageBrush ImageSource="b.png"/>
+        			</Rectangle.Fill>
+        		</Rectangle>
+        		<Rectangle x:Name="q" Height="96" Canvas.Left="261.5" StrokeThickness="8" Canvas.Top="36" Width="85.5">
+        			<Rectangle.Fill>
         				<ImageBrush ImageSource="q.png"/>
-        			</Button.Background>
-        		</Button>
-        		<Button x:Name="r" Height="96" Canvas.Left="479.5" Canvas.Top="27" Width="85.5" BorderBrush="{x:Null}">
-        			<Button.Background>
+        			</Rectangle.Fill>
+        		</Rectangle>
+        		<Rectangle x:Name="r" Height="96" Canvas.Left="379.5" StrokeThickness="8" Canvas.Top="36" Width="85.5">
+        			<Rectangle.Fill>
         				<ImageBrush ImageSource="r.png"/>
-        			</Button.Background>
-        		</Button>
-        		<Button x:Name="s" Height="96" Width="85.5" Canvas.Left="467.5" Canvas.Top="155" BorderBrush="{x:Null}">
-        			<Button.Background>
-        				<ImageBrush ImageSource="s.png"/>
-        			</Button.Background>
-        		</Button>
-        		<Button x:Name="t" Height="96" Width="85.5" Canvas.Left="331.5" Canvas.Top="419.5" BorderBrush="{x:Null}">
-        			<Button.Background>
+        			</Rectangle.Fill>
+        		</Rectangle>
+        		<Rectangle x:Name="g" Height="96" Canvas.Left="145.5" StrokeThickness="8" Canvas.Top="283" Width="85.5">
+        			<Rectangle.Fill>
+        				<ImageBrush ImageSource="g.png"/>
+        			</Rectangle.Fill>
+        		</Rectangle>
+        		<Rectangle x:Name="i" StrokeThickness="8" Height="96" Canvas.Left="489.5" Canvas.Top="34" Width="85.5">
+        			<Rectangle.Fill>
+        				<ImageBrush ImageSource="i.png"/>
+        			</Rectangle.Fill>
+        		</Rectangle>
+        		<Rectangle x:Name="j" StrokeThickness="8" Height="96" Canvas.Left="808.5" Canvas.Top="34" Width="85.5">
+        			<Rectangle.Fill>
+        				<ImageBrush ImageSource="j.png"/>
+        			</Rectangle.Fill>
+        		</Rectangle>
+        		<Rectangle x:Name="n" StrokeThickness="8" Height="96" Canvas.Left="647.5" Canvas.Top="284" Width="85.5">
+        			<Rectangle.Fill>
+        				<ImageBrush ImageSource="n.png"/>
+        			</Rectangle.Fill>
+        		</Rectangle>
+        		<Rectangle x:Name="h" StrokeThickness="8" Height="96" Canvas.Left="89.5" Canvas.Top="158" Width="85.5">
+        			<Rectangle.Fill>
+        				<ImageBrush ImageSource="h.png"/>
+        			</Rectangle.Fill>
+        		</Rectangle>
+        		<Rectangle x:Name="f" StrokeThickness="8" Height="96" Canvas.Left="325.5" Canvas.Top="158" Width="85.5">
+        			<Rectangle.Fill>
+        				<ImageBrush ImageSource="f.png"/>
+        			</Rectangle.Fill>
+        		</Rectangle>
+        		<Rectangle x:Name="a" StrokeThickness="8" Height="96" Canvas.Left="209" Canvas.Top="158" Width="85.5">
+        			<Rectangle.Fill>
+        				<ImageBrush ImageSource="a.png"/>
+        			</Rectangle.Fill>
+        		</Rectangle>
+        		<Rectangle x:Name="c" StrokeThickness="8" Height="96" Canvas.Left="31.5" Canvas.Top="284" Width="85.5">
+        			<Rectangle.Fill>
+        				<ImageBrush ImageSource="c.png"/>
+        			</Rectangle.Fill>
+        		</Rectangle>
+        		<Rectangle x:Name="o" StrokeThickness="8" Height="96" Canvas.Left="253.5" Canvas.Top="284" Width="85.5">
+        			<Rectangle.Fill>
+        				<ImageBrush ImageSource="o.png"/>
+        			</Rectangle.Fill>
+        		</Rectangle>
+        		<Rectangle x:Name="k" StrokeThickness="8" Height="96" Canvas.Left="439" Canvas.Top="158" Width="85.5">
+        			<Rectangle.Fill>
+        				<ImageBrush ImageSource="k.png"/>
+        			</Rectangle.Fill>
+        		</Rectangle>
+        		<Rectangle x:Name="l" StrokeThickness="8" Height="96" Canvas.Left="560" Canvas.Top="158" Width="85.5">
+        			<Rectangle.Fill>
+        				<ImageBrush ImageSource="l.png"/>
+        			</Rectangle.Fill>
+        		</Rectangle>
+        		<Rectangle x:Name="t" StrokeThickness="8" Height="96" Canvas.Left="704" Canvas.Top="34" Width="85.5">
+        			<Rectangle.Fill>
         				<ImageBrush ImageSource="t.png"/>
-        			</Button.Background>
-        		</Button>
-        		<Button x:Name="v" Content="" Height="96" Width="85.5" Canvas.Left="581.5" Canvas.Top="162" BorderBrush="{x:Null}">
-        			<Button.Background>
-        				<ImageBrush ImageSource="v.png"/>
-        			</Button.Background>
-        		</Button>
-        		<Button x:Name="x" Content="" Height="96" Width="85.5" Canvas.Left="799" Canvas.Top="158" BorderBrush="{x:Null}">
-        			<Button.Background>
-        				<ImageBrush ImageSource="x.png"/>
-        			</Button.Background>
-        		</Button>
-        		<Button x:Name="w" Content="" Height="96" Width="85.5" Canvas.Left="581.5" Canvas.Top="419.5" BorderBrush="{x:Null}">
-        			<Button.Background>
-        				<ImageBrush ImageSource="w.png"/>
-        			</Button.Background>
-        		</Button>
-        		<Button x:Name="z" Content="" Height="96" Width="85.5" Canvas.Left="457.5" Canvas.Top="427.5" BorderBrush="{x:Null}">
-        			<Button.Background>
+        			</Rectangle.Fill>
+        		</Rectangle>
+        		<Rectangle x:Name="s" StrokeThickness="8" Height="96" Canvas.Left="671.5" Canvas.Top="158" Width="85.5">
+        			<Rectangle.Fill>
+        				<ImageBrush ImageSource="s.png"/>
+        			</Rectangle.Fill>
+        		</Rectangle>
+        		<Rectangle x:Name="m" StrokeThickness="8" Height="96" Canvas.Left="381.5" Canvas.Top="284" Width="85.5">
+        			<Rectangle.Fill>
+        				<ImageBrush ImageSource="m.png"/>
+        			</Rectangle.Fill>
+        		</Rectangle>
+        		<Rectangle x:Name="z" StrokeThickness="8" Height="96" Canvas.Left="460" Canvas.Top="420" Width="85.5">
+        			<Rectangle.Fill>
         				<ImageBrush ImageSource="z.png"/>
-        			</Button.Background>
-        		</Button>
-        		<Button x:Name="y" Content="" Height="96" Width="85.5" Canvas.Left="715.5" Canvas.Top="291" BorderBrush="{x:Null}">
-        			<Button.Background>
+        			</Rectangle.Fill>
+        		</Rectangle>
+        		<Rectangle x:Name="u" StrokeThickness="8" Height="96" Canvas.Left="560.5" Canvas.Top="420" Width="85.5">
+        			<Rectangle.Fill>
+        				<ImageBrush ImageSource="u.png"/>
+        			</Rectangle.Fill>
+        		</Rectangle>
+        		<Rectangle x:Name="w" StrokeThickness="8" Height="96" Canvas.Left="597.5" Canvas.Top="34" Width="85.5">
+        			<Rectangle.Fill>
+        				<ImageBrush ImageSource="w.png"/>
+        			</Rectangle.Fill>
+        		</Rectangle>
+        		<Rectangle x:Name="p" StrokeThickness="8" Height="96" Canvas.Left="895.5" Canvas.Top="158" Width="85.5">
+        			<Rectangle.Fill>
+        				<ImageBrush ImageSource="p.png"/>
+        			</Rectangle.Fill>
+        		</Rectangle>
+        		<Rectangle x:Name="y" StrokeThickness="8" Height="96" Canvas.Left="518" Canvas.Top="284" Width="85.5">
+        			<Rectangle.Fill>
         				<ImageBrush ImageSource="y.png"/>
-        			</Button.Background>
-        		</Button>
+        			</Rectangle.Fill>
+        		</Rectangle>
+        		<Rectangle x:Name="x" StrokeThickness="8" Height="96" Canvas.Left="251.5" Canvas.Top="420" Width="85.5">
+        			<Rectangle.Fill>
+        				<ImageBrush ImageSource="x.png" Stretch="UniformToFill"/>
+        			</Rectangle.Fill>
+        		</Rectangle>
+        		<Rectangle x:Name="d" StrokeThickness="8" Height="96" Canvas.Left="350" Canvas.Top="420" Width="85.5">
+        			<Rectangle.Fill>
+        				<ImageBrush ImageSource="d.png"/>
+        			</Rectangle.Fill>
+        		</Rectangle>
+        		<Rectangle x:Name="v" Height="96" Canvas.Left="783.5" StrokeThickness="8" Canvas.Top="157" Width="85.5">
+        			<Rectangle.Fill>
+        				<ImageBrush ImageSource="v.png"/>
+        			</Rectangle.Fill>
+        		</Rectangle>
         	</Canvas>
-        	<Rectangle x:Name="espacioJuego" HorizontalAlignment="Left" Height="367.5" RadiusY="48" RadiusX="48" StrokeThickness="8" VerticalAlignment="Top" Width="476.5" Canvas.Left="182.687" Canvas.Top="227.5">
+        	<Rectangle x:Name="espacioJuego" HorizontalAlignment="Left" Height="367.5" RadiusY="48" RadiusX="48" StrokeThickness="8" VerticalAlignment="Top" Width="476.5" Canvas.Left="182.687" Canvas.Top="227.5" Visibility="Hidden">
         		<Rectangle.Fill>
         			<ImageBrush ImageSource="am.png"/>
         		</Rectangle.Fill>
