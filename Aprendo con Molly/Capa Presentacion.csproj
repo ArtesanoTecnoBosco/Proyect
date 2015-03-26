@@ -139,28 +139,55 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Resource Include="a.png" />
     <Resource Include="am.png" />
     <Resource Include="amarillo.png" />
     <Resource Include="azul.png" />
+    <Resource Include="b.png" />
     <Resource Include="blanco.png" />
     <Resource Include="boyom.png" />
     <Resource Include="boyom1.png" />
+    <Resource Include="c.png" />
+    <Resource Include="d.png" />
+    <Resource Include="e.png" />
+    <Resource Include="f.png" />
     <Resource Include="flores.png" />
     <Resource Include="floress.png" />
     <Resource Include="fondo3.jpg" />
     <Resource Include="fondo5.jpg" />
+    <Resource Include="g.png" />
+    <Resource Include="h.png" />
+    <Resource Include="i.png" />
     <Resource Include="images.jpg" />
+    <Resource Include="j.png" />
+    <Resource Include="k.png" />
+    <Resource Include="l.png" />
+    <Resource Include="m.png" />
     <Resource Include="marron.png" />
     <Resource Include="Molly.jpg" />
     <Resource Include="Molly.png" />
     <Resource Include="morada.png" />
+    <Resource Include="n.png" />
     <Resource Include="naranja.png" />
     <Resource Include="negro.png" />
+    <Resource Include="o.png" />
+    <Resource Include="p.png" />
     <Resource Include="pantallaInicio.png" />
+    <Resource Include="q.png" />
+    <Resource Include="r.png" />
     <Resource Include="rojo.png" />
     <Resource Include="rosa.png" />
+    <Resource Include="s.png" />
+    <Resource Include="stop.png" />
+    <Resource Include="t.png" />
     <Resource Include="TITULO.png" />
+    <Resource Include="u.png" />
+    <Resource Include="v.png" />
     <Resource Include="verde.png" />
+    <Resource Include="w.png" />
+    <Resource Include="x.png" />
+    <Resource Include="y.png" />
+    <Resource Include="z.png" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Imagenes\" />
