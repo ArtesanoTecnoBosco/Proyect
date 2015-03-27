@@ -10,19 +10,40 @@ using System.IO;
 
 namespace Capa_de_Negocio
 {
+    /// <summary>
+    /// Modelo de datos del juego.
+    /// </summary>
     public class Juego
     {
-
+        /// <summary>
+        /// Contador de la barra de progreso.
+        /// </summary>
         public static int contadorBarra =0;
-
+        /// <summary>
+        /// Avatares del juego
+        /// </summary>
         private List<ModeloDatos.Avatar> avatares;
+        /// <summary>
+        /// Partidas del juego(Se utilizara mas que otra cosa para estadisticas).
+        /// </summary>
         private List<ModeloDatos.Partida> partidas;
+        /// <summary>
+        /// Niveles del juego.
+        /// </summary>
         private List<ModeloDatos.Nivel> niveles;
+        /// <summary>
+        /// Usuario que juega.
+        /// </summary>
         private ModeloDatos.Usuario usuario;
+        /// <summary>
+        /// Conexion a la BD.
+        /// </summary>
         private Capa_Acceso_a_Datos.Conexion conexion;
 
 
-
+        /// <summary>
+        /// Constructor.
+        /// </summary>
         public Juego()
         {
             avatares = new List<ModeloDatos.Avatar>();
@@ -33,7 +54,11 @@ namespace Capa_de_Negocio
         }
 
 
-
+        /// <summary>
+        /// Metodo para cargar los niveles en memoria.
+        /// </summary>
+        /// <param name="rutaPadre">Directorio en el que se encuentra el programa.</param>
+        /// <returns></returns>
         public int cargarAvatares(String rutaPadre)
         {
             
@@ -112,6 +137,9 @@ namespace Capa_de_Negocio
 
         }
 
+        /// <summary>
+        /// Metodo para comprobar que existen los avatares.
+        /// </summary>
         public void comprobarImagenes()
         {
 
@@ -127,6 +155,10 @@ namespace Capa_de_Negocio
 
         }
 
+        /// <summary>
+        /// Metodo para obtener el directorio raiz del proyecto.
+        /// </summary>
+        /// <returns>String - Directorio raiz del proyecto.</returns>
         private String directorioPadre()
         {
             DirectoryInfo info;
@@ -136,7 +168,11 @@ namespace Capa_de_Negocio
             return info.FullName;
         }
 
-
+        /// <summary>
+        /// Metodo para buscar un nivel.
+        /// </summary>
+        /// <param name="nombre">Nombre del nivel.</param>
+        /// <returns>Nivel - Nivel encontrado.</returns>
         public Capa_de_Negocio.ModeloDatos.Nivel buscarNivel(String nombre){
 
             Capa_de_Negocio.ModeloDatos.Nivel n = new ModeloDatos.Nivel();
@@ -172,37 +208,72 @@ namespace Capa_de_Negocio
             return n;
         }
 
-
+        /// <summary>
+        /// Metodo para obtener los usuarios.
+        /// </summary>
+        /// <returns>Usuario - Usuario que juega.</returns>
         public ModeloDatos.Usuario getUsuario()
         {
             return usuario;
         }
 
-
+        /// <summary>
+        /// Metodo para establecer el usuario del juego.
+        /// </summary>
+        /// <param name="usuario">Usuario - Usuario del juego.</param>
         public void setUsuario(ModeloDatos.Usuario usuario)
         {
             this.usuario = usuario;
         }
 
-
+        /// <summary>
+        /// Metodo para obtener las partidas del juego. Principalmente se utilizara para estadisticas.
+        /// </summary>
+        /// <returns>Lista de partidas.</returns>
         public List<ModeloDatos.Partida> getPartidas()
         {
             return this.partidas;
         }
 
-
+        /// <summary>
+        /// Metodo para obtener el listado de avatares.
+        /// </summary>
+        /// <returns>Lista de avatares.</returns>
         public List<ModeloDatos.Avatar> getAvatares()
         {
             return this.avatares;
             
         }
 
-
+        /// <summary>
+        /// Metodo para obtener un unico avatar,.
+        /// </summary>
+        /// <param name="pos">Posicion del avatar a devolver.</param>
+        /// <returns>Avatar - Un avatar.</returns>
         public ModeloDatos.Avatar getUnAvatar(int pos)
         {
 
             return this.avatares.ElementAt(pos);
 
+        }
+
+        /// <summary>
+        /// Metodo para obtener el listado de niveles.
+        /// </summary>
+        /// <returns>Lista con los niveles.</returns>
+        public List<ModeloDatos.Nivel> getNiveles()
+        {
+            return niveles;
+        }
+
+        /// <summary>
+        /// Metodo para obtener un unico nivel.
+        /// </summary>
+        /// <param name="pos">Posicion en la lista del nivel a devolver.</param>
+        /// <returns>Nivel - Nivel de juego.</returns>
+        public ModeloDatos.Nivel getUnNivel(int pos)
+        {
+            return niveles.ElementAt(pos);
         }
     }
 }

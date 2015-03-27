@@ -911,7 +911,7 @@
         			</Button.RenderTransform>
         		</Button>
         	</Canvas>
-        	<Canvas x:Name="letras" Height="614" Width="1024" Visibility="Visible">
+        	<Canvas x:Name="letras" Height="614" Width="1024" Visibility="Hidden">
         		<Rectangle x:Name="e" Height="96" Canvas.Left="146" StrokeThickness="8" Canvas.Top="36" Width="85.5" RenderTransformOrigin="0.5,0.5">
         			<Rectangle.RenderTransform>
         				<TransformGroup>

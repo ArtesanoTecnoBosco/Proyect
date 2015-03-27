@@ -9,7 +9,6 @@ namespace Capa_de_Negocio.ModeloDatos
     /// <summary>
     /// Clase de representacion para un usuario.
     /// </summary>
-
     public class Usuario
     {
 
@@ -112,18 +111,36 @@ namespace Capa_de_Negocio.ModeloDatos
             this.avatar = avatar;
         }
 
-
-        public int insertarUsuario()
+        /// <summary>
+        /// Metodo para insertar el usuario en la bd si existe por el contrario se actualizara su avatar.
+        /// </summary>
+        public void insertarUsuario()
         {
-            int numero = 0;
+            
 
             //Añadir usuario y saber que identificador es para pasarsele a este usuario.
 
             Capa_Acceso_a_Datos.Conexion conexion = new Capa_Acceso_a_Datos.Conexion();
 
-            numero=conexion.ejecutarSentencia("INSERT INTO USUARIOS (Nombre, Avatar) VALUES ('"+this.nombre+"','"+this.avatar.getRuta()+"')");
+            System.Data.OleDb.OleDbDataReader reader = conexion.ejecutarConsulta("SELECT Id FROM USUARIOS WHERE Nombre='" + this.nombre + "'");
+
+            if (reader.HasRows)
+            {
+                while (reader.Read())
+                {
+                    this.id = reader.GetInt32(0);
+                }
+                conexion.cerrarConexion();
+                conexion.ejecutarSentencia("UPDATE USUARIOS SET Avatar='" + this.avatar + "' WHERE Id=" + this.id);
+                conexion.cerrarConexion();
+            }
+            else
+            {
+
+                this.id = conexion.ejecutarSentencia("INSERT INTO USUARIOS (Nombre, Avatar) VALUES ('" + this.nombre + "','" + this.avatar.getRuta() + "')");
+                conexion.cerrarConexion();
+            }
             
-            return numero;
         }
 
 

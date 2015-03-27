@@ -20,11 +20,28 @@ namespace Aprendo_con_Molly
 	/// </summary>
 	public partial class jUGADORES : Window
 	{
+        /// <summary>
+        /// Juego....arbol de estructuras, se guardan los niveles, partidas, el usuario, etc.
+        /// </summary>
         private Capa_de_Negocio.Juego juego;
+        /// <summary>
+        /// Usuario auxiliar para guardar almacenar los datos del jugador.
+        /// </summary>
         private Capa_de_Negocio.ModeloDatos.Usuario auxUsu;
+        /// <summary>
+        /// Posicion en la que se encuentra el avatar seleccionado del usuario.
+        /// </summary>
         private int posicionAvatar;
+        /// <summary>
+        /// Nivel seleccionado por el usuario.
+        /// </summary>
+        private String nivel;
 
 
+        /// <summary>
+        /// Contructor.
+        /// </summary>
+        /// <param name="juego"></param>
 		public jUGADORES(Capa_de_Negocio.Juego juego)
 		{
             this.InitializeComponent();
@@ -60,6 +77,11 @@ namespace Aprendo_con_Molly
 
         }
 
+        /// <summary>
+        /// Accion cuando se pulsa el boton minimizar.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
 
@@ -67,6 +89,9 @@ namespace Aprendo_con_Molly
 
         }
 
+        /// <summary>
+        /// Metodo para borrar el cuadro de usuario y ganar el foco.
+        /// </summary>
         private void seleccionarCuadroUsuario()
         {
 
@@ -76,6 +101,11 @@ namespace Aprendo_con_Molly
         }
 
 
+        /// <summary>
+        /// Accion del boton Siguiente.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnSiguiente_Click(object sender, RoutedEventArgs e)
         {
 
@@ -218,6 +248,10 @@ namespace Aprendo_con_Molly
 
         }
 
+        /// <summary>
+        /// Metodo para saber el directorio padre.
+        /// </summary>
+        /// <returns></returns>
         private String directorioPadre()
         {
             DirectoryInfo info;
@@ -228,7 +262,11 @@ namespace Aprendo_con_Molly
         }
 
 
-
+        /// <summary>
+        /// Metodo para comprobar si el nombre introducido es real. No se permiten ni numero ni caracteres raros.
+        /// </summary>
+        /// <param name="nombre"></param>
+        /// <returns></returns>
         private Boolean nombreEsReal(String nombre)
         {
             Boolean real =true;
@@ -270,7 +308,9 @@ namespace Aprendo_con_Molly
 
         }
 
-
+        /// <summary>
+        /// Accion que se realizara cuando se pulse la tecla delante o el boton.
+        /// </summary>
         private void delante()
         {
             posicionAvatar = posicionAvatar - 1;
@@ -328,6 +368,9 @@ namespace Aprendo_con_Molly
 
         }
 
+        /// <summary>
+        /// Accion cuando se pulsa el boton o la tecla de atras.
+        /// </summary>
         private void atras()
         {
             posicionAvatar = posicionAvatar + 1;
@@ -369,6 +412,11 @@ namespace Aprendo_con_Molly
 
         }
 
+        /// <summary>
+        /// Metodo de accion para las acciones de las flechas del teclado.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void Window_KeyDown(object sender, KeyEventArgs e)
         {
             if (imagenNene.Visibility == System.Windows.Visibility.Visible)
@@ -392,6 +440,11 @@ namespace Aprendo_con_Molly
             }
         }
 
+        /// <summary>
+        /// Metodo cuando se le pulsa con el raton en la imagen del centro.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void imgCentro_MouseDown(object sender, MouseButtonEventArgs e)
         {
 
@@ -406,20 +459,85 @@ namespace Aprendo_con_Molly
             //Mostrar animacion de selección.
 
 
-
+            //Dependiendo del nivel que me haya elegido el usuario tendre que mostrarle un panel u otro.
+            int panel = seleccionPanelNivel(nivel);
+            
             //Cargar ventana del juego.
             //Crear contador de tiempo y cuando finalice que cargue la ventana.
-            colores ventana = new colores();
-            ventana = new colores();
+            colores ventana = new colores(panel,this.juego);
             ventana.Show();
 
             this.Close();
             
-
-
-
-
         }
+
+        /// <summary>
+        /// Metodo para seleccionar un panel aleatorio del nivel que se le especifica.
+        /// </summary>
+        /// <param name="nivel">Nivel 1-Principiante 2-Medio 3-Avanzado</param>
+        /// <returns></returns>
+        private int seleccionPanelNivel(String nivel)
+        {
+            int numero=0;
+            int max=2;
+            int min=1;
+
+            Random random = new Random(DateTime.Now.Millisecond);
+            
+
+            switch (nivel)
+            {
+
+                case "Principiante":
+                    max = this.juego.getUnNivel(0).getTipos().Count;
+                    break;
+
+                case "Medio":
+                    max = this.juego.getUnNivel(1).getTipos().Count;
+                    break;
+
+                case "Avanzado":
+                    max = this.juego.getUnNivel(2).getTipos().Count;
+                    break;
+
+            }
+
+            numero = random.Next(min, max+1);
+
+            return numero;
+        }
+
+
+        /// <summary>
+        /// Si el radioButton esta check el nivel es principiante.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void rdbBajo_Checked(object sender, RoutedEventArgs e)
+        {
+            nivel = "Principiante";
+        }
+
+        /// <summary>
+        /// Si el radioButton esta check el nivel es medio.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void rdbMedio_Checked(object sender, RoutedEventArgs e)
+        {
+            nivel = "Medio";
+        }
+
+        /// <summary>
+        /// Si el radioButton esta check el nivel es avanzado
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void rdbAlto_Checked(object sender, RoutedEventArgs e)
+        {
+            nivel = "Avanzado";
+        }
+
 
 
 

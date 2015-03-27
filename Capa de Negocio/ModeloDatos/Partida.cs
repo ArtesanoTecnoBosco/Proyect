@@ -63,7 +63,10 @@ namespace Capa_de_Negocio.ModeloDatos
         }
 
 
-
+        /// <summary>
+        /// Constructor con un parametros.
+        /// </summary>
+        /// <param name="nivel">Nivel - Nivel de la partida.</param>
         public Partida(Nivel nivel)
         {
             this.nivel = nivel;

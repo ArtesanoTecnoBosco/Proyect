@@ -19,7 +19,9 @@ namespace Aprendo_con_Molly
 	public partial class VentanaEmergente : Window
 	{
 
-
+        /// <summary>
+        /// Constructor vacio.
+        /// </summary>
         public VentanaEmergente()
         {
             this.InitializeComponent();
@@ -29,7 +31,10 @@ namespace Aprendo_con_Molly
         }
 
 
-
+        /// <summary>
+        /// Constructor con parametros.
+        /// </summary>
+        /// <param name="x">Mensaje a escribir.</param>
 		public VentanaEmergente(String x)
 		{
 			this.InitializeComponent();
@@ -40,18 +45,30 @@ namespace Aprendo_con_Molly
 			// A partir de este punto se requiere la inserción de código para la creación del objeto.
 		}
 
+        /// <summary>
+        /// Metodo al hacer click en el boton de cerrar.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             Application.Current.Shutdown();
 
         }
 
+        /// <summary>
+        /// Metodo al hacer click en el boton OK.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
             Application.Current.Shutdown();
         }
 
-
+        /// <summary>
+        /// Metodo para personalizar la ventana(No mostrarse en la barra, no resize etc).
+        /// </summary>
         private void personalizar()
         {
             ShowInTaskbar = false;

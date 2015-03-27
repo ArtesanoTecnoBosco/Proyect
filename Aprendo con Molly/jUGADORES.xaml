@@ -287,9 +287,9 @@
 					</TransformGroup>
 				</Label.RenderTransform>
 			</Label>
-			<RadioButton x:Name="rdbBajo" Content="BAJO" Margin="93.167,103.166,92.5,220.667" FontFamily="Cooper Black" FontWeight="Bold" FontSize="16" Focusable="False"/>
-			<RadioButton x:Name="rdbMedio" Content="MEDIO" HorizontalAlignment="Left" Height="28" VerticalAlignment="Top" Width="95.834" FontFamily="Cooper Black" FontWeight="Bold" FontSize="16" Margin="93.167,127.833,0,0" Focusable="False"/>
-			<RadioButton x:Name="rdbAlto" Content="ALTO" Margin="93.167,155.833,92.5,168" FontFamily="Cooper Black" FontWeight="Bold" FontSize="16" Focusable="False"/>
+			<RadioButton x:Name="rdbBajo" Content="BAJO" Margin="93.167,103.166,92.5,220.667" FontFamily="Cooper Black" FontWeight="Bold" FontSize="16" Focusable="False" Checked="rdbBajo_Checked"/>
+			<RadioButton x:Name="rdbMedio" Content="MEDIO" HorizontalAlignment="Left" Height="28" VerticalAlignment="Top" Width="95.834" FontFamily="Cooper Black" FontWeight="Bold" FontSize="16" Margin="93.167,127.833,0,0" Focusable="False" Checked="rdbMedio_Checked"/>
+			<RadioButton x:Name="rdbAlto" Content="ALTO" Margin="93.167,155.833,92.5,168" FontFamily="Cooper Black" FontWeight="Bold" FontSize="16" Focusable="False" Checked="rdbAlto_Checked"/>
 			<Button x:Name="btnSiguiente_Copy" Content="NEXT" HorizontalAlignment="Left" Height="132.015" Margin="61.908,210.818,0,0" Style="{DynamicResource comenzR}" VerticalAlignment="Top" Width="153.834" Click="btnSiguiente_Click" FontFamily="Cooper Black" FontSize="26.667" FontWeight="Bold" Foreground="#FF238755" HorizontalContentAlignment="Left" VerticalContentAlignment="Top" Padding="1" FlowDirection="RightToLeft" Focusable="False" IsDefault="True" Cursor="Hand"/>
 		</Grid>
 		<Button Content="Button" HorizontalAlignment="Left" Height="23.72" Margin="944.833,10,0,0" Style="{DynamicResource BotonCerrar}" VerticalAlignment="Top" Width="25.011" Cursor="Hand" Click="Button_Click" Focusable="False"/>
