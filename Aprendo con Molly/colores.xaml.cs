@@ -21,6 +21,7 @@ namespace Aprendo_con_Molly
         /// Estructura del juego donde se almacen todos los datos y se pasa entre ventanas.
         /// </summary>
         private Capa_de_Negocio.Juego juego;
+        private Capa_de_Negocio.ModeloDatos.Pregunta pregunta;
         
         /// <summary>
         /// Contructor vacio.
@@ -28,6 +29,7 @@ namespace Aprendo_con_Molly
 		public colores()
 		{
 			this.InitializeComponent();
+            pregunta = new Capa_de_Negocio.ModeloDatos.Pregunta();
 						
 		}
 
@@ -39,8 +41,13 @@ namespace Aprendo_con_Molly
         public colores(int panel,Capa_de_Negocio.Juego juego)
         {
             this.InitializeComponent();
+            this.juego = juego;
             mostrarPanel(panel);
-            this.juego = juego;            
+
+            //Consulta para sacar una pregunta del tipo (panel).
+            pregunta = new Capa_de_Negocio.ModeloDatos.Pregunta();
+
+            //Cargo imagen del centro.
         }
 
 
@@ -72,19 +79,41 @@ namespace Aprendo_con_Molly
                 case 4:
                     //OBJETOS
                     break;
-            
+                //FIN MODO MEDIO
                 case 5:
                     //SUMAR
                     break;
 
                 case 6:
                     //RESTAR
-                    break;                 
+                    break;      
+                //FIN MODO AVANZADO
             }
            
         }
 
+        private void btnCerrar_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+        }
 
+        private void btnMinimiza_Click(object sender, RoutedEventArgs e)
+        {
+            this.WindowState = WindowState.Minimized;
+        }
+
+
+
+
+        
+        ///(Ver y jugar deshabilitado)
+        ///1-Saco el nombre del color.
+        ///2-Reproduzco el audio del color.
+
+        ///Seleccion:
+	        //- Mal--> Oculto la bola y reproduzco audio ooohhh.
+	        //- Bien--> Reproduzco el sonido bien. Oculto panel de las bolas. Y pongo todas las bolas como visibles.
+		    //Pongo el panel del video a visible. Y cargo el video
 
 
 	}

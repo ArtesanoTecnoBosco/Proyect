@@ -35,7 +35,7 @@ namespace Aprendo_con_Molly
         /// <summary>
         /// Nivel seleccionado por el usuario.
         /// </summary>
-        private String nivel;
+        public static String nivel;
 
 
         /// <summary>
@@ -537,9 +537,6 @@ namespace Aprendo_con_Molly
         {
             nivel = "Avanzado";
         }
-
-
-
 
 	}
 }

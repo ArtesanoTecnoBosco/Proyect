@@ -43,6 +43,7 @@
     <Compile Include="ModeloDatos\Avatar.cs" />
     <Compile Include="ModeloDatos\Nivel.cs" />
     <Compile Include="ModeloDatos\Partida.cs" />
+    <Compile Include="ModeloDatos\Pregunta.cs" />
     <Compile Include="ModeloDatos\Tipo.cs" />
     <Compile Include="ModeloDatos\Usuario.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
