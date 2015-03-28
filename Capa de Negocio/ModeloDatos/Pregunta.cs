@@ -194,5 +194,32 @@ namespace Capa_de_Negocio.ModeloDatos
         {
             this.video = video;
         }
+
+
+        /// <summary>
+        /// Metodo para cargar una pregunta aleatoria de la bd a la pregunta.
+        /// </summary>
+        /// <param name="tipo">Tipo de pregunta que equivale al panel a cargar.</param>
+        public void cargarPregunta(int tipo)
+        {
+            Capa_Acceso_a_Datos.Conexion conexion = new Capa_Acceso_a_Datos.Conexion();
+
+            System.Data.OleDb.OleDbDataReader reader=conexion.ejecutarConsulta("SELECT top 1 Id, IdTipo, Nombre, Imagen, Video, Sonido, TagSeleccion FROM PREGUNTAS_TIPO WHERE IdTipo=" + tipo +" ORDER BY rnd(IdTipo)");
+
+            while (reader.Read())
+            {
+
+                this.id = reader.GetInt32(0);
+                this.idTipo = reader.GetInt32(1);
+                this.nombre = reader.GetString(2);
+                this.imagen = reader.GetString(3);
+                this.video = reader.GetString(4);
+                this.sonido = reader.GetString(5);
+                this.tag = reader.GetString(6);
+
+            }
+
+            conexion.cerrarConexion();
+        }
     }
 }

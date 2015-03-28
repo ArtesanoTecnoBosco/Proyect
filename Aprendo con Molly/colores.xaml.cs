@@ -42,12 +42,16 @@ namespace Aprendo_con_Molly
         {
             this.InitializeComponent();
             this.juego = juego;
-            mostrarPanel(panel);
 
             //Consulta para sacar una pregunta del tipo (panel).
             pregunta = new Capa_de_Negocio.ModeloDatos.Pregunta();
-
+            mostrarPanel(1);
+            
+            
             //Cargo imagen del centro.
+
+
+
         }
 
 
@@ -89,6 +93,8 @@ namespace Aprendo_con_Molly
                     break;      
                 //FIN MODO AVANZADO
             }
+
+            pregunta.cargarPregunta(panel);
            
         }
 

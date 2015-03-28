@@ -140,6 +140,8 @@ namespace Capa_de_Negocio.ModeloDatos
                 this.id = conexion.ejecutarSentencia("INSERT INTO USUARIOS (Nombre, Avatar) VALUES ('" + this.nombre + "','" + this.avatar.getRuta() + "')");
                 conexion.cerrarConexion();
             }
+
+            
             
         }
 
