@@ -176,9 +176,10 @@ namespace Aprendo_con_Molly
                 //Efecto desaparecer
                 desaparecerBola(tag);
                 //Reproducir el sonido.
-                sonido = new SoundPlayer("RUTA");
+                
+                //sonido = new SoundPlayer("RUTA");
 
-                sonido.PlaySync();
+                //sonido.PlaySync();
 
             }
 
