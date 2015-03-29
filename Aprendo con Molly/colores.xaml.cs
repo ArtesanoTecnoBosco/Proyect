@@ -10,6 +10,8 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using System.IO;
+using System.Windows.Media.Animation;
+using System.Media;
 
 namespace Aprendo_con_Molly
 {
@@ -23,6 +25,8 @@ namespace Aprendo_con_Molly
         /// </summary>
         private Capa_de_Negocio.Juego juego;
         private Capa_de_Negocio.ModeloDatos.Pregunta pregunta;
+
+       
         
 
         /// <summary>
@@ -45,6 +49,9 @@ namespace Aprendo_con_Molly
         {
             this.InitializeComponent();
             btnJugar.Visibility = System.Windows.Visibility.Hidden;
+            
+
+
             this.juego = juego;
 
             //Consulta para sacar una pregunta del tipo (panel).
@@ -149,6 +156,7 @@ namespace Aprendo_con_Molly
         {
             Button b = (Button)sender;
             String tag = b.Tag.ToString();
+            SoundPlayer sonido;
 
             //Si se ha acertado la pregunta.
             if (tag.Equals(pregunta.getTag()))
@@ -166,9 +174,11 @@ namespace Aprendo_con_Molly
             else
             {
                 //Efecto desaparecer
-
+                desaparecerBola(tag);
                 //Reproducir el sonido.
-                b.Visibility = System.Windows.Visibility.Hidden;
+                sonido = new SoundPlayer("RUTA");
+
+                sonido.PlaySync();
 
             }
 
@@ -176,7 +186,61 @@ namespace Aprendo_con_Molly
         }
 
 
+        private void desaparecerBola(String tag)
+        {
 
+            Storyboard storyBoard = new Storyboard();
+            String efecto = "";
+            
+
+            switch (tag)
+            {
+
+                case "Blanco":
+                    efecto = "BlancoDesaparece";
+                    break;
+
+                case "Amarillo":
+                    efecto = "AmarilloDesaparece";
+                    break;
+
+                case "Azul":
+                    efecto = "AzulDesaparece";
+                    break;
+
+                case "Marron":
+                    efecto = "MarronDesaparece";
+                    break;
+
+                case "Morado":
+                    efecto="MoradoDesaparece";
+                    break;
+
+                case "Naranja":
+                    efecto = "NaranjaDesaparece";
+                    break;
+
+                case "Negro":
+                    efecto = "NegroDesaparece";
+                    break;
+
+                case "Rojo":
+                    efecto = "RojoDesaparece";
+                    break;
+
+                case "Rosa":
+                    efecto = "RosaDesaparece";
+                    break;
+
+                case "Verde":
+                    efecto = "VerdeDesaparece";
+                    break;
+
+            }
+            storyBoard = (Storyboard)FindResource(efecto);
+            storyBoard.Begin();
+
+        }
 
 
         
