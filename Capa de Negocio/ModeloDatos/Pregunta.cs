@@ -45,7 +45,7 @@ namespace Capa_de_Negocio.ModeloDatos
         /// </summary>
         public Pregunta()
         {
-
+        
         }
 
         /// <summary>
@@ -204,7 +204,7 @@ namespace Capa_de_Negocio.ModeloDatos
         {
             Capa_Acceso_a_Datos.Conexion conexion = new Capa_Acceso_a_Datos.Conexion();
 
-            System.Data.OleDb.OleDbDataReader reader=conexion.ejecutarConsulta("SELECT top 1 Id, IdTipo, Nombre, Imagen, Video, Sonido, TagSeleccion FROM PREGUNTAS_TIPO WHERE IdTipo=" + tipo +" ORDER BY rnd(IdTipo)");
+            System.Data.OleDb.OleDbDataReader reader = conexion.ejecutarConsulta("SELECT top 1 Id, IdTipo, Nombre, Imagen, Video, Sonido, TagSeleccion FROM PREGUNTAS_TIPO WHERE IdTipo=" + tipo + " ORDER BY rnd(INT(NOW*Id)-NOW*Id)");
 
             while (reader.Read())
             {

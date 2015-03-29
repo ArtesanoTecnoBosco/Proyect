@@ -864,7 +864,7 @@
         	<Button x:Name="btnMinimiza" Content="Button" HorizontalAlignment="Left" Height="23.72" VerticalAlignment="Top" Width="25.011" Style="{DynamicResource Minimizar}" RenderTransformOrigin="-2.032,0.008" Canvas.Left="906.822" Canvas.Top="10" Click="btnMinimiza_Click"/>
         	<Button x:Name="btnCerrar" Content="Button" HorizontalAlignment="Left" Height="23.72" VerticalAlignment="Top" Width="25.011" Style="{DynamicResource BotonCerrar}" RenderTransformOrigin="-2.032,0.008" Canvas.Left="936.833" Canvas.Top="10" Click="btnCerrar_Click"/>
         	<Canvas x:Name="bolitas" HorizontalAlignment="Left" Height="300.018" VerticalAlignment="Top" Width="991.992" Canvas.Left="4.008" Canvas.Top="-12" Visibility="Hidden" Opacity="0">
-        		<Button x:Name="blanco" Content="Button" HorizontalAlignment="Left" Height="57.78" VerticalAlignment="Top" Width="69" Style="{DynamicResource btnBlanco}" Canvas.Left="2" Canvas.Top="233.518" RenderTransformOrigin="0.5,0.5">
+        		<Button x:Name="blanco" Content="Button" HorizontalAlignment="Left" Height="57.78" VerticalAlignment="Top" Width="69" Style="{DynamicResource btnBlanco}" Canvas.Left="2" Canvas.Top="233.518" RenderTransformOrigin="0.5,0.5" Click="HandlerBolas" Tag="Blanco">
         			<Button.RenderTransform>
         				<TransformGroup>
         					<ScaleTransform/>
@@ -874,12 +874,12 @@
         				</TransformGroup>
         			</Button.RenderTransform>
         		</Button>
-        		<Button x:Name="amarillo" Content="Button" HorizontalAlignment="Left" Height="57.78" VerticalAlignment="Top" Width="69" Style="{DynamicResource btnAmarillo}" Canvas.Left="432" Canvas.Top="137.798"/>
-        		<Button x:Name="marron" Content="Button" HorizontalAlignment="Left" Height="58" VerticalAlignment="Top" Width="69" Style="{DynamicResource btnMarron}" Canvas.Left="194.5" Canvas.Top="171.578"/>
-        		<Button x:Name="azul" Content="Button" HorizontalAlignment="Left" Height="57.78" VerticalAlignment="Top" Width="69" Style="{DynamicResource btnAzul}" Canvas.Left="633.464" Canvas.Top="55.958"/>
-        		<Button x:Name="rojo" Content="Button" HorizontalAlignment="Left" Height="58" VerticalAlignment="Top" Width="69" Style="{DynamicResource btnRojo}" Canvas.Left="274.5" Canvas.Top="45.738"/>
-        		<Button x:Name="rosa" Content="Button" HorizontalAlignment="Left" Height="58" VerticalAlignment="Top" Width="69" Style="{DynamicResource rosa}" Canvas.Left="797.464" Canvas.Top="114.018"/>
-        		<Button x:Name="negro" Content="Button" HorizontalAlignment="Left" Height="58" VerticalAlignment="Top" Width="69" Style="{DynamicResource negro}" RenderTransformOrigin="0.495,0.465" Canvas.Left="903.822" Canvas.Top="232.018">
+        		<Button x:Name="amarillo" Content="Button" HorizontalAlignment="Left" Height="57.78" VerticalAlignment="Top" Width="69" Style="{DynamicResource btnAmarillo}" Canvas.Left="432" Canvas.Top="137.798" Tag="Amarillo" Click="HandlerBolas"/>
+        		<Button x:Name="marron" Content="Button" HorizontalAlignment="Left" Height="58" VerticalAlignment="Top" Width="69" Style="{DynamicResource btnMarron}" Canvas.Left="194.5" Canvas.Top="171.578" Tag="Marron" Click="HandlerBolas"/>
+        		<Button x:Name="azul" Content="Button" HorizontalAlignment="Left" Height="57.78" VerticalAlignment="Top" Width="69" Style="{DynamicResource btnAzul}" Canvas.Left="633.464" Canvas.Top="55.958" Tag="Azul" Click="HandlerBolas"/>
+        		<Button x:Name="rojo" Content="Button" HorizontalAlignment="Left" Height="58" VerticalAlignment="Top" Width="69" Style="{DynamicResource btnRojo}" Canvas.Left="274.5" Canvas.Top="45.738" Tag="Rojo" Click="HandlerBolas"/>
+        		<Button x:Name="rosa" Content="Button" HorizontalAlignment="Left" Height="58" VerticalAlignment="Top" Width="69" Style="{DynamicResource rosa}" Canvas.Left="797.464" Canvas.Top="114.018" Tag="Rosa" Click="HandlerBolas"/>
+        		<Button x:Name="negro" Content="Button" HorizontalAlignment="Left" Height="58" VerticalAlignment="Top" Width="69" Style="{DynamicResource negro}" RenderTransformOrigin="0.495,0.465" Canvas.Left="903.822" Canvas.Top="232.018" Tag="Negro" Click="HandlerBolas">
         			<Button.RenderTransform>
         				<TransformGroup>
         					<ScaleTransform/>
@@ -889,8 +889,8 @@
         				</TransformGroup>
         			</Button.RenderTransform>
         		</Button>
-        		<Button x:Name="verde" Content="Button" HorizontalAlignment="Left" Height="58" VerticalAlignment="Top" Width="69" Style="{DynamicResource btnVerde}" Canvas.Left="452" Canvas.Top="32.018"/>
-        		<Button x:Name="naranja" Content="Button" HorizontalAlignment="Left" Height="58" VerticalAlignment="Top" Width="69" Style="{DynamicResource bNaranja}" Canvas.Left="673.464" Canvas.Top="171.578" RenderTransformOrigin="0.5,0.5">
+        		<Button x:Name="verde" Content="Button" HorizontalAlignment="Left" Height="58" VerticalAlignment="Top" Width="69" Style="{DynamicResource btnVerde}" Canvas.Left="452" Canvas.Top="32.018" Tag="Verde" Click="HandlerBolas"/>
+        		<Button x:Name="naranja" Content="Button" HorizontalAlignment="Left" Height="58" VerticalAlignment="Top" Width="69" Style="{DynamicResource bNaranja}" Canvas.Left="673.464" Canvas.Top="171.578" RenderTransformOrigin="0.5,0.5" Tag="Naranja" Click="HandlerBolas">
         			<Button.RenderTransform>
         				<TransformGroup>
         					<ScaleTransform/>
@@ -900,7 +900,7 @@
         				</TransformGroup>
         			</Button.RenderTransform>
         		</Button>
-        		<Button x:Name="morado" Content="Button" HorizontalAlignment="Left" Height="58" VerticalAlignment="Top" Width="69" Style="{DynamicResource btnMorado}" Canvas.Left="99.5" Canvas.Top="94.018" RenderTransformOrigin="0.5,0.5">
+        		<Button x:Name="morado" Content="Button" HorizontalAlignment="Left" Height="58" VerticalAlignment="Top" Width="69" Style="{DynamicResource btnMorado}" Canvas.Left="99.5" Canvas.Top="94.018" RenderTransformOrigin="0.5,0.5" Tag="Morado" Click="HandlerBolas">
         			<Button.RenderTransform>
         				<TransformGroup>
         					<ScaleTransform/>
@@ -1251,7 +1251,7 @@
         			</Rectangle.Fill>
         		</Rectangle>
         	</Canvas>
-        	<Rectangle x:Name="espacioJuego" HorizontalAlignment="Left" Height="367.5" RadiusY="48" RadiusX="48" StrokeThickness="8" VerticalAlignment="Top" Width="476.5" Canvas.Left="182.687" Canvas.Top="227.5" Visibility="Hidden">
+        	<Rectangle x:Name="espacioJuego" HorizontalAlignment="Left" Height="367.5" RadiusY="48" RadiusX="48" StrokeThickness="8" VerticalAlignment="Top" Width="476.5" Canvas.Left="182.687" Canvas.Top="227.5" Visibility="Hidden" Opacity="0">
         		<Rectangle.Fill>
         			<ImageBrush ImageSource="am.png"/>
         		</Rectangle.Fill>

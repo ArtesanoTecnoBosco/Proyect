@@ -9,6 +9,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using System.IO;
 
 namespace Aprendo_con_Molly
 {
@@ -23,6 +24,7 @@ namespace Aprendo_con_Molly
         private Capa_de_Negocio.Juego juego;
         private Capa_de_Negocio.ModeloDatos.Pregunta pregunta;
         
+
         /// <summary>
         /// Contructor vacio.
         /// </summary>
@@ -30,6 +32,7 @@ namespace Aprendo_con_Molly
 		{
 			this.InitializeComponent();
             pregunta = new Capa_de_Negocio.ModeloDatos.Pregunta();
+            btnJugar.Visibility = System.Windows.Visibility.Hidden;
 						
 		}
 
@@ -41,6 +44,7 @@ namespace Aprendo_con_Molly
         public colores(int panel,Capa_de_Negocio.Juego juego)
         {
             this.InitializeComponent();
+            btnJugar.Visibility = System.Windows.Visibility.Hidden;
             this.juego = juego;
 
             //Consulta para sacar una pregunta del tipo (panel).
@@ -48,9 +52,7 @@ namespace Aprendo_con_Molly
             mostrarPanel(1);
             
             
-            //Cargo imagen del centro.
-
-
+           
 
         }
 
@@ -62,12 +64,16 @@ namespace Aprendo_con_Molly
         private void mostrarPanel(int panel)
         {
 
+            pregunta.cargarPregunta(panel);
+
             switch (panel)
             {
                 //MODO FACIL,MEDIO,DIFICIL
                 case 1:
                     bolitas.Opacity = 100;
                     bolitas.Visibility = System.Windows.Visibility.Visible;
+                    //Cargo imagen del centro y demas.
+                    cargarPreguntaBolas();
                     break;
 
                 case 2:
@@ -94,9 +100,14 @@ namespace Aprendo_con_Molly
                 //FIN MODO AVANZADO
             }
 
-            pregunta.cargarPregunta(panel);
+            
            
         }
+
+
+
+
+
 
         private void btnCerrar_Click(object sender, RoutedEventArgs e)
         {
@@ -107,6 +118,63 @@ namespace Aprendo_con_Molly
         {
             this.WindowState = WindowState.Minimized;
         }
+
+
+        private void cargarPreguntaBolas()
+        {
+            espacioJuego.Opacity = 100;
+            espacioJuego.Visibility = System.Windows.Visibility.Visible;
+            espacioJuego.Fill = new ImageBrush(new BitmapImage(new Uri(directorioPadre() + pregunta.getImagen(), UriKind.Relative)));
+
+
+        }
+
+
+        /// <summary>
+        /// Metodo para saber el directorio padre.
+        /// </summary>
+        /// <returns></returns>
+        private String directorioPadre()
+        {
+            DirectoryInfo info;
+            String path = Directory.GetCurrentDirectory();
+            info = System.IO.Directory.GetParent(path);
+            info = System.IO.Directory.GetParent(info.FullName);
+            return info.FullName;
+        }
+
+
+
+        private void HandlerBolas(object sender, RoutedEventArgs e)
+        {
+            Button b = (Button)sender;
+            String tag = b.Tag.ToString();
+
+            //Si se ha acertado la pregunta.
+            if (tag.Equals(pregunta.getTag()))
+            {
+
+                //Reproducir el sonido
+
+                //Esperar dos segundos.
+
+                //CargarVideo.
+
+
+            }
+            //Si no se ha acertado la pregunta.
+            else
+            {
+                //Efecto desaparecer
+
+                //Reproducir el sonido.
+                b.Visibility = System.Windows.Visibility.Hidden;
+
+            }
+
+            
+        }
+
 
 
 
