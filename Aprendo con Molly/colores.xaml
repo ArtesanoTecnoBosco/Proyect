@@ -1077,7 +1077,7 @@
 			</Rectangle>
 
         	<Button x:Name="btnJugar" Content="Button" HorizontalAlignment="Left" Height="39.826" Style="{DynamicResource btnJugarEfecto}" VerticalAlignment="Top" Width="137.388" Background="#FF377C07" Canvas.Left="808.964" Canvas.Top="335.982" Click="btnJugar_Click"/>
-        	<Button x:Name="bntExcuchar" Content="Button" HorizontalAlignment="Left" Height="49.826" Style="{DynamicResource btnEscucharEfecto}" VerticalAlignment="Top" Width="137.388" Canvas.Left="696.964" Canvas.Top="414.982"/>
+        	<Button x:Name="bntExcuchar" Content="Button" HorizontalAlignment="Left" Height="49.826" Style="{DynamicResource btnEscucharEfecto}" VerticalAlignment="Top" Width="137.388" Canvas.Left="696.964" Canvas.Top="414.982" Click="bntExcuchar_Click"/>
         	<Button x:Name="btnVer" Content="Button" HorizontalAlignment="Left" Height="33.826" Style="{DynamicResource btnVerEfect}" VerticalAlignment="Top" Width="68.722" Canvas.Left="866.076" Canvas.Top="439.204"/>
         	<Button x:Name="btnMinimiza" Content="Button" HorizontalAlignment="Left" Height="23.72" VerticalAlignment="Top" Width="25.011" Style="{DynamicResource Minimizar}" RenderTransformOrigin="-2.032,0.008" Canvas.Left="906.822" Canvas.Top="10" Click="btnMinimiza_Click"/>
         	<Button x:Name="btnCerrar" Content="Button" HorizontalAlignment="Left" Height="23.72" VerticalAlignment="Top" Width="25.011" Style="{DynamicResource BotonCerrar}" RenderTransformOrigin="-2.032,0.008" Canvas.Left="936.833" Canvas.Top="10" Click="btnCerrar_Click"/>
@@ -1184,7 +1184,7 @@
         		</Button>
         	</Canvas>
         	<Canvas x:Name="letras" Height="614" Width="1024" Visibility="Hidden" Opacity="0">
-        		<Rectangle x:Name="e" Height="96" Canvas.Left="146" StrokeThickness="8" Canvas.Top="36" Width="85.5" RenderTransformOrigin="0.5,0.5" Tag="E">
+        		<Rectangle x:Name="e" Height="96" Canvas.Left="146" StrokeThickness="8" Canvas.Top="36" Width="85.5" RenderTransformOrigin="0.5,0.5" Tag="E" MouseLeftButtonDown="HandleLetras">
         			<Rectangle.RenderTransform>
         				<TransformGroup>
         					<ScaleTransform/>
@@ -1197,7 +1197,7 @@
         				<ImageBrush ImageSource="e.png"/>
         			</Rectangle.Fill>
         		</Rectangle>
-        		<Rectangle x:Name="b" Height="96" Canvas.Left="36.5" StrokeThickness="8" Canvas.Top="42" Width="85.5" RenderTransformOrigin="0.5,0.5" Tag="B">
+        		<Rectangle x:Name="b" Height="96" Canvas.Left="36.5" StrokeThickness="8" Canvas.Top="42" Width="85.5" RenderTransformOrigin="0.5,0.5" Tag="B" MouseLeftButtonDown="HandleLetras">
         			<Rectangle.RenderTransform>
         				<TransformGroup>
         					<ScaleTransform/>
@@ -1210,7 +1210,7 @@
         				<ImageBrush ImageSource="b.png"/>
         			</Rectangle.Fill>
         		</Rectangle>
-        		<Rectangle x:Name="q" Height="96" Canvas.Left="261.5" StrokeThickness="8" Canvas.Top="36" Width="85.5" RenderTransformOrigin="0.5,0.5" Tag="Q">
+        		<Rectangle x:Name="q" Height="96" Canvas.Left="261.5" StrokeThickness="8" Canvas.Top="36" Width="85.5" RenderTransformOrigin="0.5,0.5" Tag="Q" MouseLeftButtonDown="HandleLetras">
         			<Rectangle.RenderTransform>
         				<TransformGroup>
         					<ScaleTransform/>
@@ -1223,7 +1223,7 @@
         				<ImageBrush ImageSource="q.png"/>
         			</Rectangle.Fill>
         		</Rectangle>
-        		<Rectangle x:Name="r" Height="96" Canvas.Left="379.5" StrokeThickness="8" Canvas.Top="36" Width="85.5" RenderTransformOrigin="0.5,0.5" Tag="R">
+        		<Rectangle x:Name="r" Height="96" Canvas.Left="379.5" StrokeThickness="8" Canvas.Top="36" Width="85.5" RenderTransformOrigin="0.5,0.5" Tag="R" MouseLeftButtonDown="HandleLetras">
         			<Rectangle.RenderTransform>
         				<TransformGroup>
         					<ScaleTransform/>
@@ -1236,7 +1236,7 @@
         				<ImageBrush ImageSource="r.png"/>
         			</Rectangle.Fill>
         		</Rectangle>
-        		<Rectangle x:Name="g" Height="96" Canvas.Left="145.5" StrokeThickness="8" Canvas.Top="283" Width="85.5" RenderTransformOrigin="0.5,0.5" Tag="G">
+        		<Rectangle x:Name="g" Height="96" Canvas.Left="145.5" StrokeThickness="8" Canvas.Top="283" Width="85.5" RenderTransformOrigin="0.5,0.5" Tag="G" MouseLeftButtonDown="HandleLetras">
         			<Rectangle.RenderTransform>
         				<TransformGroup>
         					<ScaleTransform/>
@@ -1249,7 +1249,7 @@
         				<ImageBrush ImageSource="g.png"/>
         			</Rectangle.Fill>
         		</Rectangle>
-        		<Rectangle x:Name="i" StrokeThickness="8" Height="96" Canvas.Left="489.5" Canvas.Top="34" Width="85.5" RenderTransformOrigin="0.5,0.5" Tag="I">
+        		<Rectangle x:Name="i" StrokeThickness="8" Height="96" Canvas.Left="489.5" Canvas.Top="34" Width="85.5" RenderTransformOrigin="0.5,0.5" Tag="I" MouseLeftButtonDown="HandleLetras">
         			<Rectangle.RenderTransform>
         				<TransformGroup>
         					<ScaleTransform/>
@@ -1262,7 +1262,7 @@
         				<ImageBrush ImageSource="i.png"/>
         			</Rectangle.Fill>
         		</Rectangle>
-        		<Rectangle x:Name="j" StrokeThickness="8" Height="96" Canvas.Left="808.5" Canvas.Top="34" Width="85.5" RenderTransformOrigin="0.5,0.5" Tag="J">
+        		<Rectangle x:Name="j" StrokeThickness="8" Height="96" Canvas.Left="808.5" Canvas.Top="34" Width="85.5" RenderTransformOrigin="0.5,0.5" Tag="J" MouseLeftButtonDown="HandleLetras">
         			<Rectangle.RenderTransform>
         				<TransformGroup>
         					<ScaleTransform/>
@@ -1275,7 +1275,7 @@
         				<ImageBrush ImageSource="j.png"/>
         			</Rectangle.Fill>
         		</Rectangle>
-        		<Rectangle x:Name="n" StrokeThickness="8" Height="96" Canvas.Left="574.5" Canvas.Top="283" Width="85.5" RenderTransformOrigin="0.5,0.5" Tag="N">
+        		<Rectangle x:Name="n" StrokeThickness="8" Height="96" Canvas.Left="574.5" Canvas.Top="283" Width="85.5" RenderTransformOrigin="0.5,0.5" Tag="N" MouseLeftButtonDown="HandleLetras">
         			<Rectangle.RenderTransform>
         				<TransformGroup>
         					<ScaleTransform/>
@@ -1288,7 +1288,7 @@
         				<ImageBrush ImageSource="n.png"/>
         			</Rectangle.Fill>
         		</Rectangle>
-        		<Rectangle x:Name="h" StrokeThickness="8" Height="96" Canvas.Left="89.5" Canvas.Top="158" Width="85.5" RenderTransformOrigin="0.5,0.5" Tag="H">
+        		<Rectangle x:Name="h" StrokeThickness="8" Height="96" Canvas.Left="89.5" Canvas.Top="158" Width="85.5" RenderTransformOrigin="0.5,0.5" Tag="H" MouseLeftButtonDown="HandleLetras">
         			<Rectangle.RenderTransform>
         				<TransformGroup>
         					<ScaleTransform/>
@@ -1301,7 +1301,7 @@
         				<ImageBrush ImageSource="h.png"/>
         			</Rectangle.Fill>
         		</Rectangle>
-        		<Rectangle x:Name="f" StrokeThickness="8" Height="96" Canvas.Left="325.5" Canvas.Top="158" Width="85.5" RenderTransformOrigin="0.5,0.5" Tag="F">
+        		<Rectangle x:Name="f" StrokeThickness="8" Height="96" Canvas.Left="325.5" Canvas.Top="158" Width="85.5" RenderTransformOrigin="0.5,0.5" Tag="F" MouseLeftButtonDown="HandleLetras">
         			<Rectangle.RenderTransform>
         				<TransformGroup>
         					<ScaleTransform/>
@@ -1314,7 +1314,7 @@
         				<ImageBrush ImageSource="f.png"/>
         			</Rectangle.Fill>
         		</Rectangle>
-        		<Rectangle x:Name="a" StrokeThickness="8" Height="96" Canvas.Left="209" Canvas.Top="158" Width="85.5" RenderTransformOrigin="0.5,0.5" Tag="A">
+        		<Rectangle x:Name="a" StrokeThickness="8" Height="96" Canvas.Left="209" Canvas.Top="158" Width="85.5" RenderTransformOrigin="0.5,0.5" Tag="A" MouseLeftButtonDown="HandleLetras">
         			<Rectangle.RenderTransform>
         				<TransformGroup>
         					<ScaleTransform/>
@@ -1327,7 +1327,7 @@
         				<ImageBrush ImageSource="a.png"/>
         			</Rectangle.Fill>
         		</Rectangle>
-        		<Rectangle x:Name="c" StrokeThickness="8" Height="96" Canvas.Left="31.5" Canvas.Top="284" Width="85.5" RenderTransformOrigin="0.5,0.5" Tag="C">
+        		<Rectangle x:Name="c" StrokeThickness="8" Height="96" Canvas.Left="31.5" Canvas.Top="284" Width="85.5" RenderTransformOrigin="0.5,0.5" Tag="C" MouseLeftButtonDown="HandleLetras">
         			<Rectangle.RenderTransform>
         				<TransformGroup>
         					<ScaleTransform/>
@@ -1340,7 +1340,7 @@
         				<ImageBrush ImageSource="c.png"/>
         			</Rectangle.Fill>
         		</Rectangle>
-        		<Rectangle x:Name="o" StrokeThickness="8" Height="96" Canvas.Left="253.5" Canvas.Top="284" Width="85.5" RenderTransformOrigin="0.5,0.5" Tag="O">
+        		<Rectangle x:Name="o" StrokeThickness="8" Height="96" Canvas.Left="253.5" Canvas.Top="284" Width="85.5" RenderTransformOrigin="0.5,0.5" Tag="O" MouseLeftButtonDown="HandleLetras">
         			<Rectangle.RenderTransform>
         				<TransformGroup>
         					<ScaleTransform/>
@@ -1353,20 +1353,20 @@
         				<ImageBrush ImageSource="o.png"/>
         			</Rectangle.Fill>
         		</Rectangle>
-        		<Rectangle x:Name="k" StrokeThickness="8" Height="96" Canvas.Left="439" Canvas.Top="158" Width="85.5" RenderTransformOrigin="0.5,0.5" Tag="K">
-        			<Rectangle.RenderTransform>
-        				<TransformGroup>
-        					<ScaleTransform/>
-        					<SkewTransform/>
-        					<RotateTransform/>
-        					<TranslateTransform/>
-        				</TransformGroup>
-        			</Rectangle.RenderTransform>
-        			<Rectangle.Fill>
-        				<ImageBrush ImageSource="k.png"/>
-        			</Rectangle.Fill>
-        		</Rectangle>
-        		<Rectangle x:Name="l" StrokeThickness="8" Height="96" Canvas.Left="560" Canvas.Top="158" Width="85.5" RenderTransformOrigin="0.5,0.5" Tag="L">
+                <Rectangle x:Name="k" StrokeThickness="8" Height="96" Canvas.Left="439" Canvas.Top="158" Width="85.5" RenderTransformOrigin="0.5,0.5" Tag="K" MouseLeftButtonDown="HandleLetras">
+                    <Rectangle.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform/>
+                            <RotateTransform/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </Rectangle.RenderTransform>
+                    <Rectangle.Fill>
+                        <ImageBrush ImageSource="k.png"/>
+                    </Rectangle.Fill>
+                </Rectangle>
+                <Rectangle x:Name="l" StrokeThickness="8" Height="96" Canvas.Left="560" Canvas.Top="158" Width="85.5" RenderTransformOrigin="0.5,0.5" Tag="L" MouseLeftButtonDown="HandleLetras">
         			<Rectangle.RenderTransform>
         				<TransformGroup>
         					<ScaleTransform/>
@@ -1379,7 +1379,7 @@
         				<ImageBrush ImageSource="l.png"/>
         			</Rectangle.Fill>
         		</Rectangle>
-        		<Rectangle x:Name="t" StrokeThickness="8" Height="96" Canvas.Left="704" Canvas.Top="34" Width="85.5" RenderTransformOrigin="0.5,0.5" Tag="T">
+        		<Rectangle x:Name="t" StrokeThickness="8" Height="96" Canvas.Left="704" Canvas.Top="34" Width="85.5" RenderTransformOrigin="0.5,0.5" Tag="T" MouseLeftButtonDown="HandleLetras">
         			<Rectangle.RenderTransform>
         				<TransformGroup>
         					<ScaleTransform/>
@@ -1392,7 +1392,7 @@
         				<ImageBrush ImageSource="t.png"/>
         			</Rectangle.Fill>
         		</Rectangle>
-        		<Rectangle x:Name="s" StrokeThickness="8" Height="96" Canvas.Left="671.5" Canvas.Top="158" Width="85.5" RenderTransformOrigin="0.5,0.5" Tag="S">
+        		<Rectangle x:Name="s" StrokeThickness="8" Height="96" Canvas.Left="671.5" Canvas.Top="158" Width="85.5" RenderTransformOrigin="0.5,0.5" Tag="S" MouseLeftButtonDown="HandleLetras">
         			<Rectangle.RenderTransform>
         				<TransformGroup>
         					<ScaleTransform/>
@@ -1405,7 +1405,7 @@
         				<ImageBrush ImageSource="s.png"/>
         			</Rectangle.Fill>
         		</Rectangle>
-        		<Rectangle x:Name="m" StrokeThickness="8" Height="96" Canvas.Left="361.5" Canvas.Top="284" Width="85.5" RenderTransformOrigin="0.5,0.5" Tag="M">
+        		<Rectangle x:Name="m" StrokeThickness="8" Height="96" Canvas.Left="361.5" Canvas.Top="284" Width="85.5" RenderTransformOrigin="0.5,0.5" Tag="M" MouseLeftButtonDown="HandleLetras">
         			<Rectangle.RenderTransform>
         				<TransformGroup>
         					<ScaleTransform/>
@@ -1418,7 +1418,7 @@
         				<ImageBrush ImageSource="m.png"/>
         			</Rectangle.Fill>
         		</Rectangle>
-        		<Rectangle x:Name="z" StrokeThickness="8" Height="96" Canvas.Left="460" Canvas.Top="420" Width="85.5" RenderTransformOrigin="0.5,0.5" Tag="Z">
+        		<Rectangle x:Name="z" StrokeThickness="8" Height="96" Canvas.Left="460" Canvas.Top="420" Width="85.5" RenderTransformOrigin="0.5,0.5" Tag="Z" MouseLeftButtonDown="HandleLetras">
         			<Rectangle.RenderTransform>
         				<TransformGroup>
         					<ScaleTransform/>
@@ -1431,7 +1431,7 @@
         				<ImageBrush ImageSource="z.png"/>
         			</Rectangle.Fill>
         		</Rectangle>
-        		<Rectangle x:Name="u" StrokeThickness="8" Height="96" Canvas.Left="560.5" Canvas.Top="420" Width="85.5" RenderTransformOrigin="0.5,0.5" Tag="U">
+        		<Rectangle x:Name="u" StrokeThickness="8" Height="96" Canvas.Left="560.5" Canvas.Top="420" Width="85.5" RenderTransformOrigin="0.5,0.5" Tag="U" MouseLeftButtonDown="HandleLetras">
         			<Rectangle.RenderTransform>
         				<TransformGroup>
         					<ScaleTransform/>
@@ -1444,7 +1444,7 @@
         				<ImageBrush ImageSource="u.png"/>
         			</Rectangle.Fill>
         		</Rectangle>
-        		<Rectangle x:Name="w" StrokeThickness="8" Height="96" Canvas.Left="597.5" Canvas.Top="34" Width="85.5" RenderTransformOrigin="0.5,0.5" Tag="W">
+        		<Rectangle x:Name="w" StrokeThickness="8" Height="96" Canvas.Left="597.5" Canvas.Top="34" Width="85.5" RenderTransformOrigin="0.5,0.5" Tag="W" MouseLeftButtonDown="HandleLetras">
         			<Rectangle.RenderTransform>
         				<TransformGroup>
         					<ScaleTransform/>
@@ -1457,7 +1457,7 @@
         				<ImageBrush ImageSource="w.png"/>
         			</Rectangle.Fill>
         		</Rectangle>
-        		<Rectangle x:Name="p" StrokeThickness="8" Height="96" Canvas.Left="895.5" Canvas.Top="158" Width="85.5" RenderTransformOrigin="0.5,0.5" Tag="P">
+        		<Rectangle x:Name="p" StrokeThickness="8" Height="96" Canvas.Left="895.5" Canvas.Top="158" Width="85.5" RenderTransformOrigin="0.5,0.5" Tag="P" MouseLeftButtonDown="HandleLetras">
         			<Rectangle.RenderTransform>
         				<TransformGroup>
         					<ScaleTransform/>
@@ -1470,7 +1470,7 @@
         				<ImageBrush ImageSource="p.png"/>
         			</Rectangle.Fill>
         		</Rectangle>
-        		<Rectangle x:Name="y" StrokeThickness="8" Height="96" Canvas.Left="468.5" Canvas.Top="284" Width="85.5" RenderTransformOrigin="0.5,0.5" Tag="Y">
+        		<Rectangle x:Name="y" StrokeThickness="8" Height="96" Canvas.Left="468.5" Canvas.Top="284" Width="85.5" RenderTransformOrigin="0.5,0.5" Tag="Y" MouseLeftButtonDown="HandleLetras">
         			<Rectangle.RenderTransform>
         				<TransformGroup>
         					<ScaleTransform/>
@@ -1483,7 +1483,7 @@
         				<ImageBrush ImageSource="y.png"/>
         			</Rectangle.Fill>
         		</Rectangle>
-        		<Rectangle x:Name="x" StrokeThickness="8" Height="96" Canvas.Left="251.5" Canvas.Top="420" Width="85.5" RenderTransformOrigin="0.5,0.5" Tag="X">
+        		<Rectangle x:Name="x" StrokeThickness="8" Height="96" Canvas.Left="251.5" Canvas.Top="420" Width="85.5" RenderTransformOrigin="0.5,0.5" Tag="X" MouseLeftButtonDown="HandleLetras">
         			<Rectangle.RenderTransform>
         				<TransformGroup>
         					<ScaleTransform/>
@@ -1496,7 +1496,7 @@
         				<ImageBrush ImageSource="x.png" Stretch="UniformToFill"/>
         			</Rectangle.Fill>
         		</Rectangle>
-        		<Rectangle x:Name="d" StrokeThickness="8" Height="96" Canvas.Left="350" Canvas.Top="420" Width="85.5" RenderTransformOrigin="0.5,0.5" Tag="D">
+        		<Rectangle x:Name="d" StrokeThickness="8" Height="96" Canvas.Left="350" Canvas.Top="420" Width="85.5" RenderTransformOrigin="0.5,0.5" Tag="D" MouseLeftButtonDown="HandleLetras">
         			<Rectangle.RenderTransform>
         				<TransformGroup>
         					<ScaleTransform/>
@@ -1509,7 +1509,7 @@
         				<ImageBrush ImageSource="d.png"/>
         			</Rectangle.Fill>
         		</Rectangle>
-        		<Rectangle x:Name="v" Height="96" Canvas.Left="783.5" StrokeThickness="8" Canvas.Top="157" Width="85.5" RenderTransformOrigin="0.5,0.5" Tag="V">
+        		<Rectangle x:Name="v" Height="96" Canvas.Left="783.5" StrokeThickness="8" Canvas.Top="157" Width="85.5" RenderTransformOrigin="0.5,0.5" Tag="V" MouseLeftButtonDown="HandleLetras">
         			<Rectangle.RenderTransform>
         				<TransformGroup>
         					<ScaleTransform/>

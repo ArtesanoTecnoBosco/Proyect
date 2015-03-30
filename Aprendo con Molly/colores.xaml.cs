@@ -28,6 +28,7 @@ namespace Aprendo_con_Molly
         private static string ERROR = "\\audio\\error.wav";
         private static string ACIERTO = "\\audio\\Aplausos.wav";
         private int numeroIntentos;
+        private SoundPlayer escuchar;
         
 
         /// <summary>
@@ -36,6 +37,7 @@ namespace Aprendo_con_Molly
 		public colores()
 		{
             numeroIntentos = 0;
+            escuchar = new SoundPlayer();
 			this.InitializeComponent();
             pregunta = new Capa_de_Negocio.ModeloDatos.Pregunta();
             btnJugar.Visibility = System.Windows.Visibility.Hidden;
@@ -50,6 +52,7 @@ namespace Aprendo_con_Molly
         public colores(int panel,Capa_de_Negocio.Juego juego)
         {
             numeroIntentos = 0;
+            escuchar = new SoundPlayer();
             this.InitializeComponent();
             btnJugar.Visibility = System.Windows.Visibility.Hidden;
             
@@ -59,7 +62,7 @@ namespace Aprendo_con_Molly
 
             //Consulta para sacar una pregunta del tipo (panel).
             pregunta = new Capa_de_Negocio.ModeloDatos.Pregunta();
-            mostrarPanel(1);
+            mostrarPanel(panel);
             
         }
 
@@ -125,6 +128,8 @@ namespace Aprendo_con_Molly
 
             
         }
+
+
 
 
 
@@ -200,6 +205,26 @@ namespace Aprendo_con_Molly
         {
             Button b = (Button)sender;
             String tag = b.Tag.ToString();
+
+            comprobarRespuestaColores(tag);
+            
+        }
+
+
+        private void HandleLetras(object sender, MouseButtonEventArgs e)
+        {
+
+            Rectangle rectangulo = (Rectangle)sender;
+            String tag = rectangulo.Tag.ToString();
+
+            comprobarRespuestaLetras(tag,rectangulo);
+
+        }
+
+
+
+        private void comprobarRespuestaLetras(String tag,Rectangle rectangulo)
+        {
             SoundPlayer sonido;
 
             //Si se ha acertado la pregunta.
@@ -211,7 +236,52 @@ namespace Aprendo_con_Molly
                 sonido.Play();
 
                 //Esperar dos segundos.
+
+                //CargarVideo.
+                ocultarPaneles();
+                mostrarVideo();
+                mostrarBoton(btnJugar);
+
+
+            }
+            //Si no se ha acertado la pregunta.
+            else
+            {
                 
+
+                //Reproducir el sonido.
+                sonido = new SoundPlayer(directorioPadre() + ERROR);
+                sonido.Play();
+
+                ocultarRectangulo(rectangulo);
+
+            }
+
+
+        }
+
+        private void ocultarRectangulo(Rectangle r)
+        {
+            r.Opacity = 0;
+            r.Visibility = System.Windows.Visibility.Hidden;
+        }
+
+
+        private void comprobarRespuestaColores(String tag)
+        {
+           
+            SoundPlayer sonido;
+
+            //Si se ha acertado la pregunta.
+            if (tag.Equals(pregunta.getTag()))
+            {
+
+                //Reproducir el sonido
+                sonido = new SoundPlayer(directorioPadre() + ACIERTO);
+                sonido.Play();
+
+                //Esperar dos segundos.
+
                 //CargarVideo.
                 ocultarPaneles();
                 mostrarVideo();
@@ -230,9 +300,9 @@ namespace Aprendo_con_Molly
                 sonido.Play();
 
             }
-
             
         }
+
 
         private void mostrarBoton(Button boton)
         {
@@ -390,6 +460,23 @@ namespace Aprendo_con_Molly
 
             return numero;
         }
+
+        /// <summary>
+        /// Accion al pulsar el boton escuchar.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void bntExcuchar_Click(object sender, RoutedEventArgs e)
+        {
+
+            escuchar.SoundLocation = directorioPadre() + pregunta.getSonido();
+            escuchar.Play();
+
+
+
+        }
+
+
 
 
 	}
