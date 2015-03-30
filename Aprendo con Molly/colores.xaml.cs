@@ -25,8 +25,9 @@ namespace Aprendo_con_Molly
         /// </summary>
         private Capa_de_Negocio.Juego juego;
         private Capa_de_Negocio.ModeloDatos.Pregunta pregunta;
-
-       
+        private static string ERROR = "\\audio\\error.wav";
+        private static string ACIERTO = "\\audio\\Aplausos.wav";
+        private int numeroIntentos;
         
 
         /// <summary>
@@ -34,6 +35,7 @@ namespace Aprendo_con_Molly
         /// </summary>
 		public colores()
 		{
+            numeroIntentos = 0;
 			this.InitializeComponent();
             pregunta = new Capa_de_Negocio.ModeloDatos.Pregunta();
             btnJugar.Visibility = System.Windows.Visibility.Hidden;
@@ -47,6 +49,7 @@ namespace Aprendo_con_Molly
         /// <param name="juego">Dato de tipo juego con la estructura del juego USUARIO, NIVELES, etc.</param>
         public colores(int panel,Capa_de_Negocio.Juego juego)
         {
+            numeroIntentos = 0;
             this.InitializeComponent();
             btnJugar.Visibility = System.Windows.Visibility.Hidden;
             
@@ -58,9 +61,6 @@ namespace Aprendo_con_Molly
             pregunta = new Capa_de_Negocio.ModeloDatos.Pregunta();
             mostrarPanel(1);
             
-            
-           
-
         }
 
 
@@ -71,7 +71,19 @@ namespace Aprendo_con_Molly
         private void mostrarPanel(int panel)
         {
 
+            ocultarPaneles();
             pregunta.cargarPregunta(panel);
+
+            try
+            {
+                ocultarVideo();
+            }
+            catch (Exception e)
+            {
+                
+            }
+
+
 
             switch (panel)
             {
@@ -81,12 +93,14 @@ namespace Aprendo_con_Molly
                     bolitas.Visibility = System.Windows.Visibility.Visible;
                     //Cargo imagen del centro y pongo visible todos los elemetos.
                     mostrarTodasLasBolas();
-                    cargarPreguntaBolas();
+                    cargarImagenPregunta();
                     break;
 
                 case 2:
                     letras.Opacity = 100;
                     letras.Visibility = System.Windows.Visibility.Visible;
+                    mostrarTodasLasLetras();
+                    
                     break;
                 //FIN MODO FACIL
                 
@@ -108,8 +122,8 @@ namespace Aprendo_con_Molly
                 //FIN MODO AVANZADO
             }
 
+
             
-           
         }
 
 
@@ -128,12 +142,11 @@ namespace Aprendo_con_Molly
         }
 
 
-        private void cargarPreguntaBolas()
+        private void cargarImagenPregunta()
         {
             espacioJuego.Opacity = 100;
             espacioJuego.Visibility = System.Windows.Visibility.Visible;
             espacioJuego.Fill = new ImageBrush(new BitmapImage(new Uri(directorioPadre() + pregunta.getImagen(), UriKind.Relative)));
-            mostrarTodasLasBolas();
 
         }
 
@@ -152,6 +165,19 @@ namespace Aprendo_con_Molly
             espacioJuego.Opacity = 100;
             espacioJuego.Visibility = System.Windows.Visibility.Visible;
 
+        }
+
+        private void mostrarTodasLasLetras()
+        {
+
+            Rectangle[] letras = {a,b,c,d,e,f,g,h,i,j,k,m,n,o,p,q,r,s,t,u,w,x,y,z};
+
+            for (int pos = 0; pos < letras.Length; pos++)
+            {
+                letras[pos].Opacity = 100;
+                letras[pos].Visibility = System.Windows.Visibility.Visible;
+            }
+                      
         }
 
 
@@ -181,10 +207,15 @@ namespace Aprendo_con_Molly
             {
 
                 //Reproducir el sonido
+                sonido = new SoundPlayer(directorioPadre() + ACIERTO);
+                sonido.Play();
 
                 //Esperar dos segundos.
-
+                
                 //CargarVideo.
+                ocultarPaneles();
+                mostrarVideo();
+                mostrarBoton(btnJugar);
 
 
             }
@@ -193,15 +224,62 @@ namespace Aprendo_con_Molly
             {
                 //Efecto desaparecer
                 desaparecerBola(tag);
-                //Reproducir el sonido.
-                
-                //sonido = new SoundPlayer("RUTA");
 
-                //sonido.PlaySync();
+                //Reproducir el sonido.
+                sonido = new SoundPlayer(directorioPadre() + ERROR);
+                sonido.Play();
 
             }
 
             
+        }
+
+        private void mostrarBoton(Button boton)
+        {
+            boton.Opacity = 100;
+            boton.Visibility = System.Windows.Visibility.Visible;
+            
+        }
+
+        private void ocultarBoton(Button boton)
+        {
+            boton.Opacity = 0;
+            boton.Visibility = System.Windows.Visibility.Hidden;
+        }
+
+        private void mostrarVideo()
+        {
+            video.Visibility = System.Windows.Visibility.Visible;
+            video.Source = new Uri(directorioPadre() + pregunta.getVideo());
+            elipseVideo.Opacity = 100;
+            elipseVideo.Visibility = System.Windows.Visibility.Visible;
+            video.Play();
+
+        }
+
+        private void ocultarVideo()
+        {
+            video.Stop();
+            video.Visibility = System.Windows.Visibility.Hidden;
+            elipseVideo.Opacity = 0;
+            elipseVideo.Visibility = System.Windows.Visibility.Hidden;
+
+        }
+
+
+
+        private void ocultarPaneles()
+        {
+            bolitas.Visibility = System.Windows.Visibility.Hidden;
+            letras.Visibility = System.Windows.Visibility.Hidden;
+
+
+
+
+            espacioJuego.Opacity = 0;
+            espacioJuego.Visibility = System.Windows.Visibility.Hidden;
+
+
         }
 
 
@@ -263,6 +341,55 @@ namespace Aprendo_con_Molly
 
 
 
+        private void btnJugar_Click(object sender, RoutedEventArgs e)
+        {
+
+            int panel;
+            
+            panel= seleccionPanelNivel(jUGADORES.nivel);         
+            pregunta.cargarPregunta(panel);
+
+            mostrarPanel(panel);
+
+        }
+
+
+
+        /// <summary>
+        /// Metodo para seleccionar un panel aleatorio del nivel que se le especifica.
+        /// </summary>
+        /// <param name="nivel">Nivel 1-Principiante 2-Medio 3-Avanzado</param>
+        /// <returns></returns>
+        private int seleccionPanelNivel(String nivel)
+        {
+            int numero = 0;
+            int max = 2;
+            int min = 1;
+
+            Random random = new Random(DateTime.Now.Millisecond);
+
+
+            switch (nivel)
+            {
+
+                case "Principiante":
+                    max = this.juego.getUnNivel(0).getTipos().Count;
+                    break;
+
+                case "Medio":
+                    max = this.juego.getUnNivel(1).getTipos().Count;
+                    break;
+
+                case "Avanzado":
+                    max = this.juego.getUnNivel(2).getTipos().Count;
+                    break;
+
+            }
+
+            numero = random.Next(min, max + 1);
+
+            return numero;
+        }
 
 
 	}

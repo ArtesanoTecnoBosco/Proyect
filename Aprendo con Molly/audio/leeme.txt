@@ -1,0 +1,9 @@
+El sonido Animada es el que "se puede" meter como fondo duerante lo que dure la partida, 
+es decir, mientras el niño este buscando la opcion correcta. Cuando la ha encontrado el 
+sonido pararia y se escucharian los aplausos... (esto... se me ha ocurrido, pero como
+quieras).
+
+El sonido Aplausos es lo que el niño escuchara si ha acertado.
+
+Los otros dos sonidos (error y fallo) es para cuando el niño falle. Elige tu entre
+estos dos el que mas te guste.
