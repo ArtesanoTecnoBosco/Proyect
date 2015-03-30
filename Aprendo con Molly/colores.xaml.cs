@@ -79,7 +79,8 @@ namespace Aprendo_con_Molly
                 case 1:
                     bolitas.Opacity = 100;
                     bolitas.Visibility = System.Windows.Visibility.Visible;
-                    //Cargo imagen del centro y demas.
+                    //Cargo imagen del centro y pongo visible todos los elemetos.
+                    mostrarTodasLasBolas();
                     cargarPreguntaBolas();
                     break;
 
@@ -132,7 +133,24 @@ namespace Aprendo_con_Molly
             espacioJuego.Opacity = 100;
             espacioJuego.Visibility = System.Windows.Visibility.Visible;
             espacioJuego.Fill = new ImageBrush(new BitmapImage(new Uri(directorioPadre() + pregunta.getImagen(), UriKind.Relative)));
+            mostrarTodasLasBolas();
 
+        }
+
+        private void mostrarTodasLasBolas()
+        {
+            Button[] bolas = { amarillo, blanco, azul, marron, morado, naranja, negro, rojo, rosa, verde };
+
+
+            for (int pos = 0; pos < bolas.Length; pos++)
+            {
+                bolas[pos].Opacity = 100;
+                bolas[pos].Visibility = System.Windows.Visibility.Visible;
+
+            }
+
+            espacioJuego.Opacity = 100;
+            espacioJuego.Visibility = System.Windows.Visibility.Visible;
 
         }
 
@@ -244,15 +262,7 @@ namespace Aprendo_con_Molly
         }
 
 
-        
-        ///(Ver y jugar deshabilitado)
-        ///1-Saco el nombre del color.
-        ///2-Reproduzco el audio del color.
 
-        ///Seleccion:
-	        //- Mal--> Oculto la bola y reproduzco audio ooohhh.
-	        //- Bien--> Reproduzco el sonido bien. Oculto panel de las bolas. Y pongo todas las bolas como visibles.
-		    //Pongo el panel del video a visible. Y cargo el video
 
 
 	}
