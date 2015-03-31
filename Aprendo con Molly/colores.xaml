@@ -459,7 +459,12 @@
         		<EasingDoubleKeyFrame KeyTime="0:0:0.7" Value="-1"/>
         		<EasingDoubleKeyFrame KeyTime="0:0:1.1" Value="0"/>
         		<EasingDoubleKeyFrame KeyTime="0:0:1.5" Value="1"/>
+        		<EasingDoubleKeyFrame KeyTime="0:0:1.6" Value="1"/>
         	</DoubleAnimationUsingKeyFrames>
+        	<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="b">
+        		<DiscreteObjectKeyFrame KeyTime="0:0:1.5" Value="{x:Static Visibility.Visible}"/>
+        		<DiscreteObjectKeyFrame KeyTime="0:0:1.6" Value="{x:Static Visibility.Hidden}"/>
+        	</ObjectAnimationUsingKeyFrames>
         </Storyboard>
         <Storyboard x:Key="E">
         	<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleX)" Storyboard.TargetName="e">
@@ -468,7 +473,12 @@
         		<EasingDoubleKeyFrame KeyTime="0:0:0.8" Value="-1"/>
         		<EasingDoubleKeyFrame KeyTime="0:0:1.1" Value="0"/>
         		<EasingDoubleKeyFrame KeyTime="0:0:1.5" Value="1"/>
+        		<EasingDoubleKeyFrame KeyTime="0:0:1.6" Value="1"/>
         	</DoubleAnimationUsingKeyFrames>
+        	<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="e">
+        		<DiscreteObjectKeyFrame KeyTime="0:0:1.5" Value="{x:Static Visibility.Visible}"/>
+        		<DiscreteObjectKeyFrame KeyTime="0:0:1.6" Value="{x:Static Visibility.Hidden}"/>
+        	</ObjectAnimationUsingKeyFrames>
         </Storyboard>
         <Storyboard x:Key="Q">
         	<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleX)" Storyboard.TargetName="q">
@@ -477,7 +487,12 @@
         		<EasingDoubleKeyFrame KeyTime="0:0:0.8" Value="-1"/>
         		<EasingDoubleKeyFrame KeyTime="0:0:1.1" Value="0"/>
         		<EasingDoubleKeyFrame KeyTime="0:0:1.5" Value="1"/>
+        		<EasingDoubleKeyFrame KeyTime="0:0:1.6" Value="1"/>
         	</DoubleAnimationUsingKeyFrames>
+        	<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="q">
+        		<DiscreteObjectKeyFrame KeyTime="0:0:1.5" Value="{x:Static Visibility.Visible}"/>
+        		<DiscreteObjectKeyFrame KeyTime="0:0:1.6" Value="{x:Static Visibility.Hidden}"/>
+        	</ObjectAnimationUsingKeyFrames>
         </Storyboard>
         <Storyboard x:Key="R">
         	<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleX)" Storyboard.TargetName="r">
@@ -486,7 +501,12 @@
         		<EasingDoubleKeyFrame KeyTime="0:0:0.8" Value="-1"/>
         		<EasingDoubleKeyFrame KeyTime="0:0:1.1" Value="0"/>
         		<EasingDoubleKeyFrame KeyTime="0:0:1.5" Value="1"/>
+        		<EasingDoubleKeyFrame KeyTime="0:0:1.6" Value="1"/>
         	</DoubleAnimationUsingKeyFrames>
+        	<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="r">
+        		<DiscreteObjectKeyFrame KeyTime="0:0:1.5" Value="{x:Static Visibility.Visible}"/>
+        		<DiscreteObjectKeyFrame KeyTime="0:0:1.6" Value="{x:Static Visibility.Hidden}"/>
+        	</ObjectAnimationUsingKeyFrames>
         </Storyboard>
         <Storyboard x:Key="I">
         	<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleX)" Storyboard.TargetName="i">
@@ -495,7 +515,12 @@
         		<EasingDoubleKeyFrame KeyTime="0:0:0.8" Value="-1"/>
         		<EasingDoubleKeyFrame KeyTime="0:0:1.1" Value="0"/>
         		<EasingDoubleKeyFrame KeyTime="0:0:1.5" Value="1"/>
+        		<EasingDoubleKeyFrame KeyTime="0:0:1.6" Value="1"/>
         	</DoubleAnimationUsingKeyFrames>
+        	<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="i">
+        		<DiscreteObjectKeyFrame KeyTime="0:0:1.5" Value="{x:Static Visibility.Visible}"/>
+        		<DiscreteObjectKeyFrame KeyTime="0:0:1.6" Value="{x:Static Visibility.Hidden}"/>
+        	</ObjectAnimationUsingKeyFrames>
         </Storyboard>
         <Storyboard x:Key="W">
         	<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleX)" Storyboard.TargetName="w">
@@ -504,7 +529,12 @@
         		<EasingDoubleKeyFrame KeyTime="0:0:0.8" Value="-1"/>
         		<EasingDoubleKeyFrame KeyTime="0:0:1.1" Value="0"/>
         		<EasingDoubleKeyFrame KeyTime="0:0:1.5" Value="1"/>
+        		<EasingDoubleKeyFrame KeyTime="0:0:1.6" Value="1"/>
         	</DoubleAnimationUsingKeyFrames>
+        	<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="w">
+        		<DiscreteObjectKeyFrame KeyTime="0:0:1.5" Value="{x:Static Visibility.Visible}"/>
+        		<DiscreteObjectKeyFrame KeyTime="0:0:1.6" Value="{x:Static Visibility.Hidden}"/>
+        	</ObjectAnimationUsingKeyFrames>
         </Storyboard>
         <Storyboard x:Key="T">
         	<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleX)" Storyboard.TargetName="t">
@@ -513,7 +543,12 @@
         		<EasingDoubleKeyFrame KeyTime="0:0:0.8" Value="-1"/>
         		<EasingDoubleKeyFrame KeyTime="0:0:1.1" Value="0"/>
         		<EasingDoubleKeyFrame KeyTime="0:0:1.5" Value="1"/>
+        		<EasingDoubleKeyFrame KeyTime="0:0:1.6" Value="1"/>
         	</DoubleAnimationUsingKeyFrames>
+        	<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="t">
+        		<DiscreteObjectKeyFrame KeyTime="0:0:1.5" Value="{x:Static Visibility.Visible}"/>
+        		<DiscreteObjectKeyFrame KeyTime="0:0:1.6" Value="{x:Static Visibility.Hidden}"/>
+        	</ObjectAnimationUsingKeyFrames>
         </Storyboard>
         <Storyboard x:Key="J">
         	<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleX)" Storyboard.TargetName="j">
@@ -522,7 +557,12 @@
         		<EasingDoubleKeyFrame KeyTime="0:0:0.8" Value="-1"/>
         		<EasingDoubleKeyFrame KeyTime="0:0:1.1" Value="0"/>
         		<EasingDoubleKeyFrame KeyTime="0:0:1.5" Value="1"/>
+        		<EasingDoubleKeyFrame KeyTime="0:0:1.6" Value="1"/>
         	</DoubleAnimationUsingKeyFrames>
+        	<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="j">
+        		<DiscreteObjectKeyFrame KeyTime="0:0:1.5" Value="{x:Static Visibility.Visible}"/>
+        		<DiscreteObjectKeyFrame KeyTime="0:0:1.6" Value="{x:Static Visibility.Hidden}"/>
+        	</ObjectAnimationUsingKeyFrames>
         </Storyboard>
         <Storyboard x:Key="H">
         	<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleX)" Storyboard.TargetName="h">
@@ -531,7 +571,12 @@
         		<EasingDoubleKeyFrame KeyTime="0:0:0.8" Value="-1"/>
         		<EasingDoubleKeyFrame KeyTime="0:0:1.1" Value="0"/>
         		<EasingDoubleKeyFrame KeyTime="0:0:1.5" Value="1"/>
+        		<EasingDoubleKeyFrame KeyTime="0:0:1.6" Value="1"/>
         	</DoubleAnimationUsingKeyFrames>
+        	<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="h">
+        		<DiscreteObjectKeyFrame KeyTime="0:0:1.5" Value="{x:Static Visibility.Visible}"/>
+        		<DiscreteObjectKeyFrame KeyTime="0:0:1.6" Value="{x:Static Visibility.Hidden}"/>
+        	</ObjectAnimationUsingKeyFrames>
         </Storyboard>
         <Storyboard x:Key="A">
         	<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleX)" Storyboard.TargetName="a">
@@ -540,7 +585,12 @@
         		<EasingDoubleKeyFrame KeyTime="0:0:0.8" Value="-1"/>
         		<EasingDoubleKeyFrame KeyTime="0:0:1.1" Value="0"/>
         		<EasingDoubleKeyFrame KeyTime="0:0:1.5" Value="1"/>
+        		<EasingDoubleKeyFrame KeyTime="0:0:1.6" Value="1"/>
         	</DoubleAnimationUsingKeyFrames>
+        	<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="a">
+        		<DiscreteObjectKeyFrame KeyTime="0:0:1.5" Value="{x:Static Visibility.Visible}"/>
+        		<DiscreteObjectKeyFrame KeyTime="0:0:1.6" Value="{x:Static Visibility.Hidden}"/>
+        	</ObjectAnimationUsingKeyFrames>
         </Storyboard>
         <Storyboard x:Key="F">
         	<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleX)" Storyboard.TargetName="f">
@@ -549,7 +599,12 @@
         		<EasingDoubleKeyFrame KeyTime="0:0:0.8" Value="-1"/>
         		<EasingDoubleKeyFrame KeyTime="0:0:1.1" Value="0"/>
         		<EasingDoubleKeyFrame KeyTime="0:0:1.5" Value="1"/>
+        		<EasingDoubleKeyFrame KeyTime="0:0:1.6" Value="1"/>
         	</DoubleAnimationUsingKeyFrames>
+        	<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="f">
+        		<DiscreteObjectKeyFrame KeyTime="0:0:1.5" Value="{x:Static Visibility.Visible}"/>
+        		<DiscreteObjectKeyFrame KeyTime="0:0:1.6" Value="{x:Static Visibility.Hidden}"/>
+        	</ObjectAnimationUsingKeyFrames>
         </Storyboard>
         <Storyboard x:Key="K">
         	<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleX)" Storyboard.TargetName="k">
@@ -558,7 +613,12 @@
         		<EasingDoubleKeyFrame KeyTime="0:0:0.8" Value="-1"/>
         		<EasingDoubleKeyFrame KeyTime="0:0:1.1" Value="0"/>
         		<EasingDoubleKeyFrame KeyTime="0:0:1.5" Value="1"/>
+        		<EasingDoubleKeyFrame KeyTime="0:0:1.6" Value="1"/>
         	</DoubleAnimationUsingKeyFrames>
+        	<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="k">
+        		<DiscreteObjectKeyFrame KeyTime="0:0:1.5" Value="{x:Static Visibility.Visible}"/>
+        		<DiscreteObjectKeyFrame KeyTime="0:0:1.6" Value="{x:Static Visibility.Hidden}"/>
+        	</ObjectAnimationUsingKeyFrames>
         </Storyboard>
         <Storyboard x:Key="L">
         	<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleX)" Storyboard.TargetName="l">
@@ -568,6 +628,10 @@
         		<EasingDoubleKeyFrame KeyTime="0:0:1.1" Value="0"/>
         		<EasingDoubleKeyFrame KeyTime="0:0:1.5" Value="1"/>
         	</DoubleAnimationUsingKeyFrames>
+        	<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="l">
+        		<DiscreteObjectKeyFrame KeyTime="0:0:1.5" Value="{x:Static Visibility.Visible}"/>
+        		<DiscreteObjectKeyFrame KeyTime="0:0:1.6" Value="{x:Static Visibility.Hidden}"/>
+        	</ObjectAnimationUsingKeyFrames>
         </Storyboard>
         <Storyboard x:Key="S">
         	<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleX)" Storyboard.TargetName="s">
@@ -576,7 +640,12 @@
         		<EasingDoubleKeyFrame KeyTime="0:0:0.8" Value="-1"/>
         		<EasingDoubleKeyFrame KeyTime="0:0:1.1" Value="0"/>
         		<EasingDoubleKeyFrame KeyTime="0:0:1.5" Value="1"/>
+        		<EasingDoubleKeyFrame KeyTime="0:0:1.6" Value="1"/>
         	</DoubleAnimationUsingKeyFrames>
+        	<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="s">
+        		<DiscreteObjectKeyFrame KeyTime="0:0:1.5" Value="{x:Static Visibility.Visible}"/>
+        		<DiscreteObjectKeyFrame KeyTime="0:0:1.6" Value="{x:Static Visibility.Hidden}"/>
+        	</ObjectAnimationUsingKeyFrames>
         </Storyboard>
         <Storyboard x:Key="V">
         	<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleX)" Storyboard.TargetName="v">
@@ -585,7 +654,12 @@
         		<EasingDoubleKeyFrame KeyTime="0:0:0.8" Value="-1"/>
         		<EasingDoubleKeyFrame KeyTime="0:0:1.1" Value="0"/>
         		<EasingDoubleKeyFrame KeyTime="0:0:1.5" Value="1"/>
+        		<EasingDoubleKeyFrame KeyTime="0:0:1.6" Value="1"/>
         	</DoubleAnimationUsingKeyFrames>
+        	<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="v">
+        		<DiscreteObjectKeyFrame KeyTime="0:0:1.5" Value="{x:Static Visibility.Visible}"/>
+        		<DiscreteObjectKeyFrame KeyTime="0:0:1.6" Value="{x:Static Visibility.Hidden}"/>
+        	</ObjectAnimationUsingKeyFrames>
         </Storyboard>
         <Storyboard x:Key="P">
         	<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleX)" Storyboard.TargetName="p">
@@ -594,7 +668,12 @@
         		<EasingDoubleKeyFrame KeyTime="0:0:0.8" Value="-1"/>
         		<EasingDoubleKeyFrame KeyTime="0:0:1.1" Value="0"/>
         		<EasingDoubleKeyFrame KeyTime="0:0:1.5" Value="1"/>
+        		<EasingDoubleKeyFrame KeyTime="0:0:1.6" Value="1"/>
         	</DoubleAnimationUsingKeyFrames>
+        	<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="p">
+        		<DiscreteObjectKeyFrame KeyTime="0:0:1.5" Value="{x:Static Visibility.Visible}"/>
+        		<DiscreteObjectKeyFrame KeyTime="0:0:1.6" Value="{x:Static Visibility.Hidden}"/>
+        	</ObjectAnimationUsingKeyFrames>
         </Storyboard>
         <Storyboard x:Key="C">
         	<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleX)" Storyboard.TargetName="c">
@@ -603,7 +682,12 @@
         		<EasingDoubleKeyFrame KeyTime="0:0:0.8" Value="-1"/>
         		<EasingDoubleKeyFrame KeyTime="0:0:1.1" Value="0"/>
         		<EasingDoubleKeyFrame KeyTime="0:0:1.5" Value="1"/>
+        		<EasingDoubleKeyFrame KeyTime="0:0:1.6" Value="1"/>
         	</DoubleAnimationUsingKeyFrames>
+        	<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="c">
+        		<DiscreteObjectKeyFrame KeyTime="0:0:1.5" Value="{x:Static Visibility.Visible}"/>
+        		<DiscreteObjectKeyFrame KeyTime="0:0:1.6" Value="{x:Static Visibility.Hidden}"/>
+        	</ObjectAnimationUsingKeyFrames>
         </Storyboard>
         <Storyboard x:Key="G">
         	<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleX)" Storyboard.TargetName="g">
@@ -612,7 +696,12 @@
         		<EasingDoubleKeyFrame KeyTime="0:0:0.8" Value="-1"/>
         		<EasingDoubleKeyFrame KeyTime="0:0:1.1" Value="0"/>
         		<EasingDoubleKeyFrame KeyTime="0:0:1.5" Value="1"/>
+        		<EasingDoubleKeyFrame KeyTime="0:0:1.6" Value="1"/>
         	</DoubleAnimationUsingKeyFrames>
+        	<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="g">
+        		<DiscreteObjectKeyFrame KeyTime="0:0:1.5" Value="{x:Static Visibility.Visible}"/>
+        		<DiscreteObjectKeyFrame KeyTime="0:0:1.6" Value="{x:Static Visibility.Hidden}"/>
+        	</ObjectAnimationUsingKeyFrames>
         </Storyboard>
         <Storyboard x:Key="O">
         	<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleX)" Storyboard.TargetName="o">
@@ -621,7 +710,12 @@
         		<EasingDoubleKeyFrame KeyTime="0:0:0.8" Value="-1"/>
         		<EasingDoubleKeyFrame KeyTime="0:0:1.1" Value="0"/>
         		<EasingDoubleKeyFrame KeyTime="0:0:1.5" Value="1"/>
+        		<EasingDoubleKeyFrame KeyTime="0:0:1.6" Value="1"/>
         	</DoubleAnimationUsingKeyFrames>
+        	<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="o">
+        		<DiscreteObjectKeyFrame KeyTime="0:0:1.5" Value="{x:Static Visibility.Visible}"/>
+        		<DiscreteObjectKeyFrame KeyTime="0:0:1.6" Value="{x:Static Visibility.Hidden}"/>
+        	</ObjectAnimationUsingKeyFrames>
         </Storyboard>
         <Storyboard x:Key="M">
         	<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleX)" Storyboard.TargetName="m">
@@ -630,7 +724,12 @@
         		<EasingDoubleKeyFrame KeyTime="0:0:0.8" Value="-1"/>
         		<EasingDoubleKeyFrame KeyTime="0:0:1.1" Value="0"/>
         		<EasingDoubleKeyFrame KeyTime="0:0:1.5" Value="1"/>
+        		<EasingDoubleKeyFrame KeyTime="0:0:1.6" Value="1"/>
         	</DoubleAnimationUsingKeyFrames>
+        	<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="m">
+        		<DiscreteObjectKeyFrame KeyTime="0:0:1.5" Value="{x:Static Visibility.Visible}"/>
+        		<DiscreteObjectKeyFrame KeyTime="0:0:1.6" Value="{x:Static Visibility.Hidden}"/>
+        	</ObjectAnimationUsingKeyFrames>
         </Storyboard>
         <Storyboard x:Key="Y">
         	<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleX)" Storyboard.TargetName="y">
@@ -639,7 +738,12 @@
         		<EasingDoubleKeyFrame KeyTime="0:0:0.8" Value="-1"/>
         		<EasingDoubleKeyFrame KeyTime="0:0:1.1" Value="0"/>
         		<EasingDoubleKeyFrame KeyTime="0:0:1.5" Value="1"/>
+        		<EasingDoubleKeyFrame KeyTime="0:0:1.6" Value="1"/>
         	</DoubleAnimationUsingKeyFrames>
+        	<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="y">
+        		<DiscreteObjectKeyFrame KeyTime="0:0:1.5" Value="{x:Static Visibility.Visible}"/>
+        		<DiscreteObjectKeyFrame KeyTime="0:0:1.6" Value="{x:Static Visibility.Hidden}"/>
+        	</ObjectAnimationUsingKeyFrames>
         </Storyboard>
         <Storyboard x:Key="N">
         	<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleX)" Storyboard.TargetName="n">
@@ -648,7 +752,12 @@
         		<EasingDoubleKeyFrame KeyTime="0:0:0.8" Value="-1"/>
         		<EasingDoubleKeyFrame KeyTime="0:0:1.1" Value="0"/>
         		<EasingDoubleKeyFrame KeyTime="0:0:1.5" Value="1"/>
+        		<EasingDoubleKeyFrame KeyTime="0:0:1.6" Value="1"/>
         	</DoubleAnimationUsingKeyFrames>
+        	<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="n">
+        		<DiscreteObjectKeyFrame KeyTime="0:0:1.5" Value="{x:Static Visibility.Visible}"/>
+        		<DiscreteObjectKeyFrame KeyTime="0:0:1.6" Value="{x:Static Visibility.Hidden}"/>
+        	</ObjectAnimationUsingKeyFrames>
         </Storyboard>
         <Storyboard x:Key="X">
         	<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleX)" Storyboard.TargetName="x">
@@ -657,7 +766,12 @@
         		<EasingDoubleKeyFrame KeyTime="0:0:0.8" Value="-1"/>
         		<EasingDoubleKeyFrame KeyTime="0:0:1.1" Value="0"/>
         		<EasingDoubleKeyFrame KeyTime="0:0:1.5" Value="1"/>
+        		<EasingDoubleKeyFrame KeyTime="0:0:1.6" Value="1"/>
         	</DoubleAnimationUsingKeyFrames>
+        	<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="x">
+        		<DiscreteObjectKeyFrame KeyTime="0:0:1.5" Value="{x:Static Visibility.Visible}"/>
+        		<DiscreteObjectKeyFrame KeyTime="0:0:1.6" Value="{x:Static Visibility.Hidden}"/>
+        	</ObjectAnimationUsingKeyFrames>
         </Storyboard>
         <Storyboard x:Key="D">
         	<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleX)" Storyboard.TargetName="d">
@@ -666,7 +780,12 @@
         		<EasingDoubleKeyFrame KeyTime="0:0:0.8" Value="-1"/>
         		<EasingDoubleKeyFrame KeyTime="0:0:1.1" Value="0"/>
         		<EasingDoubleKeyFrame KeyTime="0:0:1.5" Value="1"/>
+        		<EasingDoubleKeyFrame KeyTime="0:0:1.6" Value="1"/>
         	</DoubleAnimationUsingKeyFrames>
+        	<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="d">
+        		<DiscreteObjectKeyFrame KeyTime="0:0:1.5" Value="{x:Static Visibility.Visible}"/>
+        		<DiscreteObjectKeyFrame KeyTime="0:0:1.6" Value="{x:Static Visibility.Hidden}"/>
+        	</ObjectAnimationUsingKeyFrames>
         </Storyboard>
         <Storyboard x:Key="Z">
         	<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleX)" Storyboard.TargetName="z">
@@ -675,7 +794,12 @@
         		<EasingDoubleKeyFrame KeyTime="0:0:0.8" Value="-1"/>
         		<EasingDoubleKeyFrame KeyTime="0:0:1.1" Value="0"/>
         		<EasingDoubleKeyFrame KeyTime="0:0:1.5" Value="1"/>
+        		<EasingDoubleKeyFrame KeyTime="0:0:1.6" Value="1"/>
         	</DoubleAnimationUsingKeyFrames>
+        	<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="z">
+        		<DiscreteObjectKeyFrame KeyTime="0:0:1.5" Value="{x:Static Visibility.Visible}"/>
+        		<DiscreteObjectKeyFrame KeyTime="0:0:1.6" Value="{x:Static Visibility.Hidden}"/>
+        	</ObjectAnimationUsingKeyFrames>
         </Storyboard>
         <Storyboard x:Key="U">
         	<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleX)" Storyboard.TargetName="u">
@@ -684,7 +808,12 @@
         		<EasingDoubleKeyFrame KeyTime="0:0:0.8" Value="-1"/>
         		<EasingDoubleKeyFrame KeyTime="0:0:1.1" Value="0"/>
         		<EasingDoubleKeyFrame KeyTime="0:0:1.5" Value="1"/>
+        		<EasingDoubleKeyFrame KeyTime="0:0:1.6" Value="1"/>
         	</DoubleAnimationUsingKeyFrames>
+        	<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="u">
+        		<DiscreteObjectKeyFrame KeyTime="0:0:1.5" Value="{x:Static Visibility.Visible}"/>
+        		<DiscreteObjectKeyFrame KeyTime="0:0:1.6" Value="{x:Static Visibility.Hidden}"/>
+        	</ObjectAnimationUsingKeyFrames>
         </Storyboard>
         <Storyboard x:Key="MoradoDesaparece">
         	<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleX)" Storyboard.TargetName="morado">
@@ -1183,7 +1312,7 @@
         			</Button.RenderTransform>
         		</Button>
         	</Canvas>
-        	<Canvas x:Name="letras" Height="614" Width="1024" Visibility="Hidden" Opacity="0">
+        	<Canvas x:Name="letras" Height="614" Width="1024">
         		<Rectangle x:Name="e" Height="96" Canvas.Left="146" StrokeThickness="8" Canvas.Top="36" Width="85.5" RenderTransformOrigin="0.5,0.5" Tag="E" MouseLeftButtonDown="HandleLetras">
         			<Rectangle.RenderTransform>
         				<TransformGroup>
