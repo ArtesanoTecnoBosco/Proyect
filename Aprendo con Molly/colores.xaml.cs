@@ -253,7 +253,7 @@ namespace Aprendo_con_Molly
                 sonido = new SoundPlayer(directorioPadre() + ERROR);
                 sonido.Play();
 
-                ocultarRectangulo(rectangulo);
+                
 
             }
 
