@@ -21,9 +21,9 @@ namespace Capa_de_Negocio.ModeloDatos
         /// </summary>
         private Usuario usuario;
         /// <summary>
-        /// Atributo si el usuario ha ganado la partida o no.
+        /// Atributo si el usuario ha ganado la partida o no -1 Gana 0 Pierde.
         /// </summary>
-        private Boolean ganado;
+        private int ganado;
         /// <summary>
         /// Atributo que especifica el tipo de partida.
         /// </summary>
@@ -40,7 +40,7 @@ namespace Capa_de_Negocio.ModeloDatos
         {
             id = null;
             usuario = new Usuario();
-            ganado = false;
+            ganado = 0;
             tipo = new Tipo();
             nivel = new Nivel();
         }
@@ -57,7 +57,7 @@ namespace Capa_de_Negocio.ModeloDatos
         {
             this.id = id;
             this.usuario = usuario;
-            this.ganado = ganado;
+            this.ganado = 0;
             this.tipo = tipo;
             this.nivel = nivel;
         }
@@ -113,7 +113,7 @@ namespace Capa_de_Negocio.ModeloDatos
         /// Metodo para obtener si la partida se a ganado.
         /// </summary>
         /// <returns>Boolean True si ha ganado, false si a perdido.</returns>
-        public Boolean getGanado()
+        public int getGanado()
         {
             return ganado;
         }
@@ -122,7 +122,7 @@ namespace Capa_de_Negocio.ModeloDatos
         /// Metodo para establecer el atributo de si a ganado o no.
         /// </summary>
         /// <param name="ganado">Boolean true si la partida es ganada, false si la partida es perdida.</param>
-        public void setGanado(Boolean ganado)
+        public void setGanado(int ganado)
         {
             this.ganado = ganado;
         }
@@ -161,6 +161,35 @@ namespace Capa_de_Negocio.ModeloDatos
         public void setNivel(Nivel nivel)
         {
             this.nivel = nivel;
+        }
+
+
+        public void insertarPartida()
+        {
+            try{
+
+            Capa_Acceso_a_Datos.Conexion conexion = new Capa_Acceso_a_Datos.Conexion();
+
+
+            String sql = "INSERT INTO PARTIDAS (IdUsuario,Ganado,IdNivelTipo) VALUES ('" + this.usuario.getId() + "'," + this.ganado + ","+this.tipo.getId()+")";
+
+            int numero = conexion.ejecutarSentencia(sql);
+            
+
+            if(numero<1){
+                String x = "ERROR 110\nPor favor pongase en contacto con el administrador de la aplicación.";
+                throw new System.Exception(x);
+            }
+
+
+
+            }catch(Exception e){
+                String x = "ERROR 109\nPor favor pongase en contacto con el administrador de la aplicación.";
+                throw new System.Exception(x);
+            }
+    
+
+            
         }
     }
 }

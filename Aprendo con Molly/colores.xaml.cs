@@ -29,6 +29,7 @@ namespace Aprendo_con_Molly
         private static string ACIERTO = "\\audio\\Aplausos.wav";
         private int numeroIntentos;
         private SoundPlayer escuchar;
+        public static int TIPO;
         
 
         /// <summary>
@@ -77,6 +78,7 @@ namespace Aprendo_con_Molly
             ocultarPaneles();
             pregunta.cargarPregunta(panel);
 
+            
             try
             {
                 ocultarVideo();
@@ -158,27 +160,37 @@ namespace Aprendo_con_Molly
         private void mostrarTodasLasBolas()
         {
             Button[] bolas = { amarillo, blanco, azul, marron, morado, naranja, negro, rojo, rosa, verde };
-
+            String[] animacion ={"AmarilloDesaparece","BlancoDesaparece","AzulDesaparece","MarronDesaparece","MoradoDesaparece","NaranjaDesaparece","NegroDesaparece"
+                               ,"RojoDesaparece","RosaDesaparece","VerdeDesaparece"};
+            Storyboard storyBoard;
+            
 
             for (int pos = 0; pos < bolas.Length; pos++)
             {
+                storyBoard = (Storyboard)FindResource(animacion[pos]);
+                storyBoard.Stop();
                 bolas[pos].Opacity = 100;
                 bolas[pos].Visibility = System.Windows.Visibility.Visible;
-
+                
             }
 
             espacioJuego.Opacity = 100;
             espacioJuego.Visibility = System.Windows.Visibility.Visible;
 
+            this.InvalidateVisual();
         }
 
         private void mostrarTodasLasLetras()
         {
 
             Rectangle[] letras = {a,b,c,d,e,f,g,h,i,j,k,m,n,o,p,q,r,s,t,u,w,x,y,z};
+            String[] animacion = {"A","B","C","D","E","F","G","H","I","J","K","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"};
+            Storyboard storyBoard;
 
             for (int pos = 0; pos < letras.Length; pos++)
             {
+                storyBoard = (Storyboard)FindResource(animacion[pos]);
+                storyBoard.Stop();
                 letras[pos].Opacity = 100;
                 letras[pos].Visibility = System.Windows.Visibility.Visible;
             }
@@ -231,34 +243,92 @@ namespace Aprendo_con_Molly
             if (tag.Equals(pregunta.getTag()))
             {
 
-                //Reproducir el sonido
-                sonido = new SoundPlayer(directorioPadre() + ACIERTO);
-                sonido.Play();
+                try
+                {
+                    //Reproducir el sonido
+                    sonido = new SoundPlayer(directorioPadre() + ACIERTO);
+                    sonido.Play();
 
-                //Esperar dos segundos.
+                    //Insertar en BD.
+                    insertarPartida();
 
-                //CargarVideo.
-                ocultarPaneles();
-                mostrarVideo();
-                mostrarBoton(btnJugar);
 
+                    //CargarVideo.
+                    ocultarPaneles();
+                    mostrarVideo();
+                    mostrarBoton(btnJugar);
+                }
+                catch (Exception e)
+                {
+                    VentanaEmergente ventana = new VentanaEmergente(e.ToString());
+                    ventana.ShowDialog();
+                    ventana.Focus();
+                }
 
             }
             //Si no se ha acertado la pregunta.
             else
             {
-                
+                try
+                {
+                    //Efecto desaparecer
+                    desaparecerLetra(tag);
 
-                //Reproducir el sonido.
-                sonido = new SoundPlayer(directorioPadre() + ERROR);
-                sonido.Play();
+                    //Reproducir el sonido.
+                    sonido = new SoundPlayer(directorioPadre() + ERROR);
+                    sonido.Play();
 
+                    insertarPartidaPerdida();
+                }
+                catch (Exception e)
+                {
+                    VentanaEmergente ventana = new VentanaEmergente(e.ToString());
+                    ventana.ShowDialog();
+                    ventana.Focus();
+                }
                 
 
             }
 
 
         }
+
+        private void insertarPartida()
+        {
+            Capa_de_Negocio.ModeloDatos.Partida partida = new Capa_de_Negocio.ModeloDatos.Partida();
+            partida.setUsuario(this.juego.getUsuario());
+            partida.setGanado(-1);
+            partida.setNivel(this.juego.buscarNivel(jUGADORES.nivel));
+            partida.getTipo().setId(TIPO);
+
+            partida.insertarPartida();
+        }
+
+        private void insertarPartidaPerdida()
+        {
+            Capa_de_Negocio.ModeloDatos.Partida partida = new Capa_de_Negocio.ModeloDatos.Partida();
+            partida.setUsuario(this.juego.getUsuario());
+            partida.setGanado(0);
+            partida.setNivel(this.juego.buscarNivel(jUGADORES.nivel));
+            partida.getTipo().setId(TIPO);
+
+            partida.insertarPartida();
+        }
+
+
+        private void desaparecerLetra(String tag)
+        {
+
+            Storyboard storyBoard = new Storyboard();
+
+
+            storyBoard = (Storyboard)FindResource(tag);
+            storyBoard.Begin();
+
+        }
+
+
+
 
         private void ocultarRectangulo(Rectangle r)
         {
@@ -272,33 +342,53 @@ namespace Aprendo_con_Molly
            
             SoundPlayer sonido;
 
+            
             //Si se ha acertado la pregunta.
             if (tag.Equals(pregunta.getTag()))
             {
+                try
+                {
+                    //Reproducir el sonido
+                    sonido = new SoundPlayer(directorioPadre() + ACIERTO);
+                    sonido.Play();
 
-                //Reproducir el sonido
-                sonido = new SoundPlayer(directorioPadre() + ACIERTO);
-                sonido.Play();
+                    //Insertar Partida en la BD
+                    insertarPartida();
 
-                //Esperar dos segundos.
-
-                //CargarVideo.
-                ocultarPaneles();
-                mostrarVideo();
-                mostrarBoton(btnJugar);
+                    //CargarVideo.
+                    ocultarPaneles();
+                    mostrarVideo();
+                    mostrarBoton(btnJugar);
+                }
+                catch (Exception e)
+                {
+                    VentanaEmergente ventana = new VentanaEmergente(e.ToString());
+                    ventana.ShowDialog();
+                    ventana.Focus();
+                }
 
 
             }
             //Si no se ha acertado la pregunta.
             else
             {
-                //Efecto desaparecer
-                desaparecerBola(tag);
+                try
+                {
+                    //Efecto desaparecer
+                    desaparecerBola(tag);
 
-                //Reproducir el sonido.
-                sonido = new SoundPlayer(directorioPadre() + ERROR);
-                sonido.Play();
+                    //Reproducir el sonido.
+                    sonido = new SoundPlayer(directorioPadre() + ERROR);
+                    sonido.Play();
 
+                    insertarPartidaPerdida();
+                }
+                catch (Exception e)
+                {
+                    VentanaEmergente ventana = new VentanaEmergente(e.ToString());
+                    ventana.ShowDialog();
+                    ventana.Focus();
+                }
             }
             
         }
@@ -418,6 +508,8 @@ namespace Aprendo_con_Molly
             
             panel= seleccionPanelNivel(jUGADORES.nivel);         
             pregunta.cargarPregunta(panel);
+
+            TIPO = panel;
 
             mostrarPanel(panel);
 

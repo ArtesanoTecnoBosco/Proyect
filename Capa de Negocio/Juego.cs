@@ -208,6 +208,8 @@ namespace Capa_de_Negocio
             return n;
         }
 
+      
+
         /// <summary>
         /// Metodo para obtener los usuarios.
         /// </summary>
@@ -275,5 +277,8 @@ namespace Capa_de_Negocio
         {
             return niveles.ElementAt(pos);
         }
+
+
+
     }
 }

@@ -447,27 +447,35 @@ namespace Aprendo_con_Molly
         /// <param name="e"></param>
         private void imgCentro_MouseDown(object sender, MouseButtonEventArgs e)
         {
-
-            //Guardar datos del usuario.            
-            this.auxUsu.setAvatar(this.juego.getUnAvatar(posicionAvatar));
-            this.auxUsu.insertarUsuario();
-
-
-
-            this.juego.setUsuario(auxUsu);
-
-            //Mostrar animacion de selección.
+            try
+            {
+                //Guardar datos del usuario.            
+                this.auxUsu.setAvatar(this.juego.getUnAvatar(posicionAvatar));
+                this.auxUsu.insertarUsuario();
 
 
-            //Dependiendo del nivel que me haya elegido el usuario tendre que mostrarle un panel u otro.
-            int panel = seleccionPanelNivel(nivel);
-            
-            //Cargar ventana del juego.
-            //Crear contador de tiempo y cuando finalice que cargue la ventana.
-            colores ventana = new colores(panel,this.juego);
-            ventana.Show();
 
-            this.Close();
+                this.juego.setUsuario(auxUsu);
+
+                //Mostrar animacion de selección.
+
+
+                //Dependiendo del nivel que me haya elegido el usuario tendre que mostrarle un panel u otro.
+                int panel = seleccionPanelNivel(nivel);
+                colores.TIPO = panel;
+
+                //Cargar ventana del juego.
+                //Crear contador de tiempo y cuando finalice que cargue la ventana.
+                colores ventana = new colores(panel, this.juego);
+                ventana.Show();
+
+                this.Close();
+            }
+            catch (Exception ex)
+            {
+                VentanaEmergente ventana = new VentanaEmergente(ex.ToString());
+                ventana.ShowDialog();
+            }
             
         }
 

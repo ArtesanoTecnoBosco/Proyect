@@ -1085,84 +1085,6 @@
 		<EventTrigger RoutedEvent="Mouse.MouseLeave" SourceName="negro">
 			<BeginStoryboard Storyboard="{StaticResource NegroLeave}"/>
 		</EventTrigger>
-		<EventTrigger RoutedEvent="UIElement.MouseLeftButtonDown" SourceName="b">
-			<BeginStoryboard Storyboard="{StaticResource B}"/>
-		</EventTrigger>
-		<EventTrigger RoutedEvent="UIElement.MouseLeftButtonDown" SourceName="e">
-			<BeginStoryboard Storyboard="{StaticResource E}"/>
-		</EventTrigger>
-		<EventTrigger RoutedEvent="UIElement.MouseLeftButtonDown" SourceName="q">
-			<BeginStoryboard Storyboard="{StaticResource Q}"/>
-		</EventTrigger>
-		<EventTrigger RoutedEvent="UIElement.MouseLeftButtonDown" SourceName="r">
-			<BeginStoryboard Storyboard="{StaticResource R}"/>
-		</EventTrigger>
-		<EventTrigger RoutedEvent="UIElement.MouseLeftButtonDown" SourceName="i">
-			<BeginStoryboard Storyboard="{StaticResource I}"/>
-		</EventTrigger>
-		<EventTrigger RoutedEvent="UIElement.MouseLeftButtonDown" SourceName="w">
-			<BeginStoryboard Storyboard="{StaticResource W}"/>
-		</EventTrigger>
-		<EventTrigger RoutedEvent="UIElement.MouseLeftButtonDown" SourceName="t">
-			<BeginStoryboard Storyboard="{StaticResource T}"/>
-		</EventTrigger>
-		<EventTrigger RoutedEvent="UIElement.MouseLeftButtonDown" SourceName="j">
-			<BeginStoryboard Storyboard="{StaticResource J}"/>
-		</EventTrigger>
-		<EventTrigger RoutedEvent="UIElement.MouseLeftButtonDown" SourceName="h">
-			<BeginStoryboard Storyboard="{StaticResource H}"/>
-		</EventTrigger>
-		<EventTrigger RoutedEvent="UIElement.MouseLeftButtonDown" SourceName="a">
-			<BeginStoryboard Storyboard="{StaticResource A}"/>
-		</EventTrigger>
-		<EventTrigger RoutedEvent="UIElement.MouseLeftButtonDown" SourceName="f">
-			<BeginStoryboard Storyboard="{StaticResource F}"/>
-		</EventTrigger>
-		<EventTrigger RoutedEvent="UIElement.MouseLeftButtonDown" SourceName="k">
-			<BeginStoryboard Storyboard="{StaticResource K}"/>
-		</EventTrigger>
-		<EventTrigger RoutedEvent="UIElement.MouseLeftButtonDown" SourceName="l">
-			<BeginStoryboard Storyboard="{StaticResource L}"/>
-		</EventTrigger>
-		<EventTrigger RoutedEvent="UIElement.MouseLeftButtonDown" SourceName="s">
-			<BeginStoryboard Storyboard="{StaticResource S}"/>
-		</EventTrigger>
-		<EventTrigger RoutedEvent="UIElement.MouseLeftButtonDown" SourceName="v">
-			<BeginStoryboard Storyboard="{StaticResource V}"/>
-		</EventTrigger>
-		<EventTrigger RoutedEvent="UIElement.MouseLeftButtonDown" SourceName="p">
-			<BeginStoryboard Storyboard="{StaticResource P}"/>
-		</EventTrigger>
-		<EventTrigger RoutedEvent="UIElement.MouseLeftButtonDown" SourceName="c">
-			<BeginStoryboard Storyboard="{StaticResource C}"/>
-		</EventTrigger>
-		<EventTrigger RoutedEvent="UIElement.MouseLeftButtonDown" SourceName="g">
-			<BeginStoryboard Storyboard="{StaticResource G}"/>
-		</EventTrigger>
-		<EventTrigger RoutedEvent="UIElement.MouseLeftButtonDown" SourceName="o">
-			<BeginStoryboard Storyboard="{StaticResource O}"/>
-		</EventTrigger>
-		<EventTrigger RoutedEvent="UIElement.MouseLeftButtonDown" SourceName="m">
-			<BeginStoryboard Storyboard="{StaticResource M}"/>
-		</EventTrigger>
-		<EventTrigger RoutedEvent="UIElement.MouseLeftButtonDown" SourceName="y">
-			<BeginStoryboard Storyboard="{StaticResource Y}"/>
-		</EventTrigger>
-		<EventTrigger RoutedEvent="UIElement.MouseLeftButtonDown" SourceName="n">
-			<BeginStoryboard Storyboard="{StaticResource N}"/>
-		</EventTrigger>
-		<EventTrigger RoutedEvent="UIElement.MouseLeftButtonDown" SourceName="x">
-			<BeginStoryboard Storyboard="{StaticResource X}"/>
-		</EventTrigger>
-		<EventTrigger RoutedEvent="UIElement.MouseLeftButtonDown" SourceName="d">
-			<BeginStoryboard Storyboard="{StaticResource D}"/>
-		</EventTrigger>
-		<EventTrigger RoutedEvent="UIElement.MouseLeftButtonDown" SourceName="z">
-			<BeginStoryboard Storyboard="{StaticResource Z}"/>
-		</EventTrigger>
-		<EventTrigger RoutedEvent="UIElement.MouseLeftButtonDown" SourceName="u">
-			<BeginStoryboard Storyboard="{StaticResource U}"/>
-		</EventTrigger>
 	</Window.Triggers>
     <Window.Effect>
         <DropShadowEffect Color="#FF32911D" Direction="200" Opacity="0.75"/>
@@ -1312,7 +1234,7 @@
         			</Button.RenderTransform>
         		</Button>
         	</Canvas>
-        	<Canvas x:Name="letras" Height="614" Width="1024">
+        	<Canvas x:Name="letras" Height="614" Width="1024" Visibility="Hidden">
         		<Rectangle x:Name="e" Height="96" Canvas.Left="146" StrokeThickness="8" Canvas.Top="36" Width="85.5" RenderTransformOrigin="0.5,0.5" Tag="E" MouseLeftButtonDown="HandleLetras">
         			<Rectangle.RenderTransform>
         				<TransformGroup>
