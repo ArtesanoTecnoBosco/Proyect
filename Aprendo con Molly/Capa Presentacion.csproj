@@ -164,9 +164,6 @@
     <Resource Include="l.png" />
     <Resource Include="m.png" />
     <Resource Include="ma.png" />
-    <Resource Include="mar.png" />
-    <Resource Include="mariposas.png" />
-    <Resource Include="marips.png" />
     <Resource Include="marron.png" />
     <Resource Include="Molly.jpg" />
     <Resource Include="Molly.png" />
@@ -182,7 +179,6 @@
     <Resource Include="rojo.png" />
     <Resource Include="rosa.png" />
     <Resource Include="s.png" />
-    <Resource Include="stop.png" />
     <Resource Include="t.png" />
     <Resource Include="TITULO.png" />
     <Resource Include="u.png" />
