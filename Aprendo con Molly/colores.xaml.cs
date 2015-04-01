@@ -184,7 +184,7 @@ namespace Aprendo_con_Molly
         private void mostrarTodasLasLetras()
         {
 
-            Rectangle[] letras = {a,b,c,d,e,f,g,h,i,j,k,m,n,o,p,q,r,s,t,u,w,x,y,z};
+            Rectangle[] letras = {a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z};
             String[] animacion = {"A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"};
             Storyboard storyBoard;
 
@@ -195,11 +195,6 @@ namespace Aprendo_con_Molly
                 letras[pos].Opacity = 100;
                 letras[pos].Visibility = System.Windows.Visibility.Visible;
             }
-
-            storyBoard = (Storyboard)FindResource("Y");
-            storyBoard.Stop();
-            y.Opacity = 100;
-            y.Visibility = System.Windows.Visibility.Visible;
                       
         }
 
@@ -436,21 +431,32 @@ namespace Aprendo_con_Molly
 
         private void mostrarVideo()
         {
+            btnParar.Visibility = System.Windows.Visibility.Visible;
+            btnVer.Visibility = System.Windows.Visibility.Hidden;
+
             video.Visibility = System.Windows.Visibility.Visible;
             video.Source = new Uri(directorioPadre() + pregunta.getVideo());
+
             elipseVideo.Opacity = 100;
             elipseVideo.Visibility = System.Windows.Visibility.Visible;
+
+            mariposas.Opacity = 100;
+            mariposas.Visibility = System.Windows.Visibility.Visible;
+
             video.Play();
 
         }
 
         private void ocultarVideo()
         {
+            
             video.Stop();
             video.Visibility = System.Windows.Visibility.Hidden;
             elipseVideo.Opacity = 0;
             elipseVideo.Visibility = System.Windows.Visibility.Hidden;
-
+            mariposas.Opacity = 0;
+            mariposas.Visibility = System.Windows.Visibility.Hidden;
+            
         }
 
 
@@ -538,6 +544,7 @@ namespace Aprendo_con_Molly
         private void botonJugar()
         {
             int panel;
+            numeroIntentos = 0;
 
             panel = seleccionPanelNivel(jUGADORES.nivel);
             pregunta.cargarPregunta(panel);
