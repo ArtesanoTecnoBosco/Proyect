@@ -1112,12 +1112,12 @@
                 <ImageBrush ImageSource="Molly.png"/>
             </Rectangle.Fill>
         </Rectangle>
-        <Canvas x:Name="flores" HorizontalAlignment="Left" Height="614" VerticalAlignment="Top" Width="1016" Grid.ColumnSpan="2" Margin="-2,0,-8,0">
+        <Canvas x:Name="flores" HorizontalAlignment="Left" Height="614" VerticalAlignment="Top" Width="1016" Grid.ColumnSpan="2" Margin="-3.493,0,-6.507,0">
         	<Canvas.Background>
         		<ImageBrush ImageSource="floress.png"/>
         	</Canvas.Background>
 
-			<Rectangle x:Name="elipseVideo" Height="391.982" Width="436" Canvas.Left="213" Canvas.Top="53.018" RadiusY="102.982" RadiusX="102.982" Visibility="Hidden">
+			<Rectangle x:Name="elipseVideo" Height="391.982" Width="436" Canvas.Left="229.423" Canvas.Top="142.598" RadiusY="102.982" RadiusX="102.982" Visibility="Hidden">
 				<Rectangle.Fill>
     				<VisualBrush TileMode="None">
     					<VisualBrush.Visual>   					
@@ -1126,10 +1126,34 @@
     				</VisualBrush>
 				</Rectangle.Fill>
 			</Rectangle>
+        	<StackPanel x:Name="mariposas" RenderTransformOrigin="0.5,0.5" Height="579.408" Canvas.Left="88.567" Canvas.Top="18.495" Width="865.672" Visibility="Hidden">
+        		<StackPanel.RenderTransform>
+        			<TransformGroup>
+        				<ScaleTransform/>
+        				<SkewTransform AngleY="0.401"/>
+        				<RotateTransform/>
+        				<TranslateTransform Y="-0.003"/>
+        			</TransformGroup>
+        		</StackPanel.RenderTransform>
+        		<StackPanel.Background>
+        			<ImageBrush ImageSource="ma.png"/>
+        		</StackPanel.Background>
+        	</StackPanel>
 
         	<Button x:Name="btnJugar" Content="Button" HorizontalAlignment="Left" Height="39.826" Style="{DynamicResource btnJugarEfecto}" VerticalAlignment="Top" Width="137.388" Background="#FF377C07" Canvas.Left="808.964" Canvas.Top="335.982" Click="btnJugar_Click"/>
+        	<Button x:Name="btnControl" Content="CONTROL" Height="50.918" Canvas.Left="807.946" Canvas.Top="324.984" Width="152.88" Background="#00000000" RenderTransformOrigin="0.5,0.5" FontFamily="Cooper Black" FontSize="21.333" Foreground="#FF7C3800" Visibility="Hidden">
+        		<Button.RenderTransform>
+        			<TransformGroup>
+        				<ScaleTransform/>
+        				<SkewTransform/>
+        				<RotateTransform Angle="-10.581"/>
+        				<TranslateTransform/>
+        			</TransformGroup>
+        		</Button.RenderTransform>
+        	</Button>
         	<Button x:Name="bntExcuchar" Content="Button" HorizontalAlignment="Left" Height="49.826" Style="{DynamicResource btnEscucharEfecto}" VerticalAlignment="Top" Width="137.388" Canvas.Left="696.964" Canvas.Top="414.982" Click="bntExcuchar_Click"/>
         	<Button x:Name="btnVer" Content="Button" HorizontalAlignment="Left" Height="33.826" Style="{DynamicResource btnVerEfect}" VerticalAlignment="Top" Width="68.722" Canvas.Left="866.076" Canvas.Top="439.204"/>
+        	<Button x:Name="btnParar" Content="STOP" HorizontalAlignment="Left" Height="51" VerticalAlignment="Top" Width="128.141" Background="Transparent" Foreground="#FF7C3800" FontFamily="Cooper Black" FontSize="21.333" Visibility="Hidden" Canvas.Left="830.859" Canvas.Top="429"/>
         	<Button x:Name="btnMinimiza" Content="Button" HorizontalAlignment="Left" Height="23.72" VerticalAlignment="Top" Width="25.011" Style="{DynamicResource Minimizar}" RenderTransformOrigin="-2.032,0.008" Canvas.Left="906.822" Canvas.Top="10" Click="btnMinimiza_Click"/>
         	<Button x:Name="btnCerrar" Content="Button" HorizontalAlignment="Left" Height="23.72" VerticalAlignment="Top" Width="25.011" Style="{DynamicResource BotonCerrar}" RenderTransformOrigin="-2.032,0.008" Canvas.Left="936.833" Canvas.Top="10" Click="btnCerrar_Click"/>
         	<Canvas x:Name="bolitas" HorizontalAlignment="Left" Height="300.018" VerticalAlignment="Top" Width="991.992" Canvas.Left="4.008" Canvas.Top="-12" Opacity="0" Visibility="Hidden">
@@ -1579,16 +1603,6 @@
         			<ImageBrush ImageSource="am.png"/>
         		</Rectangle.Fill>
         	</Rectangle>
-        	<Button x:Name="parar" Content="" Height="82.97" Canvas.Left="316" Canvas.Top="461.03" Width="88" BorderBrush="Transparent" Visibility="Hidden">
-        		<Button.Background>
-        			<ImageBrush ImageSource="stop.png"/>
-        		</Button.Background>
-        	</Button>
-        	<Button x:Name="encender" Content="" Height="82.97" Canvas.Left="448" Canvas.Top="461.03" Width="88" BorderBrush="Transparent" Visibility="Hidden">
-        		<Button.Background>
-        			<ImageBrush ImageSource="boyom.png"/>
-        		</Button.Background>
-        	</Button>
         </Canvas>
     </Grid>
 </Window>
