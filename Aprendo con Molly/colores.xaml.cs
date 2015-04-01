@@ -28,6 +28,7 @@ namespace Aprendo_con_Molly
         private static string ERROR = "\\audio\\error.wav";
         private static string ACIERTO = "\\audio\\Aplausos.wav";
         private int numeroIntentos;
+        private int INTENTOS_MAXIMOS=3;
         private SoundPlayer escuchar;
         public static int TIPO;
         
@@ -184,7 +185,7 @@ namespace Aprendo_con_Molly
         {
 
             Rectangle[] letras = {a,b,c,d,e,f,g,h,i,j,k,m,n,o,p,q,r,s,t,u,w,x,y,z};
-            String[] animacion = {"A","B","C","D","E","F","G","H","I","J","K","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"};
+            String[] animacion = {"A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"};
             Storyboard storyBoard;
 
             for (int pos = 0; pos < letras.Length; pos++)
@@ -194,6 +195,11 @@ namespace Aprendo_con_Molly
                 letras[pos].Opacity = 100;
                 letras[pos].Visibility = System.Windows.Visibility.Visible;
             }
+
+            storyBoard = (Storyboard)FindResource("Y");
+            storyBoard.Stop();
+            y.Opacity = 100;
+            y.Visibility = System.Windows.Visibility.Visible;
                       
         }
 
@@ -238,59 +244,74 @@ namespace Aprendo_con_Molly
         private void comprobarRespuestaLetras(String tag,Rectangle rectangulo)
         {
             SoundPlayer sonido;
-
-            //Si se ha acertado la pregunta.
-            if (tag.Equals(pregunta.getTag()))
+            if (numeroIntentos < INTENTOS_MAXIMOS)
             {
-
-                try
+                //Si se ha acertado la pregunta.
+                if (tag.Equals(pregunta.getTag()))
                 {
-                    //Reproducir el sonido
-                    sonido = new SoundPlayer(directorioPadre() + ACIERTO);
-                    sonido.Play();
 
-                    //Insertar en BD.
-                    insertarPartida();
+                    try
+                    {
+                        //Reproducir el sonido
+                        sonido = new SoundPlayer(directorioPadre() + ACIERTO);
+                        sonido.Play();
+
+                        //Insertar en BD.
+                        insertarPartida();
 
 
-                    //CargarVideo.
-                    ocultarPaneles();
-                    mostrarVideo();
-                    mostrarBoton(btnJugar);
+                        //CargarVideo.
+                        ocultarPaneles();
+                        mostrarVideo();
+                        mostrarBoton(btnJugar);
+                    }
+                    catch (Exception e)
+                    {
+                        VentanaEmergente ventana = new VentanaEmergente(e.ToString());
+                        ventana.ShowDialog();
+                        ventana.Focus();
+                    }
+
                 }
-                catch (Exception e)
+                //Si no se ha acertado la pregunta.
+                else
                 {
-                    VentanaEmergente ventana = new VentanaEmergente(e.ToString());
-                    ventana.ShowDialog();
-                    ventana.Focus();
-                }
+                    try
+                    {
+                        //Efecto desaparecer
+                        desaparecerLetra(tag);
 
+                        //Reproducir el sonido.
+                        sonido = new SoundPlayer(directorioPadre() + ERROR);
+                        sonido.Play();
+
+                        insertarPartidaPerdida();
+                    }
+                    catch (Exception e)
+                    {
+                        VentanaEmergente ventana = new VentanaEmergente(e.ToString());
+                        ventana.ShowDialog();
+                        ventana.Focus();
+                    }
+
+                    numeroIntentos++;
+
+                }
             }
-            //Si no se ha acertado la pregunta.
-            else
+
+            numeroIntentosMaximos();
+
+
+        }
+
+        private void numeroIntentosMaximos()
+        {
+            if (numeroIntentos == 3)
             {
-                try
-                {
-                    //Efecto desaparecer
-                    desaparecerLetra(tag);
-
-                    //Reproducir el sonido.
-                    sonido = new SoundPlayer(directorioPadre() + ERROR);
-                    sonido.Play();
-
-                    insertarPartidaPerdida();
-                }
-                catch (Exception e)
-                {
-                    VentanaEmergente ventana = new VentanaEmergente(e.ToString());
-                    ventana.ShowDialog();
-                    ventana.Focus();
-                }
-                
-
+                numeroIntentos = 0;
+                insertarPartidaPerdida();
+                botonJugar();
             }
-
-
         }
 
         private void insertarPartida()
@@ -342,54 +363,60 @@ namespace Aprendo_con_Molly
            
             SoundPlayer sonido;
 
-            
-            //Si se ha acertado la pregunta.
-            if (tag.Equals(pregunta.getTag()))
+            if (numeroIntentos < INTENTOS_MAXIMOS)
             {
-                try
+                //Si se ha acertado la pregunta.
+                if (tag.Equals(pregunta.getTag()))
                 {
-                    //Reproducir el sonido
-                    sonido = new SoundPlayer(directorioPadre() + ACIERTO);
-                    sonido.Play();
+                    try
+                    {
+                        //Reproducir el sonido
+                        sonido = new SoundPlayer(directorioPadre() + ACIERTO);
+                        sonido.Play();
 
-                    //Insertar Partida en la BD
-                    insertarPartida();
+                        //Insertar Partida en la BD
+                        insertarPartida();
 
-                    //CargarVideo.
-                    ocultarPaneles();
-                    mostrarVideo();
-                    mostrarBoton(btnJugar);
+                        //CargarVideo.
+                        ocultarPaneles();
+                        mostrarVideo();
+                        mostrarBoton(btnJugar);
+                    }
+                    catch (Exception e)
+                    {
+                        VentanaEmergente ventana = new VentanaEmergente(e.ToString());
+                        ventana.ShowDialog();
+                        ventana.Focus();
+                    }
+
+
                 }
-                catch (Exception e)
+                //Si no se ha acertado la pregunta.
+                else
                 {
-                    VentanaEmergente ventana = new VentanaEmergente(e.ToString());
-                    ventana.ShowDialog();
-                    ventana.Focus();
+                    try
+                    {
+                        //Efecto desaparecer
+                        desaparecerBola(tag);
+
+                        //Reproducir el sonido.
+                        sonido = new SoundPlayer(directorioPadre() + ERROR);
+                        sonido.Play();
+
+                        insertarPartidaPerdida();
+                    }
+                    catch (Exception e)
+                    {
+                        VentanaEmergente ventana = new VentanaEmergente(e.ToString());
+                        ventana.ShowDialog();
+                        ventana.Focus();
+                    }
+
+                    numeroIntentos++;
                 }
-
-
             }
-            //Si no se ha acertado la pregunta.
-            else
-            {
-                try
-                {
-                    //Efecto desaparecer
-                    desaparecerBola(tag);
 
-                    //Reproducir el sonido.
-                    sonido = new SoundPlayer(directorioPadre() + ERROR);
-                    sonido.Play();
-
-                    insertarPartidaPerdida();
-                }
-                catch (Exception e)
-                {
-                    VentanaEmergente ventana = new VentanaEmergente(e.ToString());
-                    ventana.ShowDialog();
-                    ventana.Focus();
-                }
-            }
+            numeroIntentosMaximos();
             
         }
 
@@ -504,15 +531,20 @@ namespace Aprendo_con_Molly
         private void btnJugar_Click(object sender, RoutedEventArgs e)
         {
 
+            botonJugar();
+
+        }
+
+        private void botonJugar()
+        {
             int panel;
-            
-            panel= seleccionPanelNivel(jUGADORES.nivel);         
+
+            panel = seleccionPanelNivel(jUGADORES.nivel);
             pregunta.cargarPregunta(panel);
 
             TIPO = panel;
 
             mostrarPanel(panel);
-
         }
 
 
