@@ -123,7 +123,16 @@
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <None Include="Aprendo con Molly.rar" />
+    <None Include="casa.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="cuchara.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
     <None Include="fondo1COPIA1.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="gato.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
     <None Include="Molly.ico">
@@ -142,14 +151,21 @@
     <Resource Include="a.png" />
     <Resource Include="am.png" />
     <Resource Include="amarillo.png" />
+    <Resource Include="avion.png" />
     <Resource Include="azul.png" />
     <Resource Include="b.png" />
     <Resource Include="blanco.png" />
     <Resource Include="boyom.png" />
     <Resource Include="boyom1.png" />
     <Resource Include="c.png" />
+    <Resource Include="cero.png" />
+    <Resource Include="cinco.png" />
+    <Resource Include="coche.png" />
+    <Resource Include="cuatro.png" />
     <Resource Include="d.png" />
+    <Resource Include="dos.png" />
     <Resource Include="e.png" />
+    <Resource Include="Elefante.png" />
     <Resource Include="f.png" />
     <Resource Include="flores.png" />
     <Resource Include="floress.png" />
@@ -164,6 +180,7 @@
     <Resource Include="l.png" />
     <Resource Include="m.png" />
     <Resource Include="ma.png" />
+    <Resource Include="mariposa.png" />
     <Resource Include="marron.png" />
     <Resource Include="Molly.jpg" />
     <Resource Include="Molly.png" />
@@ -171,18 +188,30 @@
     <Resource Include="n.png" />
     <Resource Include="naranja.png" />
     <Resource Include="negro.png" />
+    <Resource Include="nueve.png" />
     <Resource Include="o.png" />
+    <Resource Include="ocho.png" />
     <Resource Include="p.png" />
     <Resource Include="pantallaInicio.png" />
+    <Resource Include="paraguas.png" />
+    <Resource Include="pelota.png" />
+    <Resource Include="perro.jpg" />
+    <Resource Include="perro.png" />
     <Resource Include="q.png" />
     <Resource Include="r.png" />
     <Resource Include="rojo.png" />
     <Resource Include="rosa.png" />
     <Resource Include="s.png" />
+    <Resource Include="seis.png" />
+    <Resource Include="siete.png" />
+    <Resource Include="sol.png" />
     <Resource Include="t.png" />
     <Resource Include="TITULO.png" />
+    <Resource Include="tres.png" />
     <Resource Include="u.png" />
+    <Resource Include="uno.png" />
     <Resource Include="v.png" />
+    <Resource Include="vaso.png" />
     <Resource Include="verde.png" />
     <Resource Include="w.png" />
     <Resource Include="x.png" />
