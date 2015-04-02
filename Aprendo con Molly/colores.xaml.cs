@@ -132,7 +132,55 @@ namespace Aprendo_con_Molly
             
         }
 
+        private void mostrarPanelSinModificar(int panel)
+        {
 
+            try
+            {
+                ocultarVideo();
+            }
+            catch (Exception e)
+            {
+
+            }
+
+            switch (panel)
+            {
+                //MODO FACIL,MEDIO,DIFICIL
+                case 1:
+                    bolitas.Opacity = 100;
+                    bolitas.Visibility = System.Windows.Visibility.Visible;
+                    espacioJuego.Opacity = 100;
+                    espacioJuego.Visibility = System.Windows.Visibility.Visible;
+                    break;
+
+                case 2:
+                    letras.Opacity = 100;
+                    letras.Visibility = System.Windows.Visibility.Visible;
+                    break;
+                //FIN MODO FACIL
+
+                case 3:
+                    //NUMEROS.
+                    break;
+
+                case 4:
+                    //OBJETOS
+                    break;
+                //FIN MODO MEDIO
+                case 5:
+                    //SUMAR
+                    break;
+
+                case 6:
+                    //RESTAR
+                    break;
+                //FIN MODO AVANZADO
+            }
+
+
+
+        }
 
 
 
@@ -431,8 +479,9 @@ namespace Aprendo_con_Molly
 
         private void mostrarVideo()
         {
-            btnParar.Visibility = System.Windows.Visibility.Visible;
-            btnVer.Visibility = System.Windows.Visibility.Hidden;
+            mostrarBoton(btnParar);
+
+            ocultarBoton(btnVer);
 
             video.Visibility = System.Windows.Visibility.Visible;
             video.Source = new Uri(directorioPadre() + pregunta.getVideo());
@@ -546,6 +595,10 @@ namespace Aprendo_con_Molly
             int panel;
             numeroIntentos = 0;
 
+            ocultarBoton(btnParar);
+
+            mostrarBoton(btnVer);
+
             panel = seleccionPanelNivel(jUGADORES.nivel);
             pregunta.cargarPregunta(panel);
 
@@ -605,6 +658,21 @@ namespace Aprendo_con_Molly
 
 
 
+        }
+
+        private void btnParar_Click(object sender, RoutedEventArgs e)
+        {
+
+            mostrarPanelSinModificar(TIPO);
+            ocultarBoton(btnParar);
+            mostrarBoton(btnVer);
+
+        }
+
+        private void btnVer_Click(object sender, RoutedEventArgs e)
+        {
+            ocultarPaneles();
+            mostrarVideo();
         }
 
 

@@ -1152,8 +1152,8 @@
         		</Button.RenderTransform>
         	</Button>
         	<Button x:Name="bntExcuchar" Content="Button" HorizontalAlignment="Left" Height="49.826" Style="{DynamicResource btnEscucharEfecto}" VerticalAlignment="Top" Width="137.388" Canvas.Left="696.964" Canvas.Top="414.982" Click="bntExcuchar_Click"/>
-        	<Button x:Name="btnVer" Content="Button" HorizontalAlignment="Left" Height="33.826" Style="{DynamicResource btnVerEfect}" VerticalAlignment="Top" Width="68.722" Canvas.Left="866.076" Canvas.Top="439.204"/>
-        	<Button x:Name="btnParar" Content="STOP" HorizontalAlignment="Left" Height="51" VerticalAlignment="Top" Width="128.141" Background="Transparent" Foreground="#FF7C3800" FontFamily="Cooper Black" FontSize="21.333" Visibility="Hidden" Canvas.Left="830.859" Canvas.Top="429"/>
+        	<Button x:Name="btnVer" Content="Button" HorizontalAlignment="Left" Height="33.826" Style="{DynamicResource btnVerEfect}" VerticalAlignment="Top" Width="68.722" Canvas.Left="866.076" Canvas.Top="439.204" Click="btnVer_Click"/>
+        	<Button x:Name="btnParar" Content="STOP" HorizontalAlignment="Left" Height="51" VerticalAlignment="Top" Width="128.141" Background="Transparent" Foreground="#FF7C3800" FontFamily="Cooper Black" FontSize="21.333" Canvas.Left="830.859" Canvas.Top="429" BorderBrush="{x:Null}" Visibility="Hidden" Click="btnParar_Click"/>
         	<Button x:Name="btnMinimiza" Content="Button" HorizontalAlignment="Left" Height="23.72" VerticalAlignment="Top" Width="25.011" Style="{DynamicResource Minimizar}" RenderTransformOrigin="-2.032,0.008" Canvas.Left="906.822" Canvas.Top="10" Click="btnMinimiza_Click"/>
         	<Button x:Name="btnCerrar" Content="Button" HorizontalAlignment="Left" Height="23.72" VerticalAlignment="Top" Width="25.011" Style="{DynamicResource BotonCerrar}" RenderTransformOrigin="-2.032,0.008" Canvas.Left="936.833" Canvas.Top="10" Click="btnCerrar_Click"/>
         	<Canvas x:Name="bolitas" HorizontalAlignment="Left" Height="300.018" VerticalAlignment="Top" Width="991.992" Canvas.Left="4.008" Canvas.Top="-12" Opacity="0" Visibility="Hidden">
