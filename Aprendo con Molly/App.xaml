@@ -774,6 +774,88 @@
 					</Setter.Value>
 				</Setter>
 			</Style>
+			<Style x:Key="btnParar" TargetType="{x:Type Button}">
+				<Setter Property="Template">
+					<Setter.Value>
+						<ControlTemplate TargetType="{x:Type Button}">
+							<Grid x:Name="grid">
+								<Label x:Name="label" Content="STOP" Foreground="#FF7C3800" FontWeight="Bold" FontSize="21.333" FontFamily="Cooper BLACK" RenderTransformOrigin="0.5,0.5">
+									<Label.RenderTransform>
+										<TransformGroup>
+											<ScaleTransform/>
+											<SkewTransform/>
+											<RotateTransform Angle="4.642"/>
+											<TranslateTransform/>
+										</TransformGroup>
+									</Label.RenderTransform>
+								</Label>
+								<ContentPresenter HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" RecognizesAccessKey="True" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}" Content="" Margin="-11.639,-11.067,-8.639,-9.067" Width="89" Height="53.96"/>
+							</Grid>
+							<ControlTemplate.Triggers>
+								<Trigger Property="IsFocused" Value="True"/>
+								<Trigger Property="IsDefaulted" Value="True"/>
+								<Trigger Property="IsMouseOver" Value="True">
+									<Setter Property="Foreground" TargetName="label" Value="#FF377C07"/>
+									<Setter Property="Margin" TargetName="grid" Value="0,1,0,0"/>
+								</Trigger>
+								<Trigger Property="IsPressed" Value="True"/>
+								<Trigger Property="IsEnabled" Value="False"/>
+							</ControlTemplate.Triggers>
+						</ControlTemplate>
+					</Setter.Value>
+				</Setter>
+			</Style>
+			<Style x:Key="btnControl" TargetType="{x:Type Button}">
+				<Setter Property="Template">
+					<Setter.Value>
+						<ControlTemplate TargetType="{x:Type Button}">
+							<Grid x:Name="grid">
+								<Rectangle x:Name="btnControl" RenderTransformOrigin="0.5,0.5">
+									<Rectangle.RenderTransform>
+										<TransformGroup>
+											<ScaleTransform/>
+											<SkewTransform/>
+											<RotateTransform Angle="-19.534"/>
+											<TranslateTransform/>
+										</TransformGroup>
+									</Rectangle.RenderTransform>
+								</Rectangle>
+								<Label x:Name="label" Content="PROGRESO" HorizontalAlignment="Center" Height="40.808" VerticalAlignment="Center" Width="148.352" FontFamily="Cooper Black" FontSize="21.333" Margin="10,10,0,0" RenderTransformOrigin="0.5,0.5" Foreground="#FF7C3800">
+									<Label.RenderTransform>
+										<TransformGroup>
+											<ScaleTransform/>
+											<SkewTransform/>
+											<RotateTransform Angle="-16.123"/>
+											<TranslateTransform/>
+										</TransformGroup>
+									</Label.RenderTransform>
+								</Label>
+								<ContentPresenter HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" RecognizesAccessKey="True" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}" Height="50.808" Width="158.352" Content="" RenderTransformOrigin="0.5,0.5">
+									<ContentPresenter.RenderTransform>
+										<TransformGroup>
+											<ScaleTransform/>
+											<SkewTransform/>
+											<RotateTransform Angle="-11.303"/>
+											<TranslateTransform/>
+										</TransformGroup>
+									</ContentPresenter.RenderTransform>
+								</ContentPresenter>
+							</Grid>
+							<ControlTemplate.Triggers>
+								<Trigger Property="IsFocused" Value="True"/>
+								<Trigger Property="IsDefaulted" Value="True"/>
+								<Trigger Property="IsMouseOver" Value="True">
+									<Setter Property="Background" TargetName="label" Value="{x:Null}"/>
+									<Setter Property="Foreground" TargetName="label" Value="#FF206319"/>
+									<Setter Property="Margin" TargetName="grid" Value="1,0,0,0"/>
+								</Trigger>
+								<Trigger Property="IsPressed" Value="True"/>
+								<Trigger Property="IsEnabled" Value="False"/>
+							</ControlTemplate.Triggers>
+						</ControlTemplate>
+					</Setter.Value>
+				</Setter>
+			</Style>
 		</ResourceDictionary>
 	</Application.Resources>
 </Application>

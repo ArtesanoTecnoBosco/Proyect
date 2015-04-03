@@ -257,7 +257,7 @@ namespace Aprendo_con_Molly
 
         private void mostrarTodosLosNumeros()
         {
-            Button[] numeros = {cero,uno,dos,tres,cuatro,cinco,seis,siete,ocho,nueve};
+            Rectangle [] numeros = {cero,uno,dos,tres,cuatro,cinco,seis,siete,ocho,nueve};
             
 
             for (int pos = 0; pos < numeros.Length; pos++)
@@ -271,7 +271,7 @@ namespace Aprendo_con_Molly
 
         private void mostrarTodosLosObjetos()
         {
-            Button[] objetos = { btnElefante, btnCasa, btnCoche, btnAvion, btnPelota, btnMariposa, btnSol, btnParaguas, btnGato };
+            Rectangle [] objetos = { btnElefante, btnCasa, btnCoche, btnAvion, btnPelota, btnMariposa, btnSol, btnParaguas, btnGato };
 
             for (int pos = 0; pos < objetos.Length; pos++)
             {
