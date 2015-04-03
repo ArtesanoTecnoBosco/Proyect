@@ -149,6 +149,7 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="a.png" />
+    <Resource Include="aa.png" />
     <Resource Include="am.png" />
     <Resource Include="amarillo.png" />
     <Resource Include="avion.png" />
@@ -180,11 +181,14 @@
     <Resource Include="l.png" />
     <Resource Include="m.png" />
     <Resource Include="ma.png" />
+    <Resource Include="marco.png" />
+    <Resource Include="marcoasa de mariposas.png" />
     <Resource Include="mariposa.png" />
     <Resource Include="marron.png" />
     <Resource Include="Molly.jpg" />
     <Resource Include="Molly.png" />
     <Resource Include="morada.png" />
+    <Resource Include="mps.png" />
     <Resource Include="n.png" />
     <Resource Include="naranja.png" />
     <Resource Include="negro.png" />

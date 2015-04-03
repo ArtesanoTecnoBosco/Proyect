@@ -1647,7 +1647,7 @@
         		<ImageBrush ImageSource="floress.png"/>
         	</Canvas.Background>
 
-			<Rectangle x:Name="elipseVideo" Height="391.982" Width="436" Canvas.Left="229.423" Canvas.Top="142.598" RadiusY="102.982" RadiusX="102.982" Visibility="Hidden">
+			<Rectangle x:Name="elipseVideo" Height="391.982" Width="436" Canvas.Left="229.423" Canvas.Top="142.598" Visibility="Hidden">
 				<Rectangle.Fill>
     				<VisualBrush TileMode="None">
     					<VisualBrush.Visual>   					
@@ -1656,7 +1656,12 @@
     				</VisualBrush>
 				</Rectangle.Fill>
 			</Rectangle>
-        	<StackPanel x:Name="mariposas" RenderTransformOrigin="0.5,0.5" Height="579.408" Canvas.Left="88.567" Canvas.Top="18.495" Width="865.672" Visibility="Hidden">
+        	<Canvas x:Name="marcoVideo" Height="666" Canvas.Left="16.008" Canvas.Top="-32" Width="974.79" Visibility="Hidden">
+        		<Canvas.Background>
+        			<ImageBrush ImageSource="marco.png"/>
+        		</Canvas.Background>
+        	</Canvas>
+        	<StackPanel x:Name="mariposas" RenderTransformOrigin="0.5,0.5" Height="589.338" Canvas.Left="74.567" Canvas.Top="18.467" Width="885.672" Visibility="Hidden">
         		<StackPanel.RenderTransform>
         			<TransformGroup>
         				<ScaleTransform/>
@@ -1666,7 +1671,7 @@
         			</TransformGroup>
         		</StackPanel.RenderTransform>
         		<StackPanel.Background>
-        			<ImageBrush ImageSource="ma.png"/>
+        			<ImageBrush ImageSource="aa.png"/>
         		</StackPanel.Background>
         	</StackPanel>
 
