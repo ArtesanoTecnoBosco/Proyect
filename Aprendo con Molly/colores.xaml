@@ -1043,24 +1043,222 @@
         <Storyboard x:Key="ocho.MouseLeave"/>
         <Storyboard x:Key="nueve.MouseEnter"/>
         <Storyboard x:Key="nueve.MouseLeave"/>
-        <Storyboard x:Key="btnElefante.MouseEnter"/>
-        <Storyboard x:Key="btnElefante.MouseLeave"/>
-        <Storyboard x:Key="btnAvion.MouseEnter"/>
-        <Storyboard x:Key="btnAvion.MouseLeave"/>
-        <Storyboard x:Key="btnPelota.MouseEnter"/>
-        <Storyboard x:Key="btnPelota.MouseLeave"/>
-        <Storyboard x:Key="btnParaguas.MouseEnter"/>
-        <Storyboard x:Key="btnParaguas.MouseLeave"/>
-        <Storyboard x:Key="btnSol.MouseEnter"/>
-        <Storyboard x:Key="btnSol.MouseLeave"/>
-        <Storyboard x:Key="btnCoche.MouseEnter"/>
+        <Storyboard x:Key="btnElefante.MouseEnter">
+        	<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleX)" Storyboard.TargetName="btnElefante">
+        		<EasingDoubleKeyFrame KeyTime="0" Value="1"/>
+        		<EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="1.429"/>
+        		<EasingDoubleKeyFrame KeyTime="0:0:1" Value="1.013"/>
+        		<EasingDoubleKeyFrame KeyTime="0:0:1.5" Value="1.416"/>
+        		<EasingDoubleKeyFrame KeyTime="0:0:2" Value="1"/>
+        	</DoubleAnimationUsingKeyFrames>
+        	<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)" Storyboard.TargetName="btnElefante">
+        		<EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+        		<EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="-33"/>
+        		<EasingDoubleKeyFrame KeyTime="0:0:1" Value="-1"/>
+        		<EasingDoubleKeyFrame KeyTime="0:0:1.5" Value="-32"/>
+        		<EasingDoubleKeyFrame KeyTime="0:0:2" Value="0"/>
+        	</DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Key="btnElefante.MouseLeave">
+        	<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="btnElefante">
+        		<EasingDoubleKeyFrame KeyTime="0" Value="1"/>
+        		<EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="0.5"/>
+        		<EasingDoubleKeyFrame KeyTime="0:0:1" Value="1"/>
+        	</DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Key="btnAvion.MouseEnter">
+        	<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)" Storyboard.TargetName="btnAvion">
+        		<EasingDoubleKeyFrame KeyTime="0" Value="2"/>
+        	</DoubleAnimationUsingKeyFrames>
+        	<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)" Storyboard.TargetName="btnAvion">
+        		<EasingDoubleKeyFrame KeyTime="0" Value="2"/>
+        	</DoubleAnimationUsingKeyFrames>
+        	<PointAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransformOrigin)" Storyboard.TargetName="btnAvion">
+        		<EasingPointKeyFrame KeyTime="0" Value="1.028,0.946"/>
+        	</PointAnimationUsingKeyFrames>
+        	<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[2].(RotateTransform.Angle)" Storyboard.TargetName="btnAvion">
+        		<EasingDoubleKeyFrame KeyTime="0" Value="360.358"/>
+        		<EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="343.46"/>
+        		<EasingDoubleKeyFrame KeyTime="0:0:1" Value="359.342"/>
+        		<EasingDoubleKeyFrame KeyTime="0:0:1.5" Value="338.866"/>
+        		<EasingDoubleKeyFrame KeyTime="0:0:2" Value="359.771"/>
+        	</DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Key="btnAvion.MouseLeave">
+        	<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="btnAvion">
+        		<EasingDoubleKeyFrame KeyTime="0" Value="0.5"/>
+        		<EasingDoubleKeyFrame KeyTime="0:0:1" Value="1"/>
+        	</DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Key="btnPelota.MouseEnter">
+        	<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)" Storyboard.TargetName="btnPelota">
+        		<EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+        		<EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="74"/>
+        		<EasingDoubleKeyFrame KeyTime="0:0:1" Value="194"/>
+        		<EasingDoubleKeyFrame KeyTime="0:0:1.5" Value="132"/>
+        		<EasingDoubleKeyFrame KeyTime="0:0:2" Value="2"/>
+        	</DoubleAnimationUsingKeyFrames>
+        	<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)" Storyboard.TargetName="btnPelota">
+        		<EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+        		<EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="30"/>
+        		<EasingDoubleKeyFrame KeyTime="0:0:1" Value="158"/>
+        		<EasingDoubleKeyFrame KeyTime="0:0:1.5" Value="90"/>
+        		<EasingDoubleKeyFrame KeyTime="0:0:2" Value="-2"/>
+        	</DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Key="btnPelota.MouseLeave">
+        	<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="btnPelota">
+        		<EasingDoubleKeyFrame KeyTime="0" Value="1"/>
+        		<EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="0.5"/>
+        		<EasingDoubleKeyFrame KeyTime="0:0:1" Value="1"/>
+        	</DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Key="btnParaguas.MouseEnter">
+        	<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[2].(RotateTransform.Angle)" Storyboard.TargetName="btnParaguas">
+        		<EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+        		<EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="41.764"/>
+        		<EasingDoubleKeyFrame KeyTime="0:0:1" Value="142.492"/>
+        		<EasingDoubleKeyFrame KeyTime="0:0:1.5" Value="270.761"/>
+        		<EasingDoubleKeyFrame KeyTime="0:0:2" Value="360.036"/>
+        	</DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Key="btnParaguas.MouseLeave">
+        	<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="btnParaguas">
+        		<EasingDoubleKeyFrame KeyTime="0" Value="1"/>
+        		<EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="0.5"/>
+        		<EasingDoubleKeyFrame KeyTime="0:0:1" Value="1"/>
+        	</DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Key="btnSol.MouseEnter">
+        	<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[2].(RotateTransform.Angle)" Storyboard.TargetName="btnSol">
+        		<EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+        		<EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="362.752"/>
+        		<EasingDoubleKeyFrame KeyTime="0:0:1" Value="-0.022"/>
+        		<EasingDoubleKeyFrame KeyTime="0:0:1.5" Value="359.593"/>
+        		<EasingDoubleKeyFrame KeyTime="0:0:2" Value="-0.646"/>
+        	</DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Key="btnSol.MouseLeave">
+        	<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="btnSol">
+        		<EasingDoubleKeyFrame KeyTime="0" Value="1"/>
+        		<EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="0.5"/>
+        		<EasingDoubleKeyFrame KeyTime="0:0:1" Value="1"/>
+        	</DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Key="btnCoche.MouseEnter">
+        	<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)" Storyboard.TargetName="btnCoche">
+        		<EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+        		<EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="-152"/>
+        		<EasingDoubleKeyFrame KeyTime="0:0:1" Value="-2"/>
+        		<EasingDoubleKeyFrame KeyTime="0:0:1.5" Value="-154"/>
+        		<EasingDoubleKeyFrame KeyTime="0:0:2" Value="-2"/>
+        	</DoubleAnimationUsingKeyFrames>
+        	<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)" Storyboard.TargetName="btnCoche">
+        		<EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+        		<EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="12"/>
+        		<EasingDoubleKeyFrame KeyTime="0:0:1" Value="0"/>
+        		<EasingDoubleKeyFrame KeyTime="0:0:1.5" Value="8"/>
+        		<EasingDoubleKeyFrame KeyTime="0:0:2" Value="0"/>
+        	</DoubleAnimationUsingKeyFrames>
+        </Storyboard>
         <Storyboard x:Key="btnCoche.MouseLeave"/>
-        <Storyboard x:Key="btnMariposa.MouseEnter"/>
-        <Storyboard x:Key="btnMariposa.MouseLeave"/>
-        <Storyboard x:Key="btnCasa.MouseEnter"/>
-        <Storyboard x:Key="btnCasa.MouseLeave"/>
-        <Storyboard x:Key="btnGato.MouseEnter"/>
-        <Storyboard x:Key="btnGato.MouseLeave"/>
+        <Storyboard x:Key="btnMariposa.MouseEnter">
+        	<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleX)" Storyboard.TargetName="btnMariposa">
+        		<EasingDoubleKeyFrame KeyTime="0" Value="1"/>
+        		<EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="1.263"/>
+        		<EasingDoubleKeyFrame KeyTime="0:0:1" Value="1.017"/>
+        		<EasingDoubleKeyFrame KeyTime="0:0:1.5" Value="1.228"/>
+        		<EasingDoubleKeyFrame KeyTime="0:0:2" Value="1.035"/>
+        	</DoubleAnimationUsingKeyFrames>
+        	<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleY)" Storyboard.TargetName="btnMariposa">
+        		<EasingDoubleKeyFrame KeyTime="0" Value="1"/>
+        		<EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="1.247"/>
+        		<EasingDoubleKeyFrame KeyTime="0:0:1" Value="1.036"/>
+        		<EasingDoubleKeyFrame KeyTime="0:0:1.5" Value="1.247"/>
+        		<EasingDoubleKeyFrame KeyTime="0:0:2" Value="1.018"/>
+        	</DoubleAnimationUsingKeyFrames>
+        	<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)" Storyboard.TargetName="btnMariposa">
+        		<EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+        		<EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="15"/>
+        		<EasingDoubleKeyFrame KeyTime="0:0:1" Value="1"/>
+        		<EasingDoubleKeyFrame KeyTime="0:0:1.5" Value="13"/>
+        		<EasingDoubleKeyFrame KeyTime="0:0:2" Value="2"/>
+        	</DoubleAnimationUsingKeyFrames>
+        	<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)" Storyboard.TargetName="btnMariposa">
+        		<EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+        		<EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="14"/>
+        		<EasingDoubleKeyFrame KeyTime="0:0:1" Value="2"/>
+        		<EasingDoubleKeyFrame KeyTime="0:0:1.5" Value="14"/>
+        		<EasingDoubleKeyFrame KeyTime="0:0:2" Value="1"/>
+        	</DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Key="btnMariposa.MouseLeave">
+        	<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="btnMariposa">
+        		<EasingDoubleKeyFrame KeyTime="0" Value="1"/>
+        		<EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="0.5"/>
+        		<EasingDoubleKeyFrame KeyTime="0:0:1" Value="1"/>
+        	</DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Key="btnCasa.MouseEnter">
+        	<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleX)" Storyboard.TargetName="btnCasa">
+        		<EasingDoubleKeyFrame KeyTime="0" Value="1"/>
+        		<EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="1.234"/>
+        		<EasingDoubleKeyFrame KeyTime="0:0:1" Value="1.013"/>
+        		<EasingDoubleKeyFrame KeyTime="0:0:1.5" Value="1.234"/>
+        		<EasingDoubleKeyFrame KeyTime="0:0:2" Value="1.013"/>
+        	</DoubleAnimationUsingKeyFrames>
+        	<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleY)" Storyboard.TargetName="btnCasa">
+        		<EasingDoubleKeyFrame KeyTime="0" Value="1"/>
+        		<EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="1.138"/>
+        		<EasingDoubleKeyFrame KeyTime="0:0:1" Value="1"/>
+        		<EasingDoubleKeyFrame KeyTime="0:0:1.5" Value="1.113"/>
+        		<EasingDoubleKeyFrame KeyTime="0:0:2" Value="1.012"/>
+        	</DoubleAnimationUsingKeyFrames>
+        	<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)" Storyboard.TargetName="btnCasa">
+        		<EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+        		<EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="18"/>
+        		<EasingDoubleKeyFrame KeyTime="0:0:1" Value="1"/>
+        		<EasingDoubleKeyFrame KeyTime="0:0:1.5" Value="18"/>
+        		<EasingDoubleKeyFrame KeyTime="0:0:2" Value="1"/>
+        	</DoubleAnimationUsingKeyFrames>
+        	<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)" Storyboard.TargetName="btnCasa">
+        		<EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+        		<EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="-11"/>
+        		<EasingDoubleKeyFrame KeyTime="0:0:1" Value="0"/>
+        		<EasingDoubleKeyFrame KeyTime="0:0:1.5" Value="-9"/>
+        		<EasingDoubleKeyFrame KeyTime="0:0:2" Value="-1"/>
+        	</DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Key="btnCasa.MouseLeave">
+        	<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="btnCasa">
+        		<EasingDoubleKeyFrame KeyTime="0" Value="1"/>
+        		<EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="0.5"/>
+        		<EasingDoubleKeyFrame KeyTime="0:0:1" Value="1"/>
+        	</DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Key="btnGato.MouseEnter">
+        	<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleX)" Storyboard.TargetName="btnGato">
+        		<EasingDoubleKeyFrame KeyTime="0" Value="1"/>
+        		<EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="-1.016"/>
+        		<EasingDoubleKeyFrame KeyTime="0:0:1" Value="1.097"/>
+        		<EasingDoubleKeyFrame KeyTime="0:0:1.5" Value="-1.064"/>
+        		<EasingDoubleKeyFrame KeyTime="0:0:2" Value="1.081"/>
+        	</DoubleAnimationUsingKeyFrames>
+        	<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)" Storyboard.TargetName="btnGato">
+        		<EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+        		<EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="125"/>
+        		<EasingDoubleKeyFrame KeyTime="0:0:1" Value="-6"/>
+        		<EasingDoubleKeyFrame KeyTime="0:0:1.5" Value="128"/>
+        		<EasingDoubleKeyFrame KeyTime="0:0:2" Value="-5"/>
+        	</DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Key="btnGato.MouseLeave">
+        	<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="btnGato">
+        		<EasingDoubleKeyFrame KeyTime="0" Value="1"/>
+        		<EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="0.5"/>
+        		<EasingDoubleKeyFrame KeyTime="0:0:1" Value="1"/>
+        	</DoubleAnimationUsingKeyFrames>
+        </Storyboard>
         <Style x:Key="btnParar" TargetType="{x:Type Button}">
         	<Setter Property="Template">
         		<Setter.Value>
@@ -1916,47 +2114,119 @@
         </Canvas>
         <Image Margin="0,0,494,614"  Stretch="Fill"/>
         <Canvas x:Name="objetos" Grid.ColumnSpan="2" HorizontalAlignment="Left" Height="620" Margin="-4,-6,0,0" VerticalAlignment="Top" Width="1010" Visibility="Hidden">
-        	<Rectangle x:Name="btnElefante" Height="152" Canvas.Left="76.493" StrokeThickness="8" Canvas.Top="82.5" Width="154" MouseLeftButtonDown="HandleObjetos" Tag="Elefante">
+        	<Rectangle x:Name="btnElefante" Height="152" Canvas.Left="76.493" StrokeThickness="8" Canvas.Top="82.5" Width="154" MouseLeftButtonDown="HandleObjetos" Tag="Elefante" RenderTransformOrigin="0.5,0.5">
+        		<Rectangle.RenderTransform>
+        			<TransformGroup>
+        				<ScaleTransform/>
+        				<SkewTransform/>
+        				<RotateTransform/>
+        				<TranslateTransform/>
+        			</TransformGroup>
+        		</Rectangle.RenderTransform>
         		<Rectangle.Fill>
         			<ImageBrush ImageSource="Elefante.png"/>
         		</Rectangle.Fill>
         	</Rectangle>
-        	<Rectangle x:Name="btnAvion" Height="132.598" Canvas.Left="299" StrokeThickness="8" Canvas.Top="34.5" Width="176" MouseLeftButtonDown="HandleObjetos" Tag="Avion">
+        	<Rectangle x:Name="btnAvion" Height="132.598" Canvas.Left="299" StrokeThickness="8" Canvas.Top="34.5" Width="176" MouseLeftButtonDown="HandleObjetos" Tag="Avion" RenderTransformOrigin="0.5,0.5">
+        		<Rectangle.RenderTransform>
+        			<TransformGroup>
+        				<ScaleTransform/>
+        				<SkewTransform/>
+        				<RotateTransform/>
+        				<TranslateTransform/>
+        			</TransformGroup>
+        		</Rectangle.RenderTransform>
         		<Rectangle.Fill>
         			<ImageBrush ImageSource="avion.png"/>
         		</Rectangle.Fill>
         	</Rectangle>
-        	<Rectangle x:Name="btnParaguas" Height="134.5" Canvas.Left="586.964" StrokeThickness="8" Canvas.Top="52.5" Width="121.223" MouseLeftButtonDown="HandleObjetos" Tag="Paraguas">
+        	<Rectangle x:Name="btnParaguas" Height="134.5" Canvas.Left="586.964" StrokeThickness="8" Canvas.Top="52.5" Width="121.223" MouseLeftButtonDown="HandleObjetos" Tag="Paraguas" RenderTransformOrigin="0.5,0.5">
+        		<Rectangle.RenderTransform>
+        			<TransformGroup>
+        				<ScaleTransform/>
+        				<SkewTransform/>
+        				<RotateTransform/>
+        				<TranslateTransform/>
+        			</TransformGroup>
+        		</Rectangle.RenderTransform>
         		<Rectangle.Fill>
         			<ImageBrush ImageSource="paraguas.png"/>
         		</Rectangle.Fill>
         	</Rectangle>
-        	<Rectangle x:Name="btnSol" Height="138" Canvas.Left="805.187" StrokeThickness="8" Canvas.Top="121.5" Width="140" MouseLeftButtonDown="HandleObjetos" Tag="Sol">
+        	<Rectangle x:Name="btnSol" Height="138" Canvas.Left="805.187" StrokeThickness="8" Canvas.Top="121.5" Width="140" MouseLeftButtonDown="HandleObjetos" Tag="Sol" RenderTransformOrigin="0.5,0.5">
+        		<Rectangle.RenderTransform>
+        			<TransformGroup>
+        				<ScaleTransform/>
+        				<SkewTransform/>
+        				<RotateTransform/>
+        				<TranslateTransform/>
+        			</TransformGroup>
+        		</Rectangle.RenderTransform>
         		<Rectangle.Fill>
         			<ImageBrush ImageSource="sol.png"/>
         		</Rectangle.Fill>
         	</Rectangle>
-        	<Rectangle x:Name="btnMariposa" Height="113.5" Canvas.Left="46.493" StrokeThickness="8" Canvas.Top="269.5" Width="114" MouseLeftButtonDown="HandleObjetos" Tag="Mariposa">
+        	<Rectangle x:Name="btnMariposa" Height="113.5" Canvas.Left="46.493" StrokeThickness="8" Canvas.Top="269.5" Width="114" MouseLeftButtonDown="HandleObjetos" Tag="Mariposa" RenderTransformOrigin="0.5,0.5">
+        		<Rectangle.RenderTransform>
+        			<TransformGroup>
+        				<ScaleTransform/>
+        				<SkewTransform/>
+        				<RotateTransform/>
+        				<TranslateTransform/>
+        			</TransformGroup>
+        		</Rectangle.RenderTransform>
         		<Rectangle.Fill>
         			<ImageBrush ImageSource="mariposa.png"/>
         		</Rectangle.Fill>
         	</Rectangle>
-        	<Rectangle x:Name="btnPelota" Height="113.692" Canvas.Left="317" StrokeThickness="8" Canvas.Top="242.5" Width="106.813" MouseLeftButtonDown="HandleObjetos" Tag="Pelota">
+        	<Rectangle x:Name="btnPelota" Height="113.692" Canvas.Left="285" StrokeThickness="8" Canvas.Top="234.5" Width="106.813" MouseLeftButtonDown="HandleObjetos" Tag="Pelota" RenderTransformOrigin="0.5,0.5">
+        		<Rectangle.RenderTransform>
+        			<TransformGroup>
+        				<ScaleTransform/>
+        				<SkewTransform/>
+        				<RotateTransform/>
+        				<TranslateTransform/>
+        			</TransformGroup>
+        		</Rectangle.RenderTransform>
         		<Rectangle.Fill>
         			<ImageBrush ImageSource="pelota.png"/>
         		</Rectangle.Fill>
         	</Rectangle>
-        	<Rectangle x:Name="btnGato" Height="160.5" Canvas.Left="540" StrokeThickness="8" Canvas.Top="248.5" Width="124" MouseLeftButtonDown="HandleObjetos" Tag="Gato">
+        	<Rectangle x:Name="btnGato" Height="160.5" Canvas.Left="510" StrokeThickness="8" Canvas.Top="234.5" Width="124" MouseLeftButtonDown="HandleObjetos" Tag="Gato" RenderTransformOrigin="0.5,0.5">
+        		<Rectangle.RenderTransform>
+        			<TransformGroup>
+        				<ScaleTransform/>
+        				<SkewTransform/>
+        				<RotateTransform/>
+        				<TranslateTransform/>
+        			</TransformGroup>
+        		</Rectangle.RenderTransform>
         		<Rectangle.Fill>
         			<ImageBrush ImageSource="pack://siteoforigin:,,,/gato.png"/>
         		</Rectangle.Fill>
         	</Rectangle>
-        	<Rectangle x:Name="btnCasa" Height="159" Canvas.Left="246" StrokeThickness="8" Canvas.Top="386" Width="154" MouseLeftButtonDown="HandleObjetos" Tag="Casa">
+        	<Rectangle x:Name="btnCasa" Height="159" Canvas.Left="246" StrokeThickness="8" Canvas.Top="386" Width="154" MouseLeftButtonDown="HandleObjetos" Tag="Casa" RenderTransformOrigin="0.5,0.5">
+        		<Rectangle.RenderTransform>
+        			<TransformGroup>
+        				<ScaleTransform/>
+        				<SkewTransform/>
+        				<RotateTransform/>
+        				<TranslateTransform/>
+        			</TransformGroup>
+        		</Rectangle.RenderTransform>
         		<Rectangle.Fill>
         			<ImageBrush ImageSource="pack://siteoforigin:,,,/casa.png"/>
         		</Rectangle.Fill>
         	</Rectangle>
-        	<Rectangle x:Name="btnCoche" Height="143" Canvas.Left="510" StrokeThickness="8" Canvas.Top="454.333" Width="171.187" MouseLeftButtonDown="HandleObjetos" Tag="Coche">
+        	<Rectangle x:Name="btnCoche" Height="143" Canvas.Left="510" StrokeThickness="8" Canvas.Top="454.333" Width="171.187" MouseLeftButtonDown="HandleObjetos" Tag="Coche" RenderTransformOrigin="0.5,0.5">
+        		<Rectangle.RenderTransform>
+        			<TransformGroup>
+        				<ScaleTransform/>
+        				<SkewTransform/>
+        				<RotateTransform/>
+        				<TranslateTransform/>
+        			</TransformGroup>
+        		</Rectangle.RenderTransform>
         		<Rectangle.Fill>
         			<ImageBrush ImageSource="coche.png"/>
         		</Rectangle.Fill>
