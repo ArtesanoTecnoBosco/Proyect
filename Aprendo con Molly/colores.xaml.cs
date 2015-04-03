@@ -319,25 +319,23 @@ namespace Aprendo_con_Molly
 
         }
 
-
-        private void HandleNumeros(object sender, RoutedEventArgs e)
+        private void HandleNumeros(object sender, System.Windows.Input.MouseButtonEventArgs e)
         {
-            Button boton = (Button)sender;
+            Rectangle boton = (Rectangle)sender;
             String tag = boton.Tag.ToString();
 
             comprobarRespuestaNumeros(tag, boton);
         }
 
-        private void HandleObjetos(object sender, RoutedEventArgs e)
+        private void HandleObjetos(object sender, System.Windows.Input.MouseButtonEventArgs e)
         {
 
-            Button boton = (Button)sender;
+            Rectangle boton = (Rectangle)sender;
             String tag = boton.Tag.ToString();
 
-            comprobarRespuestaObjetos(tag,boton);
-            
-        }
+            comprobarRespuestaObjetos(tag, boton);
 
+        }
 
 
         private void comprobarRespuestaLetras(String tag,Rectangle rectangulo)
@@ -404,7 +402,7 @@ namespace Aprendo_con_Molly
         }
 
 
-        private void comprobarRespuestaNumeros(String tag, Button rectangulo)
+        private void comprobarRespuestaNumeros(String tag, Rectangle rectangulo)
         {
             SoundPlayer sonido;
             if (numeroIntentos < INTENTOS_MAXIMOS)
@@ -468,7 +466,7 @@ namespace Aprendo_con_Molly
         }
 
 
-        private void comprobarRespuestaObjetos(String tag, Button rectangulo)
+        private void comprobarRespuestaObjetos(String tag, Rectangle rectangulo)
         {
             SoundPlayer sonido;
             if (numeroIntentos < INTENTOS_MAXIMOS)
@@ -855,20 +853,24 @@ namespace Aprendo_con_Molly
 
         }
 
-        private void btnParar_Click(object sender, RoutedEventArgs e)
-        {
 
-            mostrarPanelSinModificar(TIPO);
-            ocultarBoton(btnParar);
-            mostrarBoton(btnVer);
-
-        }
 
         private void btnVer_Click(object sender, RoutedEventArgs e)
         {
             ocultarPaneles();
             mostrarVideo();
         }
+
+
+
+        private void btnParar_Click(object sender, RoutedEventArgs e)
+        {
+            mostrarPanelSinModificar(TIPO);
+            ocultarBoton(btnParar);
+            mostrarBoton(btnVer);
+        }
+
+      
 
 
 

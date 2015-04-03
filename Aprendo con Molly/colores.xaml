@@ -1389,7 +1389,7 @@
 
         	<Button x:Name="btnJugar" Content="Button" HorizontalAlignment="Left" Height="39.826" Style="{DynamicResource btnJugarEfecto}" VerticalAlignment="Top" Width="137.388" Background="#FF377C07" Canvas.Left="808.964" Canvas.Top="335.982" Click="btnJugar_Click"/>
         	<Button x:Name="bntExcuchar" Content="Button" HorizontalAlignment="Left" Height="49.826" Style="{DynamicResource btnEscucharEfecto}" VerticalAlignment="Top" Width="137.388" Canvas.Left="696.964" Canvas.Top="414.982" Click="bntExcuchar_Click"/>
-        	<Button x:Name="btnParar" Content="Button" Height="58.048" Canvas.Left="845.352" Style="{DynamicResource btnParar}" Canvas.Top="422.982" Width="107" Visibility="Hidden"/>
+        	<Button x:Name="btnParar" Content="Button" Height="58.048" Canvas.Left="845.352" Style="{DynamicResource btnParar}" Canvas.Top="422.982" Width="107" Visibility="Hidden" Click="btnParar_Click"/>
         	<Button x:Name="btnControl" Content="Button" Height="50.808" Canvas.Left="794" Style="{DynamicResource btnControl}" Canvas.Top="325" Width="158.352" Visibility="Hidden"/>
         	<Button x:Name="btnVer" Content="Button" HorizontalAlignment="Left" Height="33.826" Style="{DynamicResource btnVerEfect}" VerticalAlignment="Top" Width="68.722" Canvas.Left="866.076" Canvas.Top="439.204" Click="btnVer_Click"/>
         	<Button x:Name="btnMinimiza" Content="Button" HorizontalAlignment="Left" Height="23.72" VerticalAlignment="Top" Width="25.011" Style="{DynamicResource Minimizar}" RenderTransformOrigin="-2.032,0.008" Canvas.Left="906.822" Canvas.Top="10" Click="btnMinimiza_Click"/>
@@ -1863,52 +1863,52 @@
         	</Canvas>
         </Canvas>
         <Canvas x:Name="numeros" Grid.ColumnSpan="2" Margin="-4,0,-4,-6" Visibility="Hidden">
-        	<Rectangle x:Name="nueve" Height="176" Canvas.Left="464" StrokeThickness="8" Canvas.Top="420" Width="130">
+        	<Rectangle x:Name="nueve" Height="176" Canvas.Left="464" StrokeThickness="8" Canvas.Top="420" Width="130" MouseLeftButtonDown="HandleNumeros" Tag="9">
         		<Rectangle.Fill>
         			<ImageBrush ImageSource="nueve.png"/>
         		</Rectangle.Fill>
         	</Rectangle>
-        	<Rectangle x:Name="ocho" Height="176" Canvas.Left="280" StrokeThickness="8" Canvas.Top="420" Width="130">
+        	<Rectangle x:Name="ocho" Height="176" Canvas.Left="280" StrokeThickness="8" Canvas.Top="420" Width="130" MouseLeftButtonDown="HandleNumeros" Tag="8">
         		<Rectangle.Fill>
         			<ImageBrush ImageSource="ocho.png"/>
         		</Rectangle.Fill>
         	</Rectangle>
-        	<Rectangle x:Name="siete" Height="176" Canvas.Left="556" StrokeThickness="8" Canvas.Top="232" Width="130">
+        	<Rectangle x:Name="siete" Height="176" Canvas.Left="556" StrokeThickness="8" Canvas.Top="232" Width="130" MouseLeftButtonDown="HandleNumeros" Tag="7">
         		<Rectangle.Fill>
         			<ImageBrush ImageSource="siete.png"/>
         		</Rectangle.Fill>
         	</Rectangle>
-        	<Rectangle x:Name="seis" Height="176" Canvas.Left="370" StrokeThickness="8" Canvas.Top="232" Width="130">
+        	<Rectangle x:Name="seis" Height="176" Canvas.Left="370" StrokeThickness="8" Canvas.Top="232" Width="130" MouseLeftButtonDown="HandleNumeros" Tag="6">
         		<Rectangle.Fill>
         			<ImageBrush ImageSource="seis.png"/>
         		</Rectangle.Fill>
         	</Rectangle>
-        	<Rectangle x:Name="cinco" Height="176" Canvas.Left="182" StrokeThickness="8" Canvas.Top="232" Width="130">
+        	<Rectangle x:Name="cinco" Height="176" Canvas.Left="182" StrokeThickness="8" Canvas.Top="232" Width="130" MouseLeftButtonDown="HandleNumeros" Tag="5">
         		<Rectangle.Fill>
         			<ImageBrush ImageSource="cinco.png"/>
         		</Rectangle.Fill>
         	</Rectangle>
-        	<Rectangle x:Name="cuatro" Height="176" Canvas.Left="806" StrokeThickness="8" Canvas.Top="42" Width="130">
+        	<Rectangle x:Name="cuatro" Height="176" Canvas.Left="806" StrokeThickness="8" Canvas.Top="42" Width="130" MouseLeftButtonDown="HandleNumeros" Tag="4">
         		<Rectangle.Fill>
         			<ImageBrush ImageSource="cuatro.png"/>
         		</Rectangle.Fill>
         	</Rectangle>
-        	<Rectangle x:Name="tres" Height="176" Canvas.Left="626" StrokeThickness="8" Canvas.Top="42" Width="130">
+        	<Rectangle x:Name="tres" Height="176" Canvas.Left="626" StrokeThickness="8" Canvas.Top="42" Width="130" MouseLeftButtonDown="HandleNumeros" Tag="3">
         		<Rectangle.Fill>
         			<ImageBrush ImageSource="tres.png"/>
         		</Rectangle.Fill>
         	</Rectangle>
-        	<Rectangle x:Name="dos" Height="176" Canvas.Left="442" StrokeThickness="8" Canvas.Top="42" Width="130">
+        	<Rectangle x:Name="dos" Height="176" Canvas.Left="442" StrokeThickness="8" Canvas.Top="42" Width="130" MouseLeftButtonDown="HandleNumeros" Tag="2">
         		<Rectangle.Fill>
         			<ImageBrush ImageSource="dos.png"/>
         		</Rectangle.Fill>
         	</Rectangle>
-        	<Rectangle x:Name="uno" Height="176" Canvas.Left="254" StrokeThickness="8" Canvas.Top="42" Width="130">
+        	<Rectangle x:Name="uno" Height="176" Canvas.Left="254" StrokeThickness="8" Canvas.Top="42" Width="130" MouseLeftButtonDown="HandleNumeros" Tag="1">
         		<Rectangle.Fill>
         			<ImageBrush ImageSource="uno.png"/>
         		</Rectangle.Fill>
         	</Rectangle>
-        	<Rectangle x:Name="cero" Height="176" Canvas.Left="76" StrokeThickness="8" Canvas.Top="42" Width="130">
+        	<Rectangle x:Name="cero" Height="176" Canvas.Left="76" StrokeThickness="8" Canvas.Top="42" Width="130" MouseLeftButtonDown="HandleNumeros" Tag="0">
         		<Rectangle.Fill>
         			<ImageBrush ImageSource="cero.png"/>
         		</Rectangle.Fill>
@@ -1916,47 +1916,47 @@
         </Canvas>
         <Image Margin="0,0,494,614"  Stretch="Fill"/>
         <Canvas x:Name="objetos" Grid.ColumnSpan="2" HorizontalAlignment="Left" Height="620" Margin="-4,-6,0,0" VerticalAlignment="Top" Width="1010" Visibility="Hidden">
-        	<Rectangle x:Name="btnElefante" Height="152" Canvas.Left="76.493" StrokeThickness="8" Canvas.Top="82.5" Width="154">
+        	<Rectangle x:Name="btnElefante" Height="152" Canvas.Left="76.493" StrokeThickness="8" Canvas.Top="82.5" Width="154" MouseLeftButtonDown="HandleObjetos" Tag="Elefante">
         		<Rectangle.Fill>
         			<ImageBrush ImageSource="Elefante.png"/>
         		</Rectangle.Fill>
         	</Rectangle>
-        	<Rectangle x:Name="btnAvion" Height="132.598" Canvas.Left="299" StrokeThickness="8" Canvas.Top="34.5" Width="176">
+        	<Rectangle x:Name="btnAvion" Height="132.598" Canvas.Left="299" StrokeThickness="8" Canvas.Top="34.5" Width="176" MouseLeftButtonDown="HandleObjetos" Tag="Avion">
         		<Rectangle.Fill>
         			<ImageBrush ImageSource="avion.png"/>
         		</Rectangle.Fill>
         	</Rectangle>
-        	<Rectangle x:Name="btnParaguas" Height="134.5" Canvas.Left="586.964" StrokeThickness="8" Canvas.Top="52.5" Width="121.223">
+        	<Rectangle x:Name="btnParaguas" Height="134.5" Canvas.Left="586.964" StrokeThickness="8" Canvas.Top="52.5" Width="121.223" MouseLeftButtonDown="HandleObjetos" Tag="Paraguas">
         		<Rectangle.Fill>
         			<ImageBrush ImageSource="paraguas.png"/>
         		</Rectangle.Fill>
         	</Rectangle>
-        	<Rectangle x:Name="btnSol" Height="138" Canvas.Left="805.187" StrokeThickness="8" Canvas.Top="121.5" Width="140">
+        	<Rectangle x:Name="btnSol" Height="138" Canvas.Left="805.187" StrokeThickness="8" Canvas.Top="121.5" Width="140" MouseLeftButtonDown="HandleObjetos" Tag="Sol">
         		<Rectangle.Fill>
         			<ImageBrush ImageSource="sol.png"/>
         		</Rectangle.Fill>
         	</Rectangle>
-        	<Rectangle x:Name="btnMariposa" Height="113.5" Canvas.Left="46.493" StrokeThickness="8" Canvas.Top="269.5" Width="114">
+        	<Rectangle x:Name="btnMariposa" Height="113.5" Canvas.Left="46.493" StrokeThickness="8" Canvas.Top="269.5" Width="114" MouseLeftButtonDown="HandleObjetos" Tag="Mariposa">
         		<Rectangle.Fill>
         			<ImageBrush ImageSource="mariposa.png"/>
         		</Rectangle.Fill>
         	</Rectangle>
-        	<Rectangle x:Name="btnPelota" Height="113.692" Canvas.Left="317" StrokeThickness="8" Canvas.Top="242.5" Width="106.813">
+        	<Rectangle x:Name="btnPelota" Height="113.692" Canvas.Left="317" StrokeThickness="8" Canvas.Top="242.5" Width="106.813" MouseLeftButtonDown="HandleObjetos" Tag="Pelota">
         		<Rectangle.Fill>
         			<ImageBrush ImageSource="pelota.png"/>
         		</Rectangle.Fill>
         	</Rectangle>
-        	<Rectangle x:Name="btnGato" Height="160.5" Canvas.Left="540" StrokeThickness="8" Canvas.Top="248.5" Width="124">
+        	<Rectangle x:Name="btnGato" Height="160.5" Canvas.Left="540" StrokeThickness="8" Canvas.Top="248.5" Width="124" MouseLeftButtonDown="HandleObjetos" Tag="Gato">
         		<Rectangle.Fill>
         			<ImageBrush ImageSource="pack://siteoforigin:,,,/gato.png"/>
         		</Rectangle.Fill>
         	</Rectangle>
-        	<Rectangle x:Name="btnCasa" Height="159" Canvas.Left="246" StrokeThickness="8" Canvas.Top="386" Width="154">
+        	<Rectangle x:Name="btnCasa" Height="159" Canvas.Left="246" StrokeThickness="8" Canvas.Top="386" Width="154" MouseLeftButtonDown="HandleObjetos" Tag="Casa">
         		<Rectangle.Fill>
         			<ImageBrush ImageSource="pack://siteoforigin:,,,/casa.png"/>
         		</Rectangle.Fill>
         	</Rectangle>
-        	<Rectangle x:Name="btnCoche" Height="143" Canvas.Left="510" StrokeThickness="8" Canvas.Top="454.333" Width="171.187">
+        	<Rectangle x:Name="btnCoche" Height="143" Canvas.Left="510" StrokeThickness="8" Canvas.Top="454.333" Width="171.187" MouseLeftButtonDown="HandleObjetos" Tag="Coche">
         		<Rectangle.Fill>
         			<ImageBrush ImageSource="coche.png"/>
         		</Rectangle.Fill>
