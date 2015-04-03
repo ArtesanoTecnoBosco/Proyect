@@ -168,7 +168,6 @@
     <Resource Include="e.png" />
     <Resource Include="Elefante.png" />
     <Resource Include="f.png" />
-    <Resource Include="flores.png" />
     <Resource Include="floress.png" />
     <Resource Include="fondo3.jpg" />
     <Resource Include="fondo5.jpg" />
@@ -180,15 +179,12 @@
     <Resource Include="k.png" />
     <Resource Include="l.png" />
     <Resource Include="m.png" />
-    <Resource Include="ma.png" />
     <Resource Include="marco.png" />
-    <Resource Include="marcoasa de mariposas.png" />
     <Resource Include="mariposa.png" />
     <Resource Include="marron.png" />
     <Resource Include="Molly.jpg" />
     <Resource Include="Molly.png" />
     <Resource Include="morada.png" />
-    <Resource Include="mps.png" />
     <Resource Include="n.png" />
     <Resource Include="naranja.png" />
     <Resource Include="negro.png" />
@@ -202,7 +198,6 @@
     <Resource Include="perro.jpg" />
     <Resource Include="perro.png" />
     <Resource Include="prueba.png" />
-    <Resource Include="prueba2.png" />
     <Resource Include="prueba3.png" />
     <Resource Include="q.png" />
     <Resource Include="r.png" />
