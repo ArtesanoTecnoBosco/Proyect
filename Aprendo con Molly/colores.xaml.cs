@@ -106,16 +106,21 @@ namespace Aprendo_con_Molly
                     letras.Opacity = 100;
                     letras.Visibility = System.Windows.Visibility.Visible;
                     mostrarTodasLasLetras();
-                    
                     break;
                 //FIN MODO FACIL
                 
                 case 3:
                     //NUMEROS.
+                    numeros.Opacity = 100;
+                    numeros.Visibility = System.Windows.Visibility.Visible;
+                    mostrarTodosLosNumeros();
                     break;
 
                 case 4:
                     //OBJETOS
+                    objetos.Opacity = 100;
+                    objetos.Visibility = System.Windows.Visibility.Visible;
+                    mostrarTodosLosObjetos();
                     break;
                 //FIN MODO MEDIO
                 case 5:
@@ -162,10 +167,14 @@ namespace Aprendo_con_Molly
 
                 case 3:
                     //NUMEROS.
+                    numeros.Opacity = 100;
+                    numeros.Visibility = System.Windows.Visibility.Visible;
                     break;
 
                 case 4:
                     //OBJETOS
+                    objetos.Opacity = 100;
+                    objetos.Visibility = System.Windows.Visibility.Visible;
                     break;
                 //FIN MODO MEDIO
                 case 5:
@@ -246,6 +255,34 @@ namespace Aprendo_con_Molly
                       
         }
 
+        private void mostrarTodosLosNumeros()
+        {
+            Button[] numeros = {cero,uno,dos,tres,cuatro,cinco,seis,siete,ocho,nueve};
+            
+
+            for (int pos = 0; pos < numeros.Length; pos++)
+            {
+                numeros[pos].Opacity = 100;
+                numeros[pos].Visibility = System.Windows.Visibility.Visible;
+            }
+            
+
+        }
+
+        private void mostrarTodosLosObjetos()
+        {
+            Button[] objetos = { btnElefante, btnCasa, btnCoche, btnAvion, btnPelota, btnMariposa, btnSol, btnParaguas, btnGato };
+
+            for (int pos = 0; pos < objetos.Length; pos++)
+            {
+                objetos[pos].Opacity = 100;
+                objetos[pos].Visibility = System.Windows.Visibility.Visible;
+            }
+
+
+
+        }
+
 
         /// <summary>
         /// Metodo para saber el directorio padre.
@@ -280,6 +317,25 @@ namespace Aprendo_con_Molly
 
             comprobarRespuestaLetras(tag,rectangulo);
 
+        }
+
+
+        private void HandleNumeros(object sender, RoutedEventArgs e)
+        {
+            Button boton = (Button)sender;
+            String tag = boton.Tag.ToString();
+
+            comprobarRespuestaNumeros(tag, boton);
+        }
+
+        private void HandleObjetos(object sender, RoutedEventArgs e)
+        {
+
+            Button boton = (Button)sender;
+            String tag = boton.Tag.ToString();
+
+            comprobarRespuestaObjetos(tag,boton);
+            
         }
 
 
@@ -346,6 +402,137 @@ namespace Aprendo_con_Molly
 
 
         }
+
+
+        private void comprobarRespuestaNumeros(String tag, Button rectangulo)
+        {
+            SoundPlayer sonido;
+            if (numeroIntentos < INTENTOS_MAXIMOS)
+            {
+                //Si se ha acertado la pregunta.
+                if (tag.Equals(pregunta.getTag()))
+                {
+
+                    try
+                    {
+                        //Reproducir el sonido
+                        sonido = new SoundPlayer(directorioPadre() + ACIERTO);
+                        sonido.Play();
+
+                        //Insertar en BD.
+                        insertarPartida();
+
+
+                        //CargarVideo.
+                        ocultarPaneles();
+                        mostrarVideo();
+                        mostrarBoton(btnJugar);
+                    }
+                    catch (Exception e)
+                    {
+                        VentanaEmergente ventana = new VentanaEmergente(e.ToString());
+                        ventana.ShowDialog();
+                        ventana.Focus();
+                    }
+
+                }
+                //Si no se ha acertado la pregunta.
+                else
+                {
+                    try
+                    {
+                        //Efecto desaparecer
+                        
+
+                        //Reproducir el sonido.
+                        sonido = new SoundPlayer(directorioPadre() + ERROR);
+                        sonido.Play();
+
+                        insertarPartidaPerdida();
+                    }
+                    catch (Exception e)
+                    {
+                        VentanaEmergente ventana = new VentanaEmergente(e.ToString());
+                        ventana.ShowDialog();
+                        ventana.Focus();
+                    }
+
+                    numeroIntentos++;
+
+                }
+            }
+
+            numeroIntentosMaximos();
+
+
+        }
+
+
+        private void comprobarRespuestaObjetos(String tag, Button rectangulo)
+        {
+            SoundPlayer sonido;
+            if (numeroIntentos < INTENTOS_MAXIMOS)
+            {
+                //Si se ha acertado la pregunta.
+                if (tag.Equals(pregunta.getTag()))
+                {
+
+                    try
+                    {
+                        //Reproducir el sonido
+                        sonido = new SoundPlayer(directorioPadre() + ACIERTO);
+                        sonido.Play();
+
+                        //Insertar en BD.
+                        insertarPartida();
+
+
+                        //CargarVideo.
+                        ocultarPaneles();
+                        mostrarVideo();
+                        mostrarBoton(btnJugar);
+                    }
+                    catch (Exception e)
+                    {
+                        VentanaEmergente ventana = new VentanaEmergente(e.ToString());
+                        ventana.ShowDialog();
+                        ventana.Focus();
+                    }
+
+                }
+                //Si no se ha acertado la pregunta.
+                else
+                {
+                    try
+                    {
+                        //Efecto desaparecer
+
+
+                        //Reproducir el sonido.
+                        sonido = new SoundPlayer(directorioPadre() + ERROR);
+                        sonido.Play();
+
+                        insertarPartidaPerdida();
+                    }
+                    catch (Exception e)
+                    {
+                        VentanaEmergente ventana = new VentanaEmergente(e.ToString());
+                        ventana.ShowDialog();
+                        ventana.Focus();
+                    }
+
+                    numeroIntentos++;
+
+                }
+            }
+
+            numeroIntentosMaximos();
+
+
+        }
+
+
+
 
         private void numeroIntentosMaximos()
         {
@@ -492,6 +679,9 @@ namespace Aprendo_con_Molly
             mariposas.Opacity = 100;
             mariposas.Visibility = System.Windows.Visibility.Visible;
 
+            marcoVideo.Opacity = 100;
+            marcoVideo.Visibility = System.Windows.Visibility.Visible;
+
             video.Play();
 
         }
@@ -501,10 +691,15 @@ namespace Aprendo_con_Molly
             
             video.Stop();
             video.Visibility = System.Windows.Visibility.Hidden;
+
             elipseVideo.Opacity = 0;
             elipseVideo.Visibility = System.Windows.Visibility.Hidden;
+
             mariposas.Opacity = 0;
             mariposas.Visibility = System.Windows.Visibility.Hidden;
+
+            marcoVideo.Opacity = 0;
+            marcoVideo.Visibility = System.Windows.Visibility.Hidden;
             
         }
 
@@ -514,8 +709,8 @@ namespace Aprendo_con_Molly
         {
             bolitas.Visibility = System.Windows.Visibility.Hidden;
             letras.Visibility = System.Windows.Visibility.Hidden;
-
-
+            numeros.Visibility = System.Windows.Visibility.Hidden;
+            objetos.Visibility = System.Windows.Visibility.Hidden;
 
 
             espacioJuego.Opacity = 0;
@@ -674,6 +869,9 @@ namespace Aprendo_con_Molly
             ocultarPaneles();
             mostrarVideo();
         }
+
+
+
 
 
 

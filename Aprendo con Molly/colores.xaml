@@ -2160,7 +2160,7 @@
         	</Canvas>
         </Canvas>
         <Canvas x:Name="numeros" Grid.ColumnSpan="2" Margin="-4,0,-4,-6" Visibility="Hidden">
-        	<Button x:Name="cero" Content="" Height="176" Canvas.Left="76" Canvas.Top="42" Width="130" BorderBrush="Transparent" RenderTransformOrigin="0.5,0.5">
+        	<Button x:Name="cero" Content="" Height="176" Canvas.Left="76" Canvas.Top="42" Width="130" BorderBrush="Transparent" RenderTransformOrigin="0.5,0.5" Tag="0" Click="HandleNumeros">
         		<Button.RenderTransform>
         			<TransformGroup>
         				<ScaleTransform/>
@@ -2173,7 +2173,7 @@
         			<ImageBrush ImageSource="cero.png"/>
         		</Button.Background>
         	</Button>
-        	<Button x:Name="uno" Content="" Height="176" Canvas.Left="254" Canvas.Top="42" Width="130" BorderBrush="Transparent" RenderTransformOrigin="0.5,0.5">
+        	<Button x:Name="uno" Content="" Height="176" Canvas.Left="254" Canvas.Top="42" Width="130" BorderBrush="Transparent" RenderTransformOrigin="0.5,0.5" Tag="1" Click="HandleNumeros">
         		<Button.RenderTransform>
         			<TransformGroup>
         				<ScaleTransform/>
@@ -2186,7 +2186,7 @@
         			<ImageBrush ImageSource="uno.png"/>
         		</Button.Background>
         	</Button>
-        	<Button x:Name="dos" Content="" Height="176" Canvas.Left="444" Canvas.Top="42" Width="130" BorderBrush="Transparent" RenderTransformOrigin="0.5,0.5">
+        	<Button x:Name="dos" Content="" Height="176" Canvas.Left="444" Canvas.Top="42" Width="130" BorderBrush="Transparent" RenderTransformOrigin="0.5,0.5" Tag="2" Click="HandleNumeros">
         		<Button.RenderTransform>
         			<TransformGroup>
         				<ScaleTransform/>
@@ -2199,7 +2199,7 @@
         			<ImageBrush ImageSource="dos.png"/>
         		</Button.Background>
         	</Button>
-        	<Button x:Name="tres" Content="" Height="176" Canvas.Left="624" Canvas.Top="42" Width="130" BorderBrush="Transparent" RenderTransformOrigin="0.5,0.5">
+        	<Button x:Name="tres" Content="" Height="176" Canvas.Left="624" Canvas.Top="42" Width="130" BorderBrush="Transparent" RenderTransformOrigin="0.5,0.5" Tag="3" Click="HandleNumeros">
         		<Button.RenderTransform>
         			<TransformGroup>
         				<ScaleTransform/>
@@ -2212,7 +2212,7 @@
         			<ImageBrush ImageSource="tres.png"/>
         		</Button.Background>
         	</Button>
-        	<Button x:Name="cuatro" Content="" Height="176" Canvas.Left="806" Canvas.Top="42" Width="130" BorderBrush="Transparent" RenderTransformOrigin="0.5,0.5">
+        	<Button x:Name="cuatro" Content="" Height="176" Canvas.Left="806" Canvas.Top="42" Width="130" BorderBrush="Transparent" RenderTransformOrigin="0.5,0.5" Tag="4" Click="HandleNumeros">
         		<Button.RenderTransform>
         			<TransformGroup>
         				<ScaleTransform/>
@@ -2225,7 +2225,7 @@
         			<ImageBrush ImageSource="cuatro.png"/>
         		</Button.Background>
         	</Button>
-        	<Button x:Name="cinco" Content="" Height="176" Canvas.Left="182" Canvas.Top="232" Width="130" BorderBrush="Transparent" RenderTransformOrigin="0.5,0.5">
+        	<Button x:Name="cinco" Content="" Height="176" Canvas.Left="182" Canvas.Top="232" Width="130" BorderBrush="Transparent" RenderTransformOrigin="0.5,0.5" Tag="5" Click="HandleNumeros">
         		<Button.RenderTransform>
         			<TransformGroup>
         				<ScaleTransform/>
@@ -2238,7 +2238,7 @@
         			<ImageBrush ImageSource="cinco.png"/>
         		</Button.Background>
         	</Button>
-        	<Button x:Name="seis" Content="" Height="176" Canvas.Left="370" Canvas.Top="232" Width="130" BorderBrush="Transparent" RenderTransformOrigin="0.5,0.5">
+        	<Button x:Name="seis" Content="" Height="176" Canvas.Left="370" Canvas.Top="232" Width="130" BorderBrush="Transparent" RenderTransformOrigin="0.5,0.5" Tag="6" Click="HandleNumeros">
         		<Button.RenderTransform>
         			<TransformGroup>
         				<ScaleTransform/>
@@ -2251,7 +2251,7 @@
         			<ImageBrush ImageSource="seis.png"/>
         		</Button.Background>
         	</Button>
-        	<Button x:Name="siete" Content="" Height="176" Canvas.Left="556" Canvas.Top="232" Width="130" BorderBrush="Transparent" RenderTransformOrigin="0.5,0.5">
+        	<Button x:Name="siete" Content="" Height="176" Canvas.Left="556" Canvas.Top="232" Width="130" BorderBrush="Transparent" RenderTransformOrigin="0.5,0.5" Tag="7" Click="HandleNumeros">
         		<Button.RenderTransform>
         			<TransformGroup>
         				<ScaleTransform/>
@@ -2264,7 +2264,7 @@
         			<ImageBrush ImageSource="siete.png"/>
         		</Button.Background>
         	</Button>
-        	<Button x:Name="ocho" Content="" Height="176" Canvas.Left="280" Canvas.Top="420" Width="130" BorderBrush="Transparent" RenderTransformOrigin="0.5,0.5">
+        	<Button x:Name="ocho" Content="" Height="176" Canvas.Left="280" Canvas.Top="420" Width="130" BorderBrush="Transparent" RenderTransformOrigin="0.5,0.5" Tag="8" Click="HandleNumeros">
         		<Button.RenderTransform>
         			<TransformGroup>
         				<ScaleTransform/>
@@ -2277,7 +2277,7 @@
         			<ImageBrush ImageSource="ocho.png"/>
         		</Button.Background>
         	</Button>
-        	<Button x:Name="nueve" Content="" Height="176" Canvas.Left="464" Canvas.Top="420" Width="130" BorderBrush="Transparent" RenderTransformOrigin="0.5,0.5">
+        	<Button x:Name="nueve" Content="" Height="176" Canvas.Left="464" Canvas.Top="420" Width="130" BorderBrush="Transparent" RenderTransformOrigin="0.5,0.5" Tag="9" Click="HandleNumeros">
         		<Button.RenderTransform>
         			<TransformGroup>
         				<ScaleTransform/>
@@ -2293,7 +2293,7 @@
         </Canvas>
         <Image Margin="0,0,494,614"  Stretch="Fill"/>
         <Canvas x:Name="objetos" Grid.ColumnSpan="2" HorizontalAlignment="Left" Height="620" Margin="-4,-6,0,0" VerticalAlignment="Top" Width="1010" Visibility="Hidden">
-        	<Button x:Name="btnElefante" Content="" Height="152" Canvas.Left="70" Canvas.Top="58" Width="154" BorderBrush="Transparent" RenderTransformOrigin="0.5,0.5">
+        	<Button x:Name="btnElefante" Content="" Height="152" Canvas.Left="70" Canvas.Top="58" Width="154" BorderBrush="Transparent" RenderTransformOrigin="0.5,0.5" Tag="Elefante" Click="HandleObjetos">
         		<Button.RenderTransform>
         			<TransformGroup>
         				<ScaleTransform/>
@@ -2306,7 +2306,7 @@
         			<ImageBrush ImageSource="Elefante.png"/>
         		</Button.Background>
         	</Button>
-        	<Button x:Name="btnCasa" Height="152" Canvas.Left="249" Canvas.Top="403" Width="154" BorderBrush="Transparent" RenderTransformOrigin="0.5,0.5">
+        	<Button x:Name="btnCasa" Height="152" Canvas.Left="249" Canvas.Top="403" Width="154" BorderBrush="Transparent" RenderTransformOrigin="0.5,0.5" Tag="Casa" Click="HandleObjetos">
         		<Button.RenderTransform>
         			<TransformGroup>
         				<ScaleTransform/>
@@ -2319,7 +2319,7 @@
         			<ImageBrush ImageSource="pack://siteoforigin:,,,/casa.png"/>
         		</Button.Background>
         	</Button>
-        	<Button x:Name="btnCoche" Content="" Height="143" Canvas.Left="510" Canvas.Top="446.333" Width="171.187" BorderBrush="Transparent" RenderTransformOrigin="0.5,0.5">
+        	<Button x:Name="btnCoche" Content="" Height="143" Canvas.Left="510" Canvas.Top="446.333" Width="171.187" BorderBrush="Transparent" RenderTransformOrigin="0.5,0.5" Tag="Coche" Click="HandleObjetos">
         		<Button.RenderTransform>
         			<TransformGroup>
         				<ScaleTransform/>
@@ -2332,7 +2332,7 @@
         			<ImageBrush ImageSource="coche.png"/>
         		</Button.Background>
         	</Button>
-        	<Button x:Name="btnAvion" Content="" Height="132.598" Canvas.Left="277.423" Canvas.Top="20" Width="176" BorderBrush="Transparent" RenderTransformOrigin="0.5,0.5">
+        	<Button x:Name="btnAvion" Content="" Height="132.598" Canvas.Left="277.423" Canvas.Top="20" Width="176" BorderBrush="Transparent" RenderTransformOrigin="0.5,0.5" Tag="Avion" Click="HandleObjetos">
         		<Button.RenderTransform>
         			<TransformGroup>
         				<ScaleTransform/>
@@ -2345,7 +2345,7 @@
         			<ImageBrush ImageSource="avion.png"/>
         		</Button.Background>
         	</Button>
-        	<Button x:Name="btnPelota" Content="" Height="113.692" Canvas.Left="299" Canvas.Top="223.808" Width="106.813" BorderBrush="Transparent" RenderTransformOrigin="0.5,0.5">
+        	<Button x:Name="btnPelota" Content="" Height="113.692" Canvas.Left="299" Canvas.Top="223.808" Width="106.813" BorderBrush="Transparent" RenderTransformOrigin="0.5,0.5" Tag="Pelota" Click="HandleObjetos">
         		<Button.RenderTransform>
         			<TransformGroup>
         				<ScaleTransform/>
@@ -2358,7 +2358,7 @@
         			<ImageBrush ImageSource="pelota.png"/>
         		</Button.Background>
         	</Button>
-        	<Button x:Name="btnMariposa" Content="" Height="122.308" Canvas.Left="46.493" Canvas.Top="251.5" Width="114" BorderBrush="Transparent" RenderTransformOrigin="0.5,0.5">
+        	<Button x:Name="btnMariposa" Content="" Height="122.308" Canvas.Left="46.493" Canvas.Top="251.5" Width="114" BorderBrush="Transparent" RenderTransformOrigin="0.5,0.5" Tag="Mariposa" Click="HandleObjetos">
         		<Button.RenderTransform>
         			<TransformGroup>
         				<ScaleTransform/>
@@ -2371,7 +2371,7 @@
         			<ImageBrush ImageSource="mariposa.png"/>
         		</Button.Background>
         	</Button>
-        	<Button x:Name="btnSol" Content="" Height="138" Canvas.Left="794.859" Canvas.Top="116" Width="140" BorderBrush="Transparent" RenderTransformOrigin="0.5,0.5">
+        	<Button x:Name="btnSol" Content="" Height="138" Canvas.Left="794.859" Canvas.Top="116" Width="140" BorderBrush="Transparent" RenderTransformOrigin="0.5,0.5" Tag="Sol" Click="HandleObjetos">
         		<Button.RenderTransform>
         			<TransformGroup>
         				<ScaleTransform/>
@@ -2384,7 +2384,7 @@
         			<ImageBrush ImageSource="sol.png"/>
         		</Button.Background>
         	</Button>
-        	<Button x:Name="btnParaguas" Content="" Height="134.5" Canvas.Left="583.187" Canvas.Top="39.5" Width="121.223" BorderBrush="Transparent" RenderTransformOrigin="0.5,0.5">
+        	<Button x:Name="btnParaguas" Content="" Height="134.5" Canvas.Left="583.187" Canvas.Top="39.5" Width="121.223" BorderBrush="Transparent" RenderTransformOrigin="0.5,0.5" Tag="Paraguas" Click="HandleObjetos">
         		<Button.RenderTransform>
         			<TransformGroup>
         				<ScaleTransform/>
@@ -2397,7 +2397,7 @@
         			<ImageBrush ImageSource="paraguas.png"/>
         		</Button.Background>
         	</Button>
-        	<Button x:Name="btnGato" Height="152" Canvas.Left="531.187" Canvas.Top="251.5" Width="124" BorderBrush="Transparent" RenderTransformOrigin="0.5,0.5">
+        	<Button x:Name="btnGato" Height="152" Canvas.Left="531.187" Canvas.Top="251.5" Width="124" BorderBrush="Transparent" RenderTransformOrigin="0.5,0.5" Tag="Gato" Click="HandleObjetos">
         		<Button.RenderTransform>
         			<TransformGroup>
         				<ScaleTransform/>
