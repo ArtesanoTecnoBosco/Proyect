@@ -170,11 +170,21 @@ namespace Capa_de_Negocio.ModeloDatos
 
             Capa_Acceso_a_Datos.Conexion conexion = new Capa_Acceso_a_Datos.Conexion();
 
+            int id=0;
+            System.Data.OleDb.OleDbDataReader reader = conexion.ejecutarConsulta(sql);
 
-            String sql = "INSERT INTO PARTIDAS (IdUsuario,Ganado,IdNivelTipo) VALUES ('" + this.usuario.getId() + "'," + this.ganado + ","+this.tipo.getId()+")";
+            while (reader.Read())
+            {
+                id = reader.GetInt32(0);
+            }
+
+
+            conexion.cerrarConexion();
+
+            sql = "INSERT INTO PARTIDAS (IdUsuario,Ganado,IdNivelTipo) VALUES ('" + this.usuario.getId() + "'," + this.ganado + ","+id+")";
 
             int numero = conexion.ejecutarSentencia(sql);
-            
+            conexion.cerrarConexion();
 
             if(numero<1){
                 String x = "ERROR 110\nPor favor pongase en contacto con el administrador de la aplicación.";

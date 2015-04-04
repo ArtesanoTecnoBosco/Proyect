@@ -65,6 +65,7 @@ namespace Aprendo_con_Molly
             //Consulta para sacar una pregunta del tipo (panel).
             pregunta = new Capa_de_Negocio.ModeloDatos.Pregunta();
             mostrarPanel(panel);
+            mostrarBoton(btnControl);
             
         }
 
@@ -148,6 +149,8 @@ namespace Aprendo_con_Molly
             {
 
             }
+
+            panelControl.Visibility = System.Windows.Visibility.Hidden;
 
             switch (panel)
             {
@@ -668,6 +671,8 @@ namespace Aprendo_con_Molly
 
             ocultarBoton(btnVer);
 
+            ocultarBoton(btnControl);
+
             video.Visibility = System.Windows.Visibility.Visible;
             video.Source = new Uri(directorioPadre() + pregunta.getVideo());
 
@@ -709,6 +714,8 @@ namespace Aprendo_con_Molly
             letras.Visibility = System.Windows.Visibility.Hidden;
             numeros.Visibility = System.Windows.Visibility.Hidden;
             objetos.Visibility = System.Windows.Visibility.Hidden;
+            panelControl.Visibility = System.Windows.Visibility.Hidden;
+            ocultarVideo();
 
 
             espacioJuego.Opacity = 0;
@@ -785,19 +792,34 @@ namespace Aprendo_con_Molly
 
         private void botonJugar()
         {
-            int panel;
-            numeroIntentos = 0;
+            if (panelControl.Visibility == System.Windows.Visibility.Hidden)
+            {
 
-            ocultarBoton(btnParar);
+                int panel;
+                numeroIntentos = 0;
 
-            mostrarBoton(btnVer);
+                ocultarBoton(btnParar);
 
-            panel = seleccionPanelNivel(jUGADORES.nivel);
-            pregunta.cargarPregunta(panel);
+                mostrarBoton(btnVer);
 
-            TIPO = panel;
+                panel = seleccionPanelNivel(jUGADORES.nivel);
+                pregunta.cargarPregunta(panel);
 
-            mostrarPanel(panel);
+                TIPO = panel;
+
+                mostrarPanel(panel);
+
+                ocultarBoton(btnJugar);
+                mostrarBoton(btnControl);
+            }
+            else
+            {
+                mostrarPanelSinModificar(TIPO);
+
+                ocultarBoton(btnJugar);
+                mostrarBoton(btnControl);
+
+            }
         }
 
 
@@ -859,6 +881,8 @@ namespace Aprendo_con_Molly
         {
             ocultarPaneles();
             mostrarVideo();
+            mostrarBoton(btnControl);
+            ocultarBoton(btnJugar);
         }
 
 
@@ -868,6 +892,34 @@ namespace Aprendo_con_Molly
             mostrarPanelSinModificar(TIPO);
             ocultarBoton(btnParar);
             mostrarBoton(btnVer);
+        }
+
+
+        private void btnControl_Click(object sender, RoutedEventArgs e)
+        {
+            botonProgreso();            
+        }
+
+        private void botonProgreso()
+        {
+            if (panelControl.Visibility == System.Windows.Visibility.Hidden)
+            {
+                ocultarPaneles();
+                panelControl.Opacity = 100;
+                panelControl.Visibility = System.Windows.Visibility.Visible;
+
+                ocultarBoton(btnParar);
+                mostrarBoton(btnVer);
+
+                ocultarBoton(btnControl);
+                mostrarBoton(btnJugar);
+
+                imgAvatar.Fill = new ImageBrush(new BitmapImage(new Uri(directorioPadre() + this.juego.getUsuario().getAvatar().getRuta(), UriKind.Relative)));
+                lblNivel.Content = "Nivel " + jUGADORES.nivel;
+                txtEstadistica.Text= this.juego.obtenerEstadistica(jUGADORES.nivel);
+
+            }
+
         }
 
       

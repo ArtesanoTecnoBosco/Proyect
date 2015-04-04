@@ -278,7 +278,115 @@ namespace Capa_de_Negocio
             return niveles.ElementAt(pos);
         }
 
+        public String obtenerEstadistica(String nivel)
+        {
+            String salida;
+            int total=0;
+            int ganadas = 0;
+            int perdidas = 0;
+            String sql;
+            System.Data.OleDb.OleDbDataReader reader;
+            List<int> ids= new List<int>();
+            
+            //OBTENER LOS ID DE LOS NIVELESTIPOS
+            sql = "SELECT Id FROM NivelesTipos WHERE IdNivel=" + this.buscarNivel(nivel).getId();
+            reader = conexion.ejecutarConsulta(sql);
 
+
+            while(reader.Read()){
+                ids.Add(reader.GetInt32(0));
+
+            }
+            conexion.cerrarConexion();
+
+            //OBTENER EL TOTAL DE PARTIDAS
+            sql = "Select count(Ganado) from PARTIDAS WHERE IdUsuario =" + this.usuario.getId() + " AND (IdNivelTipo="
+                + ids.ElementAt(0);
+
+            for (int pos = 1; pos < ids.Count; pos++)
+            {
+
+                sql = sql + " OR IdNivelTipo=" + ids.ElementAt(pos);
+
+            }
+
+            sql = sql + ")";
+            reader = conexion.ejecutarConsulta(sql);
+
+
+
+            while (reader.Read())
+            {
+                total = reader.GetInt32(0);
+            }
+
+            conexion.cerrarConexion();
+
+            //OBTENER PARTIDAS GANADAS.
+            sql = "Select count(Ganado) from PARTIDAS WHERE IdUsuario =" + this.usuario.getId() +"AND Ganado=0  AND (IdNivelTipo="
+                + ids.ElementAt(0);
+
+            for (int pos = 1; pos < ids.Count; pos++)
+            {
+
+                sql = sql + " OR IdNivelTipo=" + ids.ElementAt(pos);
+
+            }
+
+            sql = sql + ")";
+            reader = conexion.ejecutarConsulta(sql);
+
+
+
+            while (reader.Read())
+            {
+                ganadas = reader.GetInt32(0);
+            }
+
+            conexion.cerrarConexion();
+
+            //OBTENER PARTIDAS PERDIDAS.
+
+            sql = "Select count(Ganado) from PARTIDAS WHERE IdUsuario =" + this.usuario.getId() + "AND Ganado=-1  AND (IdNivelTipo="
+               + ids.ElementAt(0);
+
+            for (int pos = 1; pos < ids.Count; pos++)
+            {
+
+                sql = sql + " OR IdNivelTipo=" + ids.ElementAt(pos);
+
+            }
+
+            sql = sql + ")";
+            reader = conexion.ejecutarConsulta(sql);
+
+
+
+            while (reader.Read())
+            {
+                perdidas = reader.GetInt32(0);
+            }
+
+            conexion.cerrarConexion();
+
+
+
+
+
+            salida ="Total partidas: " + total.ToString() +"\n"
+                    + "Partidas Ganadas: " + ganadas.ToString() + "(";
+
+            decimal porciento = (Convert.ToDecimal(ganadas) /Convert.ToDecimal(total)) * 100;
+
+            salida = salida + Convert.ToInt32(porciento) + "%)\n"
+                       + "Partidas Perdidas: " + perdidas.ToString() + "(";
+
+            porciento = (Convert.ToDecimal(perdidas) / Convert.ToDecimal(total)) * 100;
+
+            salida = salida + Convert.ToInt32(porciento) + "%)";
+
+            return salida;
+        }
 
     }
 }
