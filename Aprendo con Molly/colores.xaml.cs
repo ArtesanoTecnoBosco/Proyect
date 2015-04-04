@@ -246,28 +246,19 @@ namespace Aprendo_con_Molly
 
             Rectangle[] letras = {a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z};
             String[] animacion = {"A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"};
-            Storyboard storyBoard;
 
-            for (int pos = 0; pos < letras.Length; pos++)
-            {
-                storyBoard = (Storyboard)FindResource(animacion[pos]);
-                storyBoard.Stop();
-                letras[pos].Opacity = 100;
-                letras[pos].Visibility = System.Windows.Visibility.Visible;
-            }
+            mostrarTodo(letras, animacion);
                       
         }
 
         private void mostrarTodosLosNumeros()
         {
             Rectangle [] numeros = {cero,uno,dos,tres,cuatro,cinco,seis,siete,ocho,nueve};
-            
+            String[] animacion = {"CeroDesapare","UnoDesaparece","DosDesaparece","TresDesaparece","CuatroDesaparece","CincoDesaparece","SeisDesaparece",
+                                  "SieteDesaparece","OchoDesaparece","NueveDesaparece"};
+           
 
-            for (int pos = 0; pos < numeros.Length; pos++)
-            {
-                numeros[pos].Opacity = 100;
-                numeros[pos].Visibility = System.Windows.Visibility.Visible;
-            }
+            mostrarTodo(numeros, animacion);
             
 
         }
@@ -275,17 +266,27 @@ namespace Aprendo_con_Molly
         private void mostrarTodosLosObjetos()
         {
             Rectangle [] objetos = { btnElefante, btnCasa, btnCoche, btnAvion, btnPelota, btnMariposa, btnSol, btnParaguas, btnGato };
+            String [] animacion = {"ElefanteDesaparece","AvionDesaparece","GatoDesaparece","ParaguasDesaparece","SolDesaparece","CocheDesaparece","CasaDesaparece",
+                               "MariposaDesaparece","PelotaDesaparece"};
+
+
+            mostrarTodo(objetos, animacion);
+
+        }
+
+
+        private void mostrarTodo(Rectangle [] objetos, String [] animacion)
+        {
+            Storyboard storyBoard;
 
             for (int pos = 0; pos < objetos.Length; pos++)
             {
                 objetos[pos].Opacity = 100;
                 objetos[pos].Visibility = System.Windows.Visibility.Visible;
+                storyBoard = (Storyboard)FindResource(animacion[pos]);
+                storyBoard.Stop();
             }
-
-
-
         }
-
 
         /// <summary>
         /// Metodo para saber el directorio padre.
@@ -443,7 +444,7 @@ namespace Aprendo_con_Molly
                     try
                     {
                         //Efecto desaparecer
-                        
+                        desaparecerNumero(tag);
 
                         //Reproducir el sonido.
                         sonido = new SoundPlayer(directorioPadre() + ERROR);
@@ -507,7 +508,7 @@ namespace Aprendo_con_Molly
                     try
                     {
                         //Efecto desaparecer
-
+                        desaparecerObjeto(tag);
 
                         //Reproducir el sonido.
                         sonido = new SoundPlayer(directorioPadre() + ERROR);
@@ -711,10 +712,20 @@ namespace Aprendo_con_Molly
         private void ocultarPaneles()
         {
             bolitas.Visibility = System.Windows.Visibility.Hidden;
+            bolitas.Opacity = 0;
+
             letras.Visibility = System.Windows.Visibility.Hidden;
+            letras.Opacity = 0;
+
             numeros.Visibility = System.Windows.Visibility.Hidden;
+            numeros.Opacity = 0;
+
             objetos.Visibility = System.Windows.Visibility.Hidden;
+            objetos.Opacity = 0;
+
             panelControl.Visibility = System.Windows.Visibility.Hidden;
+            panelControl.Opacity = 0;
+
             ocultarVideo();
 
 
@@ -781,6 +792,114 @@ namespace Aprendo_con_Molly
 
         }
 
+        private void desaparecerNumero(String tag)
+        {
+
+            Storyboard storyBoard = new Storyboard();
+            String efecto = "";
+
+
+            switch (tag)
+            {
+
+                case "0":
+                    efecto = "CeroDesapare";
+                    break;
+
+                case "1":
+                    efecto = "UnoDesaparece";
+                    break;
+
+                case "2":
+                    efecto = "DosDesaparece";
+                    break;
+
+                case "3":
+                    efecto = "TresDesaparece";
+                    break;
+
+                case "4":
+                    efecto = "CuatroDesaparece";
+                    break;
+
+                case "5":
+                    efecto = "CincoDesaparece";
+                    break;
+
+                case "6":
+                    efecto = "SeisDesaparece";
+                    break;
+
+                case "7":
+                    efecto = "SieteDesaparece";
+                    break;
+
+                case "8":
+                    efecto = "OchoDesaparece";
+                    break;
+
+                case "9":
+                    efecto = "NueveDesaparece";
+                    break;
+
+            }
+            storyBoard = (Storyboard)FindResource(efecto);
+            storyBoard.Begin();
+
+        }
+
+        private void desaparecerObjeto(String tag)
+        {
+
+            Storyboard storyBoard = new Storyboard();
+            String efecto = "";
+
+
+            switch (tag)
+            {
+
+                case "Elefante":
+                    efecto = "ElefanteDesaparece";
+                    break;
+
+                case "Avion":
+                    efecto = "AvionDesaparece";
+                    break;
+
+                case "Paraguas":
+                    efecto = "ParaguasDesaparece";
+                    break;
+
+                case "Sol":
+                    efecto = "SolDesaparece";
+                    break;
+
+                case "Gato":
+                    efecto = "GatoDesaparece";
+                    break;
+
+                case "Coche":
+                    efecto = "CocheDesaparece";
+                    break;
+
+                case "Casa":
+                    efecto = "CasaDesaparece";
+                    break;
+
+                case "Pelota":
+                    efecto = "PelotaDesaparece";
+                    break;
+
+                case "Mariposa":
+                    efecto = "MariposaDesaparece";
+                    break;
+
+
+            }
+            storyBoard = (Storyboard)FindResource(efecto);
+            storyBoard.Begin();
+
+        }
 
 
         private void btnJugar_Click(object sender, RoutedEventArgs e)
