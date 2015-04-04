@@ -170,6 +170,7 @@ namespace Capa_de_Negocio.ModeloDatos
 
             Capa_Acceso_a_Datos.Conexion conexion = new Capa_Acceso_a_Datos.Conexion();
 
+            String sql="SELECT Id FROM NivelesTipos WHERE IdNivel="+this.nivel.getId()+" AND IdTipo="+this.tipo.getId();
             int id=0;
             System.Data.OleDb.OleDbDataReader reader = conexion.ejecutarConsulta(sql);
 
