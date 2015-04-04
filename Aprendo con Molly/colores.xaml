@@ -2189,7 +2189,7 @@
 				<Rectangle x:Name="imgAvatar" Fill="#FFE6FDF9" Height="296" Canvas.Left="353.764" Stroke="#00000000" Canvas.Top="194" Width="140" RadiusY="49.5" RadiusX="49.5"/>
 			</Canvas>
 		</Canvas>
-		<Canvas x:Name="numeros" Grid.ColumnSpan="2" Margin="-4,0,-4,-6">
+		<Canvas x:Name="numeros" Grid.ColumnSpan="2" Margin="-4,0,-4,-6" Visibility="Hidden">
 			<Rectangle x:Name="nueve" Height="176" Canvas.Left="464" StrokeThickness="8" Canvas.Top="420" Width="130" MouseLeftButtonDown="HandleNumeros" Tag="9" RenderTransformOrigin="0.5,0.5">
 				<Rectangle.RenderTransform>
 					<TransformGroup>
